@@ -1,0 +1,98 @@
+- generic [active] [ref=f9e1]:
+  - link "تخطَّ إلى المحتوى" [ref=f9e2] [cursor=pointer]:
+    - /url: "#main"
+  - status [ref=f9e3]:
+    - generic [ref=f9e4]:
+      - generic [ref=f9e5]: مسودة
+      - generic [ref=f9e6]: هذا الملف مسودة ولم يُعتمد للنشر. الألقاب والمناصب غير نهائية إلى أن تؤكدها العميلة كتابيًا.
+  - banner [ref=f9e7]:
+    - generic [ref=f9e8]:
+      - link "Sanae Rakik" [ref=f9e9] [cursor=pointer]:
+        - /url: "#top"
+      - navigation "القائمة" [ref=f9e10]:
+        - link "الرئيسية" [ref=f9e11] [cursor=pointer]:
+          - /url: /ar#top
+        - link "نبذة عني" [ref=f9e12] [cursor=pointer]:
+          - /url: /ar/about
+        - link "مجالات الخبرة" [ref=f9e13] [cursor=pointer]:
+          - /url: /ar/expertise
+        - link "المناصب" [ref=f9e14] [cursor=pointer]:
+          - /url: /ar/positions
+        - link "العضويات والشراكات" [ref=f9e15] [cursor=pointer]:
+          - /url: /ar/memberships
+        - link "اتصل بي" [ref=f9e16] [cursor=pointer]:
+          - /url: /ar/contact
+      - generic [ref=f9e18]:
+        - group "Language" [ref=f9e19]:
+          - button "EN" [ref=f9e20]
+          - button "AR" [disabled] [ref=f9e21]
+        - link "اتصل بي" [ref=f9e22] [cursor=pointer]:
+          - /url: /ar/contact
+  - main [ref=f9e23]:
+    - generic [ref=f9e26]:
+      - paragraph [ref=f9e27]: تواصل معنا
+      - heading "اتصال" [level=1] [ref=f9e28]
+      - paragraph [ref=f9e30]: للاستفسار عن الشراكات والاستشارات والتعارف المهني.
+    - generic [ref=f9e32]:
+      - generic [ref=f9e33]:
+        - heading "طرق التواصل" [level=2] [ref=f9e34]
+        - paragraph [ref=f9e36]: للتعاون والدعوات
+      - generic [ref=f9e37]:
+        - generic [ref=f9e40]:
+          - heading "الموقع" [level=3] [ref=f9e41]
+          - paragraph [ref=f9e45]: هولندا
+        - generic [ref=f9e47]:
+          - generic [ref=f9e48]:
+            - generic [ref=f9e49]:
+              - generic [ref=f9e50]: الاسم
+              - textbox "الاسم" [ref=f9e51]
+            - generic [ref=f9e52]:
+              - generic [ref=f9e53]: البريد الإلكتروني
+              - textbox "البريد الإلكتروني" [ref=f9e54]
+          - generic [ref=f9e55]:
+            - generic [ref=f9e56]: الجهة
+            - textbox "الجهة" [ref=f9e57]
+          - generic [ref=f9e58]:
+            - generic [ref=f9e59]: الموضوع
+            - textbox "الموضوع" [ref=f9e60]
+          - generic [ref=f9e61]:
+            - generic [ref=f9e62]: الرسالة
+            - textbox "الرسالة" [ref=f9e63]
+          - paragraph [ref=f9e64]: بإرسالك هذا النموذج فإنك توافق على معالجة بياناتك للرد على رسالتك.
+          - button "إرسال الرسالة" [ref=f9e65]
+    - generic [ref=f9e70]:
+      - heading "نرحب باستفسارات" [level=2] [ref=f9e72]
+      - list [ref=f9e74]:
+        - listitem [ref=f9e75]:
+          - button "مستثمرون" [ref=f9e76]
+        - listitem [ref=f9e77]:
+          - button "عملاء" [ref=f9e78]
+        - listitem [ref=f9e79]:
+          - button "رواد أعمال" [ref=f9e80]
+        - listitem [ref=f9e81]:
+          - button "شركات" [ref=f9e82]
+        - listitem [ref=f9e83]:
+          - button "شركاء استراتيجيون" [ref=f9e84]
+        - listitem [ref=f9e85]:
+          - button "مؤسسات" [ref=f9e86]
+    - generic [ref=f9e88]:
+      - heading "قبل أن تكتب" [level=2] [ref=f9e90]
+      - generic [ref=f9e92]:
+        - paragraph [ref=f9e93]: تُقرأ الرسائل مباشرة. يُرجى ذكر الجهة التي تكتب نيابةً عنها وطبيعة الاستفسار.
+        - paragraph [ref=f9e94]:
+          - text: تُستخدم البيانات المُرسلة عبر هذا النموذج للرد فقط. يُرجى الاطلاع على سياسة الخصوصية.
+          - link "سياسة الخصوصية" [ref=f9e95] [cursor=pointer]:
+            - /url: /ar/privacy
+  - contentinfo [ref=f9e96]:
+    - generic [ref=f9e97]:
+      - paragraph [ref=f9e98]: © 2026 Sanae Rakik. جميع الحقوق محفوظة.
+      - navigation "Legal" [ref=f9e99]:
+        - link "الخصوصية" [ref=f9e100] [cursor=pointer]:
+          - /url: /ar/privacy
+        - link "الشروط" [ref=f9e101] [cursor=pointer]:
+          - /url: /ar/terms
+        - link "ملفات الارتباط" [ref=f9e102] [cursor=pointer]:
+          - /url: /ar/cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f9e108] [cursor=pointer]
+  - alert [ref=f9e112]

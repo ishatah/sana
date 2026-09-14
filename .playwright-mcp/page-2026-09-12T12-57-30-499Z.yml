@@ -1,0 +1,246 @@
+- generic [active] [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main"
+  - status [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - generic [ref=f1e5]: DRAFT
+      - generic [ref=f1e6]: This profile is a draft and has not been approved for publication. Titles and positions are not final until confirmed in writing by the client.
+  - banner [ref=f1e7]:
+    - generic [ref=f1e8]:
+      - link "Sıdıka Şire" [ref=f1e9] [cursor=pointer]:
+        - /url: "#top"
+      - navigation "Menu" [ref=f1e10]:
+        - link "Home" [ref=f1e11] [cursor=pointer]:
+          - /url: /en#top
+        - link "About" [ref=f1e12] [cursor=pointer]:
+          - /url: /en/about
+        - link "Expertise" [ref=f1e13] [cursor=pointer]:
+          - /url: /en/expertise
+        - link "Positions" [ref=f1e14] [cursor=pointer]:
+          - /url: /en/positions
+        - link "Recognition" [ref=f1e15] [cursor=pointer]:
+          - /url: /en/recognition
+        - link "Contact" [ref=f1e16] [cursor=pointer]:
+          - /url: /en/contact
+      - generic [ref=f1e17]:
+        - group "Language" [ref=f1e18]:
+          - button "TR" [ref=f1e19]
+          - button "EN" [disabled] [ref=f1e20]
+          - button "AR" [ref=f1e21]
+        - link "Contact me" [ref=f1e22] [cursor=pointer]:
+          - /url: /en/contact
+  - main [ref=f1e23]:
+    - generic [ref=f1e27]:
+      - paragraph [ref=f1e28]: I am Sıdıka Şire
+      - heading "Sıdıka Şire" [level=1] [ref=f1e29]
+      - paragraph [ref=f1e30]: Businessperson
+      - paragraph [ref=f1e32]: President for Türkiye, International Federation for Businessmen and Women (IFB)
+      - list [ref=f1e33]:
+        - listitem [ref=f1e34]: Federation President
+        - listitem [ref=f1e35]: Civil Society Leader
+      - generic [ref=f1e53]:
+        - link "Get in touch" [ref=f1e54] [cursor=pointer]:
+          - /url: /en/contact
+        - link "About her work" [ref=f1e55] [cursor=pointer]:
+          - /url: /en/about
+      - generic [ref=f1e56]:
+        - generic [ref=f1e57]:
+          - term [ref=f1e58]: Years experience
+          - definition [ref=f1e59]:
+            - generic [ref=f1e60]: 10+ years
+            - generic [ref=f1e61]: Years experience
+        - generic [ref=f1e62]:
+          - term [ref=f1e63]: Positions held
+          - definition [ref=f1e64]:
+            - generic [ref=f1e65]: "6"
+            - generic [ref=f1e66]: Positions held
+        - generic [ref=f1e67]:
+          - term [ref=f1e68]: Recognitions
+          - definition [ref=f1e69]:
+            - generic [ref=f1e70]: "2"
+            - generic [ref=f1e71]: Recognitions
+      - list [ref=f1e72]:
+        - listitem [ref=f1e73]:
+          - generic [ref=f1e74]: Türkiye
+          - text: Adana, Seyhan
+        - listitem [ref=f1e75]:
+          - generic [ref=f1e76]: Iraq
+          - text: Middle East trade
+    - generic [ref=f1e80]:
+      - heading "About" [level=2] [ref=f1e82]
+      - generic [ref=f1e85]:
+        - paragraph [ref=f1e86]: Sıdıka Şire is a businessperson and civil society leader based in Adana. She serves as President for Türkiye of the International Federation for Businessmen and Women (IFB), Turkish Union President of the International Federation of Businessmen and Investors Associations (IFBI), and Chairwoman of the Board of the Iraq and Middle East Businesswomen and Businessmen Association. Her work centres on trade relations between Türkiye and Iraq, investor matchmaking, and womens entrepreneurship. She has worked for more than ten years across business associations, trade development and civil society.
+        - generic [ref=f1e87]:
+          - generic [ref=f1e88]:
+            - term [ref=f1e89]: Experience
+            - definition [ref=f1e90]: 10+ years
+          - generic [ref=f1e92]:
+            - term [ref=f1e93]: Sector
+            - definition [ref=f1e94]: Business associations, trade development, civil society
+          - generic [ref=f1e96]:
+            - term [ref=f1e97]: Based in
+            - definition [ref=f1e98]: Adana, Türkiye
+          - generic [ref=f1e100]:
+            - term [ref=f1e101]: Markets covered
+            - definition [ref=f1e102]: Iraq and the wider Middle East
+          - generic [ref=f1e104]:
+            - term [ref=f1e105]: Nationality
+            - definition [ref=f1e106]: Turkish
+    - generic [ref=f1e111]:
+      - generic [ref=f1e112]:
+        - heading "Areas of Expertise" [level=2] [ref=f1e113]
+        - paragraph [ref=f1e115]: Where her work is focused
+      - list [ref=f1e116]:
+        - listitem [ref=f1e117]:
+          - generic [aria-hidden]: "01"
+          - heading "Türkiye and Iraq trade relations" [level=3] [ref=f1e118]
+        - listitem [ref=f1e119]:
+          - generic [aria-hidden]: "02"
+          - heading "Business networking and investor matchmaking, Middle East" [level=3] [ref=f1e120]
+        - listitem [ref=f1e121]:
+          - generic [aria-hidden]: "03"
+          - heading "Women's entrepreneurship" [level=3] [ref=f1e122]
+        - listitem [ref=f1e123]:
+          - generic [aria-hidden]: "04"
+          - heading "Business associations and federation leadership" [level=3] [ref=f1e124]
+        - listitem [ref=f1e125]:
+          - generic [aria-hidden]: "05"
+          - heading "Humanitarian and civil society work" [level=3] [ref=f1e126]
+        - listitem [ref=f1e127]:
+          - generic [aria-hidden]: "06"
+          - heading "Intercultural dialogue" [level=3] [ref=f1e128]
+        - listitem [ref=f1e129]:
+          - generic [aria-hidden]: "07"
+          - heading "Representation at international forums" [level=3] [ref=f1e130]
+    - generic [ref=f1e132]:
+      - heading "Current Positions" [level=2] [ref=f1e135]
+      - generic [ref=f1e137]:
+        - list [ref=f1e138]:
+          - listitem [ref=f1e139]:
+            - article [ref=f1e140]:
+              - generic [ref=f1e142]:
+                - heading "President of the Federation in Turkey" [level=3] [ref=f1e143]
+                - paragraph [ref=f1e144]: International Federation for Businessmen and Women (IFB)
+                - generic [ref=f1e146]:
+                  - generic [ref=f1e147]: Adana, Türkiye
+                  - generic [ref=f1e148]: Start year to be confirmed
+                  - link "Organisation website" [ref=f1e149] [cursor=pointer]:
+                    - /url: https://ifb-us.org
+                - 'button "Details: President of the Federation in Turkey" [expanded] [ref=f1e154]': Details
+          - listitem [ref=f1e157]:
+            - article [ref=f1e158]:
+              - generic [ref=f1e160]:
+                - heading "Turkish Union President" [level=3] [ref=f1e161]
+                - paragraph [ref=f1e162]: International Federation of Businessmen and Investors Associations (IFBI)
+                - generic [ref=f1e164]:
+                  - generic [ref=f1e165]: Adana, Türkiye
+                  - generic [ref=f1e166]: Start year to be confirmed
+                - 'button "Details: Turkish Union President" [expanded] [ref=f1e167]': Details
+          - listitem [ref=f1e170]:
+            - article [ref=f1e171]:
+              - generic [ref=f1e173]:
+                - heading "Chairwoman of the Board" [level=3] [ref=f1e174]
+                - paragraph [ref=f1e175]: Iraq and Middle East Businesswomen and Businessmen Association
+                - generic [ref=f1e177]:
+                  - generic [ref=f1e178]: Adana, Türkiye
+                  - generic [ref=f1e179]: Start year to be confirmed
+                - 'button "Details: Chairwoman of the Board" [expanded] [ref=f1e180]': Details
+          - listitem [ref=f1e183]:
+            - article [ref=f1e184]:
+              - generic [ref=f1e186]:
+                - heading "Executive Board Member and Peace Ambassador for Türkiye" [level=3] [ref=f1e187]
+                - paragraph [ref=f1e188]: United Nations Peace Ambassadors Foundation (UN-PAF), Africa High Commission Office
+                - generic [ref=f1e189]: Start year to be confirmed
+                - 'button "Details: Executive Board Member and Peace Ambassador for Türkiye" [expanded] [ref=f1e192]': Details
+              - paragraph [ref=f1e195]:
+                - generic [ref=f1e198]: The United Nations Peace Ambassadors Foundation is a private foundation and is not a United Nations body.
+          - listitem [ref=f1e199]:
+            - article [ref=f1e200]:
+              - generic [ref=f1e202]:
+                - heading "Global Peace Ambassador" [level=3] [ref=f1e203]
+                - paragraph [ref=f1e204]: Institute of International Peace Leaders
+                - generic [ref=f1e205]: Since 2025 – 2026
+                - 'button "Details: Global Peace Ambassador" [expanded] [ref=f1e208]': Details
+          - listitem [ref=f1e211]:
+            - article [ref=f1e212]:
+              - generic [ref=f1e214]:
+                - heading "Ambassador of Goodwill, diploma no. 001/Türkiye" [level=3] [ref=f1e215]
+                - paragraph [ref=f1e216]: World Parliament of Security and Peace
+                - generic [ref=f1e217]: Since 2020
+                - 'button "Details: Ambassador of Goodwill, diploma no. 001/Türkiye" [expanded] [ref=f1e220]': Details
+        - paragraph [ref=f1e224]: DRAFT ifb-us.org confirmed. Register entries still needed for IFBI and for the Adana association.
+    - generic [ref=f1e226]:
+      - heading "Awards and Honours" [level=2] [ref=f1e229]
+      - list [ref=f1e232]:
+        - listitem [ref=f1e233]:
+          - generic [ref=f1e234]:
+            - heading "Ambassador of Goodwill" [level=3] [ref=f1e235]
+            - generic [ref=f1e236]: "2020"
+          - paragraph [ref=f1e238]:
+            - generic [ref=f1e239]: "Issued by:"
+            - text: World Parliament of Security and Peace
+          - paragraph [ref=f1e241]: Ref. no 001/Türkiye
+        - listitem [ref=f1e242]:
+          - generic [ref=f1e243]:
+            - heading "Global Peace Ambassador" [level=3] [ref=f1e244]
+            - generic [ref=f1e245]: 2025-26
+          - paragraph [ref=f1e247]:
+            - generic [ref=f1e248]: "Issued by:"
+            - text: Institute of International Peace Leaders
+    - generic [ref=f1e251]:
+      - generic [ref=f1e252]:
+        - heading "Contact" [level=2] [ref=f1e253]
+        - paragraph [ref=f1e255]: For collaboration and invitations
+      - generic [ref=f1e256]:
+        - generic [ref=f1e258]:
+          - generic [ref=f1e259]:
+            - heading "Email" [level=3] [ref=f1e260]
+            - list [ref=f1e264]:
+              - listitem [ref=f1e265]:
+                - link "President.tr@ifb-us.org" [ref=f1e266] [cursor=pointer]:
+                  - /url: mailto:President.tr@ifb-us.org
+                - 'button "Copy email address: President.tr@ifb-us.org" [ref=f1e267]':
+                  - status [ref=f1e275]
+                - generic [ref=f1e276]: Federation
+              - listitem [ref=f1e277]:
+                - link "ifbiturkiye@gmail.com" [ref=f1e278] [cursor=pointer]:
+                  - /url: mailto:ifbiturkiye@gmail.com
+                - 'button "Copy email address: ifbiturkiye@gmail.com" [ref=f1e279]':
+                  - status [ref=f1e287]
+                - generic [ref=f1e288]: IFBI Türkiye
+          - generic [ref=f1e289]:
+            - heading "Location" [level=3] [ref=f1e290]
+            - paragraph [ref=f1e294]: Adana, Türkiye
+          - paragraph [ref=f1e295]: Contact is currently by email only.
+        - generic [ref=f1e297]:
+          - generic [ref=f1e298]:
+            - generic [ref=f1e299]:
+              - generic [ref=f1e300]: Your name
+              - textbox "Your name" [ref=f1e301]
+            - generic [ref=f1e302]:
+              - generic [ref=f1e303]: Your email
+              - textbox "Your email" [ref=f1e304]
+          - generic [ref=f1e305]:
+            - generic [ref=f1e306]: Your organisation
+            - textbox "Your organisation" [ref=f1e307]
+          - generic [ref=f1e308]:
+            - generic [ref=f1e309]: Subject
+            - textbox "Subject" [ref=f1e310]
+          - generic [ref=f1e311]:
+            - generic [ref=f1e312]: Your message
+            - textbox "Your message" [ref=f1e313]
+          - paragraph [ref=f1e314]: By sending this form you agree to your details being processed so your message can be answered.
+          - button "Send Message" [ref=f1e315]
+  - contentinfo [ref=f1e319]:
+    - generic [ref=f1e320]:
+      - paragraph [ref=f1e321]: © 2026 Sıdıka Şire. All rights reserved.
+      - navigation "Legal" [ref=f1e322]:
+        - link "Privacy" [ref=f1e323] [cursor=pointer]:
+          - /url: /en/privacy
+        - link "Terms" [ref=f1e324] [cursor=pointer]:
+          - /url: /en/terms
+        - link "Cookies" [ref=f1e325] [cursor=pointer]:
+          - /url: /en/cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f1e331] [cursor=pointer]
+  - alert [ref=f1e335]

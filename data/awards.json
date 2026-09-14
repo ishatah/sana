@@ -1,0 +1,24 @@
+{
+  "_comment": "Intake form section 4 is explicit: 'الإنجازات — لا توجد جوائز أو أرقام أو صفقات قابلة للنشر والتحقق في هذه المرحلة' (no awards, figures or deals that can be published and verified) and 'التعليم — لم يُزوَّد' (education not supplied). Both arrays are therefore empty, and the Recognition page was removed rather than left to render an empty shell. What section 4 DOES record is a membership, which is what this file now carries.",
+  "education": [],
+  "awards": [],
+  "memberships": [
+    {
+      "id": "ibc-membership",
+      "organisation": "International Business Council (IBC)",
+      "organisationUrl": "",
+      "role": {
+        "en": "Consultant and Strategic Representative",
+        "ar": "مستشارة وممثلة استراتيجية"
+      },
+      "summary": {
+        "en": "Connecting entrepreneurs, companies, investors and institutions across sectors, facilitating strategic partnerships and cross-border cooperation.",
+        "ar": "الربط بين رواد الأعمال والشركات والمستثمرين والمؤسسات في مختلف القطاعات، وتيسير الشراكات الاستراتيجية والتعاون العابر للحدود."
+      },
+      "_comment_period": "Intake form section 4: 'الفترة تُزوَّد لاحقًا' — the period is to be supplied later. Empty renders as unconfirmed rather than as a guess.",
+      "period": "",
+      "tier": "A",
+      "publish": true
+    }
+  ]
+}

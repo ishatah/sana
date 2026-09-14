@@ -1,0 +1,4461 @@
+[      45ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[      67ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_cjs_react-dom-client_development_0z3nh7o.js:16702
+[      77ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/development/_clientMiddlewareManifest.js' because its MIME type ('application/json') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/:0
+[      82ms] Error: ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx
+
+
+    at <unknown> (Error: ./components/about-section.tsx:70:10)
+    at Object.getCompilationErrors (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\lib\dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\next-dev-server.js:720:42)
+    at DevServer.findPageComponents (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\next-dev-server.js:690:43)
+    at async DevServer.renderErrorToResponseImpl (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\base-server.js:1753:26)
+[      78ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[      79ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[      79ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/about/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     128ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/favicon.ico:0
+[     168ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     230ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     292ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     354ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     417ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     478ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     538ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     600ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     662ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     723ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     785ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     845ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     908ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     970ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1032ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1094ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1155ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1217ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1277ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1338ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1399ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1460ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1523ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1585ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1645ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1705ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1766ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1827ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1887ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1947ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2009ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2071ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2134ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2195ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2256ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2317ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2379ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2441ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2503ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2563ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2624ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2685ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2747ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2807ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2867ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2930ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2992ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3054ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3115ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3176ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3237ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3298ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3361ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3422ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3484ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3545ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3606ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3667ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3727ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3788ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3849ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3910ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3971ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4034ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4095ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4156ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4218ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4279ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4341ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4451ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4464ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[    4528ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4589ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4652ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4714ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4777ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4837ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4898ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4960ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5022ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5084ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5145ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5207ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5269ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5329ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5390ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5450ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5510ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5572ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5633ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5695ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5758ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5821ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5882ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5944ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6004ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6066ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6127ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6188ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6250ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6312ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6373ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6433ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6494ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6556ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6618ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6679ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6740ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6801ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6863ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6925ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6986ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7046ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7108ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7169ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7229ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7290ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7350ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7413ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7473ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7534ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7597ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7657ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7719ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7782ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7844ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7906ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7968ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8030ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8094ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8155ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8216ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8277ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8339ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8401ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8464ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8525ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8588ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8649ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8713ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8774ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8836ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8899ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8962ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9023ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9086ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9148ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9211ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9273ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9334ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9395ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9459ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9519ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9580ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9642ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9705ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9768ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9830ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9891ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9954ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10017ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10079ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10142ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10203ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10266ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10329ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10390ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10452ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10514ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10575ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10636ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10697ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10759ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10822ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10885ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10949ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11010ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11073ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11136ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11197ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11261ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11323ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11386ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11448ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11511ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11572ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11634ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11696ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11759ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11821ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11882ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11944ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12006ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12068ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12130ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12192ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12254ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12316ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12378ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12440ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12501ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12563ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12625ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12688ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12750ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12811ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12875ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12936ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12997ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13058ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13119ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13182ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13244ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13307ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13368ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13430ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13492ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13554ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13616ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13679ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13741ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13805ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13868ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13929ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13991ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14053ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14114ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14177ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14239ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14302ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14364ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14426ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14538ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14551ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   14613ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14675ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14737ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14799ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14863ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14924ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14987ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15049ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15111ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15174ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15236ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15297ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15359ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15421ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15485ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15546ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15609ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15672ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15733ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15795ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15857ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15920ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15983ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16044ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16106ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16168ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16231ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16293ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16356ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16417ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16479ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16541ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16604ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16665ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16728ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16789ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16852ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16913ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16977ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17038ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17098ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17159ms] [ERROR] ./components/about-section.tsx:70:10
+Expected ',', got 'ident'
+  68 |       begin together and the column simply runs longer.
+  69 |     */}
+> 70 |     <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+     |          ^^^^^^^^^
+  71 |       {/*
+  72 |         NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+  73 |         both entrances now.
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17234ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   17257ms] [LOG] [Fast Refresh] done in 95ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   17375ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   17699ms] [LOG] [Fast Refresh] done in 426ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   18159ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   18181ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   24079ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   24148ms] [LOG] [Fast Refresh] done in 92ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   24255ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   24606ms] [LOG] [Fast Refresh] done in 453ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   24722ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   24724ms] [LOG] [Fast Refresh] done in 106ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   24842ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   24899ms] [LOG] [Fast Refresh] done in 159ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477

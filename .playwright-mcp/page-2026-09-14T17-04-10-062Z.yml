@@ -1,0 +1,159 @@
+- generic [active] [ref=f5e1]:
+  - link "تخطَّ إلى المحتوى" [ref=f5e2] [cursor=pointer]:
+    - /url: "#main"
+  - status [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - generic [ref=f5e5]: مسودة
+      - generic [ref=f5e6]: هذا الملف مسودة ولم يُعتمد للنشر. الألقاب والمناصب غير نهائية إلى أن تؤكدها العميلة كتابيًا.
+  - banner [ref=f5e7]:
+    - generic [ref=f5e8]:
+      - link "Sanae Rakik" [ref=f5e9] [cursor=pointer]:
+        - /url: "#top"
+      - generic [ref=f5e10]:
+        - group "Language" [ref=f5e11]:
+          - button "EN" [ref=f5e12]
+          - button "AR" [disabled] [ref=f5e13]
+        - button "القائمة" [ref=f5e14]
+  - main [ref=f5e16]:
+    - generic [ref=f5e19]:
+      - generic [ref=f5e20]:
+        - paragraph [ref=f5e21]: أنا سناء رقيق
+        - heading "Sanae Rakik" [level=1] [ref=f5e22]
+        - paragraph [ref=f5e23]: سيدة أعمال
+        - paragraph [ref=f5e25]: مستشارة وممثلة استراتيجية في مجلس الأعمال الدولي (IBC)
+        - list [ref=f5e26]:
+          - listitem [ref=f5e27]: تطوير الأعمال
+          - listitem [ref=f5e28]: الشراكات الاستراتيجية
+        - generic [ref=f5e29]:
+          - link "تواصل معنا" [ref=f5e30] [cursor=pointer]:
+            - /url: /ar/contact
+          - link "عن عملها" [ref=f5e31] [cursor=pointer]:
+            - /url: /ar/about
+        - generic [ref=f5e33]:
+          - term [ref=f5e34]: سنوات الخبرة
+          - definition [ref=f5e35]:
+            - generic [ref=f5e36]: 10+ سنوات
+            - generic [ref=f5e37]: سنوات الخبرة
+        - list [ref=f5e38]:
+          - listitem [ref=f5e39]:
+            - generic [ref=f5e40]: مقر الإقامة
+            - text: هولندا
+          - listitem [ref=f5e41]:
+            - generic [ref=f5e42]: نطاق النشاط
+            - text: أوروبا · الخليج · الشرق الأوسط
+      - img "سناء رقيق، صورة شخصية رسمية بخلفية سادة." [ref=f5e45]
+    - generic [ref=f5e47]:
+      - heading "نبذة" [level=2] [ref=f5e49]
+      - generic [ref=f5e51]:
+        - generic [ref=f5e52]:
+          - paragraph [ref=f5e53]: سناء رقيق سيدة أعمال ومتخصصة في تطوير الأعمال، ولديها خبرة واسعة في الشراكات الاستراتيجية والتطوير التجاري الدولي وقطاع العقارات. وقد تمكنت خلال مسيرتها المهنية من بناء شبكة علاقات قوية تمتد عبر أوروبا والشرق الأوسط، مكنتها من الربط بين رجال الأعمال والمستثمرين وصناع القرار، وخلق فرص واعدة للتعاون طويل الأمد. وتمثل مجلس الأعمال الدولي (IBC) بصفتها مستشارة وممثلة استراتيجية.
+          - generic [ref=f5e54]:
+            - generic [ref=f5e55]:
+              - term [ref=f5e56]: الخبرة
+              - definition [ref=f5e57]: 10+ سنوات
+            - generic [ref=f5e59]:
+              - term [ref=f5e60]: القطاع
+              - definition [ref=f5e61]: تطوير الأعمال، الشراكات الاستراتيجية، القطاع العقاري
+            - generic [ref=f5e63]:
+              - term [ref=f5e64]: المقر
+              - definition [ref=f5e65]: هولندا
+            - generic [ref=f5e67]:
+              - term [ref=f5e68]: الأسواق المشمولة
+              - definition [ref=f5e69]: أوروبا ودول مجلس التعاون الخليجي والشرق الأوسط
+            - generic [ref=f5e71]:
+              - term [ref=f5e72]: الجنسية
+              - definition [ref=f5e73]: هولندية
+        - img "سناء رقيق، صورة شخصية رسمية بخلفية سادة." [ref=f5e77]
+    - blockquote [ref=f5e81]:
+      - paragraph [ref=f5e82]: أومن بأن نجاح الأعمال يقوم على الثقة والمهنية والنزاهة والعلاقات الدائمة. وهدفي هو بناء علاقات ذات معنى، ودعم المشاريع ذات الأثر الإيجابي، والمساهمة في تحقيق نمو مستدام للمؤسسات والشركاء الذين أمثلهم.
+      - generic [ref=f5e83]: Sanae Rakik
+    - generic [ref=f5e85]:
+      - generic [ref=f5e86]:
+        - heading "مجالات الخبرة" [level=2] [ref=f5e87]
+        - paragraph [ref=f5e89]: المجالات التي يتركز عليها عملها
+      - list [ref=f5e90]:
+        - listitem [ref=f5e91]:
+          - generic [aria-hidden]: "01"
+          - heading "تطوير الأعمال" [level=3] [ref=f5e92]
+        - listitem [ref=f5e93]:
+          - generic [aria-hidden]: "02"
+          - heading "التطوير الدولي للأعمال" [level=3] [ref=f5e94]
+        - listitem [ref=f5e95]:
+          - generic [aria-hidden]: "03"
+          - heading "الشراكات الاستراتيجية" [level=3] [ref=f5e96]
+        - listitem [ref=f5e97]:
+          - generic [aria-hidden]: "04"
+          - heading "استقطاب العملاء" [level=3] [ref=f5e98]
+        - listitem [ref=f5e99]:
+          - generic [aria-hidden]: "05"
+          - heading "بناء الشبكات المهنية وإدارة العلاقات" [level=3] [ref=f5e100]
+        - listitem [ref=f5e101]:
+          - generic [aria-hidden]: "06"
+          - heading "تحديد الفرص التجارية وتقييمها" [level=3] [ref=f5e102]
+        - listitem [ref=f5e103]:
+          - generic [aria-hidden]: "07"
+          - heading "القطاع العقاري والمعاملات العقارية" [level=3] [ref=f5e104]
+        - listitem [ref=f5e105]:
+          - generic [aria-hidden]: "08"
+          - heading "التعاون التجاري العابر للحدود" [level=3] [ref=f5e106]
+    - generic [ref=f5e108]:
+      - heading "المناصب الحالية" [level=2] [ref=f5e111]
+      - list [ref=f5e114]:
+        - listitem [ref=f5e115]:
+          - article [ref=f5e116]:
+            - generic [ref=f5e118]:
+              - heading "مستشارة وممثلة استراتيجية" [level=3] [ref=f5e119]
+              - paragraph [ref=f5e120]: International Business Council (IBC)
+              - generic [ref=f5e122]:
+                - generic [ref=f5e123]: أوروبا والشرق الأوسط
+                - generic [ref=f5e124]: سنة البدء بانتظار التأكيد
+              - 'button "التفاصيل: مستشارة وممثلة استراتيجية" [expanded] [ref=f5e125]': التفاصيل
+    - generic [ref=f5e129]:
+      - heading "العضويات والشراكات" [level=2] [ref=f5e132]
+      - list [ref=f5e135]:
+        - listitem [ref=f5e136]:
+          - generic [ref=f5e137]:
+            - heading "International Business Council (IBC)" [level=3] [ref=f5e138]
+            - generic [ref=f5e139]: الفترة قيد التأكيد
+          - paragraph [ref=f5e141]:
+            - generic [ref=f5e142]: "الصفة:"
+            - text: مستشارة وممثلة استراتيجية
+          - paragraph [ref=f5e144]: الربط بين رواد الأعمال والشركات والمستثمرين والمؤسسات في مختلف القطاعات، وتيسير الشراكات الاستراتيجية والتعاون العابر للحدود.
+    - generic [ref=f5e146]:
+      - generic [ref=f5e147]:
+        - heading "اتصال" [level=2] [ref=f5e148]
+        - paragraph [ref=f5e150]: للتعاون والدعوات
+      - generic [ref=f5e151]:
+        - generic [ref=f5e154]:
+          - heading "الموقع" [level=3] [ref=f5e155]
+          - paragraph [ref=f5e159]: هولندا
+        - generic [ref=f5e161]:
+          - generic [ref=f5e162]:
+            - generic [ref=f5e163]:
+              - generic [ref=f5e164]: الاسم
+              - textbox "الاسم" [ref=f5e165]
+            - generic [ref=f5e166]:
+              - generic [ref=f5e167]: البريد الإلكتروني
+              - textbox "البريد الإلكتروني" [ref=f5e168]
+          - generic [ref=f5e169]:
+            - generic [ref=f5e170]: الجهة
+            - textbox "الجهة" [ref=f5e171]
+          - generic [ref=f5e172]:
+            - generic [ref=f5e173]: الموضوع
+            - textbox "الموضوع" [ref=f5e174]
+          - generic [ref=f5e175]:
+            - generic [ref=f5e176]: الرسالة
+            - textbox "الرسالة" [ref=f5e177]
+          - paragraph [ref=f5e178]: بإرسالك هذا النموذج فإنك توافق على معالجة بياناتك للرد على رسالتك.
+          - button "إرسال الرسالة" [ref=f5e179]
+  - contentinfo [ref=f5e183]:
+    - generic [ref=f5e184]:
+      - paragraph [ref=f5e185]: © 2026 Sanae Rakik. جميع الحقوق محفوظة.
+      - navigation "Legal" [ref=f5e186]:
+        - link "الخصوصية" [ref=f5e187] [cursor=pointer]:
+          - /url: /ar/privacy
+        - link "الشروط" [ref=f5e188] [cursor=pointer]:
+          - /url: /ar/terms
+        - link "ملفات الارتباط" [ref=f5e189] [cursor=pointer]:
+          - /url: /ar/cookies
+  - region "Notifications alt+T"

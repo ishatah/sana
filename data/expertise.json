@@ -1,0 +1,45 @@
+{
+  "_comment": "Intake form section 1, مجالات التخصص, transcribed as supplied. The form asked for 'عبارات قصيرة دون جُمل' — short noun phrases, not sentences — and that is what these are. Nothing is described or characterised beyond the phrase itself.",
+  "items": [
+    { "id": "business-development", "icon": "network", "title": { "en": "Business development", "ar": "تطوير الأعمال" } },
+    {
+      "id": "international-business-development",
+      "icon": "globe",
+      "title": { "en": "International business development", "ar": "التطوير الدولي للأعمال" }
+    },
+    {
+      "id": "strategic-partnerships",
+      "icon": "handshake",
+      "title": { "en": "Strategic partnerships", "ar": "الشراكات الاستراتيجية" }
+    },
+    { "id": "client-acquisition", "icon": "users", "title": { "en": "Client acquisition", "ar": "استقطاب العملاء" } },
+    {
+      "id": "professional-networking",
+      "icon": "network",
+      "title": { "en": "Professional networking and relationship management", "ar": "بناء الشبكات المهنية وإدارة العلاقات" }
+    },
+    {
+      "id": "commercial-opportunities",
+      "icon": "building",
+      "title": { "en": "Identifying and evaluating commercial opportunities", "ar": "تحديد الفرص التجارية وتقييمها" }
+    },
+    {
+      "id": "real-estate",
+      "icon": "building",
+      "title": { "en": "Real estate and property transactions", "ar": "القطاع العقاري والمعاملات العقارية" }
+    },
+    {
+      "id": "cross-border-trade",
+      "icon": "globe",
+      "title": { "en": "Cross-border commercial cooperation", "ar": "التعاون التجاري العابر للحدود" }
+    }
+  ],
+  "languages": {
+    "_comment": "Intake form section 1, اللغات: Dutch, Arabic, French. Held as data but NOT rendered — the languages section was removed from display in an earlier build and the rows are kept so it can be restored without re-collecting anything. Proficiency levels were not supplied, so none are asserted.",
+    "items": [
+      { "code": "nl", "name": { "en": "Dutch", "ar": "الهولندية" }, "speaking": "", "writing": "", "business": null, "status": "to-confirm" },
+      { "code": "ar", "name": { "en": "Arabic", "ar": "العربية" }, "speaking": "", "writing": "", "business": null, "status": "to-confirm" },
+      { "code": "fr", "name": { "en": "French", "ar": "الفرنسية" }, "speaking": "", "writing": "", "business": null, "status": "to-confirm" }
+    ]
+  }
+}

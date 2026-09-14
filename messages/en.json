@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "expertise": "Expertise",
+    "roles": "Roles",
+    "press": "Press",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "skipToContent": "Skip to content",
+    "cta": "Contact me"
+  },
+  "hero": {
+    "scrollDown": "Scroll down",
+    "basedIn": "Based in",
+    "statPositions": "Positions held",
+    "statExperience": "Years experience",
+    "contactCta": "Get in touch",
+    "aboutCta": "About her work"
+  },
+  "about": {
+    "heading": "About",
+    "experienceLabel": "Experience",
+    "_comment_experienceValue": "The VALUE comes from data/identity.json (yearsOfExperience) and is interpolated as {years} — only the unit word is translated here. Do not hardcode a figure: this string is rendered in the hero stat bar and the About fact list, where a number reads as verified.",
+    "experienceValue": "{years} years",
+    "sectorLabel": "Sector",
+    "baseLabel": "Based in",
+    "marketsLabel": "Markets covered",
+    "nationalityLabel": "Nationality"
+  },
+  "expertise": {
+    "heading": "Areas of Expertise",
+    "subheading": "Where her work is focused"
+  },
+  "positions": {
+    "heading": "Positions",
+    "current": "Current Positions",
+    "previous": "Previous Positions",
+    "since": "Since",
+    "role": "Role",
+    "organisation": "Organisation",
+    "location": "Location",
+    "visitSite": "Organisation website",
+    "sinceUnconfirmed": "Start year to be confirmed",
+    "details": "Details"
+  },
+  "contact": {
+    "heading": "Contact",
+    "subheading": "For collaboration and invitations",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address",
+    "locationLabel": "Location",
+    "emailOnlyNote": "Contact is currently by email only.",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "organisation": "Your organisation",
+      "subject": "Subject",
+      "message": "Your message",
+      "send": "Send Message",
+      "sending": "Sending…",
+      "success": "Your message has been sent. You will receive a reply shortly.",
+      "error": "The message could not be sent. Please email directly instead.",
+      "required": "This field is required",
+      "invalidEmail": "Enter a valid email address",
+      "consent": "By sending this form you agree to your details being processed so your message can be answered."
+    },
+    "copied": "Copied",
+    "copyAddress": "Copy email address"
+  },
+  "pages": {
+    "about": {
+      "eyebrow": "Profile",
+      "lede": "Business development and strategic partnerships between Europe and the Middle East.",
+      "profileHeading": "Profile",
+      "focusHeading": "Focus",
+      "primaryIdentityLabel": "Primary focus",
+      "secondaryIdentityLabel": "Secondary focus",
+      "audienceLabel": "Works with",
+      "fullBioHeading": "Full biography",
+      "journeyHeading": "Career Journey"
+    },
+    "expertise": {
+      "eyebrow": "Capabilities",
+      "lede": "Where her work is concentrated, and the markets it covers.",
+      "areasHeading": "Core Areas",
+      "marketsHeading": "Markets",
+      "sectorLabel": "Sector",
+      "baseLabel": "Based in",
+      "marketsLabel": "Markets covered"
+    },
+    "contact": {
+      "eyebrow": "Get in touch",
+      "lede": "For partnership enquiries, consulting and introductions.",
+      "detailsHeading": "How to Reach Her",
+      "enquiriesHeading": "Enquiries welcome from",
+      "responseHeading": "Before you write",
+      "responseNote": "Messages are read directly. Please include the organisation you are writing on behalf of, and the nature of the enquiry.",
+      "privacyNote": "Details submitted through this form are used only to reply. See the privacy policy."
+    },
+    "roles": {
+      "eyebrow": "Appointments",
+      "title": "Roles and Affiliations",
+      "lede": "Current roles and the organisations represented, each named in full.",
+      "currentHeading": "Current Role",
+      "partnershipsHeading": "Business Partnerships"
+    },
+    "workingTogether": {
+      "heading": "Working Together",
+      "lede": "The kinds of engagement this work usually takes.",
+      "cta": "Start an enquiry"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} {name}. All rights reserved.",
+    "language": "Language"
+  },
+  "legal": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "cookies": "Cookie Policy",
+    "lastUpdated": "Last updated"
+  },
+  "draft": {
+    "_comment": "Rendered in the pre-launch banner. It states plainly that the profile is unapproved, because a draft that looks finished is the thing that gets forwarded and treated as final.",
+    "badge": "DRAFT",
+    "notice": "This profile is a draft and has not been approved for publication. Titles and positions are not final until confirmed in writing by the client.",
+    "pendingField": "To be confirmed",
+    "pendingSection": "This section will be published once the required information has been received."
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "There was a problem loading this page.",
+    "retry": "Try again",
+    "backHome": "Back to home",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you are looking for does not exist."
+  },
+  "memberships": {
+    "heading": "Memberships and Partnerships",
+    "role": "Role",
+    "period": "Period",
+    "periodUnconfirmed": "Period to be confirmed"
+  }
+}

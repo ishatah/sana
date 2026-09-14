@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "about": "نبذة",
+    "expertise": "مجالات الخبرة",
+    "roles": "المناصب والعضويات",
+    "press": "الصحافة",
+    "contact": "اتصال",
+    "menu": "القائمة",
+    "close": "إغلاق",
+    "skipToContent": "تخطَّ إلى المحتوى",
+    "cta": "اتصل بي"
+  },
+  "hero": {
+    "scrollDown": "مرِّر للأسفل",
+    "basedIn": "مقرها",
+    "statPositions": "المناصب",
+    "statExperience": "سنوات الخبرة",
+    "contactCta": "تواصل معنا",
+    "aboutCta": "عن عملها"
+  },
+  "about": {
+    "heading": "نبذة",
+    "experienceLabel": "الخبرة",
+    "_comment_experienceValue": "القيمة تأتي من data/identity.json (yearsOfExperience) وتُدرج كـ {years} — وما يُترجم هنا هو كلمة الوحدة فقط.",
+    "experienceValue": "{years} سنوات",
+    "sectorLabel": "القطاع",
+    "baseLabel": "المقر",
+    "marketsLabel": "الأسواق المشمولة",
+    "nationalityLabel": "الجنسية"
+  },
+  "expertise": {
+    "heading": "مجالات الخبرة",
+    "subheading": "المجالات التي يتركز عليها عملها"
+  },
+  "positions": {
+    "heading": "المناصب",
+    "current": "المناصب الحالية",
+    "previous": "المناصب السابقة",
+    "since": "منذ",
+    "role": "المنصب",
+    "organisation": "الجهة",
+    "location": "الموقع",
+    "visitSite": "موقع الجهة",
+    "sinceUnconfirmed": "سنة البدء بانتظار التأكيد",
+    "details": "التفاصيل"
+  },
+  "contact": {
+    "heading": "اتصال",
+    "subheading": "للتعاون والدعوات",
+    "emailLabel": "البريد الإلكتروني",
+    "phoneLabel": "الهاتف",
+    "addressLabel": "العنوان",
+    "locationLabel": "الموقع",
+    "emailOnlyNote": "التواصل حاليًا عبر البريد الإلكتروني فقط.",
+    "form": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "organisation": "الجهة",
+      "subject": "الموضوع",
+      "message": "الرسالة",
+      "send": "إرسال الرسالة",
+      "sending": "جارٍ الإرسال…",
+      "success": "تم إرسال رسالتك. سيصلك الرد قريبًا.",
+      "error": "تعذّر إرسال الرسالة. يُرجى المراسلة عبر البريد الإلكتروني مباشرة.",
+      "required": "هذا الحقل مطلوب",
+      "invalidEmail": "أدخل بريدًا إلكترونيًا صحيحًا",
+      "consent": "بإرسالك هذا النموذج فإنك توافق على معالجة بياناتك للرد على رسالتك."
+    },
+    "copied": "تم النسخ",
+    "copyAddress": "نسخ البريد الإلكتروني"
+  },
+  "pages": {
+    "about": {
+      "eyebrow": "الملف الشخصي",
+      "lede": "تطوير الأعمال والشراكات الاستراتيجية بين أوروبا والشرق الأوسط.",
+      "profileHeading": "الملف الشخصي",
+      "focusHeading": "مجال التركيز",
+      "primaryIdentityLabel": "التركيز الأساسي",
+      "secondaryIdentityLabel": "التركيز الثانوي",
+      "audienceLabel": "تعمل مع",
+      "fullBioHeading": "السيرة الكاملة",
+      "journeyHeading": "السيرة والمسيرة"
+    },
+    "expertise": {
+      "eyebrow": "القدرات",
+      "lede": "المجالات التي يتركز فيها عملها، والأسواق التي يغطيها.",
+      "areasHeading": "المجالات الأساسية",
+      "marketsHeading": "الأسواق",
+      "sectorLabel": "القطاع",
+      "baseLabel": "المقر",
+      "marketsLabel": "الأسواق المشمولة"
+    },
+    "contact": {
+      "eyebrow": "تواصل معنا",
+      "lede": "للاستفسار عن الشراكات والاستشارات والتعارف المهني.",
+      "detailsHeading": "طرق التواصل",
+      "enquiriesHeading": "نرحب باستفسارات",
+      "responseHeading": "قبل أن تكتب",
+      "responseNote": "تُقرأ الرسائل مباشرة. يُرجى ذكر الجهة التي تكتب نيابةً عنها وطبيعة الاستفسار.",
+      "privacyNote": "تُستخدم البيانات المُرسلة عبر هذا النموذج للرد فقط. يُرجى الاطلاع على سياسة الخصوصية."
+    },
+    "roles": {
+      "eyebrow": "المناصب",
+      "title": "المناصب والعضويات",
+      "lede": "المناصب الحالية والجهات التي تمثلها، كل منها باسمها الكامل.",
+      "currentHeading": "المنصب الحالي",
+      "partnershipsHeading": "الشراكات التجارية"
+    },
+    "workingTogether": {
+      "heading": "العمل معًا",
+      "lede": "أنواع التعاون التي يأخذها هذا العمل عادةً.",
+      "cta": "ابدأ استفسارًا"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} {name}. جميع الحقوق محفوظة.",
+    "language": "اللغة"
+  },
+  "legal": {
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الاستخدام",
+    "cookies": "سياسة ملفات الارتباط",
+    "lastUpdated": "آخر تحديث"
+  },
+  "draft": {
+    "_comment": "Rendered in the pre-launch banner. It states plainly that the profile is unapproved, because a draft that looks finished is the thing that gets forwarded and treated as final.",
+    "badge": "مسودة",
+    "notice": "هذا الملف مسودة ولم يُعتمد للنشر. الألقاب والمناصب غير نهائية إلى أن تؤكدها العميلة كتابيًا.",
+    "pendingField": "بانتظار التأكيد",
+    "pendingSection": "سيُنشر هذا القسم فور استلام المعلومات المطلوبة."
+  },
+  "error": {
+    "title": "حدث خطأ ما",
+    "description": "تعذّر تحميل هذه الصفحة.",
+    "retry": "أعد المحاولة",
+    "backHome": "العودة إلى الرئيسية",
+    "notFoundTitle": "الصفحة غير موجودة",
+    "notFoundDescription": "الصفحة التي تبحث عنها غير موجودة."
+  },
+  "memberships": {
+    "heading": "العضويات والشراكات",
+    "role": "الصفة",
+    "period": "الفترة",
+    "periodUnconfirmed": "الفترة قيد التأكيد"
+  }
+}

@@ -1,0 +1,63 @@
+- generic:
+  - generic [active]:
+    - generic [ref=f2e3]:
+      - generic [ref=f2e4]:
+        - navigation [ref=f2e6]:
+          - button [disabled] [ref=f2e7]:
+            - img "previous" [ref=f2e8]
+          - generic [ref=f2e10]:
+            - generic [ref=f2e11]: 1/
+            - text: "1"
+          - button [disabled] [ref=f2e12]:
+            - img "next" [ref=f2e13]
+        - link "Next.js 16.2.6 (stale) Turbopack" [ref=f2e16] [cursor=pointer]:
+          - /url: https://nextjs.org/docs/messages/version-staleness
+          - generic "There is a newer version (16.3.5) available, upgrade recommended!" [ref=f2e19]: Next.js 16.2.6 (stale)
+          - generic [ref=f2e20]: Turbopack
+      - dialog "Build Error" [ref=f2e22]:
+        - generic [ref=f2e25]:
+          - generic [ref=f2e26]:
+            - generic [ref=f2e27]:
+              - generic [ref=f2e28]: Build Error
+              - generic [ref=f2e30]:
+                - button "Copy Error Info" [ref=f2e31] [cursor=pointer]
+                - button "No related documentation found" [disabled] [ref=f2e34]
+                - button "Attach Node.js inspector" [ref=f2e37] [cursor=pointer]
+            - generic [ref=f2e46]: Expected ',', got 'ident'
+          - generic [ref=f2e49]:
+            - generic [ref=f2e51]:
+              - generic [ref=f2e56]: ./components/about-section.tsx (70:10)
+              - button "Open in editor" [ref=f2e57] [cursor=pointer]
+            - generic [ref=f2e62]:
+              - generic [ref=f2e63]: Expected ',', got 'ident'
+              - generic [ref=f2e64]: 68 |
+              - generic [ref=f2e65]: begin together and the column simply runs longer.
+              - generic [ref=f2e66]: 69 |
+              - generic [ref=f2e67]: "*/"
+              - generic [ref=f2e68]: "}"
+              - text: ">"
+              - generic [ref=f2e69]: 70 |
+              - generic [ref=f2e70]: <div className=
+              - generic [ref=f2e71]: "\"grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20\""
+              - generic [ref=f2e72]: ">"
+              - generic [ref=f2e73]: "|"
+              - text: ^^^^^^^^^
+              - generic [ref=f2e74]: 71 |
+              - generic [ref=f2e75]: "{/*"
+              - generic [ref=f2e76]: 72 |
+              - text: "NO `Reveal` WRAPPER ON EITHER COLUMN"
+              - generic [ref=f2e77]: — the section
+              - generic [ref=f2e78]: "'s anime.js recipe owns"
+              - generic [ref=f2e79]: 73 |
+              - generic [ref=f2e80]: both entrances now.
+              - generic [ref=f2e81]: "Parsing ecmascript source code failed Import trace: Server Component: ./components/about-section.tsx ./app/[locale]/page.tsx"
+        - generic [ref=f2e82]: "1"
+        - generic [ref=f2e83]: "2"
+    - generic [ref=f2e88] [cursor=pointer]:
+      - button "Open Next.js Dev Tools" [ref=f2e89]
+      - button "Open issues overlay" [ref=f2e94]:
+        - generic [ref=f2e95]:
+          - generic [aria-hidden] [ref=f2e96]: "0"
+          - generic [ref=f2e97]: "1"
+        - generic [ref=f2e98]: Issue
+  - alert [ref=f2e99]

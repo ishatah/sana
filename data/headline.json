@@ -1,0 +1,46 @@
+{
+  "_comment": "The hero and the page titles. Every role named here must correspond to a published row in data/positions.json — the hero must not claim something the positions table has not cleared.",
+  "primaryTitle": {
+    "en": "Consultant and Strategic Representative, International Business Council (IBC)",
+    "ar": "مستشارة وممثلة استراتيجية في مجلس الأعمال الدولي (IBC)"
+  },
+  "shortTitle": {
+    "en": "Business development and strategic partnerships",
+    "ar": "تطوير الأعمال والشراكات الاستراتيجية"
+  },
+  "heroKicker": {
+    "en": "I am Sanae Rakik",
+    "ar": "أنا سناء رقيق"
+  },
+  "_comment_rotating": "Rendered as the large accent line in the hero, plus the peers beneath it. Intake form section 1 gives the primary professional title as 'سيدة أعمال — تطوير الأعمال والشراكات الاستراتيجية'.",
+  "rotatingRoles": {
+    "en": ["Entrepreneur", "Business Development", "Strategic Partnerships"],
+    "ar": ["سيدة أعمال", "تطوير الأعمال", "الشراكات الاستراتيجية"]
+  },
+  "locations": [
+    {
+      "label": { "en": "Based in", "ar": "مقر الإقامة" },
+      "value": { "en": "Netherlands", "ar": "هولندا" }
+    },
+    {
+      "label": { "en": "Active across", "ar": "نطاق النشاط" },
+      "value": { "en": "Europe · Gulf · Middle East", "ar": "أوروبا · الخليج · الشرق الأوسط" }
+    }
+  ],
+  "_comment_positioning": "Intake form section 2. 'الصفة المراد إبرازها: سيدة أعمال ومستشارة — مع إبراز صفة ريادة الأعمال والتطوير الدولي للأعمال'. The audience list is section 2's الجمهور الأساسي verbatim.",
+  "positioning": {
+    "primaryIdentity": {
+      "en": "Businesswoman and consultant",
+      "ar": "سيدة أعمال ومستشارة"
+    },
+    "secondaryIdentity": {
+      "en": "Entrepreneurship and international business development",
+      "ar": "ريادة الأعمال والتطوير الدولي للأعمال"
+    },
+    "audience": {
+      "en": "Investors, clients, entrepreneurs, companies, strategic partners, institutions",
+      "ar": "مستثمرون، عملاء، رواد أعمال، شركات، شركاء استراتيجيون، مؤسسات"
+    },
+    "tone": "formal-professional"
+  }
+}

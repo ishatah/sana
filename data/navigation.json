@@ -1,0 +1,95 @@
+{
+  "_comment": "`enabled:false` hides an entry until the section it points at has content. The page set is intake form section 3's checked list, merged where her content does not fill two pages: المناصب and العضويات والشراكات are one route because both describe the same organisation, and السيرة والمسيرة sits inside /about. NOTE: `href` must match the id of the matching section on the home page — components/site-nav.tsx builds its scroll-spy from it, and a mismatch observes nothing and fails silently.",
+  "main": [
+    {
+      "id": "top",
+      "href": "#top",
+      "kind": "anchor",
+      "label": {
+        "en": "Home",
+        "ar": "الرئيسية"
+      },
+      "enabled": true
+    },
+    {
+      "id": "about",
+      "href": "#section-about",
+      "path": "/about",
+      "kind": "both",
+      "label": {
+        "en": "About",
+        "ar": "نبذة عني"
+      },
+      "enabled": true
+    },
+    {
+      "id": "expertise",
+      "href": "#section-expertise",
+      "path": "/expertise",
+      "kind": "both",
+      "label": {
+        "en": "Expertise",
+        "ar": "مجالات الخبرة"
+      },
+      "enabled": true
+    },
+    {
+      "id": "roles",
+      "href": "#section-roles",
+      "path": "/roles",
+      "kind": "both",
+      "label": {
+        "en": "Roles",
+        "ar": "المناصب والعضويات"
+      },
+      "enabled": true
+    },
+    {
+      "id": "press",
+      "href": "#section-press",
+      "kind": "anchor",
+      "label": {
+        "en": "Press",
+        "ar": "الصحافة"
+      },
+      "enabled": false
+    },
+    {
+      "id": "contact",
+      "href": "#section-contact",
+      "path": "/contact",
+      "kind": "both",
+      "label": {
+        "en": "Contact",
+        "ar": "اتصل بي"
+      },
+      "enabled": true
+    }
+  ],
+  "legal": [
+    {
+      "id": "privacy",
+      "href": "/privacy",
+      "label": {
+        "en": "Privacy",
+        "ar": "الخصوصية"
+      }
+    },
+    {
+      "id": "terms",
+      "href": "/terms",
+      "label": {
+        "en": "Terms",
+        "ar": "الشروط"
+      }
+    },
+    {
+      "id": "cookies",
+      "href": "/cookies",
+      "label": {
+        "en": "Cookies",
+        "ar": "ملفات الارتباط"
+      }
+    }
+  ]
+}

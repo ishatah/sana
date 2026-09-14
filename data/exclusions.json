@@ -1,0 +1,80 @@
+{
+  "_comment": "Intake form section 3's 'ما يجب تجنبه' plus section 6's 'بيانات لا يجوز نشرها'. This file is the record of what must NOT appear in published copy, and why. It is read by /admin/exclusions and mirrored by the banned-phrase rules in lib/verification.ts and scripts/check-publish-gate.mjs. `override` stays false unless the client overrides in writing; the neverPublished list below cannot be overridden at all.",
+  "items": [
+    {
+      "id": "unverified-figures",
+      "item": "Figures, percentages or growth claims that are not documented",
+      "reason": {
+        "en": "Section 3: 'وأي عبارات مبالغة أو أرقام ونِسب غير موثقة'. Section 4 adds that no figures exist that can be published and verified at this stage. A number on a profile page reads as audited whether or not it is.",
+        "ar": "القسم 3: «وأي عبارات مبالغة أو أرقام ونِسب غير موثقة». والقسم 4 يضيف أنه لا توجد أرقام قابلة للنشر والتحقق في هذه المرحلة. والرقم على صفحة تعريفية يُقرأ كأنه مدقق سواء كان كذلك أم لا."
+      },
+      "informed": true,
+      "override": false
+    },
+    {
+      "id": "client-and-partner-names",
+      "item": "Names of clients, or of partner companies before they are approved",
+      "reason": {
+        "en": "Section 3: 'وأي إشارة إلى قيم صفقات أو أسماء عملاء'. Section 6 repeats it for partners. The two ventures she is a partner in are held at publish:false in data/positions.json until the names arrive in writing.",
+        "ar": "القسم 3: «وأي إشارة إلى قيم صفقات أو أسماء عملاء». ويكرر القسم 6 ذلك بشأن الشركاء. والمشروعان اللذان هي شريكة فيهما محجوبان في data/positions.json حتى ترد الأسماء كتابيًا."
+      },
+      "informed": true,
+      "override": false
+    },
+    {
+      "id": "deal-values",
+      "item": "Transaction values, commissions or any financial figure",
+      "reason": {
+        "en": "Section 6: 'وأي تفاصيل صفقات وقيم مالية'. A profile that quotes deal sizes invites being read as a solicitation, which the terms page expressly disclaims.",
+        "ar": "القسم 6: «وأي تفاصيل صفقات وقيم مالية». والملف الذي يذكر أحجام الصفقات يُقرأ كأنه عرض، وهو ما تنفيه صفحة الشروط صراحةً."
+      },
+      "informed": true,
+      "override": false
+    },
+    {
+      "id": "promotional-tone",
+      "item": "Advertising or promotional register, and loud visual treatment",
+      "reason": {
+        "en": "Section 3: 'تجنّب الأسلوب الترويجي أو الإعلاني، والألوان الصارخة، والعناصر الحركية الزائدة'. The requested character is 'رسمي · قيادي' — formal and leadership-facing.",
+        "ar": "القسم 3: «تجنّب الأسلوب الترويجي أو الإعلاني، والألوان الصارخة، والعناصر الحركية الزائدة». والطابع المطلوب «رسمي · قيادي»."
+      },
+      "informed": true,
+      "override": false
+    },
+    {
+      "id": "non-professional-imagery",
+      "item": "Personal, family or social photographs, and any low-quality image",
+      "reason": {
+        "en": "Section 5: 'أي صور شخصية أو عائلية أو اجتماعية، وأي صور غير احترافية أو منخفضة الجودة، وأي صور تظهر فيها أطراف أخرى دون موافقتها'.",
+        "ar": "القسم 5: «أي صور شخصية أو عائلية أو اجتماعية، وأي صور غير احترافية أو منخفضة الجودة، وأي صور تظهر فيها أطراف أخرى دون موافقتها»."
+      },
+      "informed": true,
+      "override": false
+    },
+    {
+      "id": "unearned-title-prefix",
+      "item": "Any honorific or title before the name",
+      "reason": {
+        "en": "Section 6 fixes the name format as 'سناء رقيق' / 'Sanae Rakik', explicitly 'دون لقب'. identity.honorific stays empty and no override unlocks a prefix.",
+        "ar": "القسم 6 يحدد صيغة الاسم «سناء رقيق» / «Sanae Rakik» ودون لقب. ويبقى الحقل فارغًا ولا يفتحه أي استثناء."
+      },
+      "informed": true,
+      "override": false
+    }
+  ],
+  "neverPublished": {
+    "_comment": "Intake form section 6, 'بيانات لا يجوز نشرها' — NEVER PUBLISHED UNDER ANY CIRCUMSTANCE. `overrideAllowed` is false for this whole list; no client override can unlock it.",
+    "overrideAllowed": false,
+    "items": [
+      "Home address",
+      "Personal telephone numbers",
+      "Personal email address",
+      "Client names",
+      "Partner names not yet approved for publication",
+      "Deal details and financial values",
+      "Passport or national ID numbers",
+      "Bank or payment details",
+      "Family member details"
+    ]
+  }
+}

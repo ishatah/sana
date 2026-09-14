@@ -1,0 +1,2996 @@
+[     121ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     141ms] [LOG] [Fast Refresh] done in 121ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     254ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     324ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     359ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     575ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     592ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   36767ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   36806ms] [LOG] [Fast Refresh] done in 143ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   36908ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   36910ms] [LOG] [Fast Refresh] done in 103ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   37675ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   37827ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   37891ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   37966ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   38069ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   38602ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   38603ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   38705ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   39160ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   39160ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   39161ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=yWTPUyHVHtWLudsj:0
+[   39283ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[   40062ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/development/_clientMiddlewareManifest.js' because its MIME type ('application/json') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/:0
+[   40171ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_cjs_react-dom-client_development_0z3nh7o.js:16702
+[   40254ms] Error: ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx
+
+
+    at <unknown> (Error: ./components/quote.tsx:27:14)
+    at Object.getCompilationErrors (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\lib\dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\next-dev-server.js:720:42)
+    at DevServer.findPageComponents (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\next-dev-server.js:690:43)
+    at async DevServer.renderErrorToResponseImpl (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\base-server.js:1753:26)
+[   40254ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   40257ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40279ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/favicon.ico:0
+[   40336ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40394ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40455ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40519ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40581ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40643ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40705ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40767ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40830ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40893ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   40955ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41017ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41079ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41143ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41204ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41266ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41327ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41389ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41450ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41513ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41575ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41636ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41698ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41759ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41822ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41884ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   41946ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42008ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42070ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42132ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42194ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42256ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42319ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42380ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42442ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42503ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42565ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42626ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42688ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42749ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42812ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42874ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42935ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   42997ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43059ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43120ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43183ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43244ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43307ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43369ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43432ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43494ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43557ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43620ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43681ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43744ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43806ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43868ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43930ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   43993ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44054ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44115ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44178ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44239ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44302ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44364ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44425ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44486ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44549ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44610ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44673ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44735ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44796ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44859ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44919ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   44980ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45043ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45104ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45165ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45227ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45289ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45351ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45413ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45474ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45537ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45600ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45661ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45723ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45784ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45846ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45908ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   45970ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46032ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46093ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46155ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46216ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46279ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46342ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46405ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46466ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46528ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46591ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46653ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46716ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46778ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46841ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46903ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   46966ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47027ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47088ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47150ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47213ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47275ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47337ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47399ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47462ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47524ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47586ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47648ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47709ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47770ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47832ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47895ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   47958ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48021ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48084ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48145ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48206ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48270ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48333ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48395ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48458ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48519ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48582ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48644ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48706ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48768ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48829ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48890ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   48953ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49015ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49076ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49138ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49200ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49262ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49324ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49386ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49448ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49511ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49573ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49634ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49695ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49758ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49819ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49879ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   49941ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50004ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50067ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50130ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50191ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50253ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50314ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50375ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50437ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50499ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50562ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50623ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50686ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50749ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50810ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50873ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50935ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   50998ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   51059ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   51121ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   51183ms] [ERROR] ./components/quote.tsx:27:14
+Expected ',', got 'ident'
+  25 |       without the viewer being able to name why.
+  26 |     */}
+> 27 |     <section className="section-pad relative overflow-hidden bg-[color:var(--surface)]/50">
+     |              ^^^^^^^^^
+  28 |       <div className="gradient-edge-top" />
+  29 |       <div className="container-page relative z-10">
+  30 |         <Reveal>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/quote.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   51285ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   51402ms] [LOG] [Fast Refresh] done in 192ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   51583ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   52045ms] [LOG] [Fast Refresh] done in 564ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   52176ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   52285ms] [LOG] [Fast Refresh] done in 214ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   52626ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   52655ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477

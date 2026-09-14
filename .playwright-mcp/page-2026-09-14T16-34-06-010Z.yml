@@ -1,0 +1,98 @@
+- generic [active] [ref=f10e1]:
+  - link "Skip to content" [ref=f10e2] [cursor=pointer]:
+    - /url: "#main"
+  - status [ref=f10e3]:
+    - generic [ref=f10e4]:
+      - generic [ref=f10e5]: DRAFT
+      - generic [ref=f10e6]: This profile is a draft and has not been approved for publication. Titles and positions are not final until confirmed in writing by the client.
+  - banner [ref=f10e7]:
+    - generic [ref=f10e8]:
+      - link "Sanae Rakik" [ref=f10e9] [cursor=pointer]:
+        - /url: "#top"
+      - navigation "Menu" [ref=f10e10]:
+        - link "Home" [ref=f10e11] [cursor=pointer]:
+          - /url: /#top
+        - link "About" [ref=f10e12] [cursor=pointer]:
+          - /url: /about
+        - link "Expertise" [ref=f10e13] [cursor=pointer]:
+          - /url: /expertise
+        - link "Positions" [ref=f10e14] [cursor=pointer]:
+          - /url: /positions
+        - link "Memberships" [ref=f10e15] [cursor=pointer]:
+          - /url: /memberships
+        - link "Contact" [ref=f10e16] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=f10e18]:
+        - group "Language" [ref=f10e19]:
+          - button "EN" [disabled] [ref=f10e20]
+          - button "AR" [ref=f10e21]
+        - link "Contact me" [ref=f10e22] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=f10e23]:
+    - generic [ref=f10e26]:
+      - paragraph [ref=f10e27]: Get in touch
+      - heading "Contact" [level=1] [ref=f10e28]
+      - paragraph [ref=f10e30]: For partnership enquiries, consulting and introductions.
+    - generic [ref=f10e32]:
+      - generic [ref=f10e33]:
+        - heading "How to Reach Her" [level=2] [ref=f10e34]
+        - paragraph [ref=f10e36]: For collaboration and invitations
+      - generic [ref=f10e37]:
+        - generic [ref=f10e40]:
+          - heading "Location" [level=3] [ref=f10e41]
+          - paragraph [ref=f10e45]: Netherlands
+        - generic [ref=f10e47]:
+          - generic [ref=f10e48]:
+            - generic [ref=f10e49]:
+              - generic [ref=f10e50]: Your name
+              - textbox "Your name" [ref=f10e51]
+            - generic [ref=f10e52]:
+              - generic [ref=f10e53]: Your email
+              - textbox "Your email" [ref=f10e54]
+          - generic [ref=f10e55]:
+            - generic [ref=f10e56]: Your organisation
+            - textbox "Your organisation" [ref=f10e57]
+          - generic [ref=f10e58]:
+            - generic [ref=f10e59]: Subject
+            - textbox "Subject" [ref=f10e60]
+          - generic [ref=f10e61]:
+            - generic [ref=f10e62]: Your message
+            - textbox "Your message" [ref=f10e63]
+          - paragraph [ref=f10e64]: By sending this form you agree to your details being processed so your message can be answered.
+          - button "Send Message" [ref=f10e65]
+    - generic [ref=f10e70]:
+      - heading "Enquiries welcome from" [level=2] [ref=f10e72]
+      - list [ref=f10e74]:
+        - listitem [ref=f10e75]:
+          - button "Investors" [ref=f10e76]
+        - listitem [ref=f10e77]:
+          - button "clients" [ref=f10e78]
+        - listitem [ref=f10e79]:
+          - button "entrepreneurs" [ref=f10e80]
+        - listitem [ref=f10e81]:
+          - button "companies" [ref=f10e82]
+        - listitem [ref=f10e83]:
+          - button "strategic partners" [ref=f10e84]
+        - listitem [ref=f10e85]:
+          - button "institutions" [ref=f10e86]
+    - generic [ref=f10e88]:
+      - heading "Before you write" [level=2] [ref=f10e90]
+      - generic [ref=f10e92]:
+        - paragraph [ref=f10e93]: Messages are read directly. Please include the organisation you are writing on behalf of, and the nature of the enquiry.
+        - paragraph [ref=f10e94]:
+          - text: Details submitted through this form are used only to reply. See the privacy policy.
+          - link "Privacy Policy" [ref=f10e95] [cursor=pointer]:
+            - /url: /privacy
+  - contentinfo [ref=f10e96]:
+    - generic [ref=f10e97]:
+      - paragraph [ref=f10e98]: © 2026 Sanae Rakik. All rights reserved.
+      - navigation "Legal" [ref=f10e99]:
+        - link "Privacy" [ref=f10e100] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f10e101] [cursor=pointer]:
+          - /url: /terms
+        - link "Cookies" [ref=f10e102] [cursor=pointer]:
+          - /url: /cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f10e108] [cursor=pointer]
+  - alert [ref=f10e112]

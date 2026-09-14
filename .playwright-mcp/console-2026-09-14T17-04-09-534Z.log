@@ -1,0 +1,2945 @@
+[      32ms] [WARNING] The resource http://localhost:3000/_next/image?url=%2Fassets%2Fsanae-rakik-portrait.jpg&w=640&q=75 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[     140ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     154ms] [LOG] [Fast Refresh] done in 129ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     374ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     468ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     655ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     711ms] [LOG] [Fast Refresh] done in 159ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   21330ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   21375ms] [LOG] [Fast Refresh] done in 155ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   23668ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   23731ms] [LOG] [Fast Refresh] done in 164ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   44058ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   44111ms] [LOG] [Fast Refresh] done in 82ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   49052ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   49203ms] [LOG] [Fast Refresh] done in 197ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   49334ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   49549ms] [LOG] [Fast Refresh] done in 317ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   49847ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   49872ms] [LOG] [Fast Refresh] done in 125ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   49977ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   49992ms] [LOG] [Fast Refresh] done in 119ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   56618ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   56619ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   60526ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   60769ms] [LOG] [Fast Refresh] done in 347ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   63966ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   64217ms] [LOG] [Fast Refresh] done in 357ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   65505ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   65720ms] [LOG] [Fast Refresh] done in 322ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   68332ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   68490ms] [LOG] [Fast Refresh] done in 262ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   69556ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   69728ms] [LOG] [Fast Refresh] done in 285ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   76082ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   77202ms] [LOG] [Fast Refresh] done in 1213ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   77335ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   77882ms] [LOG] [Fast Refresh] done in 649ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   78010ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   78159ms] [LOG] [Fast Refresh] done in 253ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   78377ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   79033ms] [LOG] [Fast Refresh] done in 760ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   79479ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   79514ms] [LOG] [Fast Refresh] done in 135ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   79617ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   79645ms] [LOG] [Fast Refresh] done in 130ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   79688ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   79864ms] [LOG] [Fast Refresh] done in 129ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   79989ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   79998ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80102ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80145ms] [LOG] [Fast Refresh] done in 147ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80268ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80274ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80406ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80428ms] [LOG] [Fast Refresh] done in 123ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80531ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80578ms] [LOG] [Fast Refresh] done in 149ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80706ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80867ms] [LOG] [Fast Refresh] done in 261ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   80998ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81119ms] [LOG] [Fast Refresh] done in 223ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81289ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81323ms] [LOG] [Fast Refresh] done in 134ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81426ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81452ms] [LOG] [Fast Refresh] done in 128ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81556ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81651ms] [LOG] [Fast Refresh] done in 198ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81790ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81959ms] [LOG] [Fast Refresh] done in 272ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   82098ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   82281ms] [LOG] [Fast Refresh] done in 286ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   82410ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   82490ms] [LOG] [Fast Refresh] done in 183ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   82593ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   82691ms] [LOG] [Fast Refresh] done in 200ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   82818ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   82858ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83196ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83205ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83327ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83363ms] [LOG] [Fast Refresh] done in 137ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83489ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83506ms] [LOG] [Fast Refresh] done in 120ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83627ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83639ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83764ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83795ms] [LOG] [Fast Refresh] done in 132ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83897ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84070ms] [LOG] [Fast Refresh] done in 276ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84198ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84209ms] [LOG] [Fast Refresh] done in 114ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84335ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84470ms] [LOG] [Fast Refresh] done in 235ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84606ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84639ms] [LOG] [Fast Refresh] done in 136ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84743ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84782ms] [LOG] [Fast Refresh] done in 143ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84910ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   84925ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   85052ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   85070ms] [LOG] [Fast Refresh] done in 121ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   85173ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   85263ms] [LOG] [Fast Refresh] done in 193ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   85498ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   85559ms] [LOG] [Fast Refresh] done in 162ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   85789ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   85840ms] [LOG] [Fast Refresh] done in 152ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   86108ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   86111ms] [LOG] [Fast Refresh] done in 104ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   86631ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   86670ms] [LOG] [Fast Refresh] done in 142ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   87004ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   87073ms] [LOG] [Fast Refresh] done in 170ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   87331ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   87392ms] [LOG] [Fast Refresh] done in 164ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   87510ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   87510ms] [LOG] [Fast Refresh] done in 102ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   87869ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   87929ms] [LOG] [Fast Refresh] done in 162ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   88318ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   88398ms] [LOG] [Fast Refresh] done in 182ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   88673ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   88695ms] [LOG] [Fast Refresh] done in 125ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   88798ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   88823ms] [LOG] [Fast Refresh] done in 127ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   88926ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89004ms] [LOG] [Fast Refresh] done in 181ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89135ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89159ms] [LOG] [Fast Refresh] done in 125ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89293ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89309ms] [LOG] [Fast Refresh] done in 117ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89431ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89556ms] [LOG] [Fast Refresh] done in 226ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89685ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89714ms] [LOG] [Fast Refresh] done in 129ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89818ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   89865ms] [LOG] [Fast Refresh] done in 150ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   90056ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   91234ms] [LOG] [Fast Refresh] done in 1278ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   91585ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   91627ms] [LOG] [Fast Refresh] done in 144ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   91764ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   91824ms] [LOG] [Fast Refresh] done in 161ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92069ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92078ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92202ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92223ms] [LOG] [Fast Refresh] done in 124ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92364ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92398ms] [LOG] [Fast Refresh] done in 136ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92500ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92623ms] [LOG] [Fast Refresh] done in 224ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92752ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92771ms] [LOG] [Fast Refresh] done in 121ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92873ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92923ms] [LOG] [Fast Refresh] done in 151ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   93050ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   93094ms] [LOG] [Fast Refresh] done in 146ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   93197ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   93297ms] [LOG] [Fast Refresh] done in 203ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   93460ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   93475ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   93633ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   93768ms] [LOG] [Fast Refresh] done in 237ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   93893ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   93944ms] [LOG] [Fast Refresh] done in 152ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   94072ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   94372ms] [LOG] [Fast Refresh] done in 403ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   94506ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   94545ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   94646ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   94731ms] [LOG] [Fast Refresh] done in 186ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   94852ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   94987ms] [LOG] [Fast Refresh] done in 238ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95114ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95126ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95244ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95275ms] [LOG] [Fast Refresh] done in 133ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95410ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95438ms] [LOG] [Fast Refresh] done in 130ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95539ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95546ms] [LOG] [Fast Refresh] done in 108ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95672ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95684ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95806ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   95944ms] [LOG] [Fast Refresh] done in 242ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96081ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96131ms] [LOG] [Fast Refresh] done in 150ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96264ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96271ms] [LOG] [Fast Refresh] done in 108ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96389ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96442ms] [LOG] [Fast Refresh] done in 154ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96564ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96570ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96693ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96807ms] [LOG] [Fast Refresh] done in 215ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96922ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   96956ms] [LOG] [Fast Refresh] done in 134ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   97084ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   97153ms] [LOG] [Fast Refresh] done in 169ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   97256ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98095ms] [LOG] [Fast Refresh] done in 938ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98218ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98470ms] [LOG] [Fast Refresh] done in 353ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98573ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98653ms] [LOG] [Fast Refresh] done in 181ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98773ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98813ms] [LOG] [Fast Refresh] done in 143ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98939ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98952ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99077ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99130ms] [LOG] [Fast Refresh] done in 155ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99231ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99247ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99381ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99514ms] [LOG] [Fast Refresh] done in 235ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99644ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99660ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99764ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99812ms] [LOG] [Fast Refresh] done in 151ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   99981ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100097ms] [LOG] [Fast Refresh] done in 219ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100202ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100238ms] [LOG] [Fast Refresh] done in 139ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100340ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100341ms] [LOG] [Fast Refresh] done in 103ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100473ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100498ms] [LOG] [Fast Refresh] done in 129ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100777ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100783ms] [LOG] [Fast Refresh] done in 108ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100910ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  100918ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101048ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101076ms] [LOG] [Fast Refresh] done in 131ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101181ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101210ms] [LOG] [Fast Refresh] done in 132ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101341ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101347ms] [LOG] [Fast Refresh] done in 108ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101468ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101491ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101681ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101728ms] [LOG] [Fast Refresh] done in 149ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101831ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  101927ms] [LOG] [Fast Refresh] done in 198ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102057ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102074ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102189ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102206ms] [LOG] [Fast Refresh] done in 120ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102310ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102345ms] [LOG] [Fast Refresh] done in 139ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102447ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102513ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102635ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102662ms] [LOG] [Fast Refresh] done in 128ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102798ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  102823ms] [LOG] [Fast Refresh] done in 125ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  108619ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  109286ms] [LOG] [Fast Refresh] done in 766ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  109436ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  109879ms] [LOG] [Fast Refresh] done in 544ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  110010ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  110027ms] [LOG] [Fast Refresh] done in 119ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  110131ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  110173ms] [LOG] [Fast Refresh] done in 144ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  110348ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  110719ms] [LOG] [Fast Refresh] done in 473ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  110823ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  111241ms] [LOG] [Fast Refresh] done in 520ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  111435ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  111466ms] [LOG] [Fast Refresh] done in 133ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  111569ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  111601ms] [LOG] [Fast Refresh] done in 136ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  111731ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  111776ms] [LOG] [Fast Refresh] done in 145ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  111906ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  111967ms] [LOG] [Fast Refresh] done in 161ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  112094ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  112356ms] [LOG] [Fast Refresh] done in 365ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  112640ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  112875ms] [LOG] [Fast Refresh] done in 338ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  113202ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  113220ms] [LOG] [Fast Refresh] done in 121ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  113331ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  113374ms] [LOG] [Fast Refresh] done in 146ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  113476ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  113498ms] [LOG] [Fast Refresh] done in 124ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  113610ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  113944ms] [LOG] [Fast Refresh] done in 438ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  114073ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  114213ms] [LOG] [Fast Refresh] done in 243ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  114344ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  114677ms] [LOG] [Fast Refresh] done in 435ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  114861ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  114879ms] [LOG] [Fast Refresh] done in 120ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  115006ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  115053ms] [LOG] [Fast Refresh] done in 150ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  115156ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  115165ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  115306ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  115379ms] [LOG] [Fast Refresh] done in 174ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  115481ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  115515ms] [LOG] [Fast Refresh] done in 135ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  115619ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  115880ms] [LOG] [Fast Refresh] done in 364ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  116069ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  116292ms] [LOG] [Fast Refresh] done in 326ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  116607ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  116643ms] [LOG] [Fast Refresh] done in 138ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  116773ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  116805ms] [LOG] [Fast Refresh] done in 134ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  116939ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  116991ms] [LOG] [Fast Refresh] done in 151ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  117092ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  117567ms] [LOG] [Fast Refresh] done in 572ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  118307ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  118459ms] [LOG] [Fast Refresh] done in 253ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  118586ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  118597ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  118718ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  119024ms] [LOG] [Fast Refresh] done in 406ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  119127ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  119168ms] [LOG] [Fast Refresh] done in 144ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  119352ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  119389ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  119490ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  119558ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  119717ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  119930ms] [LOG] [Fast Refresh] done in 313ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  120061ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  120220ms] [LOG] [Fast Refresh] done in 261ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  120335ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  120402ms] [LOG] [Fast Refresh] done in 166ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  120535ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  120863ms] [LOG] [Fast Refresh] done in 429ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  121190ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  121203ms] [LOG] [Fast Refresh] done in 116ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  121409ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  121411ms] [LOG] [Fast Refresh] done in 102ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  121548ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  121672ms] [LOG] [Fast Refresh] done in 224ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  121777ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  121826ms] [LOG] [Fast Refresh] done in 152ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  121931ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  122076ms] [LOG] [Fast Refresh] done in 248ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  122210ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  122234ms] [LOG] [Fast Refresh] done in 125ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  122335ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  122739ms] [LOG] [Fast Refresh] done in 505ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  122931ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  122939ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  123064ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  123090ms] [LOG] [Fast Refresh] done in 128ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  123260ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  123403ms] [LOG] [Fast Refresh] done in 246ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  123532ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  123737ms] [LOG] [Fast Refresh] done in 305ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  123860ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  123906ms] [LOG] [Fast Refresh] done in 149ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  124073ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  124210ms] [LOG] [Fast Refresh] done in 239ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  124615ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  124656ms] [LOG] [Fast Refresh] done in 143ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  124786ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  124811ms] [LOG] [Fast Refresh] done in 127ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  124914ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  125070ms] [LOG] [Fast Refresh] done in 259ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  125198ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  125436ms] [LOG] [Fast Refresh] done in 338ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  125594ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  125624ms] [LOG] [Fast Refresh] done in 131ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  125727ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  125905ms] [LOG] [Fast Refresh] done in 281ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  126008ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  126145ms] [LOG] [Fast Refresh] done in 239ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  126290ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  126321ms] [LOG] [Fast Refresh] done in 136ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  126424ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  126483ms] [LOG] [Fast Refresh] done in 161ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  126604ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  126743ms] [LOG] [Fast Refresh] done in 242ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  126915ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  127033ms] [LOG] [Fast Refresh] done in 219ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  127165ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  127173ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  127298ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  127338ms] [LOG] [Fast Refresh] done in 144ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  127476ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  127621ms] [LOG] [Fast Refresh] done in 248ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  127748ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  127862ms] [LOG] [Fast Refresh] done in 216ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128025ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128034ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128156ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128191ms] [LOG] [Fast Refresh] done in 137ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128294ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128454ms] [LOG] [Fast Refresh] done in 263ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128590ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128627ms] [LOG] [Fast Refresh] done in 138ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128731ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128755ms] [LOG] [Fast Refresh] done in 128ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128856ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128886ms] [LOG] [Fast Refresh] done in 130ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  128988ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  129025ms] [LOG] [Fast Refresh] done in 138ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  129126ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  129308ms] [LOG] [Fast Refresh] done in 283ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  129436ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  129565ms] [LOG] [Fast Refresh] done in 232ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  129735ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  129762ms] [LOG] [Fast Refresh] done in 127ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  129864ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  129895ms] [LOG] [Fast Refresh] done in 132ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  129998ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  130137ms] [LOG] [Fast Refresh] done in 242ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  130268ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  130410ms] [LOG] [Fast Refresh] done in 243ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  130576ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  130577ms] [LOG] [Fast Refresh] done in 101ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  130707ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  130736ms] [LOG] [Fast Refresh] done in 130ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  130902ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  131038ms] [LOG] [Fast Refresh] done in 237ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  131140ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  131292ms] [LOG] [Fast Refresh] done in 253ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  131460ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  131502ms] [LOG] [Fast Refresh] done in 143ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  131633ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  131649ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  131752ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  131883ms] [LOG] [Fast Refresh] done in 233ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132011ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132053ms] [LOG] [Fast Refresh] done in 142ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132185ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132241ms] [LOG] [Fast Refresh] done in 158ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132356ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132361ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132484ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132510ms] [LOG] [Fast Refresh] done in 127ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132665ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132799ms] [LOG] [Fast Refresh] done in 235ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132903ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  132972ms] [LOG] [Fast Refresh] done in 173ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  133100ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  133110ms] [LOG] [Fast Refresh] done in 110ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  133232ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  133398ms] [LOG] [Fast Refresh] done in 268ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  133527ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  133684ms] [LOG] [Fast Refresh] done in 258ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  133840ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  133860ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  133985ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  134045ms] [LOG] [Fast Refresh] done in 160ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  134190ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  136015ms] [LOG] [Fast Refresh] done in 1929ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  136924ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  137290ms] [LOG] [Fast Refresh] done in 468ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  137490ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  137544ms] [LOG] [Fast Refresh] done in 154ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  137797ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  137801ms] [LOG] [Fast Refresh] done in 104ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  138009ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  138013ms] [LOG] [Fast Refresh] done in 105ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  138456ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  138513ms] [LOG] [Fast Refresh] done in 158ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  138740ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  138795ms] [LOG] [Fast Refresh] done in 159ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  138835ms] [ERROR] %o
+
+%s ReferenceError: roles is not defined
+    at HomePage (about://React/Server/C:%5CUsers%5CIbra%5CDocuments%5CGitHub%5Csana%5C.next%5Cdev%5Cserver%5Cchunks%5Cssr%5C%5Broot-of-the-server%5D__00kw.fl._.js?209:2786:21)
+    at resolveErrorDev (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js:1919:150)
+    at processFullStringRow (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js:2434:29)
+    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js:2393:9)
+    at processBinaryChunk (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js:2502:221)
+    at progress (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_0p3wegg._.js:2689:13) The above error occurred in the <HomePage> component. It was handled by the <ErrorBoundaryHandler> error boundary. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:1998
+[  138850ms] [ERROR] [error] 1648841562 @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[  138851ms] [ERROR] [error] 1648841562 @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[  144308ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  144379ms] [LOG] [Fast Refresh] done in 180ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  146255ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  146442ms] [LOG] [Fast Refresh] done in 273ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  146619ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  147077ms] [LOG] [Fast Refresh] done in 558ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  147202ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  147244ms] [LOG] [Fast Refresh] done in 145ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  147348ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  147377ms] [LOG] [Fast Refresh] done in 132ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  181717ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  181941ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[  182063ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[  182155ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[  182156ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/ar?_rsc=kbK-aRv9lBGaFMaQ:0
+[  182220ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/ar:0
+[  182289ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/development/_clientMiddlewareManifest.js' because its MIME type ('application/json') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/ar:0
+[  182331ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_cjs_react-dom-client_development_0z3nh7o.js:16702
+[  182416ms] Error: ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed
+
+
+    at <unknown> (Error: ./app/[locale]/about/page.tsx:142:24)
+    at Object.getCompilationErrors (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\lib\dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\next-dev-server.js:720:42)
+    at DevServer.findPageComponents (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\next-dev-server.js:690:43)
+    at async DevServer.renderErrorToResponseImpl (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\base-server.js:1753:26)
+[  182416ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  182418ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  182437ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/favicon.ico:0
+[  182503ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  182564ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  182643ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  182703ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  182765ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  182825ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  182902ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  182963ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183040ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183117ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183194ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183256ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183318ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183381ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183442ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183517ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183581ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183657ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183717ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183797ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183872ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  183934ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184012ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184088ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184166ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184243ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184321ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184398ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184460ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184537ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184614ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184676ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184738ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184816ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184894ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  184970ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185047ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185125ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185187ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185264ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185373ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185451ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185528ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185590ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185653ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185715ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185791ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185853ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  185931ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186008ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186069ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186147ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186224ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186302ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186364ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186426ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186503ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186566ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186644ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186720ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186797ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186874ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  186953ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187015ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187076ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187137ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187199ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187260ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187321ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187397ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187459ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187521ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187582ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187645ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187708ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187771ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187833ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187895ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  187956ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188019ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188080ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188141ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188204ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188265ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188326ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188388ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188451ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188514ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188575ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188637ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188713ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188776ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188838ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188900ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  188963ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189024ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189087ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189149ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189210ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189272ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189333ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189394ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189456ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189534ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189596ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189658ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189719ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189781ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189843ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189921ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  189983ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190059ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190135ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190195ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190274ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190337ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190400ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190461ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190521ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190583ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190643ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190704ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190765ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190828ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190890ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  190967ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191029ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191090ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191151ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191230ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191293ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191355ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191418ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191480ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191543ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191606ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191667ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191728ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191791ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191854ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191916ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  191978ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192042ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192104ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192166ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192229ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192293ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192355ms] [ERROR] ./app/[locale]/about/page.tsx:142:24
+Unterminated regexp literal
+  140 |             <div data-anime="prose" className="page-prose">
+  141 |               {localize(bio.fullBio, locale)
+> 142 |                 .split(/
+      |                        ^
+  143 | {2,}/)
+  144 |                 .map((para) => para.trim())
+  145 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192450ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192465ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  192532ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192594ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192657ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192718ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192780ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192842ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192904ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  192965ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193027ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193089ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193168ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193230ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193309ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193371ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193434ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193497ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193574ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193635ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193695ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193774ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193836ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193899ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  193962ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194024ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194087ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194149ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194211ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194274ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194334ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194397ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194460ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194522ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194586ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194646ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194709ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194769ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194832ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194893ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  194955ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195018ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195081ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195143ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195206ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195268ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195331ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195393ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195471ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195534ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195598ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195659ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195723ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195786ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195861ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195924ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  195985ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196050ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196112ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196174ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196238ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196299ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196362ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196439ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196500ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196562ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196624ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196687ms] [ERROR] ./app/[locale]/about/page.tsx:146:24
+Unterminated regexp literal
+  144 |             <div data-anime="prose" className="page-prose">
+  145 |               {localize(bio.fullBio, locale)
+> 146 |                 .split(/
+      |                        ^
+  147 | {2,}/)
+  148 |                 .map((para) => para.trim())
+  149 |                 .filter(Boolean)
+
+Parsing ecmascript source code failed @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[  196795ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  197624ms] [LOG] [Fast Refresh] done in 929ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  197764ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  198378ms] [LOG] [Fast Refresh] done in 720ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[  198933ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  198972ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  199121ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  199485ms] [LOG] [Fast Refresh] done in 465ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  199669ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  199700ms] [LOG] [Fast Refresh] done in 131ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  199803ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  199854ms] [LOG] [Fast Refresh] done in 153ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  199982ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  200204ms] [LOG] [Fast Refresh] done in 327ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  200763ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  200841ms] [LOG] [Fast Refresh] done in 192ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  200950ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  201072ms] [LOG] [Fast Refresh] done in 230ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  201197ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  201255ms] [LOG] [Fast Refresh] done in 159ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  201383ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  201407ms] [LOG] [Fast Refresh] done in 138ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  201521ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477

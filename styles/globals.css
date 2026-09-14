@@ -1,0 +1,1623 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * THE PALETTE IS A DESIGN CHOICE, NOT A BRAND MATCH.
+ *
+ * This stylesheet began as a clone of the IFB federation's own identity — a gold
+ * accent on a white ground — because the site's first subject led that federation.
+ * That is no longer the case, and none of those values survive: the scheme is now
+ * near-black with a champagne-gold accent, chosen for the register the page has to
+ * strike — a single principal's private-office profile — rather than to reproduce
+ * any organisation's brand. The gold is coincidental to the old IFB gold and is a
+ * different value at a different saturation on an inverted ground.
+ *
+ * What DID survive the change is the structure, and that is the part worth
+ * knowing: the .space-border divider, the panel treatment, the timeline rail, the
+ * section rhythm and the 1.8 body line-height all come from the original template.
+ * Only the values flip, which is why every surface, border and shadow is a token
+ * rather than a literal — re-theming the whole site is the ~25 values in :root.
+ *
+ * Every contrast ratio quoted in this file was computed against the grounds
+ * declared below, not estimated. Where a comment cites a number, that number is
+ * the reason the value is what it is; change the ground and the numbers must be
+ * recomputed rather than assumed to still hold.
+ */
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /*
+   * Tells the browser this is a dark document. Without it the native scrollbar,
+   * the date picker, and — most visibly — Chrome's autofill background stay
+   * light, painting a pale yellow block inside form fields whose own background
+   * is transparent.
+   */
+  color-scheme: dark;
+
+  /* Surfaces — near-black scheme, warm rather than neutral. The greys carry a
+     faint cream cast so the gold accent reads as belonging to the same light
+     rather than as a colour dropped onto a cold screen. Every ratio in this block
+     was computed against these three grounds, not estimated. */
+  --background: #0a0a0b;
+  --foreground: #edeae4;
+  --surface: #121214;
+  --surface-raised: #1a1a1d;
+  --card: #121214;
+  --card-foreground: #e4e0d8;
+  --heading: #f7f5f1;
+  --muted: #121214;
+  /* 5.83:1 on --background, 5.11:1 on --surface-raised. This token carries real
+     copy (dates, field labels, footer links), so it has to clear AA at normal
+     size rather than merely look dimmer than the body text. It is warm-neutral
+     rather than pure grey: against the cream body text a cold grey reads as a
+     different temperature, not as a quieter version of the same voice. */
+  --muted-foreground: #8e8b85;
+  /*
+   * WHITE-ALPHA, AND THE TWO ARE DELIBERATELY FAR APART.
+   *
+   * --border is decorative: dividers, panel edges, the timeline rail. WCAG 1.4.11
+   * does not apply to those, so it can stay faint (1.42:1) and quiet.
+   *
+   * --input is the ONLY thing that makes a form field exist — .field-input has a
+   * transparent background, so its border is the control's entire visible
+   * boundary, and 1.4.11 demands 3:1. RECOMPUTED over the new #0A0A0B ground,
+   * because a darker ground changes every one of these numbers: 0.12 -> 1.33:1,
+   * 0.14 -> 1.42:1, 0.34 -> 3.01:1, 0.38 -> 3.50:1. Nothing below 0.34 passes,
+   * which is well past the alpha that "looks about right" on a dark ground.
+   *
+   * --border rises 0.12 -> 0.14 only to hold its previous APPARENT weight: the
+   * ground dropped, so the old alpha would have read fainter than it did before.
+   */
+  --border: rgba(255, 255, 255, 0.14);
+  --input: rgba(255, 255, 255, 0.38);
+
+  /*
+   * THE ACCENT IS CHAMPAGNE GOLD, AND IT IS DELIBERATELY UNDER-USED.
+   *
+   * The previous accent was #FF6B00, a saturated orange. It passed contrast
+   * everywhere, but saturation is a register as much as a hue: full-chroma orange
+   * is the colour of a product launch, and it read as one. This profile is a
+   * private-office page for a single principal, where the identity has to signal
+   * discretion rather than energy.
+   *
+   * #C8A961 is a desaturated gold — enough chroma to be unmistakably a colour,
+   * not enough to shout. 8.77:1 on --background, 8.29:1 on --surface, 7.69:1 on
+   * --surface-raised, so like the orange it needs no darker variant on any ground
+   * in this palette.
+   *
+   * THE RESTRAINT IS THE IDENTITY. Gold spends its authority the moment it covers
+   * area: a page of gold panels reads as costume jewellery, not as luxury. It is
+   * confined to hairline rules, small-caps eyebrows, the display numerals and ONE
+   * filled CTA per view — everything else is the neutral ladder above.
+   */
+  --primary: #c8a961;
+  --primary-rgb: 200, 169, 97;
+  --primary-hover: #d9be7e;
+  /*
+   * --primary-strong and --primary-deep ARE NOW ALIASES OF THE ACCENT, and that
+   * is the point rather than an oversight.
+   *
+   * They existed for one reason: the IFB gold #C3AB73 measured 2.24:1 on white
+   * and could not be read as text, so two progressively darker golds were needed
+   * — one for white grounds (4.69:1), one for tinted grounds (5.43:1). That whole
+   * ladder was an artefact of a LIGHT ground.
+   *
+   * On near-black the accent passes on its own: #C8A961 is 8.77:1 on
+   * --background, 8.29:1 on --surface, 7.69:1 on --surface-raised. There is no
+   * ground in this palette where it needs help, so there is nothing for a
+   * "stronger" variant to do.
+   *
+   * They are kept rather than deleted because ~30 call sites reference them; the
+   * alias is one line, removing them is a pointless refactor. --primary-deep
+   * stays one step lighter so the focus ring and link hover still read as a
+   * state CHANGE rather than as the same colour twice.
+   */
+  --primary-strong: #c8a961;
+  --primary-deep: #d9be7e;
+  --primary-tint: #2a2214;
+  --primary-soft: rgba(200, 169, 97, 0.1);
+  /* Unchanged reasoning, unchanged conclusion, and MORE true of gold than it was
+     of orange: the readable foreground on an accent fill is the near-black, not
+     white. #0A0A0B on #C8A961 is 8.77:1; white on #C8A961 is 2.26:1 and fails
+     badly. A gold button with white text is the single most common way this
+     palette gets broken — it must always carry the near-black. */
+  --primary-foreground: #0a0a0b;
+  --ring: rgba(200, 169, 97, 0.55);
+
+  /*
+   * On a #0A0A0B ground a pure-black shadow is very nearly a no-op — there is
+   * almost no luminance left below the surface to darken toward, so elevation has
+   * to be carried by a faint LIGHT edge as much as by a dark spread. The ring is
+   * a 1px warm-white hairline at low alpha; the drop underneath it is what gives
+   * the panel its weight.
+   */
+  --shadow-brand:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 18px 48px rgba(0, 0, 0, 0.72);
+  --shadow-brand-sm: 0 1px 3px rgba(0, 0, 0, 0.6);
+
+  /* Status colours, used only in /admin, and they carry MEANING — sign-off state,
+     verification tier, deletion warnings — so they cannot be approximate. The
+     light scheme's values were darkened for a white ground and every one of them
+     failed here (~3.0-3.5:1). Recomputed on the #0A0A0B ground: 11.36, 11.85,
+     7.15 — all still clear AA, so the deeper ground changed nothing here. */
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --danger: #f87171;
+
+  --radius: 0;
+
+  /*
+   * The single side inset for every band on the page, and the reason the layout
+   * can be full-bleed without touching the viewport edge.
+   *
+   * clamp(1.25rem, 4.5vw, 5.5rem): 20px on a phone — the minimum that keeps text
+   * off the screen edge — rising with the viewport to a 88px ceiling. The ceiling
+   * matters: without it a 2560px monitor would inset content by 115px a side and
+   * quietly reinvent the fixed margin this replaced.
+   *
+   * Everything reads this rather than hardcoding its own padding, so the page has
+   * ONE edge. A section that sets its own inset is what makes headings and rules
+   * fail to line up down the page, and that misalignment is far more visible than
+   * any individual value being a few pixels off.
+   */
+  --gutter: clamp(1.25rem, 4.5vw, 5.5rem);
+
+  /* Height of the pre-launch draft banner. The banner is fixed and sits above the
+     equally-fixed header, so the header and the hero both offset by this rather
+     than each hardcoding a guess. Two lines of notice text on a narrow viewport is
+     what sets the value. */
+  --draft-banner-height: 3rem;
+
+  /*
+   * TWO FAMILIES, SPLIT BY SCRIPT RATHER THAN BY ROLE.
+   *
+   * IBM Plex Sans Arabic is the body face everywhere and the ONLY face Arabic ever
+   * sees — one family drawn for both scripts with matching proportions.
+   *
+   * IT REPLACED CAIRO, AND THAT IS WORTH FLAGGING RATHER THAN BURYING. Cairo was
+   * not an arbitrary pick: it was chosen to echo the site of an organisation the
+   * PREVIOUS subject represented, which is a reason that no longer applies to this
+   * profile. Moving off it trades that echo — now worth nothing — for a face with
+   * real stroke modulation and a less ubiquitous presence on Arabic sites. The
+   * swap is two lines in app/layout.tsx and the stacks below.
+   *
+   * Newsreader is the Latin display face. The previous build ran one family at one
+   * weight for every heading, which left size as the only hierarchy signal and is
+   * the main reason the page read as a template. A serif against a sans gives real
+   * contrast without touching the brand gold. See app/layout.tsx for why this face
+   * rather than Instrument Serif, which held the slot before it.
+   *
+   * THE ORIGINAL ONE-FAMILY REASONING IS PRESERVED, NOT OVERTURNED. That decision
+   * was made to prevent a display face "silently falling back mid-heading because
+   * it has no Arabic coverage". Newsreader has no Arabic coverage — so Arabic is
+   * never offered it: the [dir="rtl"] rule in @layer base repoints --font-display
+   * back to the body family, and app/layout.tsx subsets the face to `latin` only,
+   * so the Arabic range is never even downloaded. The failure mode that comment
+   * guarded against is structurally unreachable rather than merely unlikely.
+   *
+   * THE FALLBACK STACKS MATTER MORE THAN THEY LOOK. Each ends in a face that is
+   * actually present on the platforms this site is read on, and the Arabic-capable
+   * stacks keep Cairo as their first fallback even though it is no longer loaded:
+   * a reader who has it installed locally gets a usable Arabic face rather than
+   * dropping straight to Tahoma, which is the last Arabic-capable stop on Windows
+   * and a considerably worse one.
+   */
+  --font-display: var(--font-display-latin), "Newsreader", Georgia, "Times New Roman", serif;
+  --font-display-rtl: var(--font-body), "IBM Plex Sans Arabic", "Cairo", "Segoe UI", Tahoma, sans-serif;
+  --font-sans: var(--font-body), "IBM Plex Sans Arabic", "Cairo", "Segoe UI", Tahoma, sans-serif;
+  --font-arabic: var(--font-body), "IBM Plex Sans Arabic", "Cairo", "Segoe UI", Tahoma, sans-serif;
+
+  /*
+   * Fixed header height. The nav used to derive its height from padding that
+   * animated on scroll (py-6 -> py-3), so the header was ~76px at rest and ~52px
+   * once scrolled. That is fine in a flowing document and unworkable with scroll
+   * snapping, where every section's resting offset has to be a known constant.
+   * components/site-nav.tsx now holds this height and transitions only colour.
+   */
+  --nav-height: 4.75rem;
+
+  /*
+   * The height of one "page" in the snapped layout.
+   *
+   * svh, not vh: on mobile Safari vh includes the retracting browser chrome, so a
+   * 100vh section is taller than the visible area and its snap point sits below the
+   * fold.
+   *
+   * The banner is NOT subtracted here. --draft-banner-height keeps its 3rem
+   * pre-hydration default whether or not a banner is on screen, so subtracting it
+   * unconditionally would crop every section by 3rem on a signed-off profile that
+   * has no banner at all. The correction is applied in the
+   * `body[data-draft-banner]` block near the end of this file instead — the same
+   * pattern the header and hero offsets already use, which stops matching by
+   * itself once the banner is gone.
+   */
+  --section-min: 100svh;
+}
+
+/*
+ * ARABIC NEVER SEES THE LATIN DISPLAY FACE.
+ *
+ * This single declaration is what makes the two-family arrangement safe.
+ * Newsreader has no Arabic coverage, so an Arabic heading that resolved to
+ * it would fall through to whatever serif the OS happens to offer for Arabic — a
+ * different face on every machine, and on some none at all. Repointing the
+ * variable at the RTL root means Arabic headings reference the body face and the
+ * fallback chain is never consulted.
+ *
+ * IT MUST STAY OUTSIDE `@layer base`, AND THAT IS NOT A STYLE PREFERENCE.
+ * Unlayered declarations beat layered ones no matter their specificity, and
+ * `:root` above is unlayered. Written inside @layer base this rule lost to the
+ * :root default and did nothing: measured on /ar, every heading computed to
+ * "Newsreader" with the Arabic text rendering through a fallback. Moving it
+ * here — unlayered, after :root, higher specificity — is what makes it apply.
+ *
+ * Set on the ELEMENT rather than re-declared per selector, so anything reading
+ * var(--font-display) inherits the correct face automatically.
+ */
+[dir="rtl"] {
+  --font-display: var(--font-display-rtl);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-heading: var(--heading);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-tint: var(--primary-tint);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --radius: var(--radius);
+  --spacing-nav: var(--nav-height);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  /* The template's own body metrics: 16px / 1.8em on the dark scheme. The tall
+     line-height is what gives Kyros its airy editorial feel and it is load-bearing
+     for the whole layout, so it is kept rather than normalised to Tailwind's 1.5. */
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /*
+   * The Arabic display FAMILY is swapped outside this layer — see the
+   * `[dir="rtl"]` rule immediately after the :root block above, which has to be
+   * unlayered to beat the :root default.
+   *
+   * What remains here is weight and tracking, which are about the SCRIPT rather
+   * than the family: the negative tracking that tightens a large Latin serif
+   * breaks the connections between joined Arabic letters, and Plex Arabic needs 700 to
+   * hold the same presence the Latin display serif has at 400.
+   */
+
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] h5,
+  [dir="rtl"] h6,
+  [dir="rtl"] .font-display {
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  /*
+   * Headings are now a FAMILY change, not a weight change.
+   *
+   * The previous rule set every heading to 700 because the display voice was just
+   * the sans turned up — with only one family, weight was the only lever available.
+   * Newsreader is loaded at 400/500 only, so a 700 here is not a heavier cut of the
+   * face — it is the browser synthesising one, which smears the thick/thin
+   * modulation that makes the family worth loading at all.
+   *
+   * So the contrast now comes from the serif itself and headings sit at 400. RTL
+   * overrides this back to 700 just above, because Plex Arabic does need the
+   * weight to carry a heading.
+   */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--heading);
+    margin-top: 0;
+    line-height: 1.15;
+  }
+
+  /*
+   * Links had NO styling at all before this — no colour, no underline, no hover.
+   * Every anchor on the site inherited body colour and was indistinguishable from
+   * surrounding text except by position, which is both a design gap and a real
+   * usability problem in prose (the privacy and terms pages link mid-paragraph).
+   *
+   * The underline is offset and hairline rather than the browser default, and it
+   * is the gold that shifts on hover rather than the text colour: moving the text
+   * itself to gold would drop it to 2.24:1 against white. Colour is never the only
+   * signal — the underline carries it for anyone who cannot see the hue change.
+   *
+   * Scoped away from nav, buttons and cards, which style themselves.
+   */
+  a {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color 0.25s ease, color 0.25s ease;
+  }
+
+  a:hover {
+    color: var(--primary-deep);
+    text-decoration-color: var(--primary-deep);
+  }
+
+  a:where(.btn-main, .btn-outline, nav a, header a, footer a, .no-underline),
+  a:where(:has(img)) {
+    text-decoration-line: none;
+  }
+
+  ::selection {
+    background: rgba(var(--primary-rgb), 0.3);
+    color: var(--heading);
+  }
+
+  /*
+   * THE FOCUS RING USES THE DEEP GOLD, NOT THE BRAND GOLD.
+   *
+   * #C3AB73 on white is 2.24:1. WCAG requires 3:1 for a non-text UI component,
+   * and a focus indicator is the one UI component a keyboard user cannot work
+   * without — so the bright gold fails exactly where failure costs most.
+   *
+   * This is the same trade the text colours already make two blocks above:
+   * --primary-strong exists because the brand gold is unreadable as text. The
+   * focus ring needs the same treatment and one step further, because it must
+   * also hold up against --surface and --surface-raised, not just white:
+   *
+   *   --primary        2.24:1 on white   fails
+   *   --primary-strong 4.69:1 on white   passes, but 4.15:1 on surface-raised
+   *   --primary-deep   5.43:1 on white   passes on every surface in the palette
+   *
+   * 2px rather than 1px: at 3px offset a hairline ring on a light ground is
+   * easy to lose, and thickness is the cheapest legibility gain available
+   * without leaving the brand's colour family.
+   */
+  :focus-visible {
+    outline: 2px solid var(--primary-deep);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /*
+   * .space-border — the template's section-heading divider: a 30px rule with two
+   * more set 40px out on either side at 25% opacity. It appears under every <h2>
+   * in the original and is the strongest single piece of Kyros's visual signature.
+   */
+  .space-border {
+    width: 30px;
+    height: 1px;
+    background: var(--primary);
+    position: relative;
+    margin: 0 auto 40px;
+  }
+
+  /* The two flanking rules are white at low alpha — the template's original
+     value, restored now that the ground is dark again. The light build had to
+     invert them to rgba(23,23,23,.18) because white-on-white was invisible; on
+     charcoal that black would be invisible in exactly the same way, reducing the
+     divider to a single accent dash and losing the part of the mark that makes
+     it recognisable. */
+  .space-border::before,
+  .space-border::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .space-border::before {
+    inset-inline-start: -40px;
+  }
+
+  .space-border::after {
+    inset-inline-end: -40px;
+  }
+
+  /*
+   * The start-aligned variant of either rule, for a section whose heading is not
+   * centred (see components/section-header.tsx for why most now are not).
+   *
+   * `margin-inline: 0 auto` rather than `margin-left`, so the rule sits at the
+   * LEADING edge — left in Turkish and English, right in Arabic — with no second
+   * rule set, the same logical-property approach the timeline rail uses.
+   *
+   * THE FLANKING RULES ARE SUPPRESSED, not just moved. `.space-border` draws two
+   * more rules 40px out on each side; at the start edge the leading one would sit
+   * at -40px, i.e. outside the content column, either overhanging the gutter or
+   * being clipped by it. The centred divider is a symmetrical ornament and stops
+   * making sense the moment it is not centred, so the start variant is a single
+   * clean rule — which is also the better mark for a left-aligned heading.
+   */
+  /*
+   * A BARE SELECTOR AGAIN. This was doubled as ".rule-draw.rule-start" to win a
+   * specificity tie: ".rule-draw" also set "margin-inline: auto", sat in the same
+   * layer, and was declared later in the file, so source order decided it and every
+   * start-aligned heading on a dedicated page got a rule centred under it anyway —
+   * 620px of auto margin each side on /about, with the heading hard against the
+   * start gutter.
+   *
+   * ".rule-draw" was the inline-SVG rule and is gone, so there is nothing left to
+   * tie with and the doubling can go with it.
+   */
+  .rule-start {
+    margin-inline: 0 auto;
+  }
+
+  .space-border.rule-start::before,
+  .space-border.rule-start::after {
+    content: none;
+  }
+
+  /*
+   * The hero display size.
+   *
+   * THREE CHANGES, ALL AIMED AT THE SAME PROBLEM. The old rule was uppercase, 700,
+   * and had no letter-spacing at all — at 4rem that combination is the single most
+   * template-looking thing on the page, because uppercase at zero tracking is what
+   * every bootstrap hero does.
+   *
+   *   - Mixed case: a name and a title read as a name and a title, not as a banner.
+   *     It also lets the serif's ascenders and descenders do the work they were
+   *     drawn for, which uppercase throws away entirely.
+   *   - Weight 400: Newsreader ships 400 and 500 here, and 400 is what the display
+   *     sizes want — the face is drawn on Dutch text models, so its regular is
+   *     already substantial at 6rem and the 500 reads as heavy rather than as
+   *     emphasis. Asking for 700 would make the browser synthesise a cut, which
+   *     smears the thick/thin modulation the face was chosen for. Hierarchy here
+   *     comes from size, as before.
+   *   - Negative tracking: optical spacing that looks correct at 16px is far too
+   *     loose at 96px. Large type always needs pulling in; this is the difference
+   *     between "big text" and "display typography".
+   *
+   * The ceiling goes to 6rem because mixed-case lowercase letters occupy less
+   * visual width than caps, so the old 4rem cap now under-fills the hero.
+   */
+  .h1-big {
+    font-family: var(--font-display);
+    font-size: clamp(2.75rem, 8vw, 6rem);
+    line-height: 1.02;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: var(--heading);
+    margin: 0;
+  }
+
+  /*
+   * Arabic does not have letter case, so `text-transform: uppercase` was a no-op
+   * that only risked confusing a screen reader — the Latin rules above no longer
+   * set it at all. What Arabic still needs is its own weight and tracking: it is
+   * rendering in IBM Plex Sans Arabic (see the --font-display swap in @layer base),
+   * which at 400 would be too faint to read as a heading, and the negative tracking
+   * above actively damages a joined script by pulling letterforms into each other.
+   *
+   * 700, NOT 800. Plex Arabic's heaviest cut is 700 — asking for 800 makes the
+   * browser synthesise one by smearing the 700, which wrecks the stroke modulation
+   * that is the whole reason this family replaced Cairo. Cairo shipped a real 800,
+   * which is why this said 800 before; the number changed because the family did,
+   * and 700 here is visually heavier than Cairo's 800 was in any case.
+   */
+  [dir="rtl"] .h1-big,
+  [dir="rtl"] .section-heading {
+    text-transform: none;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.25;
+  }
+
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--heading);
+  }
+
+  /* A text utility, so it takes the AA-safe gold rather than the bright brand
+     gold — #C3AB73 on white is ~2:1 and unreadable at body sizes. */
+  .id-color {
+    color: var(--primary-strong);
+  }
+
+  /*
+   * .de_3d-box — the bordered panel behind each card in the template.
+   *
+   * THERE IS NO HOVER STATE, DELIBERATELY. This carried
+   * `:hover { transform: translateY(-6px); box-shadow: … }` — the lift-and-shadow
+   * that is the most-generated hover effect on the web. Two things were wrong with
+   * it beyond the familiarity:
+   *
+   *   - These panels are NOT interactive. Nothing inside a position or expertise
+   *     card is a link, so the lift promised an affordance that does not exist and
+   *     invited a click that does nothing.
+   *   - Motion that carries no information is noise. A card that moves when the
+   *     pointer crosses it is the page reacting to the cursor rather than to the
+   *     reader.
+   *
+   * Hover feedback now lives only where it means something: links, `.btn-main`,
+   * `.btn-outline`, `.copy-button` — all of which are genuinely actionable.
+   */
+  .panel-3d {
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  /*
+   * ── THE ONE LIGHT BAND ──────────────────────────────────────────────────────
+   *
+   * Recognition inverts to a near-white ground while the rest of the page stays
+   * near-black. It is the only section that does this, and that is the whole point:
+   * six full-viewport bands in one palette read as one repeated band, and a single
+   * section that is visibly not like the others is what gives the page a middle.
+   *
+   * IT REDECLARES TOKENS RATHER THAN OVERRIDING PROPERTIES. Every component inside
+   * this band — .panel-3d, .timeline, .eyebrow, the awards rows — already paints
+   * itself from var(--background), var(--heading), var(--border) and so on. So
+   * re-pointing those variables on one wrapper flips the entire subtree with no
+   * component needing a light-mode branch, and a component added later inherits
+   * the correct colours for free. Overriding `color` and `background` directly
+   * would have meant chasing every descendant selector.
+   *
+   * THE ACCENT LADDER COMES BACK HERE, AND ONLY HERE.
+   *
+   * The dark scheme deleted it: --primary-strong and --primary-deep are aliases of
+   * #C8A961 because that gold passes on near-black unaided (8.77:1). On a near-
+   * white ground it does not — #C8A961 on #F7F7F5 measures 2.10:1, which fails AA
+   * for body text at any size that matters, and fails HARDER than the orange it
+   * replaced (2.92:1) because a desaturated gold is light to begin with. A pale
+   * accent is exactly the kind that looks fine to the eye on white and is
+   * unreadable to anyone who needs contrast.
+   *
+   * The answer is the one the original gold needed on white: the bright accent
+   * stays for RULES AND LARGE DISPLAY TYPE where 1.4.3 permits 3:1, and a darkened
+   * bronze carries anything set at normal size.
+   *
+   * Measured on #F7F7F5: #C8A961 2.10:1 (rules/large type only), #7A5F1F 5.62:1,
+   * #5C4715 8.27:1. --primary-strong takes #7A5F1F for body-size accent text;
+   * --primary-deep takes #5C4715 so the focus ring still reads as a state change
+   * against it rather than as the same colour twice.
+   */
+  .section-invert {
+    color-scheme: light;
+
+    --background: #f7f7f5;
+    --surface: #efefec;
+    --surface-raised: #e7e7e3;
+    --card: #efefec;
+    --card-foreground: #2b2b2b;
+    --heading: #141414;
+    --muted: #efefec;
+    --foreground: #3f3f3f;
+    /* 4.83:1 on #F7F7F5. Carries dates and reference numbers, so it has to clear
+       AA at normal size rather than merely look quieter than the body text. */
+    --muted-foreground: #6b6b6b;
+
+    /* Black-alpha, mirroring the dark scheme's white-alpha pair and for the same
+       two reasons: --border is decorative (dividers, the timeline rail, panel
+       edges) so 1.4.11 does not apply and it stays faint; --input is the entire
+       visible boundary of a form control and must clear 3:1. */
+    --border: rgba(20, 20, 20, 0.14);
+    --input: rgba(20, 20, 20, 0.42);
+
+    --primary-strong: #7a5f1f;
+    --primary-deep: #5c4715;
+    --primary-tint: #f0e6cd;
+    --primary-soft: rgba(122, 95, 31, 0.1);
+    --ring: rgba(92, 71, 21, 0.55);
+
+    /*
+     * THE STATUS COLOURS INVERT TOO, AND ONE OF THEM WAS A LIVE BUG.
+     *
+     * These were never redeclared here, so the dark scheme's values leaked into
+     * the light band. --warning is the one that shows: the memberships list sets
+     * its "period to be confirmed" tag in --warning at 80% alpha, which composited
+     * to #FACA4E on this ground and measured 1.44:1 — a caveat about unverified
+     * information, rendered very nearly invisible on the one band that inverts.
+     *
+     * Recomputed for #F7F7F5: 4.73:1, 5.71:1, 6.13:1. They are declared as the
+     * same three tokens rather than fixed at the call site so any component that
+     * later lands in this band inherits readable status colours automatically —
+     * the same reason every other token here is redeclared rather than overridden.
+     */
+    --success: #1a7f37;
+    --warning: #7a5e00;
+    --danger: #b42318;
+
+    /* Neutral and shallow. The dark scheme's 0.5-alpha black reads as a smear on
+       a light ground, where elevation comes from a tighter, lighter shadow. */
+    --shadow-brand: 0 10px 30px rgba(20, 20, 20, 0.1);
+    --shadow-brand-sm: 0 1px 5px rgba(20, 20, 20, 0.08);
+
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+  /*
+   * THE MEDALLION CORRECTIONS ARE GONE WITH THE MEDALLION.
+   *
+   * This band used to need two: the decorative ring dimmed to 0.45 and pushed to
+   * the trailing edge, because linework tuned for charcoal reads far more strongly
+   * over a near-white ground — dark on light is absorbed light, which the eye
+   * resolves as detail rather than as atmosphere, and the ring arrived centred
+   * behind the list with "World Parliament of Security and Peace" running straight
+   * through it.
+   *
+   * No section object draws anything on this band now, so both rules were removed
+   * rather than left pointing at nothing.
+   */
+
+  /*
+   * The flanking rules of `.space-border` are white at 25% alpha, which is
+   * invisible on the light band. Same correction the light build needed, scoped to
+   * the one section that is now light.
+   */
+  .section-invert .space-border::before,
+  .section-invert .space-border::after {
+    background: rgba(20, 20, 20, 0.2);
+  }
+
+  /* .d_timeline — the resume rail. A vertical line with a dot per entry; the dot
+     is on the inline-start edge so it flips correctly in Arabic without a second
+     rule set. */
+  .timeline {
+    position: relative;
+    padding-inline-start: 30px;
+    list-style: none;
+    margin: 0;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    inset-block: 0.6rem 0;
+    inset-inline-start: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 2.5rem;
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: -34px;
+    top: 0.5rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+
+  /*
+   * BUTTONS ARE SENTENCE-CASE SANS, not tracked-out uppercase serif.
+   *
+   * These were `font-display` / 700 / uppercase / 0.1em — the same treatment the
+   * headings had, which meant a 13px button and a 96px hero were shouting in the
+   * same voice. Three corrections:
+   *
+   *   - The SANS, because Newsreader is loaded at 400/500 only and `font-weight:
+   *     700` on it forces a synthesised bold. Plex Arabic has a real 600.
+   *   - Sentence case, so "Send message" is a thing you do rather than a sign.
+   *   - No tracking, because it existed only to make uppercase legible.
+   */
+  .btn-main {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    padding: 0.9rem 2rem;
+    border: 1px solid var(--primary);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-main:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+  }
+
+  /*
+   * Pill modifier, for the hero and the nav CTA only.
+   *
+   * A MODIFIER RATHER THAN A CHANGE TO THE BASE CLASS, because `.btn-main` is
+   * also the submit button on the contact form and on every admin editor, where
+   * a rounded pill would be out of register with the square inputs it sits under.
+   * The marketing surfaces opt in; the functional ones stay as they are.
+   *
+   * 999px rather than 50%: a percentage radius on a non-square box produces an
+   * ellipse whose curvature changes with the label length, so two buttons of
+   * different widths would not match.
+   */
+  .btn-pill {
+    border-radius: 999px;
+  }
+
+  /*
+   * ── HERO CTA MICRO-INTERACTION ──────────────────────────────────────────────
+   *
+   * Scoped to `[data-anime="hero-cta"]` rather than added to `.btn-main`, because
+   * that class is also the contact form's submit and every admin save button. A
+   * button that lifts and sweeps is right for a marketing surface and wrong for a
+   * form control, where the same flourish reads as the form having done something.
+   *
+   * THE SWEEP IS A BACKGROUND POSITION, NOT A PSEUDO-ELEMENT. `::before` on these
+   * would need `overflow: hidden` on a 999px pill, which clips the focus ring — and
+   * the focus ring is the one thing on this page that must never be clipped. A
+   * moving gradient needs no extra box and cannot touch the outline.
+   *
+   * The lift is 1px. Enough to register as a response, small enough that it never
+   * reads as the layout shifting — and it is on `transform`, so it costs no layout.
+   */
+  [data-anime="hero-cta"] .btn-main {
+    background-image: linear-gradient(
+      100deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.28) 45%,
+      transparent 70%
+    );
+    background-size: 220% 100%;
+    background-position: 130% 0;
+    background-repeat: no-repeat;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease,
+      background-position 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.25s ease;
+  }
+
+  [data-anime="hero-cta"] .btn-main:hover {
+    background-position: -30% 0;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(var(--primary-rgb), 0.24);
+  }
+
+  [data-anime="hero-cta"] .btn-outline {
+    transition:
+      background 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease,
+      transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  [data-anime="hero-cta"] .btn-outline:hover {
+    transform: translateY(-1px);
+  }
+
+  /*
+   * Both revert to a plain colour change when motion is reduced. The hover still
+   * RESPONDS — removing feedback entirely would be a usability regression dressed
+   * as an accessibility win — it just stops moving.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    [data-anime="hero-cta"] .btn-main,
+    [data-anime="hero-cta"] .btn-outline {
+      background-image: none;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    [data-anime="hero-cta"] .btn-main:hover,
+    [data-anime="hero-cta"] .btn-outline:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: var(--primary-strong);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    padding: 0.9rem 2rem;
+    border: 1px solid rgba(var(--primary-rgb), 0.4);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+
+  .btn-outline:hover {
+    background: rgba(var(--primary-rgb), 0.1);
+    border-color: var(--primary);
+  }
+
+  .field-input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--input);
+    color: var(--card-foreground);
+    padding: 0.85rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    transition: border-color 0.3s ease;
+  }
+
+  /*
+   * A border-colour change is NOT a focus indicator.
+   *
+   * This previously set `outline: none` and swapped the border to the brand
+   * gold. Two failures in one rule: the ring was removed outright, and what
+   * replaced it was a 1px edge at 2.24:1 — a change most sighted keyboard users
+   * cannot see and a low-vision user certainly cannot. The border swap stays as
+   * a secondary affordance; the ring is what actually communicates focus.
+   *
+   * `:focus-visible` rather than `:focus` so a pointer click does not paint a
+   * ring, which is the reason the original reached for `outline: none` at all.
+   */
+  .field-input:focus-visible {
+    outline: 2px solid var(--primary-deep);
+    outline-offset: 2px;
+    border-color: var(--primary-deep);
+  }
+
+  .field-input:focus:not(:focus-visible) {
+    outline: none;
+    border-color: var(--primary);
+  }
+
+  .field-input::placeholder {
+    color: var(--muted-foreground);
+  }
+
+  /* The template's `.de-gradient-edge-top/bottom` — a fade that blends a full-bleed
+     background section into the flat body colour above and below it. */
+  .gradient-edge-top,
+  .gradient-edge-bottom {
+    position: absolute;
+    inset-inline: 0;
+    height: 150px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .gradient-edge-top {
+    top: 0;
+    background: linear-gradient(to bottom, var(--background), transparent);
+  }
+
+  .gradient-edge-bottom {
+    bottom: 0;
+    background: linear-gradient(to top, var(--background), transparent);
+  }
+
+  /*
+   * A section that occupies one viewport.
+   *
+   * min-height, NEVER height. The positions list, the awards timeline and the
+   * contact form all grow with their content and several already exceed a short
+   * laptop viewport in Turkish and Arabic, where the strings are longer. A fixed
+   * height would clip them with no scrollbar to recover the overflow; min-height
+   * lets a tall section simply be tall and fall out of the snap rhythm, which is
+   * the correct failure.
+   *
+   * The flex centring is what makes a SHORT section look deliberate rather than
+   * top-heavy with dead space beneath it.
+   *
+   * `isolation: isolate` gives each section its own stacking context, so the
+   * decorative object layered behind its content (z-index 0 against the content's
+   * z-index 1) can never escape upward and cover the fixed header or the section
+   * above it.
+   */
+  .snap-section {
+    position: relative;
+    /*
+     * A FLOOR, NOT A TARGET — and it is deliberately below one viewport.
+     *
+     * This was a flat 100svh. Measured on the real page at 1497x900, that left
+     * the positions band 684px of empty ground around 175px of content and the
+     * memberships band 626px around 233px: the content sat marooned in the middle
+     * of a screen-tall box, which reads as a page that failed to load rather than
+     * as a page with generous spacing. Full-viewport bands only look composed when
+     * the content is actually big enough to inhabit them.
+     *
+     * min() is what makes it self-correcting: a section still fills the viewport
+     * when its content warrants it, but a short one settles at 34rem and the
+     * spacing below comes from .section-pad, which is proportional to the content
+     * rather than to the screen. The snap rhythm is unaffected — scroll-snap-align
+     * pins the top edge, and it never required the section to be exactly one
+     * viewport tall.
+     */
+    min-height: min(var(--section-min), 34rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    isolation: isolate;
+  }
+
+  /* The decorative object layer. aria-hidden in the markup; pointer-events cleared
+     so it can never intercept a click meant for the content above it. */
+  .section-object {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  /*
+   * The hero backdrop's light is anchored to the PORTRAIT side rather than to the
+   * centre (see HeroBackdrop in components/motion/objects.tsx). The portrait swaps
+   * sides under RTL, so the light has to swap with it — otherwise Arabic gets the
+   * brightest ground behind the headline and a photograph sitting in the dark half.
+   *
+   * A scaleX mirror rather than mirrored gradient values: the layer holds three
+   * pieces whose off-axis positions all need to flip together, and one transform
+   * keeps them in the relationship they were tuned in. Nothing inside carries text,
+   * so there is no glyph to end up reversed.
+   */
+  [dir="rtl"] .hero-backdrop {
+    transform: scaleX(-1);
+  }
+
+  /* Content rides above the object layer. Needed because both are positioned and
+     the object comes first in source order. */
+  .section-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  /*
+   * ── Decorative object layer (GEOMETRY REMOVED) ──────────────────────────────
+   *
+   * Five ".obj-*" classes used to live here as no-op hooks — the remains of two
+   * rotations, an opacity pulse, a travelling dot and a marching dash that had
+   * already had their animation stripped. They were kept so the drawn objects in
+   * components/motion/objects.tsx could keep their markup.
+   *
+   * Those objects no longer draw anything, so nothing carries the classes and they
+   * have been removed rather than left as hooks onto nothing. ".section-object"
+   * above still exists and still does real work: it positions the hero's ground
+   * layer and clears its pointer events.
+   */
+}
+
+@layer components {
+  /* Small uppercase gold text — the single worst contrast case on the site, since
+     it is both tiny and low-contrast. Uses the darkened gold. */
+  /*
+   * The opening band of a dedicated page (components/page-hero.tsx).
+   *
+   * Shorter than the 100svh home hero, and the top padding is what clears the
+   * fixed header — the same job `pt-32` does on the legal pages, expressed here
+   * because this element owns its own spacing.
+   */
+  .page-hero {
+    position: relative;
+    padding-block: 10rem 3.5rem;
+  }
+
+  /*
+   * Between .h1-big (the home hero) and .section-heading, so a page title outranks
+   * the section headings beneath it without competing with the landing page.
+   */
+  .page-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: var(--heading);
+    margin: 0;
+  }
+
+  /* Plex Arabic at 400 is too faint to hold a page title, and the negative tracking
+     the Latin serif needs pulls joined Arabic letterforms into each other. Same
+     correction the other display classes carry, and 700 for the same reason: it is
+     the family's heaviest real cut, so 800 would be a synthesised smear. */
+  [dir="rtl"] .page-hero-title {
+    text-transform: none;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.25;
+  }
+
+  /*
+   * ".rule-draw" IS GONE. It was an inline-SVG twin of ".space-border" — a real
+   * <svg> whose <path> anime.js could draw on, since a styled div has no geometry
+   * to animate. Nothing had actually animated it for some time, so it rendered as a
+   * static fully-drawn line and bought nothing over the div; both call sites
+   * (section-header, page-hero) now use ".space-border" directly.
+   */
+
+  /*
+   * Section rhythm on a dedicated page. Slightly tighter than the home page's
+   * `.section-pad` — a sub-page opens with a compact hero rather than a full
+   * screen, so the same generous spacing would leave the first section stranded.
+   */
+  .page-section {
+    padding-block: clamp(3.5rem, 8vw, 6rem);
+  }
+
+  /* The alternating ground, matching the home page's expertise/awards bands. */
+  .page-section-alt {
+    background: var(--surface);
+  }
+
+  /*
+   * The prose column for the governance and verification notes. Narrower than the
+   * content width and slightly looser than body copy, because these blocks are
+   * read rather than scanned.
+   */
+  .page-prose {
+    max-width: 42rem;
+    margin-inline: auto;
+    font-size: 0.9375rem;
+    line-height: 1.9;
+    color: var(--foreground);
+  }
+
+  .page-prose p + p {
+    margin-block-start: 1.25rem;
+  }
+
+  /*
+   * A panel with a short gold rule at its top edge — the card equivalent of the
+   * `.space-border` divider, tying the cards to the section headings above them.
+   * `inset-inline-start` so it sits at the leading edge in Arabic too.
+   */
+  .card-ruled {
+    position: relative;
+  }
+
+  .card-ruled::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    width: 2.5rem;
+    height: 2px;
+    background: var(--primary);
+  }
+
+  /*
+   * ── Interactive states ──────────────────────────────────────────────────────
+   *
+   * Every rule below is the STATIC floor for a behaviour in
+   * components/motion/interactions.ts. Each one is readable and complete with no
+   * JavaScript at all; the interaction adds emphasis on top. That ordering is not
+   * stylistic — an interaction that is the only thing making content visible is
+   * the bug that already shipped once here.
+   */
+
+  /* A rule that draws under a label on hover. scaleX is animated, so it needs an
+     origin and a starting scale that survive without JS — full width, since a
+     permanently invisible rule is worse than a permanently visible one. */
+  .hover-rule {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: var(--primary);
+    transform-origin: left;
+  }
+
+  [dir="rtl"] .hover-rule {
+    transform-origin: right;
+  }
+
+  /* Copy-to-clipboard. The two icons are stacked so the checkmark can cross-fade
+     over the copy glyph without the button changing size mid-interaction. */
+  .copy-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* 44x44 (WCAG 2.5.5) — this sits beside a small email link and is a primary
+       action, so it must not be a 20px tap target. */
+    min-width: 44px;
+    min-height: 44px;
+    color: var(--muted-foreground);
+    transition: color 0.3s ease;
+  }
+
+  .copy-button:hover,
+  .copy-button:focus-visible {
+    color: var(--primary-strong);
+  }
+
+  .copy-icon {
+    position: absolute;
+    display: grid;
+    place-items: center;
+  }
+
+  /*
+   * The expandable position panel.
+   *
+   * Open by default. The interaction collapses it on mount, which means a visitor
+   * with no JavaScript — or one who arrives before hydration — sees every detail
+   * rather than a row that cannot be opened. `height: auto` here is what the
+   * animation measures against.
+   */
+  .expand-panel {
+    overflow: visible;
+    height: auto;
+  }
+
+  .expand-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    min-height: 44px;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+    transition: color 0.3s ease;
+  }
+
+  .expand-trigger:hover,
+  .expand-trigger:focus-visible {
+    color: var(--primary-strong);
+  }
+
+  /* Reading-progress rail for the governance prose. */
+  .progress-rail {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .progress-bar {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    transform-origin: top;
+  }
+
+  /* The sliding nav underline. Starts hidden and is only shown once the
+     interaction takes over; the per-item spans remain the no-JS indicator. */
+  .nav-underline {
+    position: absolute;
+    bottom: -0.375rem;
+    inset-inline-start: 0;
+    height: 1px;
+    width: 0;
+    background: var(--primary);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Form field underline, swept in on focus. */
+  .field-underline {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--primary);
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+
+  [dir="rtl"] .field-underline {
+    transform-origin: right;
+  }
+
+  /*
+   * THE EYEBROW IS THE ONLY PLACE UPPERCASE SURVIVES, and that is the point.
+   *
+   * Every display class on this site used to be uppercase and tracked out — the
+   * hero, the section headings, the page titles, the buttons. That combination is
+   * the "premium template" formula, and when everything shouts, nothing does.
+   * The headings are now mixed-case, so uppercase is left doing one job: marking
+   * a short label as METADATA rather than content, which is a real distinction
+   * a reader uses rather than decoration.
+   *
+   * It is set in the SANS, not the display serif. Newsreader is a display
+   * face drawn for large sizes; at 12px uppercase its fine modulation turns to
+   * mush. Plex Arabic holds up at small sizes and is the body face besides.
+   *
+   * THE TRACKING CAME DOWN from 0.3em to 0.14em. A third of an em is the tell —
+   * it is what gets reached for to make small caps look "designed", and past
+   * about 0.15em the word stops reading as a word and becomes a row of letters.
+   */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--primary-strong);
+  }
+
+  /*
+   * Arabic has no letter case at all, so the uppercase transform set above is
+   * dropped entirely here rather than left as a no-op that a screen reader may
+   * still announce oddly.
+   *
+   * (A `.eyebrow:lang(tr)` rule stood here while the site shipped Turkish, whose
+   * dotted/dotless-I mapping makes `text-transform` locale-sensitive. English and
+   * Arabic need no such special case.)
+   */
+  [dir="rtl"] .eyebrow {
+    letter-spacing: 0.05em;
+    text-transform: none;
+  }
+}
+
+/*
+ * Draft-banner offsets.
+ *
+ * The banner and the header are both `fixed`, so the header has to be pushed down
+ * by the banner's height or it renders on top of it. The attribute is set on
+ * <body> by the banner itself, which means the offset applies only when the banner
+ * is actually present — a signed-off profile removes the banner and these rules
+ * stop matching, with nothing to remember to change.
+ */
+/*
+ * `--draft-banner-height` is MEASURED at runtime by
+ * components/draft-banner-height.tsx, not trusted from the 3rem token above.
+ *
+ * The banner's height depends on how many lines its notice wraps to, which varies
+ * by viewport width and by locale — the Turkish and Arabic strings are longer than
+ * the English one and break differently. No CSS value can be correct for all of
+ * them, and a breakpoint with a hardcoded multiplier was tried and under-measured,
+ * putting the header 14px inside the banner. The 3rem stays as the pre-hydration
+ * default because it is right for the one-line desktop case.
+ */
+body[data-draft-banner] header {
+  top: var(--draft-banner-height);
+}
+
+/* The hero is 100svh and starts at the top of the viewport; without this its
+   bottom edge is pushed below the fold by exactly the banner's height, which puts
+   the scroll cue off screen. */
+body[data-draft-banner] #top {
+  min-height: calc(100svh - var(--draft-banner-height));
+  margin-top: var(--draft-banner-height);
+}
+
+/* The same correction for a dedicated page's opening band. `.page-hero` clears
+   the fixed header with its own top padding, but the header is itself pushed down
+   by the banner — so without this the page title sits underneath it. Reads the
+   MEASURED variable rather than adding a constant: the notice wraps to two or
+   three lines on a phone, and differently again in Turkish and Arabic, so the
+   only correct number is the one components/draft-banner-height.tsx measures. */
+body[data-draft-banner] .page-hero {
+  padding-block-start: calc(10rem + var(--draft-banner-height));
+}
+
+/*
+ * Full-viewport sections lose the banner's height too.
+ *
+ * --section-min is a plain 100svh in :root rather than a subtraction, because the
+ * 3rem default of --draft-banner-height survives whether or not a banner is on
+ * screen — subtracting it unconditionally would crop every section by 3rem on a
+ * signed-off profile that has no banner at all. Gating the correction on the
+ * attribute is the same self-disabling pattern the three rules above use: when
+ * the profile is signed off the banner stops rendering, this stops matching, and
+ * sections are a clean 100svh with nothing to remember to change.
+ */
+body[data-draft-banner] {
+  --section-min: calc(100svh - var(--draft-banner-height));
+}
+
+@layer utilities {
+  /*
+   * ── FULL-BLEED, WITH A FLUID GUTTER ─────────────────────────────────────────
+   *
+   * There is no max-width here any more, and that is the layout decision rather
+   * than an omission. 1280px inside a 1500px+ viewport left ~110px of dead ground
+   * down each side, and dead ground on a page this sparse does not read as
+   * generous margin — it reads as a narrow site stranded in the middle of a wide
+   * screen, which is the opposite of the register this profile is meant to strike.
+   *
+   * The gutter does the work the cap used to. --gutter scales with the viewport
+   * (clamped, so it never collapses on a phone and never runs away on a monitor),
+   * so the content is inset by a proportion of the screen rather than pinned to a
+   * fixed pixel measure. The layout therefore stays edge-aware at every width
+   * instead of snapping between breakpoints.
+   *
+   * WHAT PROTECTS READABILITY IS .measure, NOT THE CONTAINER. Removing the cap
+   * would set body copy to 200+ characters a line, which is unreadable however
+   * wide the screen — so prose keeps its own 42rem cap (see below) while rules,
+   * grids, figures and section furniture go genuinely edge to edge. The two
+   * concerns are separated rather than both being solved by one middle-ground
+   * number that served neither well.
+   */
+  .container-page {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  /* Kept as a distinct name because ~10 call sites use it and it still means
+     something: this is the one that may go wider than the page grid. With the cap
+     gone the two coincide, but the intent stays legible at the call site. */
+  .container-wide {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  /*
+   * A reading measure, and since the container lost its max-width this is the
+   * ONLY thing standing between body copy and a 200-character line. It is load
+   * bearing now rather than a refinement: a paragraph that is not inside a
+   * .measure (or a grid column narrow enough to act as one) WILL run the full
+   * width of the viewport.
+   *
+   * 42rem holds roughly 65-75 characters, the range prose is comfortable at.
+   */
+  .measure {
+    max-width: 42rem;
+  }
+
+  /*
+   * The vertical rhythm between bands.
+   *
+   * Reduced from clamp(4rem, 10vw, 7.5rem). The old ceiling was 120px top AND
+   * bottom, so two adjacent sections put 240px of nothing between their content —
+   * on top of a min-height that was already holding the band open. The padding and
+   * the floor were solving the same problem twice and compounding into the dead
+   * space the floor above now describes.
+   *
+   * 10vw was also the wrong input: vw is the WIDTH, so a wide monitor inflated the
+   * VERTICAL gaps for no reason. The band gets taller precisely when there is more
+   * room to place things side by side and it needs the height least.
+   */
+  .section-pad {
+    padding-block: clamp(3.5rem, 7vh, 6rem);
+  }
+}
+
+/*
+ * ── Per-section layout grammar ──────────────────────────────────────────────
+ *
+ * Each home-page band gets a different SHAPE, not just a different animation.
+ * Six sections built from one template — centred heading, rule, content — is the
+ * uniform cadence that makes a page read as generated, and no amount of entrance
+ * motion fixes a layout that never responds to what it contains.
+ *
+ * These live outside @layer components so they win against the utility classes
+ * they are correcting, without needing !important.
+ */
+
+/*
+ * EXPERTISE — the numeral wall.
+ *
+ * The numerals hang OUTSIDE the text column rather than sitting in a 40px box
+ * beside it, so the list reads as a wall of figures with phrases set against
+ * them. This is the one place the design sanctions type-as-ornament: the numbers
+ * are the section's visual event.
+ *
+ * `ch` units on the negative margin, so the hang is proportional to the numeral's
+ * own rendered width at whatever the clamp resolved to — a fixed px offset breaks
+ * the moment the viewport changes the font size.
+ */
+.numeral-wall > li {
+  position: relative;
+  padding-inline-start: 4.25rem;
+}
+
+.numeral-wall .numeral {
+  position: absolute;
+  inset-inline-start: 0;
+  top: -0.15em;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+  /* The numerals are the ornament, but they must never out-shout the phrase they
+     label. At full strength a 4rem orange figure beside 16px body text reverses
+     the hierarchy — the reader sees a wall of numbers and has to hunt for the
+     content. */
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* The sans's figures are wider and sit on a different baseline than Newsreader's,
+   and the display face is repointed to the sans in Arabic anyway — so the
+   hang needs more room and no negative optical offset. */
+[dir="rtl"] .numeral-wall > li {
+  padding-inline-start: 5rem;
+}
+
+[dir="rtl"] .numeral-wall .numeral {
+  top: 0;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+@media (max-width: 640px) {
+  /* The hang costs a quarter of a phone's width. Below sm the numeral returns to
+     the flow at a size that still reads as display type but leaves the phrase its
+     measure. */
+  .numeral-wall > li {
+    padding-inline-start: 3rem;
+  }
+
+  .numeral-wall .numeral {
+    font-size: 2rem;
+  }
+}
+
+/*
+ * POSITIONS — rows stepped along the thread.
+ *
+ * Each card is indented slightly further than the one above it, so the list
+ * descends diagonally alongside the decorative thread instead of stacking flush.
+ *
+ * CAPPED AT THREE STEPS, and the cap is the important part: the step repeats
+ * every fourth row (`4n+1`…), so a list of any length stays inside the column.
+ * An uncapped step would walk the last rows of a long list off the inline edge —
+ * and the positions list is the longest section on the page in Turkish.
+ */
+@media (min-width: 1024px) {
+  .thread-steps > li:nth-child(4n + 2) {
+    margin-inline-start: 1.5rem;
+  }
+
+  .thread-steps > li:nth-child(4n + 3) {
+    margin-inline-start: 3rem;
+  }
+
+  .thread-steps > li:nth-child(4n + 4) {
+    margin-inline-start: 4.5rem;
+  }
+}
+
+/*
+ * ABOUT — the portrait breaks its column.
+ *
+ * The figure lifts out of the grid's top edge so it overlaps the band above it,
+ * which is what stops the two-column split reading as two equal boxes. Desktop
+ * only: below lg the grid is a single column and a negative top margin would pull
+ * the portrait over the bio text.
+ */
+@media (min-width: 1024px) {
+  .about-figure {
+    margin-block-start: -4.5rem;
+  }
+}
+
+/*
+ * CONTACT — the arcs go full-bleed.
+ *
+ * The object layer is clipped to the section box everywhere else. Here it spans
+ * the full band behind both columns, so the section reads as an open field rather
+ * than as another bordered panel — the page's last band should feel like an
+ * arrival, not another row.
+ */
+.contact-arcs-bleed {
+  inset-inline: -10%;
+}
+
+/*
+ * ── Anchor-link offset ──────────────────────────────────────────────────────
+ *
+ * All that remains of what used to be the scroll-snapping block. Snapping itself
+ * is gone — `scroll-snap-type`, `scroll-snap-align`, `scroll-snap-stop` and the
+ * `overscroll-behavior-y` that existed only to stop the removed wheel controller
+ * from triggering the browser's rubber-band — along with the desktop-only media
+ * query that gated all of it.
+ *
+ * `scroll-padding-block-start` is NOT part of that and must stay: the header is
+ * `fixed`, so without it every in-page anchor (the nav links, the skip link)
+ * lands with its target's first line underneath the header. It is unconditional
+ * now rather than desktop-only, because the header is fixed at every width and
+ * the old query was about snapping, never about this.
+ */
+html {
+  scroll-padding-block-start: var(--nav-height);
+}
+
+body[data-draft-banner] {
+  scroll-padding-block-start: calc(var(--nav-height) + var(--draft-banner-height));
+}
+
+/*
+ * `.reveal` IS NOW INERT, AND IT IS KEPT ON PURPOSE.
+ *
+ * It used to hold content at `opacity: 0` with a 24px offset until an
+ * IntersectionObserver added `.is-visible` on scroll. That scroll-triggered
+ * entrance is exactly what was removed, so the hiding half is gone with it.
+ *
+ * The RULE stays rather than being deleted because the class is still applied by
+ * components/motion/reveal.tsx across nine components. Declaring the visible
+ * state explicitly means there is no way for the old hidden state to come back by
+ * accident — from a stale cached stylesheet, or from `.is-visible` never being
+ * added now that nothing adds it. Content that is invisible until JavaScript says
+ * otherwise is the single worst failure mode this file can have, and one
+ * unconditional declaration closes it off permanently.
+ */
+.reveal,
+.reveal.is-visible,
+.no-js .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /*
+   * `scroll-behavior: auto` cancels the smooth glide on anchor links — the one
+   * scroll behaviour the page still has. The scroll-snap overrides that used to
+   * sit here are gone because snapping itself is gone: there is no longer anything
+   * for this query to switch off.
+   */
+  html {
+    scroll-behavior: auto;
+  }
+
+  /*
+   * Belt-and-braces beside the JS guard in components/motion/anime-scope.tsx.
+   *
+   * That guard returns before anime.js constructs anything, so normally no
+   * from-state is ever written. This covers the gap where one could be: a scope
+   * created in the instant before the media query resolves, or a future recipe
+   * that sets an initial value outside the guarded callback. An element left at
+   * `opacity: 0` is invisible content, and for a reduced-motion visitor there
+   * would be no animation coming to rescue it — so the floor is stated in CSS
+   * where nothing can race it.
+   */
+  [data-anime] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

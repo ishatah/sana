@@ -1,0 +1,46 @@
+{
+  "_comment": "Intake form section 11's checklist, carried into the repo so /admin/deliverables tracks production against the same list the form uses. Status values: ready | blocked | done. This drives nothing on the public site — it is a production tracker. The one exception is `signOff`, which gates indexing and the draft banner.",
+  "items": [
+    { "id": "micro-bio", "output": "Micro bio", "targetLength": "25 to 40 words", "languages": ["en", "ar"], "status": "done", "blockedOn": "" },
+    { "id": "short-bio", "output": "Short bio", "targetLength": "80 to 120 words", "languages": ["en", "ar"], "status": "done", "blockedOn": "" },
+    { "id": "full-bio", "output": "Full bio", "targetLength": "250 to 350 words", "languages": ["en", "ar"], "status": "done", "blockedOn": "" },
+    { "id": "website-about", "output": "Website About page", "targetLength": "400 to 600 words", "languages": ["en", "ar"], "status": "done", "blockedOn": "" },
+    { "id": "timeline", "output": "Career timeline", "targetLength": "dated milestones", "languages": ["en", "ar"], "status": "blocked", "blockedOn": "q2 — employment dates" },
+    { "id": "partnerships", "output": "Partnership entries", "targetLength": "two ventures", "languages": ["en", "ar"], "status": "blocked", "blockedOn": "q1 — partner company names" },
+    { "id": "one-pager", "output": "One-pager PDF", "targetLength": "1 page", "languages": ["en", "ar"], "status": "ready", "blockedOn": "" },
+    { "id": "linkedin-headline", "output": "LinkedIn headline", "targetLength": "220 characters", "languages": ["en", "ar"], "status": "done", "blockedOn": "" },
+    { "id": "meta-description", "output": "Meta description", "targetLength": "155 characters", "languages": ["en", "ar"], "status": "done", "blockedOn": "" },
+    { "id": "domain", "output": "Domain proposal", "targetLength": "shortlist", "languages": ["en"], "status": "blocked", "blockedOn": "q4 — domain choice" }
+  ],
+  "_comment_questions": "Each of these is a field the intake form marked 'يُزوَّد لاحقًا' or 'لم يُزوَّد'. They are the real outstanding items for this subject — nothing here is inherited from a previous file.",
+  "openQuestions": [
+    { "id": "q1", "question": "Names and details of the two commercial ventures she is a partner in (section 1 — required before those rows may publish)", "answer": "", "answeredOn": "" },
+    { "id": "q2", "question": "Start date for the IBC role, and the period for the membership entry (section 4)", "answer": "", "answeredOn": "" },
+    { "id": "q3", "question": "Which contact channels may be published — official email, phone, WhatsApp (section 6, all currently withheld)", "answer": "", "answeredOn": "" },
+    { "id": "q4", "question": "Domain choice from the proposed shortlist, so the official mailbox can be created (section 7)", "answer": "", "answeredOn": "" },
+    { "id": "q5", "question": "Social account handles, or confirmation that none are to be linked (section 9)", "answer": "", "answeredOn": "" },
+    { "id": "q6", "question": "Whether the city of residence may be named, or country only (section 6)", "answer": "", "answeredOn": "" },
+    { "id": "q7", "question": "A horizontal image at 1920px or wider for the hero backdrop, and whether a colour palette is to be approved (section 5)", "answer": "", "answeredOn": "" },
+    {
+      "_comment": "Not from the intake form — found in review. The supplied biography says 'close to ten years' (under ten) while identity.yearsOfExperience is '10+' (over ten), and both render: the bio in the About prose, the figure in the hero stat bar and the About fact list. They cannot both be right, and the figure is the one a reader treats as verified. NOTHING WAS GUESSED: the '10+' value is left exactly as supplied until she confirms which is correct. Fix by editing data/identity.json only — every surface now interpolates from that one field.",
+      "id": "q8",
+      "question": "Years of experience: the biography says 'close to ten years' but the profile figure says '10+'. Which is correct? (affects data/identity.json yearsOfExperience, and the bio wording in data/biography.json)",
+      "answer": "",
+      "answeredOn": ""
+    }
+  ],
+  "signOff": {
+    "clientReviewedOn": "",
+    "allTitlesConfirmed": false,
+    "exclusionsConfirmed": false,
+    "approvedForPublicationBy": ""
+  },
+  "_comment_media": "Section 5. The two portraits arrived with the intake form and are cleared for website use; everything else is outstanding.",
+  "mediaAssets": [
+    { "id": "portrait-formal", "asset": "Formal portrait photo", "received": true, "permissionRecorded": true },
+    { "id": "portrait-wide", "asset": "Wide studio photo", "received": true, "permissionRecorded": true },
+    { "id": "horizontal-hero", "asset": "Horizontal image, 1920px or wider", "received": false, "permissionRecorded": false },
+    { "id": "org-logos", "asset": "Organisation logos, with permission from the organisation", "received": false, "permissionRecorded": false },
+    { "id": "personal-logo", "asset": "Personal logo or monogram, if one exists", "received": false, "permissionRecorded": false }
+  ]
+}
