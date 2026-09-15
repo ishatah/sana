@@ -1,5 +1,5 @@
 {
-  "_comment": "`enabled:false` hides an entry until the section it points at has content. The page set is intake form section 3's checked list, merged where her content does not fill two pages: المناصب and العضويات والشراكات are one route because both describe the same organisation, and السيرة والمسيرة sits inside /about. NOTE: `href` must match the id of the matching section on the home page, components/site-nav.tsx builds its scroll-spy from it, and a mismatch observes nothing and fails silently.",
+  "_comment": "`enabled:false` hides an entry from the nav row. Usually that means the section has no content yet (press); `contact` is the exception, hidden deliberately because the masthead's Contact CTA already leads there and the row should not carry the same destination twice. The /contact route, the #section-contact anchor and the CTA all still work, only the row entry is suppressed. The page set is intake form section 3's checked list, merged where her content does not fill two pages: المناصب and العضويات والشراكات are one route because both describe the same organisation, and السيرة والمسيرة sits inside /about. NOTE: `href` must match the id of the matching section on the home page, components/site-nav.tsx builds its scroll-spy from it, and a mismatch observes nothing and fails silently.",
   "main": [
     {
       "id": "top",
@@ -63,7 +63,7 @@
         "en": "Contact",
         "ar": "اتصل بي"
       },
-      "enabled": true
+      "enabled": false
     }
   ],
   "legal": [

@@ -29,7 +29,14 @@ import { stripLocale, type ResolvedNavItem } from "@/lib/nav"
  * different states in a six-item row, which reads as noise.
  */
 function desktopLinkClass(isActive: boolean): string {
-  return `relative font-display text-xs font-semibold uppercase tracking-[0.15em] transition-colors ${
+  /*
+   * `.masthead-link` carries only the RTL tracking reset (see globals.css); the
+   * size and spacing stay here with the rest of the link's appearance. The
+   * tracking is 0.14em rather than the old row's 0.15em, matching `.eyebrow`,
+   * because in a centred masthead this row IS an eyebrow: a line of small caps
+   * labelling what is above it.
+   */
+  return `masthead-link relative font-display text-xs font-semibold uppercase tracking-[0.14em] transition-colors ${
     isActive
       ? "text-[color:var(--accent-cool)]"
       : "text-[color:var(--foreground)] hover:text-[color:var(--heading)]"
@@ -45,12 +52,33 @@ function mobileLinkClass(isActive: boolean): string {
 }
 
 /**
- * The Kyros header: transparent over the hero, solid once scrolled, with the
- * menu collapsing to a full-screen overlay below the lg breakpoint.
+ * THE EDITORIAL MASTHEAD: the wordmark centred on its own line, a hairline
+ * beneath it, the nav row centred below that, and the header's own border
+ * closing the block.
  *
- * The template does this with jQuery, a scroll handler toggling `.clone` on the
- * header and a `#menu-btn` click handler. Both are reimplemented here in React so
- * there is no second source of truth for the DOM.
+ * ── IT HAS TWO HEIGHTS, BOTH OF THEM CONSTANTS ────────────────────────────────
+ *
+ * At rest it is --masthead-tall; once scrolled past 60px it collapses to
+ * --masthead-short, the wordmark shrinking onto the same row as the links and
+ * the inner rule retreating to nothing. The tokens and the reasoning behind
+ * keeping them as two fixed values rather than one animated one are in
+ * styles/globals.css; the short version is that `scroll-padding-block-start`
+ * needs a height it can resolve, and a value mid-transition is not one.
+ *
+ * THE SWITCH IS AN ATTRIBUTE ON `body`, NOT A CLASS ON THIS ELEMENT. The anchor
+ * offset is declared on `html`, an ancestor of this header, and custom
+ * properties inherit downward only, so a token set here would be invisible to
+ * the rule that needs it. `body` is the lowest element both can see. That is
+ * also why this component writes to the DOM directly in an effect rather than
+ * rendering the attribute: `body` is outside React's tree.
+ *
+ * ── WHAT IS UNCHANGED ─────────────────────────────────────────────────────────
+ *
+ * The scrolled background swap, the scroll-spy, the sliding underline, the
+ * mobile overlay and the two-kinds-of-link handling are all exactly as they
+ * were. The underline in particular needs no adjustment: it measures each link's
+ * rect against the nav's own rect, so a centred row is no different from a
+ * right-aligned one as far as it is concerned.
  *
  * IT SERVES TWO KINDS OF LINK. Most entries now point at a dedicated route
  * (/about, /roles…); `#top` is still a fragment, and the home page still
@@ -104,6 +132,21 @@ export function SiteNav({
   }, [])
 
   /**
+   * Mirror the scrolled state onto `body`, where the height token lives.
+   *
+   * Written to the DOM rather than rendered because `body` is outside React's
+   * tree. The cleanup removes the attribute so a teardown cannot leave the
+   * document pinned to the collapsed height with no header driving it.
+   */
+  useEffect(() => {
+    const { body } = document
+    if (scrolled) body.setAttribute("data-nav-scrolled", "")
+    else body.removeAttribute("data-nav-scrolled")
+
+    return () => body.removeAttribute("data-nav-scrolled")
+  }, [scrolled])
+
+  /**
    * The sliding underline.
    *
    * Called directly rather than through `MotionScope`, because that component
@@ -116,6 +159,13 @@ export function SiteNav({
    * Reduced motion is checked here, since the scope's `mediaQueries` guard is not
    * in play. Without it, a visitor who has asked for less movement still gets a
    * bar chasing the cursor across the header.
+   *
+   * `scrolled` IS A DEPENDENCY NOW. The collapse moves every link horizontally,
+   * the row re-centres as the wordmark leaves it, so the rects the interaction
+   * measured at the tall height are stale at the short one and the bar would sit
+   * beside its item rather than under it. Rebinding on the transition re-measures
+   * them. It is the same argument as the `resize` listener the interaction
+   * already carries: the geometry changed, so the measurement has to be retaken.
    */
   useEffect(() => {
     const header = headerRef.current
@@ -126,7 +176,7 @@ export function SiteNav({
     return () => cleanup?.()
     // `visible.length` rather than `visible`: the array identity changes on every
     // render, which would tear down and rebind the listeners each time.
-  }, [visible.length, active])
+  }, [visible.length, active, scrolled])
 
   /**
    * Scroll-spy for the active anchor.
@@ -182,66 +232,128 @@ export function SiteNav({
 
   return (
     /*
-     * FIXED HEIGHT, NOT ANIMATED PADDING.
+     * THE HEIGHT IS --nav-height, WHICH IS NOW ONE OF TWO CONSTANTS.
      *
-     * This used to shrink from `py-6` to `py-3` on scroll, so the header was
-     * ~76px at rest and ~52px once scrolled, transitioning over 300ms between
-     * them. That is harmless in a flowing document and unworkable underneath
-     * scroll snapping: `scroll-padding-block-start` has to equal the header's
-     * height for a snapped section to land below it rather than behind it, and a
-     * height that is mid-transition has no single correct value, every snap
-     * during those 300ms lands at a slightly different offset.
+     * It reads the same token it always did; what changed is that the token is
+     * reassigned on `body[data-nav-scrolled]` rather than being a single fixed
+     * value. Everything downstream of it, the anchor offset on `html`, the
+     * sticky ledger column, follows automatically. See the block on the tokens
+     * in styles/globals.css.
      *
-     * The height is now --nav-height in styles/globals.css, which is the same
-     * value the scroll padding reads, and only colour, shadow and blur still
-     * transition. The header still visibly changes on scroll; it just no longer
-     * changes SIZE.
+     * A BORDER ON SCROLL, NOT A SHADOW.
+     *
+     * The scrolled state used `shadow-[var(--shadow-brand)]`, which was the
+     * light scheme's warm brown glow. A drop shadow works by darkening what is
+     * behind it, on a charcoal page there is nothing left to darken, so it
+     * contributed a faint muddy smear and no separation at all. A hairline is
+     * how a fixed header separates itself from dark content.
+     *
+     * THE BORDER APPEARS ON SCROLL, TOGETHER WITH THE GROUND BEHIND IT.
+     *
+     * It was briefly permanent, on the argument that the lower rule is half of
+     * the "rules above and below" the design is built on. But at the top of the
+     * page the header is transparent, so that rule was a hairline ruled across
+     * the hero with nothing above it, separating the hero from itself. A
+     * separator needs two things to separate; at rest there is only one.
+     *
+     * So it fades in with the background, on the same `scrolled` flag and the
+     * same duration, and the pair reads as one bar arriving rather than as a
+     * line that was always there over a ground that was not. The inner masthead
+     * rule under the wordmark is untouched: that one underscores the name, which
+     * IS present at rest, so it has something to do.
+     *
+     * `border-transparent` rather than `border-b-0`: the border box has to keep
+     * its width or the header's content shifts up a pixel as it fades in, and
+     * `border-color` is animatable where border-width is not.
+     *
+     * AND THAT GROUND IS OPAQUE, NOT FROSTED. The scrolled state was
+     * `bg-[--background]/95 backdrop-blur-sm`. At 95% opacity the blur had
+     * almost nothing to act on, 5% of the content bleeding through, softened,
+     * so it read as a flat bar either way while still forcing the browser to
+     * hold a backdrop layer and re-filter it on every scroll frame.
+     *
+     * Paying a compositing cost for an effect nobody can see is the easy half of
+     * the argument. The other half is that frosted glass is a borrowed idiom: it
+     * belongs to floating translucent panels, and this header is neither, it is
+     * an opaque bar with a hairline under it, which is what the rest of the page
+     * is built from.
      */
     <header
       ref={headerRef}
       style={{ height: "var(--nav-height)" }}
-      /*
-       * A BORDER ON SCROLL, NOT A SHADOW.
-       *
-       * The scrolled state used `shadow-[var(--shadow-brand)]`, which was the
-       * light scheme's warm brown glow. A drop shadow works by darkening what is
-       * behind it, on a charcoal page there is nothing left to darken, so it
-       * contributed a faint muddy smear and no separation at all. A hairline is
-       * how a fixed header separates itself from dark content.
-       *
-       * `border-b border-transparent` in the unscrolled state rather than no
-       * border: it keeps the header's box the same height in both states, so the
-       * content beneath does not shift by 1px on the first scroll.
-       *
-       * AND THE GROUND IS OPAQUE, NOT FROSTED. The scrolled state was
-       * `bg-[--background]/95 backdrop-blur-sm`. At 95% opacity the blur had
-       * almost nothing to act on, 5% of the content bleeding through, softened,
-       * so it read as a flat bar either way while still forcing the browser to
-       * hold a backdrop layer and re-filter it on every scroll frame.
-       *
-       * Paying a compositing cost for an effect nobody can see is the easy half of
-       * the argument. The other half is that frosted glass is a borrowed idiom: it
-       * belongs to floating translucent panels, and this header is neither, it is
-       * an opaque bar with a hairline under it, which is what the rest of the page
-       * is built from.
-       */
-      className={`fixed inset-x-0 top-0 z-40 border-b transition-[background-color,border-color] [transition-duration:var(--dur-3)] [transition-timing-function:var(--ease-out)] ${
-        scrolled
-          ? "border-[color:var(--border)] bg-[color:var(--background)]"
-          : "border-transparent bg-transparent"
+      className={`fixed inset-x-0 top-0 z-40 border-b transition-[background-color,border-color,height] [transition-duration:var(--dur-4)] [transition-timing-function:var(--ease-out)] ${
+        scrolled ? "border-[color:var(--border)] bg-[color:var(--background)]" : "border-transparent bg-transparent"
       }`}
     >
-      <div className="container-page flex h-full items-center justify-between gap-6">
+      {/*
+        ── THE MASTHEAD, lg AND UP ─────────────────────────────────────────
+
+        A column at rest, a row once collapsed, which is the whole layout change
+        the scroll triggers. Everything else, the rule, the wordmark's size, the
+        nav row's position, is a transition on one of those two states.
+
+        `justify-center` rather than `justify-between` in the column state: a
+        masthead is centred by definition, and the language toggle and CTA are
+        pinned to the corners absolutely (below) rather than participating in the
+        flow. Putting them in the flow is what would pull the wordmark off
+        centre, which is the one thing this design cannot tolerate.
+      */}
+      <div className="container-page relative hidden h-full flex-col items-center justify-center lg:flex">
+        {/*
+          THE CORNERS: language inline-start, CTA inline-end.
+
+          Absolutely positioned so they take no part in centring the masthead.
+          `start-0`/`end-0` are the logical insets, so Arabic mirrors them
+          without a second rule, and they are inside `.container-page` so they
+          sit on the same gutter every other page element does.
+
+          They keep their vertical centring in BOTH header states, `inset-y-0`
+          plus `items-center`, so the collapse does not move them at all. The
+          masthead rearranges; its corners are furniture.
+        */}
+        <div className="absolute inset-y-0 start-0 flex items-center">
+          <LanguageToggle />
+        </div>
+        <div className="absolute inset-y-0 end-0 flex items-center">
+          <Link href={contactHref} className="btn-main !px-6 !py-2.5 text-sm">
+            {t("cta")}
+          </Link>
+        </div>
+
+        {/*
+          The wordmark. `.masthead-name` carries the size and tracking, both of
+          which change with the collapse; the colour and weight stay here.
+        */}
         <a
           href="#top"
-          className="font-display text-lg font-bold uppercase tracking-[0.2em] text-[color:var(--heading)] transition-colors hover:text-[color:var(--primary-strong)]"
+          className="masthead-name font-display font-bold uppercase text-[color:var(--heading)] transition-colors hover:text-[color:var(--primary-strong)]"
         >
           {name}
         </a>
 
+        {/*
+          THE INNER RULE, and the gap it lives in.
+
+          `my-3` at rest, collapsing with the rule itself. It is inside a wrapper
+          with `w-full max-w-[22rem]` so the rule is a measured line under the
+          wordmark rather than a full-bleed divider, a masthead rule is sized to
+          the name it underscores, not to the page.
+
+          aria-hidden: it is pure typography with no semantic content, and the
+          header already has its structure from the landmark and the heading.
+        */}
+        <span
+          aria-hidden
+          className={`w-full max-w-[22rem] transition-[margin] [transition-duration:var(--dur-4)] [transition-timing-function:var(--ease-out)] ${
+            scrolled ? "my-0" : "my-3"
+          }`}
+        >
+          <span className="masthead-rule block" />
+        </span>
+
         <nav
           aria-label={t("menu")}
-          className="relative hidden items-center gap-8 lg:flex"
+          className={`masthead-row relative flex items-center gap-8 ${scrolled ? "-mt-1" : ""}`}
           data-interact="nav-list"
         >
           {/* One shared underline that slides between items. Hidden until the
@@ -280,25 +392,24 @@ export function SiteNav({
             )
           })}
         </nav>
+      </div>
 
-        {/*
-          The locale switcher and the CTA, OUTSIDE the <nav>.
+      {/*
+        ── THE MOBILE BAR, BELOW lg ────────────────────────────────────────
 
-          LanguageToggle used to live inside it. It is not navigation, it does not
-          take you to another part of the document, it re-renders the current one
-          in another language, so it was inflating the "navigation" landmark's
-          contents for anyone listing links by landmark. It is its own labelled
-          group (role="group" aria-label="Language") and belongs beside the nav,
-          not in it.
-        */}
-        <div className="hidden items-center gap-4 lg:flex">
-          <LanguageToggle />
-          <Link href={contactHref} className="btn-main !px-6 !py-2.5 text-sm">
-            {t("cta")}
-          </Link>
-        </div>
+        Unchanged. The masthead is a desktop composition; see the note on the
+        `max-width` query in styles/globals.css for why the tall height is never
+        in force here.
+      */}
+      <div className="container-page flex h-full items-center justify-between gap-6 lg:hidden">
+        <a
+          href="#top"
+          className="font-display text-lg font-bold uppercase tracking-[0.2em] text-[color:var(--heading)] transition-colors hover:text-[color:var(--primary-strong)]"
+        >
+          {name}
+        </a>
 
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-3">
           <LanguageToggle />
           <button
             type="button"

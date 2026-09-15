@@ -327,13 +327,24 @@
   --font-arabic: var(--font-body), "IBM Plex Sans Arabic", "Cairo", "Segoe UI", Tahoma, sans-serif;
 
   /*
-   * Fixed header height. The nav used to derive its height from padding that
-   * animated on scroll (py-6 -> py-3), so the header was ~76px at rest and ~52px
-   * once scrolled. That is fine in a flowing document and unworkable with scroll
-   * snapping, where every section's resting offset has to be a known constant.
-   * components/site-nav.tsx now holds this height and transitions only colour.
+   * The header height every other rule reads, and the ONLY name they need to
+   * know. The nav used to derive its height from padding that animated on scroll
+   * (py-6 -> py-3), so the header was ~76px at rest and ~52px once scrolled. That
+   * is fine in a flowing document and unworkable with scroll snapping, where
+   * every section's resting offset has to be a known constant.
+   *
+   * IT IS NOW AN ALIAS, NOT A LITERAL, and it is deliberately declared down with
+   * the masthead rules rather than here. The header has two heights again
+   * (--masthead-tall / --masthead-short below), but unlike the animated padding
+   * this replaced, both are CONSTANTS and this token resolves to exactly one of
+   * them at any moment, switched by an attribute rather than swept through.
+   *
+   * The declaration lives beside `scroll-padding-block-start`, its most
+   * important consumer, because the two only make sense read together: search
+   * for `body[data-nav-scrolled]` in this file. Declaring it here as well would
+   * put a literal in the obvious place that the cascade silently discards, which
+   * is worse than not declaring it here at all.
    */
-  --nav-height: 4.75rem;
 
   /*
    * ── THE MASTHEAD'S TWO HEIGHTS ──────────────────────────────────────────
@@ -3231,6 +3242,155 @@
  */
 html {
   scroll-padding-block-start: var(--nav-height);
+}
+
+/*
+ * ── THE MASTHEAD, AND HOW THE ANCHOR OFFSET FOLLOWS IT ──────────────────────
+ *
+ * --nav-height is REASSIGNED rather than replaced at the call site, and that is
+ * the whole design of this. The rule above reads --nav-height and knows nothing
+ * about mastheads; every other consumer in the codebase
+ * (components/motion/fm/pinned-ledger.tsx pins a sticky column at
+ * `calc(var(--nav-height) + 6vh)`) is in the same position. Pointing the token
+ * at whichever height is currently in force means all of them stay correct
+ * without any of them learning a second name.
+ *
+ * `body[data-nav-scrolled]` is the switch, set by components/site-nav.tsx from
+ * the same scroll listener that used to drive the background swap. An attribute
+ * on `body` rather than a class on the header because the token has to be
+ * readable by `html`'s scroll padding, which is an ANCESTOR of the header and so
+ * cannot inherit anything the header sets. Custom properties inherit downward
+ * only; `body` is the lowest element both the padding rule and the header can
+ * see. (`:root` would work equally, but React does not own <html>.)
+ */
+:root {
+  --nav-height: var(--masthead-tall);
+}
+
+body[data-nav-scrolled] {
+  --nav-height: var(--masthead-short);
+}
+
+/*
+ * BELOW `lg` THE MASTHEAD IS NOT USED AT ALL.
+ *
+ * A centred two-line masthead needs horizontal room for the nav row; at phone
+ * width six tracked-out uppercase labels wrap to three lines and the "masthead"
+ * becomes a third of the screen. The mobile header stays the compact bar with a
+ * hamburger it already was, so the token is pinned to the short height there and
+ * the tall value is never in force.
+ *
+ * 64rem is Tailwind's `lg`, matching the `lg:` prefixes in site-nav.tsx. It is
+ * written as a raw length because a custom property cannot be used in a media
+ * condition, which is a language limit rather than an oversight.
+ */
+@media (max-width: 63.999rem) {
+  :root {
+    --nav-height: var(--masthead-short);
+  }
+}
+
+/*
+ * The rules above and below the wordmark.
+ *
+ * Both are `--border` hairlines rather than gold. The masthead is the most
+ * persistent element on the site, on screen at every scroll position of every
+ * route, and the budget note on the accent in this file is explicit that gold is
+ * spent by PERSISTENCE as much as by area. Two permanent gold rules across the
+ * full width of every page would be the single largest gold surface on the site.
+ *
+ * The lower rule is on the header's own `border-b`, so only the upper one needs
+ * declaring: it sits between the wordmark and the nav row and must shrink to
+ * nothing when the masthead collapses, which a border on a fixed-height element
+ * cannot do.
+ */
+.masthead-rule {
+  height: 1px;
+  width: 100%;
+  background: var(--border);
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: opacity var(--dur-3) var(--ease-rule), transform var(--dur-3) var(--ease-rule);
+}
+
+/*
+ * Collapsed, the inner rule is gone rather than merely hidden.
+ *
+ * `scaleX(0)` from the centre rather than `opacity: 0` alone: the rule retreats
+ * to the middle of the masthead, which is where the collapse is pulling
+ * everything else, so it reads as part of one gesture rather than as a line that
+ * blinked out while the rest of the header moved.
+ */
+body[data-nav-scrolled] .masthead-rule {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+/*
+ * THE WORDMARK'S SIZE IS PART OF THE COLLAPSE.
+ *
+ * At rest it is the largest type in the chrome, which is what makes the block a
+ * masthead rather than a tall nav. Collapsed it has to sit on one line beside
+ * the nav row at the same optical weight as it had in the old header, so it
+ * comes down to the 1.125rem that header used.
+ *
+ * Tracking comes DOWN as the size goes up, for the reason recorded at
+ * `.eyebrow-lg`: letterspacing is optical rather than proportional, and 0.2em at
+ * 24px is visibly looser than the same figure at 18px.
+ */
+.masthead-name {
+  font-size: 1.5rem;
+  letter-spacing: 0.16em;
+  transition: font-size var(--dur-4) var(--ease-out), letter-spacing var(--dur-4) var(--ease-out);
+}
+
+body[data-nav-scrolled] .masthead-name {
+  font-size: 1.125rem;
+  letter-spacing: 0.2em;
+}
+
+/*
+ * Arabic has no letter case, so the uppercase transform the wordmark carries is
+ * dropped and the tracking cut, exactly as `.eyebrow` does. Tracked-out Arabic
+ * breaks the cursive joins between letters, which is a legibility fault rather
+ * than a stylistic one.
+ */
+[dir="rtl"] .masthead-name,
+[dir="rtl"] .masthead-link {
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+/*
+ * The nav row's own collapse.
+ *
+ * It carries only a `margin` transition, because the margin is what actually
+ * moves it, the `-mt-1` the component swaps on at the collapsed height. An
+ * earlier draft of this rule transitioned `transform` as well; nothing ever set
+ * a transform on this element, so that half was a promise to animate a property
+ * that never changed. A transition listed for a property nobody writes is not
+ * inert, it is a false lead for whoever next tries to work out why this row
+ * moves.
+ */
+.masthead-row {
+  transition: margin var(--dur-4) var(--ease-out);
+}
+
+/*
+ * ── REDUCED MOTION: THE HEADER STILL COLLAPSES, IT JUST DOES NOT TRAVEL ─────
+ *
+ * The collapse is not decoration that can simply be switched off. It is what
+ * keeps a 9.5rem block from covering a fifth of a phone-sized viewport for the
+ * whole of a long page, and --nav-height, which the anchor offset reads, changes
+ * with it either way. What a reader on reduced motion has asked not to have is
+ * the MOVEMENT, so every transition is removed and both states remain.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .masthead-rule,
+  .masthead-name,
+  .masthead-row {
+    transition: none !important;
+  }
 }
 
 /*
