@@ -336,6 +336,39 @@
   --nav-height: 4.75rem;
 
   /*
+   * ── THE MASTHEAD'S TWO HEIGHTS ──────────────────────────────────────────
+   *
+   * The header is a centred editorial masthead: the wordmark on its own line
+   * with the nav row beneath it, rules above and below. That is TALL at rest and
+   * collapses to a single compact row once the reader has scrolled past the
+   * point where an identity block is still earning its space.
+   *
+   * WHY TWO TOKENS AND NOT AN ANIMATED PADDING. The note on --nav-height above
+   * records exactly why the old header stopped animating its own size: a height
+   * that is mid-transition has no single correct value, and
+   * `scroll-padding-block-start` has to equal the header's height for an anchor
+   * to land below it rather than behind it. That argument is not repealed here,
+   * it is respected. The header still has exactly two heights, both of them
+   * constants, and the scroll padding tracks whichever one is in force via
+   * --nav-height being reassigned (see the `body[data-nav-scrolled]` rule further
+   * down), not via a value that sweeps between them.
+   *
+   * The height itself DOES transition for the eye, over --dur-4, which is the
+   * "geometry" step on the scale. What matters for correctness is that at any
+   * moment the anchor offset resolves to one of two known numbers rather than to
+   * whatever the animation happens to be passing through, and a reader clicking
+   * an anchor mid-collapse is landing at most 5rem off for 720ms, against a
+   * masthead that was going to settle at the compact height anyway.
+   *
+   * 9.5rem at rest: enough for a 1.5rem wordmark, its rules, and the nav row
+   * without the block reading as a banner. 4.75rem collapsed is exactly
+   * --nav-height's old value, so the compact state is dimensionally the header
+   * this replaced.
+   */
+  --masthead-tall: 9.5rem;
+  --masthead-short: 4.75rem;
+
+  /*
    * The height of one "page" in the snapped layout.
    *
    * svh, not vh: on mobile Safari vh includes the retracting browser chrome, so a
