@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
  * Scoped to what this site actually does, which is very little: it has no
  * analytics, no advertising, no third-party embeds, and the only personal data it
  * ever receives is what someone types into the contact form. Saying that plainly
- * is more useful — and more accurate — than a generic template describing cookie
+ * is more useful, and more accurate, than a generic template describing cookie
  * categories and processors that do not exist here.
  *
  * The contact address is read from settings rather than hardcoded, so it can never

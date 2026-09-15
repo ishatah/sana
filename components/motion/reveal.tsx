@@ -12,7 +12,7 @@
  *
  * Nine components render `<Reveal>`, several as `as="li"` or `as="section"` and
  * several passing `data-*` attributes through. Deleting it would mean editing
- * every one of those call sites to swap in a bare element — a large diff whose
+ * every one of those call sites to swap in a bare element, a large diff whose
  * only purpose is to remove a wrapper that now costs nothing. Keeping the
  * component with its signature intact removes the motion without touching the
  * markup that uses it.
@@ -26,7 +26,7 @@
  * wrapper renders on the server and ships nothing.
  *
  * `delay` and `once` are accepted and ignored. They are kept in the signature so
- * the existing call sites — which still pass `delay={120}` and similar — keep
+ * the existing call sites, which still pass `delay={120}` and similar, keep
  * type-checking; removing them would be the same wide diff this file exists to
  * avoid. They are deliberately not destructured into the DOM, because `delay` and
  * `once` are not valid HTML attributes and React would warn on every one.
@@ -40,27 +40,27 @@ export function Reveal({
   ...rest
 }: {
   children: React.ReactNode
-  /** Accepted and ignored — see the note above. */
+  /** Accepted and ignored, see the note above. */
   delay?: number
   className?: string
   as?: React.ElementType
-  /** Accepted and ignored — see the note above. */
+  /** Accepted and ignored, see the note above. */
   once?: boolean
   /**
-   * Anything else — in practice `data-anime="…"`, which the remaining anime.js
+   * Anything else, in practice `data-anime="…"`, which the remaining anime.js
    * INTERACTIONS (hover, expand, copy) still select on.
    *
    * WITHOUT THIS SPREAD THE ATTRIBUTE IS SILENTLY DROPPED. This component once
    * destructured its known props and rendered only those, so a `data-anime`
    * passed to `<Reveal as="li">` never reached the DOM and the recipes matched
-   * zero elements — no error, just nothing happening. The spread stays for the
+   * zero elements, no error, just nothing happening. The spread stays for the
    * same reason it was added.
    */
   [key: string]: unknown
 }) {
   /*
    * `.reveal` is still applied, and the class is still declared in
-   * styles/globals.css — but it now resolves to the VISIBLE state
+   * styles/globals.css, but it now resolves to the VISIBLE state
    * unconditionally. Keeping the class on the element means the stylesheet stays
    * the single place that decides what it means, rather than the truth being
    * split between a class here and a rule there.

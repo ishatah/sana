@@ -5,7 +5,7 @@ import { NextRequest } from "next/server"
  * expiry, verified with Web Crypto so this runs unchanged on the Edge runtime.
  *
  * The admin panel here edits an unpublished profile that contains, among other
- * things, two unlisted phone numbers and two unconfirmed addresses — so this is
+ * things, two unlisted phone numbers and two unconfirmed addresses, so this is
  * guarding real personal data, not just page copy.
  */
 async function verifyToken(token: string): Promise<boolean> {

@@ -1,0 +1,85 @@
+- generic [active] [ref=f5e1]:
+  - link "Skip to content" [ref=f5e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - link "Sanae Rakik" [ref=f5e5] [cursor=pointer]:
+        - /url: "#top"
+      - navigation "Menu" [ref=f5e6]:
+        - link "Home" [ref=f5e7] [cursor=pointer]:
+          - /url: /#top
+        - link "About" [ref=f5e8] [cursor=pointer]:
+          - /url: /about
+        - link "Expertise" [ref=f5e10] [cursor=pointer]:
+          - /url: /expertise
+        - link "Roles" [ref=f5e11] [cursor=pointer]:
+          - /url: /roles
+        - link "Contact" [ref=f5e12] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=f5e13]:
+        - group "Language" [ref=f5e14]:
+          - button "EN" [disabled] [ref=f5e15]
+          - button "AR" [ref=f5e16]
+        - link "Contact me" [ref=f5e17] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=f5e18]:
+    - generic [ref=f5e22]:
+      - paragraph [ref=f5e23]: Profile
+      - heading "About" [level=1] [ref=f5e24]
+      - paragraph [ref=f5e25]: Business development and strategic partnerships between Europe and the Middle East.
+    - generic [ref=f5e27]:
+      - heading "Profile" [level=2] [ref=f5e29]
+      - generic [ref=f5e30]:
+        - generic [ref=f5e31]:
+          - paragraph [ref=f5e32]: Sanae Rakik is an entrepreneur and business development professional with extensive experience in strategic partnerships, international business development and real estate. She has built a network across Europe and the Middle East that allows her to connect businesses, investors and decision makers, and to create opportunities for long-term collaboration. She represents the International Business Council (IBC) as a Consultant and Strategic Representative.
+          - generic [ref=f5e33]:
+            - generic [ref=f5e34]:
+              - term [ref=f5e35]: Experience
+              - definition [ref=f5e36]: 10+ years
+            - generic [ref=f5e37]:
+              - term [ref=f5e38]: Sector
+              - definition [ref=f5e39]: Business development, strategic partnerships, real estate
+            - generic [ref=f5e40]:
+              - term [ref=f5e41]: Based in
+              - definition [ref=f5e42]: Netherlands
+            - generic [ref=f5e43]:
+              - term [ref=f5e44]: Markets covered
+              - definition [ref=f5e45]: Europe, the Gulf states and the wider Middle East
+            - generic [ref=f5e46]:
+              - term [ref=f5e47]: Nationality
+              - definition [ref=f5e48]: Dutch
+          - blockquote [ref=f5e49]:
+            - paragraph [ref=f5e50]: I believe that successful business is built on trust, professionalism, integrity and lasting relationships. My goal is to create meaningful connections, support impactful projects, and contribute to sustainable growth for the organisations and partners I represent.
+            - generic [ref=f5e51]: Sanae Rakik
+        - img "Sanae Rakik, formal studio portrait." [ref=f5e53]
+    - generic [ref=f5e55]:
+      - heading "Focus" [level=2] [ref=f5e57]
+      - generic [ref=f5e58]:
+        - generic [ref=f5e59]:
+          - term [ref=f5e60]: Primary focus
+          - definition [ref=f5e61]: Businesswoman and consultant
+        - generic [ref=f5e62]:
+          - term [ref=f5e63]: Secondary focus
+          - definition [ref=f5e64]: Entrepreneurship and international business development
+        - generic [ref=f5e65]:
+          - term [ref=f5e66]: Works with
+          - definition [ref=f5e67]: Investors, clients, entrepreneurs, companies, strategic partners, institutions
+    - generic [ref=f5e69]:
+      - heading "Full biography" [level=2] [ref=f5e71]
+      - generic [ref=f5e72]:
+        - paragraph [ref=f5e73]: Sanae Rakik is an entrepreneur and business development professional with extensive experience in strategic partnerships, international business development and real estate. Throughout her career she has built a strong network across Europe and the Middle East, allowing her to connect businesses, investors and decision makers while creating valuable opportunities for long-term collaboration.
+        - paragraph [ref=f5e74]: She specialises in business development, client acquisition, strategic networking, relationship management and identifying commercial opportunities. Her work centres on bringing the right parties together, building trusted partnerships, and supporting organisations in achieving sustainable growth through meaningful business relationships.
+        - paragraph [ref=f5e75]: She represents the International Business Council (IBC) as a Consultant and Strategic Representative, contributing to international business relations by connecting entrepreneurs, companies, investors and institutions across different sectors. That role focuses on facilitating strategic partnerships, encouraging cross-border collaboration, and supporting initiatives that create long-term economic value.
+        - paragraph [ref=f5e76]: Alongside her consulting work she is a partner in two established commercial ventures.
+  - contentinfo [ref=f5e77]:
+    - generic [ref=f5e78]:
+      - paragraph [ref=f5e79]: © 2026 Sanae Rakik. All rights reserved.
+      - navigation "Legal" [ref=f5e80]:
+        - link "Privacy" [ref=f5e81] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f5e82] [cursor=pointer]:
+          - /url: /terms
+        - link "Cookies" [ref=f5e83] [cursor=pointer]:
+          - /url: /cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f5e89] [cursor=pointer]

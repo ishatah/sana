@@ -9,7 +9,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   return {
     locale,
     messages: (await import(`../messages/${locale}.json`)).default,
-    // Server side only — every NextIntlClientProvider must pass TIME_ZONE too.
+    // Server side only, every NextIntlClientProvider must pass TIME_ZONE too.
     timeZone: TIME_ZONE,
   }
 })

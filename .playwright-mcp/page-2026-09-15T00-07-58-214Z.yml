@@ -1,0 +1,82 @@
+- generic [active] [ref=f12e1]:
+  - link "Skip to content" [ref=f12e2] [cursor=pointer]:
+    - /url: "#main"
+  - status [ref=f12e3]:
+    - generic [ref=f12e4]:
+      - generic [ref=f12e5]: DRAFT
+      - generic [ref=f12e6]: This profile is a draft and has not been approved for publication. Titles and positions are not final until confirmed in writing by the client.
+  - banner [ref=f12e7]:
+    - generic [ref=f12e8]:
+      - link "Sanae Rakik" [ref=f12e9] [cursor=pointer]:
+        - /url: "#top"
+      - generic [ref=f12e10]:
+        - group "Language" [ref=f12e11]:
+          - button "EN" [disabled] [ref=f12e12]
+          - button "AR" [ref=f12e13]
+        - button "Menu" [ref=f12e14]
+  - main [ref=f12e19]:
+    - generic [ref=f12e22]:
+      - paragraph [ref=f12e23]: Capabilities
+      - heading "Areas of Expertise" [level=1] [ref=f12e24]
+      - paragraph [ref=f12e26]: Where her work is concentrated, and the markets it covers.
+    - generic [ref=f12e28]:
+      - generic [ref=f12e29]:
+        - heading "Core Areas" [level=2] [ref=f12e31]
+        - paragraph [ref=f12e33]: Where her work is focused
+      - list [ref=f12e34]:
+        - listitem [ref=f12e35]:
+          - generic [aria-hidden]: "01"
+          - heading "Business development" [level=3] [ref=f12e36]
+        - listitem [ref=f12e37]:
+          - generic [aria-hidden]: "02"
+          - heading "International business development" [level=3] [ref=f12e38]
+        - listitem [ref=f12e39]:
+          - generic [aria-hidden]: "03"
+          - heading "Strategic partnerships" [level=3] [ref=f12e40]
+        - listitem [ref=f12e41]:
+          - generic [aria-hidden]: "04"
+          - heading "Client acquisition" [level=3] [ref=f12e42]
+        - listitem [ref=f12e43]:
+          - generic [aria-hidden]: "05"
+          - heading "Professional networking and relationship management" [level=3] [ref=f12e44]
+        - listitem [ref=f12e45]:
+          - generic [aria-hidden]: "06"
+          - heading "Identifying and evaluating commercial opportunities" [level=3] [ref=f12e46]
+        - listitem [ref=f12e47]:
+          - generic [aria-hidden]: "07"
+          - heading "Real estate and property transactions" [level=3] [ref=f12e48]
+        - listitem [ref=f12e49]:
+          - generic [aria-hidden]: "08"
+          - heading "Cross-border commercial cooperation" [level=3] [ref=f12e50]
+    - generic [ref=f12e52]:
+      - heading "Markets" [level=2] [ref=f12e55]
+      - generic [ref=f12e57]:
+        - generic [ref=f12e58]:
+          - term [ref=f12e59]: Sector
+          - definition [ref=f12e60]: Business development, strategic partnerships, real estate
+        - generic [ref=f12e61]:
+          - term [ref=f12e62]: Based in
+          - definition [ref=f12e63]: Netherlands
+        - generic [ref=f12e64]:
+          - term [ref=f12e65]: Markets covered
+          - definition [ref=f12e66]: Europe, the Gulf states and the wider Middle East
+      - list [ref=f12e67]:
+        - listitem [ref=f12e68]:
+          - generic [ref=f12e69]: Based in
+          - text: Netherlands
+        - listitem [ref=f12e70]:
+          - generic [ref=f12e71]: Active across
+          - text: Europe · Gulf · Middle East
+  - contentinfo [ref=f12e72]:
+    - generic [ref=f12e73]:
+      - paragraph [ref=f12e74]: © 2026 Sanae Rakik. All rights reserved.
+      - navigation "Legal" [ref=f12e75]:
+        - link "Privacy" [ref=f12e76] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f12e77] [cursor=pointer]:
+          - /url: /terms
+        - link "Cookies" [ref=f12e78] [cursor=pointer]:
+          - /url: /cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f12e84] [cursor=pointer]
+  - alert [ref=f12e88]

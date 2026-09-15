@@ -8,9 +8,9 @@ export const getDeliverables = cmsSection("deliverables", deliverablesLocal as a
 
 /**
  * How a contact line may be used.
- *   public      — cleared for the website
- *   internal    — our file only; never rendered, never put in JSON-LD
- *   to-confirm  — withheld until the client answers open question Q6 in writing
+ *   public, cleared for the website
+ *   internal, our file only; never rendered, never put in JSON-LD
+ *   to-confirm, withheld until the client answers open question Q6 in writing
  *
  * "to-confirm" is a separate state from "internal" on purpose. Both are withheld
  * today, but they resolve differently: an internal line stays internal forever,
@@ -47,12 +47,12 @@ export interface OfficeAddress {
  *
  * Defaulting to withheld is the whole point: `visibility === "public"` is an
  * allowlist, so a line added later through /admin without an explicit decision is
- * hidden until someone makes one. The opposite default — hide only what is marked
- * internal — publishes anything anyone forgets to mark, and a personal phone
+ * hidden until someone makes one. The opposite default, hide only what is marked
+ * internal, publishes anything anyone forgets to mark, and a personal phone
  * number is exactly the kind of thing that gets forgotten.
  *
  * EVERY CHANNEL IS WITHHELD TODAY. Intake section 6 defers all of them: the phone
- * and WhatsApp are "لا يُنشر في هذه المرحلة", and the email is "يُزوَّد لاحقًا" —
+ * and WhatsApp are "لا يُنشر في هذه المرحلة", and the email is "يُزوَّد لاحقًا",
  * an official mailbox is to be created once a domain is chosen. So `emails`,
  * `phones` and `addresses` are all empty and the contact page offers the form and
  * the country, which is the honest state rather than a gap. Note also that a home

@@ -22,7 +22,7 @@
   "about": {
     "heading": "About",
     "experienceLabel": "Experience",
-    "_comment_experienceValue": "The VALUE comes from data/identity.json (yearsOfExperience) and is interpolated as {years} — only the unit word is translated here. Do not hardcode a figure: this string is rendered in the hero stat bar and the About fact list, where a number reads as verified.",
+    "_comment_experienceValue": "The VALUE comes from data/identity.json (yearsOfExperience) and is interpolated as {years}, only the unit word is translated here. Do not hardcode a figure: this string is rendered in the hero stat bar and the About fact list, where a number reads as verified.",
     "experienceValue": "{years} years",
     "sectorLabel": "Sector",
     "baseLabel": "Based in",
@@ -43,7 +43,9 @@
     "location": "Location",
     "visitSite": "Organisation website",
     "sinceUnconfirmed": "Start year to be confirmed",
-    "details": "Details"
+    "details": "Details",
+    "registerConfirmed": "Register entry confirmed",
+    "registerPending": "Register entry pending confirmation"
   },
   "contact": {
     "heading": "Contact",
@@ -61,6 +63,7 @@
       "message": "Your message",
       "send": "Send Message",
       "sending": "Sending…",
+      "sentShort": "Message sent",
       "success": "Your message has been sent. You will receive a reply shortly.",
       "error": "The message could not be sent. Please email directly instead.",
       "required": "This field is required",
@@ -79,8 +82,7 @@
       "primaryIdentityLabel": "Primary focus",
       "secondaryIdentityLabel": "Secondary focus",
       "audienceLabel": "Works with",
-      "fullBioHeading": "Full biography",
-      "journeyHeading": "Career Journey"
+      "fullBioHeading": "Full biography"
     },
     "expertise": {
       "eyebrow": "Capabilities",
@@ -104,13 +106,14 @@
       "eyebrow": "Appointments",
       "title": "Roles and Affiliations",
       "lede": "Current roles and the organisations represented, each named in full.",
-      "currentHeading": "Current Role",
-      "partnershipsHeading": "Business Partnerships"
+      "currentHeading": "Current Role"
     },
     "workingTogether": {
       "heading": "Working Together",
       "lede": "The kinds of engagement this work usually takes.",
-      "cta": "Start an enquiry"
+      "cta": "Start an enquiry",
+      "splitHeading": "How engagements usually begin",
+      "splitLede": "Each of these opens the enquiry form with the subject already filled in."
     }
   },
   "footer": {
@@ -124,9 +127,6 @@
     "lastUpdated": "Last updated"
   },
   "draft": {
-    "_comment": "Rendered in the pre-launch banner. It states plainly that the profile is unapproved, because a draft that looks finished is the thing that gets forwarded and treated as final.",
-    "badge": "DRAFT",
-    "notice": "This profile is a draft and has not been approved for publication. Titles and positions are not final until confirmed in writing by the client.",
     "pendingField": "To be confirmed",
     "pendingSection": "This section will be published once the required information has been received."
   },

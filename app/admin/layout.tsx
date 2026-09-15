@@ -13,7 +13,7 @@ const WARN_MS = 5 * 60 * 1000
 /**
  * The admin shell: sidebar, header, idle timeout.
  *
- * The login page renders bare — it is inside this route group but must not show
+ * The login page renders bare, it is inside this route group but must not show
  * the chrome of the thing you have not signed into yet.
  *
  * WHY THE IDLE TIMEOUT. This panel edits an unpublished profile holding two
@@ -60,7 +60,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     }
   }, [isLogin, logout])
 
-  // Close the mobile drawer on navigation — otherwise it stays open over the page
+  // Close the mobile drawer on navigation, otherwise it stays open over the page
   // that was just opened behind it.
   useEffect(() => setOpen(false), [pathname])
 

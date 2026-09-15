@@ -8,20 +8,20 @@ import { mountHero } from "./hero"
  *
  * It wraps the hero markup rather than replacing it: `Hero` stays a SERVER
  * component and arrives here as `children`, already rendered. Nothing about the
- * hero's content — which runs `localize` across three locales — is shipped to the
+ * hero's content, which runs `localize` across three locales, is shipped to the
  * browser to be re-rendered. This component adds one effect and no markup of its
  * own beyond the wrapper element.
  *
- * WHY NOT `AnimeScope`. That component exists for the INTERACTION layer: it takes a
+ * WHY NOT `MotionScope`. That component exists for the INTERACTION layer: it takes a
  * named interaction, scopes it, and tears it down on navigation. The hero's motion
- * is a one-shot entrance plus a pointer handler, which is a different lifecycle —
+ * is a one-shot entrance plus a pointer handler, which is a different lifecycle,
  * and routing it through the interactions registry would have meant adding an
  * entrance recipe back to a registry the last change deliberately emptied.
  *
  * ── REDUCED MOTION IS CHECKED HERE, AND CHECKED FIRST ──────────────────────────
  *
  * `mountHero` is never called when the visitor has asked for less motion. Not
- * "called and shortened to zero" — not called at all, so no from-state is ever
+ * "called and shortened to zero", not called at all, so no from-state is ever
  * written, no pointer listener is bound, and the role line never changes. The
  * server-rendered hero is already the finished state, so returning early leaves a
  * complete, readable, correct page.
@@ -29,7 +29,7 @@ import { mountHero } from "./hero"
  * The query is WATCHED rather than sampled once. Someone toggling the OS setting
  * gets the change immediately: turning it on tears the motion down mid-flight,
  * turning it off does not retroactively play an entrance they have already read
- * past — `mounted` guards that, because an entrance animation firing on content the
+ * past, `mounted` guards that, because an entrance animation firing on content the
  * visitor is already looking at is worse than no entrance at all.
  */
 export function HeroScope({ children }: { children: React.ReactNode }) {

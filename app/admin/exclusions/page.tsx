@@ -10,7 +10,7 @@ import { SaveButton } from "@/components/admin/SaveButton"
 const SECTION = "exclusions"
 
 /**
- * The exclusions log — intake section 15.
+ * The exclusions log, intake section 15.
  *
  * "Everything received but not used, with the reason. This protects the client and
  * us." That sentence is why this is a first-class page rather than a note in a
@@ -20,12 +20,12 @@ const SECTION = "exclusions"
  *
  * TWO CLASSES OF ITEM, RENDERED DIFFERENTLY:
  *
- *   Overridable — the client may insist in writing. The override is recorded here,
+ *   Overridable, the client may insist in writing. The override is recorded here,
  *   and per the form's FINAL CHECK the item then goes in with the full organisation
  *   name and no diplomatic or United Nations wording. Those two rules are enforced
  *   in lib/verification.ts and an override cannot reach them.
  *
- *   Absolute — passport and national ID numbers, identity scans, home address, bank
+ *   Absolute, passport and national ID numbers, identity scans, home address, bank
  *   details, family details, and anything imitating a diplomatic, governmental or
  *   United Nations credential. These render with NO override control at all, rather
  *   than a disabled one. A switch that cannot be flipped invites someone to try;
@@ -113,7 +113,7 @@ export default function ExclusionsAdminPage() {
                   {absolute ? (
                     <span className="flex items-center gap-1.5 text-xs text-[color:var(--danger)]">
                       <Lock size={11} aria-hidden />
-                      Never published — no override possible
+                      Never published, no override possible
                     </span>
                   ) : (
                     <label className="flex items-center gap-2.5 text-xs text-[color:var(--card-foreground)]">

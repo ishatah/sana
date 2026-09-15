@@ -1,0 +1,70 @@
+- generic [active] [ref=f2e1]:
+  - link "Skip to content" [ref=f2e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - link "Sanae Rakik" [ref=f2e5] [cursor=pointer]:
+        - /url: "#top"
+      - generic [ref=f2e6]:
+        - group "Language" [ref=f2e7]:
+          - button "EN" [disabled] [ref=f2e8]
+          - button "AR" [ref=f2e9]
+        - button "Menu" [ref=f2e10]
+  - main [ref=f2e15]:
+    - generic [ref=f2e18]:
+      - paragraph [ref=f2e19]: Capabilities
+      - heading "Areas of Expertise" [level=1] [ref=f2e20]
+      - paragraph [ref=f2e22]: Where her work is concentrated, and the markets it covers.
+    - generic [ref=f2e24]:
+      - generic [ref=f2e25]:
+        - heading "Core Areas" [level=2] [ref=f2e26]
+        - paragraph [ref=f2e28]: Where her work is focused
+      - list [ref=f2e29]:
+        - listitem [ref=f2e30]:
+          - heading "Business development" [level=3] [ref=f2e33]
+        - listitem [ref=f2e34]:
+          - heading "International business development" [level=3] [ref=f2e37]
+        - listitem [ref=f2e38]:
+          - heading "Strategic partnerships" [level=3] [ref=f2e41]
+        - listitem [ref=f2e42]:
+          - heading "Client acquisition" [level=3] [ref=f2e45]
+        - listitem [ref=f2e46]:
+          - heading "Professional networking and relationship management" [level=3] [ref=f2e49]
+        - listitem [ref=f2e50]:
+          - heading "Identifying and evaluating commercial opportunities" [level=3] [ref=f2e53]
+        - listitem [ref=f2e54]:
+          - heading "Real estate and property transactions" [level=3] [ref=f2e57]
+        - listitem [ref=f2e58]:
+          - heading "Cross-border commercial cooperation" [level=3] [ref=f2e61]
+    - generic [ref=f2e63]:
+      - heading "Markets" [level=2] [ref=f2e65]
+      - generic [ref=f2e67]:
+        - generic [ref=f2e68]:
+          - term [ref=f2e69]: Sector
+          - definition [ref=f2e70]: Business development, strategic partnerships, real estate
+        - generic [ref=f2e71]:
+          - term [ref=f2e72]: Based in
+          - definition [ref=f2e73]: Netherlands
+        - generic [ref=f2e74]:
+          - term [ref=f2e75]: Markets covered
+          - definition [ref=f2e76]: Europe, the Gulf states and the wider Middle East
+      - list [ref=f2e77]:
+        - listitem [ref=f2e78]:
+          - generic [ref=f2e79]: Based in
+          - text: Netherlands
+        - listitem [ref=f2e80]:
+          - generic [ref=f2e81]: Active across
+          - text: Europe · Gulf · Middle East
+  - contentinfo [ref=f2e82]:
+    - generic [ref=f2e83]:
+      - paragraph [ref=f2e84]: © 2026 Sanae Rakik. All rights reserved.
+      - navigation "Legal" [ref=f2e85]:
+        - link "Privacy" [ref=f2e86] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f2e87] [cursor=pointer]:
+          - /url: /terms
+        - link "Cookies" [ref=f2e88] [cursor=pointer]:
+          - /url: /cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f2e94] [cursor=pointer]
+  - alert [ref=f2e98]

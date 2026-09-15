@@ -14,8 +14,8 @@ import type { ResolvedMedia } from "@/lib/media"
  * written slightly differently in the fourth place someone adds an image. There is one
  * gate, it lives in lib/media.ts, and this component is the only thing downstream of it.
  *
- * Today every slot resolves to null — intake section 14 lists every media asset as not
- * received, and open question Q5 covers both the portrait and permission for the logos —
+ * Today every slot resolves to null, intake section 14 lists every media asset as not
+ * received, and open question Q5 covers both the portrait and permission for the logos,
  * so this renders nothing anywhere on the site. That is the correct current state, not a
  * placeholder awaiting a stock photo.
  */
@@ -92,7 +92,7 @@ export function ProfileImage({
 }
 
 /**
- * A decorative background image — the hero backdrop.
+ * A decorative background image, the hero backdrop.
  *
  * `alt=""` plus aria-hidden is correct HERE and nowhere else in this file: the hero
  * backdrop carries no information the heading does not already state, so announcing it

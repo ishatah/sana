@@ -24,13 +24,13 @@ const LEVEL_LABEL: Record<string, string> = {
  *
  * THE LANGUAGES TABLE IS THE CAREFUL PART. Intake section 8 is marked MUST
  * CONFIRM, with the instruction "Never assume a language level from the material
- * supplied" — and on this file the temptation is concrete: the client corresponds
+ * supplied", and on this file the temptation is concrete: the client corresponds
  * from an ifb-us.org address and works the Iraqi market, from which "Arabic:
  * fluent, English: professional" is an easy and entirely unevidenced guess.
  *
  * So a level and a confirmation state are two separate controls, and setting a
  * level does not silently confirm the row. Confirming is a deliberate second act,
- * because the thing being recorded is not the level — it is that someone asked
+ * because the thing being recorded is not the level, it is that someone asked
  * her and she answered in writing.
  */
 export default function ExpertiseAdminPage() {
@@ -68,7 +68,7 @@ export default function ExpertiseAdminPage() {
 
       <ContentSection
         title="Areas of expertise"
-        description="Five to eight short noun phrases. No sentences — the public grid is designed for phrases, not paragraphs."
+        description="Five to eight short noun phrases. No sentences, the public grid is designed for phrases, not paragraphs."
       >
         {items.map((item: any, i: number) => (
           <div key={item.id} className="space-y-2 border-b border-[color:var(--border)] pb-5 last:border-0">
@@ -99,12 +99,12 @@ export default function ExpertiseAdminPage() {
         </button>
       </ContentSection>
 
-      <ContentSection title="Languages" description="Intake section 8 — MUST CONFIRM.">
+      <ContentSection title="Languages" description="Intake section 8: MUST CONFIRM.">
         <p className="mb-5 flex gap-2.5 border border-[color:var(--warning)]/30 bg-[color:var(--warning)]/12 p-4 text-xs leading-relaxed text-[color:var(--muted-foreground)]">
           <ShieldAlert size={14} className="mt-0.5 shrink-0 text-[color:var(--warning)]" aria-hidden />
           <span>
-            Never assume a level from the material supplied. A row stays &ldquo;to confirm&rdquo; — and renders as pending on
-            the site — until she has answered in writing. Setting a level does not confirm the row on its own.
+            Never assume a level from the material supplied. A row stays &ldquo;to confirm&rdquo;, and renders as pending on
+            the site, until she has answered in writing. Setting a level does not confirm the row on its own.
           </span>
         </p>
 

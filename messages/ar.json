@@ -22,7 +22,7 @@
   "about": {
     "heading": "نبذة",
     "experienceLabel": "الخبرة",
-    "_comment_experienceValue": "القيمة تأتي من data/identity.json (yearsOfExperience) وتُدرج كـ {years} — وما يُترجم هنا هو كلمة الوحدة فقط.",
+    "_comment_experienceValue": "القيمة تأتي من data/identity.json (yearsOfExperience) وتُدرج كـ {years}, وما يُترجم هنا هو كلمة الوحدة فقط.",
     "experienceValue": "{years} سنوات",
     "sectorLabel": "القطاع",
     "baseLabel": "المقر",
@@ -43,7 +43,9 @@
     "location": "الموقع",
     "visitSite": "موقع الجهة",
     "sinceUnconfirmed": "سنة البدء بانتظار التأكيد",
-    "details": "التفاصيل"
+    "details": "التفاصيل",
+    "registerConfirmed": "قيد السجل مؤكَّد",
+    "registerPending": "قيد السجل قيد التأكيد"
   },
   "contact": {
     "heading": "اتصال",
@@ -61,6 +63,7 @@
       "message": "الرسالة",
       "send": "إرسال الرسالة",
       "sending": "جارٍ الإرسال…",
+      "sentShort": "تم الإرسال",
       "success": "تم إرسال رسالتك. سيصلك الرد قريبًا.",
       "error": "تعذّر إرسال الرسالة. يُرجى المراسلة عبر البريد الإلكتروني مباشرة.",
       "required": "هذا الحقل مطلوب",
@@ -79,8 +82,7 @@
       "primaryIdentityLabel": "التركيز الأساسي",
       "secondaryIdentityLabel": "التركيز الثانوي",
       "audienceLabel": "تعمل مع",
-      "fullBioHeading": "السيرة الكاملة",
-      "journeyHeading": "السيرة والمسيرة"
+      "fullBioHeading": "السيرة الكاملة"
     },
     "expertise": {
       "eyebrow": "القدرات",
@@ -104,13 +106,14 @@
       "eyebrow": "المناصب",
       "title": "المناصب والعضويات",
       "lede": "المناصب الحالية والجهات التي تمثلها، كل منها باسمها الكامل.",
-      "currentHeading": "المنصب الحالي",
-      "partnershipsHeading": "الشراكات التجارية"
+      "currentHeading": "المنصب الحالي"
     },
     "workingTogether": {
       "heading": "العمل معًا",
       "lede": "أنواع التعاون التي يأخذها هذا العمل عادةً.",
-      "cta": "ابدأ استفسارًا"
+      "cta": "ابدأ استفسارًا",
+      "splitHeading": "كيف تبدأ التعاونات عادة",
+      "splitLede": "كل واحد منها يفتح نموذج التواصل مع تعبئة الموضوع مسبقًا."
     }
   },
   "footer": {
@@ -124,9 +127,6 @@
     "lastUpdated": "آخر تحديث"
   },
   "draft": {
-    "_comment": "Rendered in the pre-launch banner. It states plainly that the profile is unapproved, because a draft that looks finished is the thing that gets forwarded and treated as final.",
-    "badge": "مسودة",
-    "notice": "هذا الملف مسودة ولم يُعتمد للنشر. الألقاب والمناصب غير نهائية إلى أن تؤكدها العميلة كتابيًا.",
     "pendingField": "بانتظار التأكيد",
     "pendingSection": "سيُنشر هذا القسم فور استلام المعلومات المطلوبة."
   },

@@ -11,14 +11,14 @@ export const runtime = "nodejs"
 const BUCKET = "cms-content"
 
 /**
- * The local data/*.json is the fallback for keys the stored CMS copy predates —
+ * The local data/*.json is the fallback for keys the stored CMS copy predates,
  * without this, a key newly added in code stays invisible until someone saves.
  */
 function patchMissingFields(remote: any, local: any): any {
   if (Array.isArray(remote) && Array.isArray(local)) {
     return remote.map((item: any, i: number) => {
       if (local[i] === undefined) return item
-      // A primitive has nothing to merge — keep the saved value. Returning local[i]
+      // A primitive has nothing to merge, keep the saved value. Returning local[i]
       // here would substitute the repo copy into every saved string array and the
       // next PUT would write that reverted list back. Silent destruction of the
       // owner's edits.
@@ -39,7 +39,7 @@ function patchMissingFields(remote: any, local: any): any {
 }
 
 // An allowlist, not a directory listing. A section missing from here 404s the GET,
-// which an editor cannot recover from — so adding a data file means adding it here
+// which an editor cannot recover from, so adding a data file means adding it here
 // too. Enumerating the directory instead would turn any stray JSON into an
 // editable, publishable section.
 const ALLOWED_SECTIONS = [
@@ -94,7 +94,7 @@ async function readSection(section: string): Promise<any> {
       }
     } catch {}
   }
-  // Local file — dev, first boot, or no Storage project at all.
+  // Local file, dev, first boot, or no Storage project at all.
   return JSON.parse(await fs.readFile(localPath(section), "utf-8"))
 }
 
@@ -152,7 +152,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     const body = await request.json()
 
     // A section is always a JSON object. Without this, a PUT of null, [] or a bare
-    // string is accepted and upsert replaces the whole section with it — and the
+    // string is accepted and upsert replaces the whole section with it, and the
     // revalidate below makes the damage live immediately.
     if (body === null || typeof body !== "object" || Array.isArray(body)) {
       return Response.json({ error: "Expected a JSON object" }, { status: 400 })
@@ -172,7 +172,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
      *
      * 422 rather than 400: the request is well-formed, the content is what is
      * refused. The response names the phrase and the reason so the editor can see
-     * why — a rejection that just says "invalid" gets worked around.
+     * why, a rejection that just says "invalid" gets worked around.
      */
     if (PUBLIC_SECTIONS.has(section)) {
       const violations = collectStrings(body).flatMap((s) => findViolations(s))

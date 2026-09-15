@@ -8,8 +8,21 @@ import { AboutSection } from "@/components/about-section"
 import { ExpertiseGrid } from "@/components/expertise-grid"
 import { RoleEntryList, composeRoles } from "@/components/role-entry"
 import { ContactSection } from "@/components/contact-section"
-import { AnimeScope } from "@/components/motion/anime-scope"
+import { MotionScope } from "@/components/motion/motion-scope"
 import { HeroScope } from "@/components/motion/hero-scope"
+/* NO `BandTone` IMPORT ON THIS PAGE, and its absence is deliberate rather than an
+   oversight. Each band used to render one, a faint gold radial centred on that
+   band, and the home page is the one route where four of them stack directly
+   above one another: that is what produced four bright middles and four seams
+   instead of one continuous surface. This page paints `.hero-field` behind the
+   whole of `<main>` instead. The component is unchanged and still correct for the
+   sub-pages, which open with a `.page-hero` and carry no continuous field. */
+/* The working-together section's pinned two-column grid. Owns the <ul> and the
+   <li> wrapper for each row it is passed; see the header note in the component
+   for why this is a pinned ledger and not the 3D card deck first planned. */
+import { PinnedLedger } from "@/components/motion/fm/pinned-ledger"
+/* Dev-only invariant checks on the rendered tree. Null in production. */
+import { MotionAudit } from "@/components/motion/fm/audit"
 import {
   ExpertiseLattice,
   PositionsThread,
@@ -38,7 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 /**
- * The one-page profile — the Kyros `index.html` structure, section for section:
+ * The one-page profile, the Kyros `index.html` structure, section for section:
  *
  *   hero → about (+ quote) → expertise → positions → (memberships) →
  *   (press) → contact → footer
@@ -47,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
  * 4 records media coverage as "غير مطلوب حاليًا".
  *
  * THE QUOTE IS NO LONGER ITS OWN BAND. The philosophy paragraph in her supplied
- * profile is first-person and attributable, so it renders for this subject — but
+ * profile is first-person and attributable, so it renders for this subject, but
  * it now sits under her portrait inside the about block rather than as a
  * full-bleed strip below it. `components/quote.tsx` is still the component for a
  * standalone pull quote and is untouched; this page simply no longer needs one.
@@ -55,7 +68,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
  * That gating is the whole editorial argument of this build. A profile whose
  * credibility is the product cannot carry a counter nobody has verified, or a
  * blockquote she never gave. `getSectionAvailability()` decides, from the data
- * alone, which sections have earned their place — so the page grows as the open
+ * alone, which sections have earned their place, so the page grows as the open
  * questions are answered, and never before.
  *
  * The awards band became memberships when the subject changed: intake section 3
@@ -91,7 +104,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     getPublicContact(),
     getSiteSettings(),
     getDeliverables(),
-    // hero-background is null — intake section 5 asks for a horizontal image at
+    // hero-background is null, intake section 5 asks for a horizontal image at
     // 1920px or wider and neither supplied file reaches it. The portrait IS wired:
     // both photographs arrived with the form and carry a recorded permission.
     getMedia("hero-background", locale),
@@ -106,10 +119,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
    *
    * COUNTED THROUGH `publishable()`, NOT `.length`. A row marked tier C or
    * `publish: false` is withheld from the lists further down the page, so counting
-   * the raw arrays would advertise a number the visitor cannot then find — and
+   * the raw arrays would advertise a number the visitor cannot then find, and
    * would quietly present unverified records as verified ones.
    *
-   * The experience figure comes from `identity.yearsOfExperience` — the DATA, not
+   * The experience figure comes from `identity.yearsOfExperience`, the DATA, not
    * a translation string. It was previously `t("about.experienceValue")`, which
    * hardcoded "10+ years" in messages/en.json and messages/ar.json and left the
    * data field unread: the one number on this page that looks like a verified
@@ -118,7 +131,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
    * translated); the VALUE comes from data.
    *
    * StatBar drops any cell whose value is empty or "0", and any `kind: "count"`
-   * cell below 2 — so nothing here needs a guard: if every position were withheld,
+   * cell below 2, so nothing here needs a guard: if every position were withheld,
    * or only one publishes, the bar simply loses that cell.
    */
   const prefix = localePrefix(locale)
@@ -140,7 +153,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
    *
    * DRAWN FROM HER OWN EXPERTISE ITEMS, NOT WRITTEN. Each card is one of the
    * `expertise.items` phrases she supplied at intake, so the section introduces no
-   * claim the site does not already make — it only reframes the list as things a
+   * claim the site does not already make, it only reframes the list as things a
    * visitor can enquire about, which is what intake section 2 asks the site to do.
    *
    * Four rather than all eight: the section is an invitation, not a second
@@ -172,18 +185,40 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         contactHref={`${prefix}/contact`}
       />
 
-      <main id="main">
+      {/*
+        `main-field` establishes the stacking context for the continuous hero
+        field below it; see the block at the end of styles/globals.css for why the
+        atmosphere is ONE fixed layer here rather than a copy inside each band.
+      */}
+      <main id="main" className="main-field">
+        {/*
+          THE HERO ATMOSPHERE, EXTENDED OVER THE WHOLE PAGE.
+
+          Every band below the hero used to paint its own `<BandTone />`, a faint
+          gold radial centred on that band, which is what made the page read as a
+          lit hero followed by four separately-lit boxes. Four centred radials
+          stacked vertically produce four bright middles and four dark seams; the
+          bands were tinted the same colour and still did not look like one
+          surface, because the gradient restarted at every boundary.
+
+          One fixed field removes the restarts. It is mounted here rather than in
+          the layout because it belongs to this page's composition, the sub-pages
+          open with `.page-hero` and keep the hero's own `.mesh-hero` markup.
+        */}
+        <div aria-hidden className="hero-field" />
+        <div aria-hidden className="hero-field-aurora" />
+
         {/*
           The hero is wrapped rather than carrying its own scope, because it is a
-          SERVER component and must stay one — it does no data fetching of its own
+          SERVER component and must stay one, it does no data fetching of its own
           but it renders `localize` output for three locales, and making it a
           client component would ship that work to the browser for nothing.
-          AnimeScope takes the already-rendered markup as children and animates it
+          MotionScope takes the already-rendered markup as children and animates it
           from the outside, which is the same arrangement every dedicated page uses.
 
-          `HeroScope` replaces the bare `AnimeScope` that stood here. It mounts the
-          hero's own motion — the staggered entrance, the one-pass shimmer on the
-          name, the role crossfade and the pointer parallax — all of which fire on
+          `HeroScope` replaces the bare `MotionScope` that stood here. It mounts the
+          hero's own motion, the staggered entrance, the one-pass shimmer on the
+          name, the role crossfade and the pointer parallax, all of which fire on
           LOAD and none of which observe the scroll position. See
           components/motion/hero.ts for why that distinction is the whole design.
         */}
@@ -194,7 +229,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             roles={headline.rotatingRoles?.[locale] ?? headline.rotatingRoles?.en ?? []}
             title={headline.primaryTitle}
             locations={headline.locations ?? []}
-            // Empty by design — intake section 9 records every account as
+            statement={headline.heroStatement ?? null}
+            // Empty by design, intake section 9 records every account as
             // "لم يُزوَّد", so SocialRow renders decorative rings, not dead links.
             social={settings.social ?? []}
             stats={stats}
@@ -211,8 +247,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         {/*
           `snap-section` makes each band one viewport tall and a scroll-snap
           target. It is min-height rather than height (see styles/globals.css), so
-          a section whose content outgrows the viewport — which the positions list
-          does in Turkish and Arabic — simply becomes taller instead of clipping.
+          a section whose content outgrows the viewport, which the positions list
+          does in Turkish and Arabic, simply becomes taller instead of clipping.
 
           The object layer is rendered as a SIBLING of the content and behind it,
           never as a wrapper: it is aria-hidden decoration, and nesting content
@@ -221,22 +257,25 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         {/* No background object on this one: AboutSection already renders the
             drifting rings inside its portrait frame, and a second copy behind the
             text would read as the same shape printed twice. */}
-        <AnimeScope
+        <MotionScope
           as="section"
           id="section-about"
           interaction="hoverRule"
-          className="snap-section section-pad"
+          recipe="aboutSpread"
+          physics
+          className="section-skew snap-section section-pad"
         >
+          <span aria-hidden className="band-edge" />
           <div className="section-content container-page">
-            <SectionHeader title={t("about.heading")} animate />
+            <SectionHeader title={t("about.heading")} animate maskReveal />
             {/*
               The quote is passed INTO the about section rather than rendered as
               its own band below it. It used to be a full-bleed `Quote` strip a
               screen further down; set beside her portrait it reads as her saying
               it, which is what a first-person statement of principle is for.
 
-              `availability.quote` still decides. The gate has not moved — only
-              where the line is set — so a subject who supplies no attributable
+              `availability.quote` still decides. The gate has not moved, only
+              where the line is set, so a subject who supplies no attributable
               quote still gets no blockquote and no attribution, exactly as before.
             */}
             <AboutSection
@@ -247,29 +286,41 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               quoteAttribution={bio.quoteAttribution}
             />
           </div>
-        </AnimeScope>
+        </MotionScope>
 
-        <AnimeScope
+        <MotionScope
           as="section"
           id="section-expertise"
-          className="snap-section section-pad bg-[color:var(--surface)]"
+          recipe="markWall"
+          physics
+          /*
+            NO `bg-[color:var(--surface)]` HERE ANY MORE. This was the one band
+            that painted an opaque ground a step lighter than the page, which is
+            the seam the continuous field exists to remove: an opaque fill covers
+            `.hero-field` outright, so the band would have stayed a visible box no
+            matter what was lit behind it. Its separation now comes from the
+            field's own falloff and from `.band-edge`, the same as every other
+            dark band on the page.
+          */
+          className="section-skew snap-section section-pad"
         >
+          <span aria-hidden className="band-edge" />
           <ExpertiseLattice />
           <div className="section-content container-page">
-            <SectionHeader title={t("expertise.heading")} subtitle={t("expertise.subheading")} animate />
+            <SectionHeader title={t("expertise.heading")} subtitle={t("expertise.subheading")} animate maskReveal />
             <ExpertiseGrid items={expertise.items ?? []} />
           </div>
-        </AnimeScope>
+        </MotionScope>
 
         {/*
-          THE TWO-COLUMN SPLIT — the main structural break in the page's rhythm.
+          THE TWO-COLUMN SPLIT, the main structural break in the page's rhythm.
 
           Every section here used to be the same shape: a centred heading, a rule,
           then full-width content. Seven of those stacked is the uniform vertical
           cadence that makes a page read as generated, because the layout never
           responds to what any given section contains.
 
-          Positions and Recognition are LISTS — chronological rows of organisation
+          Positions and Recognition are LISTS, chronological rows of organisation
           names and dates. Setting the heading in a narrow left column with the list
           beside it does three things a stacked heading cannot: the heading stays
           visible next to the rows it labels while they are read, the list starts at
@@ -278,7 +329,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
           `lg:sticky` on the heading column, so on a long list the label holds
           position as the rows scroll past it. `items-start` on the grid is what
-          allows that — a stretched grid item has no free space to stick within.
+          allows that, a stretched grid item has no free space to stick within.
 
           It collapses to a single column below `lg`, where there is no room for a
           side column and the stacked order (heading, then list) is the correct
@@ -286,7 +337,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         */}
         {/*
           ONE BAND FOR BOTH. Positions and Memberships were two sections here, and
-          for this subject both listed the same organisation — the post she holds
+          for this subject both listed the same organisation, the post she holds
           and the body she is affiliated with are one relationship, so the page
           named the International Business Council twice under two headings.
 
@@ -295,29 +346,30 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           than in the data.
 
           THE ONE LIGHT BAND. `.section-invert` re-points the palette tokens for
-          this subtree only (styles/globals.css), so every component inside it —
-          the panels, the eyebrow, the rules — paints itself light with no
+          this subtree only (styles/globals.css), so every component inside it,
+          the panels, the eyebrow, the rules, paints itself light with no
           per-component branch.
         */}
         {roles.length > 0 && (
-          <AnimeScope
+          <MotionScope
             as="section"
             id="section-roles"
-            interaction="hoverRule"
+            interaction={["ledgerMarks", "verifyMarks"]}
+            recipe="ledgerRows"
             className="section-invert snap-section section-pad"
           >
             <PositionsThread />
             <div className="section-content container-page grid items-start gap-y-8 lg:grid-cols-[minmax(0,16rem)_1fr] lg:gap-x-20">
               <div className="lg:sticky lg:top-32">
-                <SectionHeader title={t("pages.roles.currentHeading")} animate />
+                <SectionHeader title={t("pages.roles.currentHeading")} animate maskReveal />
               </div>
               <RoleEntryList roles={roles} />
             </div>
-          </AnimeScope>
+          </MotionScope>
         )}
 
         {/*
-          WORKING TOGETHER — the section intake form section 2 implies and the site
+          WORKING TOGETHER, the section intake form section 2 implies and the site
           did not have.
 
           Its stated goal is "استقطاب فرص وشراكات" and the single most important
@@ -325,55 +377,125 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           page listed her capabilities and then, several screens later, offered a
           form; nothing connected the two.
 
-          Every card is one of her own `expertise.items` — no new claim is made,
+          Every card is one of her own `expertise.items`, no new claim is made,
           and there is no outcome, volume or client named anywhere in it (section 3
           forbids all three). It names KINDS OF WORK, and each one prefills the
           enquiry form with its own subject via the existing `prefillEnquiry`
           interaction.
         */}
-        <AnimeScope
+        {/*
+          AN EDITORIAL SPLIT, NOT A CARD GRID.
+
+          The four cards this replaced were ~90% empty space, and the reason is in
+          the data rather than the styling: `expertise.items` carries `id`, `icon`
+          and `title` only (data/expertise.json), there is no description field, so
+          a card sized for a heading-plus-paragraph had only ever one short phrase
+          to put in it. Fitting the container to the content is the fix; writing
+          four descriptions into the CMS would have been the alternative.
+
+          The left column also does something the grid could not: it SAYS WHAT
+          CLICKING DOES. "Start an enquiry" printed four times spent the words
+          without ever explaining that the button prefills the form below, so the
+          lede now carries that once and each row is left as a plain subject.
+
+          `recipe="aboutSpread"` rather than `panelGrid`: that recipe already
+          animates a `bio` block and staggered `row`s, which is exactly this
+          composition, the left column is the bio, each engagement is a row. No new
+          recipe was needed.
+        */}
+        <MotionScope
           as="section"
           id="section-working-together"
           interaction="prefillEnquiry"
-          className="snap-section section-pad"
+          recipe="aboutSpread"
+          physics
+          className="section-skew snap-section section-pad"
         >
+          <span aria-hidden className="band-edge" />
           <div className="section-content container-page">
-            <SectionHeader
-              title={t("pages.workingTogether.heading")}
-              subtitle={t("pages.workingTogether.lede")}
-              animate
-            />
-            <ul className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2">
+            {/*
+              `PinnedLedger` owns the two-column grid so it can pin the left
+              column and drive the rows. It takes the statement and the rows as
+              separate props because they are laid out independently, see
+              components/motion/fm/pinned-ledger.tsx, which also records why this
+              is a pinned ledger rather than the 3D card deck the plan first
+              described (the markup it was written against no longer exists).
+
+              Below `md`, and under reduced motion, it renders exactly the plain
+              grid and list that were here before.
+            */}
+            <PinnedLedger
+              className="grid gap-x-16 gap-y-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] md:items-start"
+              statement={
+                /*
+                  `data-anime="bio"`, the recipe fades and lifts this whole column
+                  as one object. Its children are deliberately NOT hooked
+                  individually: a heading, an eyebrow and a lede arriving separately
+                  reads as three things queueing, when they are one statement.
+                */
+                <div data-anime="bio">
+                  <span className="eyebrow block">{t("pages.workingTogether.heading")}</span>
+                  <h2 className="mt-3 font-display text-[clamp(1.6rem,3vw,2.1rem)] font-normal leading-[1.15] text-balance text-[color:var(--heading)]">
+                    {t("pages.workingTogether.splitHeading")}
+                  </h2>
+                  <p className="mt-5 max-w-[34ch] text-sm leading-[1.75] text-[color:var(--foreground)]">
+                    {t("pages.workingTogether.splitLede")}
+                  </p>
+                </div>
+              }
+            >
+              {/*
+                One hairline between rows rather than four bordered boxes. These
+                are four peer subjects with no order, the same reason
+                components/expertise-grid.tsx dropped its numerals. The <ul> and
+                each <li> are rendered by the wrapper; everything inside the row,
+                including the prefill hooks `prefillEnquiry` binds to, is
+                server-rendered here and passed through untouched.
+              */}
               {engagements.map((e: { id: string; label: string }) => (
-                <li key={e.id}>
+                <div key={e.id} data-anime="row" className="engagement-rule">
                   <button
                     type="button"
                     data-interact="prefill"
                     data-prefill-value={e.label}
-                    className="card-ruled panel-3d w-full p-6 text-start transition-colors"
+                    className="engagement-row flex w-full items-baseline justify-between gap-6 px-1 py-5 text-start"
                   >
-                    <span className="block text-sm leading-relaxed text-[color:var(--card-foreground)]">
+                    <span className="text-[0.95rem] leading-snug text-[color:var(--heading)]">
                       {e.label}
                     </span>
-                    <span className="eyebrow mt-3 block text-[color:var(--primary-strong)]">
+                    {/*
+                      The CTA is per-row for screen readers, "Business
+                      development, Enquire" is a complete label, but is revealed
+                      on hover/focus for the eye, so the resting column stays a
+                      clean list of subjects rather than four repetitions of the
+                      same word. `.engagement-cta` handles that in CSS; it is
+                      never display:none, so it is always announced.
+                    */}
+                    <span className="engagement-cta eyebrow shrink-0 text-[color:var(--primary-strong)]">
                       {t("pages.workingTogether.cta")}
+                      <span aria-hidden className="engagement-arrow ms-2 inline-block">
+                        &rarr;
+                      </span>
                     </span>
                   </button>
-                </li>
+                </div>
               ))}
-            </ul>
+            </PinnedLedger>
           </div>
-        </AnimeScope>
+        </MotionScope>
 
-        <AnimeScope
+        <MotionScope
           as="section"
           id="section-contact"
           interaction="copyEmail"
-          className="snap-section section-pad"
+          recipe="proseArrival"
+          physics
+          className="section-skew snap-section section-pad"
         >
+          <span aria-hidden className="band-edge" />
           <ContactArcs />
           <div className="section-content container-page">
-            <SectionHeader title={t("contact.heading")} subtitle={t("contact.subheading")} animate />
+            <SectionHeader title={t("contact.heading")} subtitle={t("contact.subheading")} animate maskReveal />
             <ContactSection
               emails={contact.emails}
               phones={contact.phones}
@@ -382,8 +504,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               showForm={settings.visibility?.contactForm !== false}
             />
           </div>
-        </AnimeScope>
+        </MotionScope>
       </main>
+
+      {/*
+        Development-only assertions about the composed DOM: that no element is
+        claimed by both motion layers, that the subject's name is still one intact
+        text node, and that no heading is left masked. Renders null and is
+        dead-code-eliminated in production, see components/motion/fm/audit.tsx.
+      */}
+      <MotionAudit />
 
       <SiteFooter />
     </>

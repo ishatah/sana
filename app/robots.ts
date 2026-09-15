@@ -9,7 +9,7 @@ import { isIndexable } from "@/lib/seo"
  * rather than a placeholder: the intake form's FINAL CHECK says nothing is
  * published until sections 15 and 18 are both complete, and section 18 is blank.
  * Titles like "Peace Ambassador for Türkiye" indexed against her name before
- * anyone has confirmed them in writing are hard to retract — a search engine keeps
+ * anyone has confirmed them in writing are hard to retract, a search engine keeps
  * a copy long after the page changes.
  *
  * /admin is disallowed either way. It is behind auth, but there is no reason for

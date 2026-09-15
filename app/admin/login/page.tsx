@@ -24,7 +24,7 @@ function LoginForm() {
       })
 
       if (res.ok) {
-        // `from` is attacker-controllable — anyone can send an admin a
+        // `from` is attacker-controllable, anyone can send an admin a
         // /admin/login?from=… link. Unchecked it is an open redirect, and a
         // `javascript:` value would run in this origin with a live session cookie.
         // Only a same-origin /admin path may be followed; note that "//evil.com"
@@ -105,7 +105,7 @@ function LoginForm() {
 }
 
 export default function LoginPage() {
-  // useSearchParams needs a Suspense boundary — without one this route opts the
+  // useSearchParams needs a Suspense boundary, without one this route opts the
   // whole segment into client-side rendering at build time.
   return (
     <Suspense fallback={null}>

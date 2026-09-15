@@ -1,0 +1,2183 @@
+[     304ms] [LOG] [Fast Refresh] done in 531ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     897ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     936ms] [LOG] [Fast Refresh] done in 143ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1038ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1071ms] [LOG] [Fast Refresh] done in 135ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1176ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1176ms] [WARNING] The resource http://localhost:3000/_next/image?url=%2Fassets%2Fsanae-rakik-portrait-cutout.png&w=640&q=75 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/:0
+[    1834ms] [LOG] [Fast Refresh] done in 762ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1963ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    2565ms] [LOG] [Fast Refresh] done in 706ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    4642ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    4674ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    5001ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    5087ms] [LOG] [Fast Refresh] done in 201ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    6345ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    8555ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[    8603ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[    8824ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[    8825ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[    8826ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[    8927ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    9624ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[    9626ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[    9753ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   10128ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=yWTPUyHVHtWLudsj:0
+[   10138ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   10139ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   10216ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   10255ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   10358ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   10460ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   10688ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=yWTPUyHVHtWLudsj:0
+[   10691ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   10814ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[   10959ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_cjs_react-dom-client_development_0z3nh7o.js:16702
+[   10974ms] Error: ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx
+
+
+    at <unknown> (Error: ./components/site-footer.tsx:52:20)
+    at Object.getCompilationErrors (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\lib\dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\next-dev-server.js:720:42)
+    at DevServer.findPageComponents (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\next-dev-server.js:690:43)
+    at async DevServer.renderErrorToResponseImpl (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\base-server.js:1753:26)
+[   10973ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/development/_clientMiddlewareManifest.js' because its MIME type ('application/json') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/:0
+[   10990ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   11013ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11045ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11045ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./components/page-shell.tsx
+    ./app/[locale]/about/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11045ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./components/page-shell.tsx
+    ./app/[locale]/expertise/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11046ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./components/page-shell.tsx
+    ./app/[locale]/roles/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11046ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./components/page-shell.tsx
+    ./app/[locale]/contact/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11085ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/favicon.ico:0
+[   11111ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11174ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11237ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11297ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11360ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11422ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11499ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11561ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11623ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11685ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11747ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11810ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11873ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11936ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11999ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12060ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12122ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12183ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12245ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12307ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12370ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12432ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12495ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12558ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12619ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12680ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12742ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12803ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12866ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12929ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   12990ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13050ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13111ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13173ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13236ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13299ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13361ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13423ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13484ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13545ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13606ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13669ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13729ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13789ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13851ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13912ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   13989ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14051ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14170ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   14313ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14379ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14465ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14529ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14589ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14653ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14717ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14811ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14888ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   14962ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15028ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15097ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15157ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15220ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15281ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15342ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15423ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15480ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15558ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15659ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15740ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15840ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   15865ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   15942ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16019ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16097ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16155ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16234ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16295ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16357ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16419ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16496ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16557ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16618ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16693ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16754ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16815ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16879ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   16939ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17001ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17063ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17124ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17185ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17262ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17324ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17386ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17446ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17506ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17568ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17629ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17691ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17751ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17812ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17875ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17936ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   17999ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18062ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18122ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18183ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18244ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18304ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18367ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18429ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18491ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18554ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18618ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   18678ms] [ERROR] ./components/site-footer.tsx:52:20
+Unexpected token `=`. Expected an identifier, void, yield, null, await, break, a string literal, a numeric literal, true, false, `, -, import, this, typeof, {, [, (
+  50 |       would otherwise escape to the nearest positioned ancestor.
+  51 |     */}
+> 52 |     <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+     |                    ^
+  53 |       {/*
+  54 |         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
+  55 |
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/site-footer.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945

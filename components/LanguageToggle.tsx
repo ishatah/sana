@@ -12,7 +12,7 @@ const LABELS: Record<string, string> = { en: "EN", ar: "AR" }
  *
  * The current path is rewritten rather than pushed to a fixed route, so switching
  * language on /privacy stays on /privacy. Turkish is `defaultLocale` with
- * `localePrefix: "as-needed"`, so its URLs carry no prefix at all — the stripping
+ * `localePrefix: "as-needed"`, so its URLs carry no prefix at all, the stripping
  * below has to handle both shapes.
  */
 export function LanguageToggle() {
@@ -41,7 +41,7 @@ export function LanguageToggle() {
           // min-h/min-w 44px: the visible label is 11px type in a 28x28 box,
           // which is under the 44x44 touch target WCAG 2.5.5 asks for and the
           // hardest control on the page to hit on a phone. The padding stays
-          // small so the ink is unchanged — only the hit area grows.
+          // small so the ink is unchanged, only the hit area grows.
           className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center px-1.5 py-1 font-display text-[0.7rem] font-bold tracking-[0.15em] transition-colors ${
             l === locale
               ? "text-[color:var(--primary-strong)]"

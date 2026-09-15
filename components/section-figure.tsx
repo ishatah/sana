@@ -6,7 +6,7 @@ import type { ResolvedMedia } from "@/lib/media"
  *
  * EVERY MEDIA SLOT ON THIS SITE IS EMPTY TODAY. lib/media.ts withholds an image
  * until it has a file, a recorded permission, a publishable tier AND alt text,
- * and intake section 14 lists every asset as not received — so `getMedia` returns
+ * and intake section 14 lists every asset as not received, so `getMedia` returns
  * null for all six slots, and `ProfileImage` correspondingly renders nothing.
  *
  * That is the correct data behaviour and a bad layout outcome: a design built
@@ -47,8 +47,8 @@ export function SectionFigure({
   className?: string
   /**
    * The `.card-ruled` accent bar. MUST be false for a round frame: the bar is
-   * absolutely positioned at the inset-block/inline start — the corner of the
-   * BOUNDING BOX — so on a circle it floats in the empty area outside the visible
+   * absolutely positioned at the inset-block/inline start, the corner of the
+   * BOUNDING BOX, so on a circle it floats in the empty area outside the visible
    * shape, looking like a stray mark rather than a rule.
    */
   ruled?: boolean
@@ -64,7 +64,7 @@ export function SectionFigure({
    * supplied portrait is 1206x1748 with the face in the top third; cropped to the
    * hero's 1:1 circle on the default centre, the frame lands on the subject's
    * hands and the head is cut off above the top edge. That is not a tuning
-   * preference — it is the difference between a portrait and an unusable one.
+   * preference, it is the difference between a portrait and an unusable one.
    *
    * A prop rather than a hardcoded value here, because the right focal point is a
    * property of the individual photograph and the shape it is being cropped into,
@@ -79,18 +79,25 @@ export function SectionFigure({
   // `overflow-hidden` and the caller's className are applied to BOTH branches.
   // They were on the empty branch only, which meant a round frame (`rounded-full`
   // via className) clipped the placeholder correctly and then failed to clip the
-  // actual photograph — the bug would only have appeared on the day a real
+  // actual photograph, the bug would only have appeared on the day a real
   // portrait was finally approved, which is the worst possible time to find it.
   if (media) {
+    /* The frame uncovers from its reading edge as it enters the viewport.
+       It is the image FRAME that is clipped rather than the <img>, so the
+       object-cover crop and object-position below are unaffected, the clip
+       only decides how much of the finished frame is showing. */
     return (
-      <div className={`relative w-full overflow-hidden ${className}`} style={{ aspectRatio: ratio }}>
+      <div
+        className={`figure-uncover relative w-full overflow-hidden ${className}`}
+        style={{ aspectRatio: ratio }}
+      >
         <ProfileImage
           media={media}
           // `fill` UNLESS the caller asked for intrinsic dimensions.
           //
           // The frame is an aspect-ratio box and the image is meant to cover it, so
           // the layout mode has to be fill. Without this, a caller that passes no
-          // width/height — which is all of them — fell through to the record's own
+          // width/height, which is all of them, fell through to the record's own
           // intrinsic size (1206x1748 for the portrait), and next/image emitted
           // width and height attributes that the `h-full w-full object-cover`
           // classes then had to fight. The crop worked by accident of specificity

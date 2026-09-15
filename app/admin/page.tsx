@@ -15,7 +15,7 @@ import { LoadState } from "@/components/admin/LoadState"
  * than a status buried in a settings tab.
  *
  * Everything else here is the open-questions list from section 16, rendered as
- * work remaining. Six unanswered questions is not a failure state — it is the
+ * work remaining. Six unanswered questions is not a failure state, it is the
  * normal condition of a file at intake, and the panel should read that way rather
  * than as an error screen.
  */
@@ -106,7 +106,7 @@ export default function AdminDashboard() {
           title="Open questions"
           count={openQuestions.length}
           href="/admin/deliverables"
-          items={openQuestions.map((q: any) => `${q.id.toUpperCase()} — ${q.question}`)}
+          items={openQuestions.map((q: any) => `${q.id.toUpperCase()}, ${q.question}`)}
         />
         <StatCard
           title="Media assets outstanding"
@@ -118,7 +118,7 @@ export default function AdminDashboard() {
           title="Deliverables blocked"
           count={blockedItems.length}
           href="/admin/deliverables"
-          items={blockedItems.map((i: any) => `${i.output} — blocked on ${i.blockedOn}`)}
+          items={blockedItems.map((i: any) => `${i.output}, blocked on ${i.blockedOn}`)}
         />
         <StatCard
           title="Register entries needed"
@@ -147,7 +147,7 @@ function StatCard({ title, count, href, items }: { title: string; count: number;
 
       {items.length > 0 ? (
         <ul className="space-y-1.5">
-          {/* Capped at four with a remainder count — the whole point of this card
+          {/* Capped at four with a remainder count, the whole point of this card
               is a glance, and a card that grows to fourteen rows stops being one. */}
           {items.slice(0, 4).map((item, i) => (
             <li key={i} className="flex gap-2 text-xs leading-relaxed text-[color:var(--muted-foreground)]">

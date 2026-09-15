@@ -43,7 +43,7 @@ export default function IdentityAdminPage() {
           The honorific field carries its own warning because it is the single
           highest-risk input in the whole panel. Intake section 10: the 2024
           honorary doctorate is not from a recognised university, so no prefix may
-          be used — and a save containing "Dr. Sanae" is rejected by the API
+          be used, and a save containing "Dr. Sanae" is rejected by the API
           regardless of what is typed here.
         */}
         <div className="space-y-2 border border-[color:var(--danger)]/30 bg-[color:var(--danger)]/12 p-4">

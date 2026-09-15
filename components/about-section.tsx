@@ -10,7 +10,7 @@ import type { ResolvedMedia } from "@/lib/media"
  *
  * THE LANGUAGES TABLE USED TO LIVE HERE AND HAS BEEN REMOVED FROM DISPLAY ONLY.
  * Intake section 8 is one of only two fields on the whole form marked MUST
- * CONFIRM — "Never assume a language level from the material supplied" — and only
+ * CONFIRM, "Never assume a language level from the material supplied", and only
  * Turkish is confirmed; Arabic and English are still `status: "to-confirm"`.
  *
  * None of that has been resolved, so none of it has been deleted: the rows remain
@@ -18,7 +18,7 @@ import type { ResolvedMedia } from "@/lib/media"
  * question q1 in data/deliverables.json still tracks the missing levels. What is
  * gone is the rendering, at the client's request. The distinction matters,
  * because the original component carried an explicit warning that omitting these
- * languages "would silently drop two of her three languages" — that warning is
+ * languages "would silently drop two of her three languages", that warning is
  * about inventing or hiding a CREDENTIAL, and it is honoured by the data and the
  * open question surviving intact. Restoring the section is one commit; recovering
  * discarded intake data is not.
@@ -36,14 +36,14 @@ export async function AboutSection({
 }: {
   bio: LocalizedString
   facts: { label: string; value: string }[]
-  /** The `portrait` slot, already gated by lib/media.ts. Null today — open question Q5. */
+  /** The `portrait` slot, already gated by lib/media.ts. Null today, open question Q5. */
   portrait?: ResolvedMedia | null
   /**
    * Her philosophy paragraph, set BENEATH the portrait rather than in its own band.
    *
    * It is first-person and attributable (see data/biography.json), and the whole
    * point of pairing it with the photograph is that a reader should hear it as
-   * her saying it — a statement of principle floating in a separate full-bleed
+   * her saying it, a statement of principle floating in a separate full-bleed
    * band a screen further down belongs to nobody in particular.
    *
    * Optional, and guarded the same way `Quote` guards itself: empty text renders
@@ -58,22 +58,33 @@ export async function AboutSection({
   const quoteText = quote && !isEmpty(quote) ? localize(quote, locale) : ""
 
   /*
-   * `items-start` on the grid below, NOT `items-center`. Centring was right while
-   * the figure was a fixed 4:5 box of roughly the text column's height. An
-   * uncropped portrait with a quote under it is substantially taller than the bio
-   * and fact list, and centring two columns of very different heights pushes the
-   * shorter one into the middle — leaving a large empty band above the bio and
-   * starting the two columns on different optical lines. Top-aligned, the bio and
-   * the portrait begin together and the column simply runs longer.
+   * ── THE GRID MOVED TO CSS, AND THE ALIGNMENT WENT BACK TO CENTRE ─────────────
+   *
+   * This was `grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20`, and
+   * `items-start` was the right call FOR THE LAYOUT AS IT THEN STOOD: an uncropped
+   * portrait with a quote under it ran far taller than the bio and fact list, and
+   * centring two columns of very different heights left a dead band above the bio.
+   *
+   * The heights are no longer very different. `.about-figure-capped` gives the
+   * figure a viewport-relative ceiling (see styles/globals.css), so the two columns
+   * now finish within a reasonable distance of each other and `align-items: center`
+   *, set on the class at `lg` only, is what makes the pair read as one composed
+   * block rather than two columns that happen to share a row. Below `lg` the grid
+   * is a single column and the alignment is moot.
+   *
+   * It is a CLASS rather than utilities because the cap, the column ratio and the
+   * alignment are one decision: the text column widens BECAUSE the figure narrowed,
+   * and splitting that across a utility string here and a rule there is how the two
+   * halves drift apart. They are stated together, with the reasoning, in one place.
    */
   return (
-    <div className="grid items-start gap-14 lg:grid-cols-[1.35fr_1fr] lg:gap-20">
+    <div className="about-grid">
       {/*
-        NO `Reveal` WRAPPER ON EITHER COLUMN — the section's anime.js recipe owns
+        NO `Reveal` WRAPPER ON EITHER COLUMN: the section's anime.js recipe owns
         both entrances now.
 
         `Reveal` holds its child at `opacity: 0` until an IntersectionObserver at a
-        12% threshold adds `.is-visible`. Inside a full-viewport `AnimeScope` that
+        12% threshold adds `.is-visible`. Inside a full-viewport `MotionScope` that
         is a SECOND gate on the same element, and it is the one that fails:
         measured on /en, these wrappers sat at `opacity: 0` / `translateY(24px)`
         while the `data-anime` targets inside them had already animated to
@@ -86,36 +97,124 @@ export async function AboutSection({
       */}
       <div>
         {/* The portrait no longer floats inside this column. It has its own column
-            below, which is what the languages table used to occupy — a figure at a
+            below, which is what the languages table used to occupy, a figure at a
             fixed ratio holds the two-column grid up whether or not a photograph has
             been supplied, where a float collapsed the layout to a single block the
             moment the slot resolved to null (which is every locale today). */}
-        <p data-anime="bio" className="measure text-base leading-[1.9] text-[color:var(--foreground)]">
+        {/* `.about-bio` replaces `text-base leading-[1.9]`: 17px at 1.75 rather
+            than 16px at 1.9. Bigger type, and shorter overall, the leading is
+            where a paragraph's height actually comes from, so the step up in size
+            is paid for by the step down in leading. `.measure` stays: it is the
+            only thing standing between this and a 200-character line. */}
+        <p data-anime="bio" className="measure about-bio">
           {localize(bio, locale)}
         </p>
 
+        {/*
+          ── THE FACT LIST IS NOW A RULED LEDGER ──────────────────────────────────
+
+          It was five loose cells in a `gap-y-5` grid, each with a hover-drawn rule
+          UNDER it. Two problems, both structural rather than cosmetic:
+
+            - Five items in two columns leaves a hanging odd cell, and with nothing
+              but whitespace between them the block read as a form, five unrelated
+              captions, rather than as a spec table annotating the paragraph above.
+            - It was the tallest thing in the column after the paragraph, which is
+              the other half of why this section ran past a screen.
+
+          `.about-ledger` closes the vertical gaps and gives every cell a hairline
+          on its TOP edge, so the rows line up across both columns and the list
+          reads as one table. The hanging fifth cell is now a feature of a table
+          rather than a gap in a grid.
+
+          THE RULE MOVED FROM UNDER THE CELL TO ON ITS EDGE, and that is why
+          `data-interact="rule-item"` / `rule-line` and the `<span className="hover-rule">`
+          are gone from this block. That pair is components/motion/interactions.ts'
+          `hoverRule`, which animates a real element's width on pointerenter. The
+          section still passes `interaction="hoverRule"` at both call sites and that
+          is harmless: the interaction queries for `[data-interact="rule-item"]`,
+          finds none here, and registers nothing.
+
+          THE GOLD EDGE THAT ONCE DREW ON HOVER IS GONE, a gradient hairline over
+          the row's top border, drawn by a CSS transition plus an `.is-lit` class
+          from the entrance. `tabIndex={0}` went with it: it existed so a static
+          <div> could take `:focus-visible` and draw that edge, and with nothing
+          left to draw it only adds an empty stop to the tab order.
+        */}
         {facts.length > 0 && (
-          <dl className="mt-10 grid gap-x-8 gap-y-5 sm:clear-both sm:grid-cols-2">
+          <dl className="about-ledger">
             {facts.map((f) => (
-              <div
-                key={f.label}
-                data-anime="row"
-                data-interact="rule-item"
-                // Focusable so the rule is reachable by keyboard; the interaction
-                // binds focusin as well as pointerenter.
-                tabIndex={0}
-                className="outline-offset-4"
-              >
-                <dt className="mb-1 font-display text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[color:var(--primary-strong)]">
-                  {f.label}
-                </dt>
-                <dd className="text-sm leading-relaxed text-[color:var(--card-foreground)]">{f.value}</dd>
-                {/* Drawn on hover/focus. Decorative — the label and value above are
-                    always fully visible. */}
-                <span aria-hidden className="hover-rule mt-2" data-interact="rule-line" />
+              <div key={f.label} data-anime="row" className="about-ledger-row">
+                <dt className="about-ledger-label">{f.label}</dt>
+                {/*
+                  THE SWEEP RIDES THE VALUE, NOT THE LABEL. The value is the piece
+                  a reader is actually looking for, "Netherlands", "10+ years",
+                  and the label is a small uppercase gold run already. Putting a
+                  gold wash through gold type would be invisible; putting it through
+                  the value is the effect landing on the word that carries meaning.
+
+                  `.text-sweep` needs no text splitting, which matters here beyond
+                  taste: these values include `identity.nationality` and
+                  `identity.residence`, and the no-split rule this codebase holds
+                  (see components/section-header.tsx) exists precisely so supplied
+                  proper nouns stay single intact text nodes.
+                */}
+                <dd className="about-ledger-value text-sweep">{f.value}</dd>
               </div>
             ))}
           </dl>
+        )}
+
+        {/*
+          ── HER WORDS, NOW BESIDE THE PORTRAIT RATHER THAN BENEATH IT ────────────
+
+          This blockquote used to close the FIGURE column, and the argument for
+          putting it there still holds in full: it is first-person and attributable
+          (see data/biography.json), and pairing it with the photograph is what
+          makes a reader hear it as her saying it rather than as a statement of
+          principle floating free.
+
+          IT IS STILL PAIRED WITH THE PHOTOGRAPH. `.about-grid` centres the two
+          columns at `lg`, so the quote sits directly across from the portrait on
+          the same optical line, which is the pairing the original note was after.
+          What has changed is which column carries the height.
+
+          WHY IT HAD TO MOVE. Measured at 1497x900 after the figure was capped: the
+          text column came to 471px and the figure column to 793px, 544 of image,
+          217 of quote, 32 of gap. The quote was the single largest thing making the
+          two columns disagree, and with the portrait no longer free to run long it
+          became the thing setting the section's height. Moved across, it fills the
+          text column's shortfall instead of adding to the taller one's surplus, so
+          the two columns land close to level and the section fits a laptop screen.
+
+          Everything else about it is untouched: `availability.quote` still decides
+          whether it renders at all, the `<cite>` stays inside a `<footer>` so the
+          attribution is bound to the statement in the accessibility tree, and no
+          decorative quotation mark is drawn, the glyph is in neither locale's data
+          and a one-sided mark reads as a stray character in Arabic.
+        */}
+        {/* `.block-rule`, not `border-t`. A rule spanning the column would close
+            the paragraph above and open a separate region; this quote is by the
+            same subject as the prose it follows, so the mark opens a passage
+            instead of ending one. See styles/globals.css. */}
+        {/* `mt-14`, not the `mt-8` this carried in the figure column. The ledger
+            above now ends in a full-width rule of its own, and `.block-rule` draws
+            another one a third of the way across, at a short gap the two read as
+            one more ledger row that lost its label. The wider gap is what separates
+            the closing of the table from the opening of the quote. */}
+        {quoteText && (
+          <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+            {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+                starts at the bio's size rather than below it, this is her own
+                first-person statement and it was previously set SMALLER than the
+                third-person paragraph beside it on every screen under 640px. */}
+            <p className="about-quote">{quoteText}</p>
+            {quoteAttribution && (
+              <footer className="eyebrow mt-4 text-[color:var(--primary-strong)]">
+                <cite className="not-italic">{quoteAttribution}</cite>
+              </footer>
+            )}
+          </blockquote>
         )}
       </div>
 
@@ -126,20 +225,25 @@ export async function AboutSection({
       {/* `.about-figure` lifts the portrait out of the grid's top edge on desktop
           so it overlaps the band above, which is what stops the two-column split
           reading as two equal boxes. Single-column below lg, where the lift is
-          suppressed — see styles/globals.css. */}
-      <div data-anime="figure" className="about-figure">
+          suppressed, see styles/globals.css. */}
+      {/* `.about-figure-capped` is the new half: a `max-height` on the <img> at
+          `lg` and up, so the portrait is scaled to fit a share of the viewport
+          rather than setting the section's height by itself. Nothing is cropped,
+          see the rule in styles/globals.css for why a cap and a crop are different
+          things here. */}
+      <div data-anime="figure" className="about-figure about-figure-capped">
         {portrait ? (
           /*
             THE PHOTOGRAPH IS NO LONGER CROPPED, AND THAT IS THE WHOLE CHANGE HERE.
 
             This was a `SectionFigure` at a fixed `4 / 5` frame with the image set
-            to `object-cover`. The supplied portrait is 1206x1748 — roughly 2:3 —
+            to `object-cover`. The supplied portrait is 1206x1748, roughly 2:3,
             so covering a 4:5 box cut a band off the TOP and the BOTTOM of her:
             the frame took the crop it needed and the subject was what got
             trimmed. No focal point tuning fixes that, because the problem is not
             where the crop sits, it is that a crop is happening at all.
 
-            `object-contain` inside that frame would have been the wrong fix too —
+            `object-contain` inside that frame would have been the wrong fix too,
             it keeps the whole image but letterboxes it inside a bordered box,
             which reintroduces the visible frame edge the hero deliberately got
             rid of.
@@ -147,26 +251,34 @@ export async function AboutSection({
             So the frame goes and the image sets its own height (`h-auto w-full`).
             Nothing is cropped in either direction.
 
-            The soft edge is a MASK, not a gradient overlay, for the same reason as
-            the hero (see components/hero.tsx): an overlay would have to paint the
-            page's exact backdrop on top of the image to hide its edge, and any
-            painted colour is wrong the moment the ground behind it is not a flat
-            value. A mask removes the pixels, so whatever is behind shows through
-            by construction — and it keeps working if the section's ground ever
-            changes.
+            THERE IS NO FADE IN THIS FILE, AND THAT IS ON PURPOSE. The bottom fade
+            is baked into the asset's alpha channel by
+            scripts/build-portrait-cutout.mjs.
 
-            Bottom only, as asked. The cutout PNG already carries transparency on
-            its other three sides (scripts/build-portrait-cutout.mjs), so the only
-            edge that needs softening is the one where the photograph itself ends.
+            A CSS mask was tried here first and could not work. The supplied
+            photograph has a studio floor across its lower portion, which the
+            cutout's luminance pass correctly keeps, the floor is dark, not white,
+            so it is indistinguishable from her abaya by colour. That left a
+            full-width opaque BAND at the bottom of the file, and a mask only
+            reduces a region's opacity: the band stays a rectangle, so its straight
+            upper edge reads exactly as hard as before. The rectangle had to stop
+            existing, which can only happen in the alpha channel.
+
+            Fading in the asset is also simply better here: the ramp is measured
+            against the photograph's own geometry rather than against whatever box
+            the layout gives it, so it cannot drift out of alignment when the
+            column is resized, and it needs no `mask-repeat`/`mask-size` companions
+            to behave (a lesson learned, a gradient mask ending before 100% tiles
+            by default and repaints the very edge it was hiding).
           */
           <ProfileImage
             media={portrait}
             priority
             sizes="(max-width: 1024px) 100vw, 32rem"
-            className="portrait-fade-b h-auto w-full select-none"
+            className="h-auto w-full select-none"
           />
         ) : (
-          /* Slot empty — the ruled frame holds the column's shape, exactly as before.
+          /* Slot empty, the ruled frame holds the column's shape, exactly as before.
              A placeholder IS a box, so it keeps the fixed ratio a photograph no
              longer needs. */
           <SectionFigure
@@ -180,29 +292,6 @@ export async function AboutSection({
           </SectionFigure>
         )}
 
-        {/*
-          HER WORDS, UNDER HER PHOTOGRAPH.
-
-          Set as a `<blockquote>` with a `<cite>` in its footer so the attribution
-          is bound to the statement in the accessibility tree, not merely printed
-          near it — the same reason ProfileImage renders a credit as a <figure>.
-
-          No quotation marks are drawn as decoration: the mark is typed into
-          neither locale's data, and a decorative glyph on one side only reads as a
-          stray character in Arabic, where the block runs right to left.
-        */}
-        {quoteText && (
-          <blockquote data-anime="row" className="mt-8 border-t border-[color:var(--border)] pt-6">
-            <p className="font-display text-base leading-relaxed text-[color:var(--heading)] sm:text-lg">
-              {quoteText}
-            </p>
-            {quoteAttribution && (
-              <footer className="eyebrow mt-4 text-[color:var(--primary-strong)]">
-                <cite className="not-italic">{quoteAttribution}</cite>
-              </footer>
-            )}
-          </blockquote>
-        )}
       </div>
     </div>
   )

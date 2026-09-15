@@ -13,13 +13,25 @@ import { stripLocale, type ResolvedNavItem } from "@/lib/nav"
  * The link classes, defined once and shared by the `<Link>` and `<a>` branches.
  *
  * Both branches render identical markup and differ only in element type, so the
- * class strings have to come from one place — inlining them twice is how the two
+ * class strings have to come from one place, inlining them twice is how the two
  * halves of a nav quietly drift apart.
+ *
+ * ACTIVE STATE IS THE COOL TONE, NOT GOLD.
+ *
+ * "Which page am I on" is wayfinding, which is what --accent-cool exists to
+ * carry, see the split documented on that token in styles/globals.css. The nav
+ * is also on screen on every route, so leaving it gold meant the accent's most
+ * persistent appearance on the site was a navigation state rather than anything
+ * the page wanted emphasised.
+ *
+ * The inactive hover stays neutral (--heading) rather than tinting: a hue change
+ * on hover plus a hue change on active gives two different colours for two
+ * different states in a six-item row, which reads as noise.
  */
 function desktopLinkClass(isActive: boolean): string {
   return `relative font-display text-xs font-semibold uppercase tracking-[0.15em] transition-colors ${
     isActive
-      ? "text-[color:var(--primary-strong)]"
+      ? "text-[color:var(--accent-cool)]"
       : "text-[color:var(--foreground)] hover:text-[color:var(--heading)]"
   }`
 }
@@ -27,8 +39,8 @@ function desktopLinkClass(isActive: boolean): string {
 function mobileLinkClass(isActive: boolean): string {
   return `font-display text-2xl font-bold uppercase tracking-wide transition-colors ${
     isActive
-      ? "text-[color:var(--primary-strong)]"
-      : "text-[color:var(--heading)] hover:text-[color:var(--primary-strong)]"
+      ? "text-[color:var(--accent-cool)]"
+      : "text-[color:var(--heading)] hover:text-[color:var(--accent-cool)]"
   }`
 }
 
@@ -36,7 +48,7 @@ function mobileLinkClass(isActive: boolean): string {
  * The Kyros header: transparent over the hero, solid once scrolled, with the
  * menu collapsing to a full-screen overlay below the lg breakpoint.
  *
- * The template does this with jQuery — a scroll handler toggling `.clone` on the
+ * The template does this with jQuery, a scroll handler toggling `.clone` on the
  * header and a `#menu-btn` click handler. Both are reimplemented here in React so
  * there is no second source of truth for the DOM.
  *
@@ -63,7 +75,7 @@ export function SiteNav({
   const [spyActive, setSpyActive] = useState<string>("")
   const headerRef = useRef<HTMLElement>(null)
 
-  // `enabled:false` hides a section whose content has not been supplied — press
+  // `enabled:false` hides a section whose content has not been supplied, press
   // today. Filtering here rather than in the data means the anchor list and the
   // rendered sections cannot disagree.
   const visible = items.filter((i) => i.enabled)
@@ -73,7 +85,7 @@ export function SiteNav({
    *
    * The route match has to be computed, not set in an effect: this used to
    * initialise to `items[0].id`, so opening /about highlighted "Home" until
-   * hydration replaced it — a visible flash on every sub-page load. `usePathname`
+   * hydration replaced it, a visible flash on every sub-page load. `usePathname`
    * is stable across the server and client passes, so deriving it here is correct
    * in both and there is nothing to flash.
    *
@@ -94,8 +106,8 @@ export function SiteNav({
   /**
    * The sliding underline.
    *
-   * Called directly rather than through `AnimeScope`, because that component
-   * wraps page SECTIONS and this is the header — wrapping the nav in one would
+   * Called directly rather than through `MotionScope`, because that component
+   * wraps page SECTIONS and this is the header, wrapping the nav in one would
    * mean a scope whose only purpose is to reach an element it does not own.
    * `SiteNav` is already a client component, so an effect is the natural fit and
    * the cleanup contract is identical: whatever the interaction returns is what
@@ -121,13 +133,13 @@ export function SiteNav({
    *
    * A single observer over all the sections rather than one per link. The
    * `-45% 0px -50%` root margin narrows the viewport to a band just above the
-   * middle, so exactly one section qualifies at a time — without it, two adjacent
+   * middle, so exactly one section qualifies at a time, without it, two adjacent
    * sections are both "intersecting" through most of a scroll and the highlight
    * flickers between them.
    */
   useEffect(() => {
     // Only fragment entries are spyable, and only on a page that actually renders
-    // them. On a sub-page this resolves to nothing and the guard below bails —
+    // them. On a sub-page this resolves to nothing and the guard below bails,
     // which is correct, because `routeActive` is already driving the highlight
     // there. Kept rather than deleted: the home page still has #top, and the
     // one-pager still renders every section.
@@ -177,7 +189,7 @@ export function SiteNav({
      * them. That is harmless in a flowing document and unworkable underneath
      * scroll snapping: `scroll-padding-block-start` has to equal the header's
      * height for a snapped section to land below it rather than behind it, and a
-     * height that is mid-transition has no single correct value — every snap
+     * height that is mid-transition has no single correct value, every snap
      * during those 300ms lands at a slightly different offset.
      *
      * The height is now --nav-height in styles/globals.css, which is the same
@@ -193,17 +205,29 @@ export function SiteNav({
        *
        * The scrolled state used `shadow-[var(--shadow-brand)]`, which was the
        * light scheme's warm brown glow. A drop shadow works by darkening what is
-       * behind it — on a charcoal page there is nothing left to darken, so it
+       * behind it, on a charcoal page there is nothing left to darken, so it
        * contributed a faint muddy smear and no separation at all. A hairline is
        * how a fixed header separates itself from dark content.
        *
        * `border-b border-transparent` in the unscrolled state rather than no
        * border: it keeps the header's box the same height in both states, so the
        * content beneath does not shift by 1px on the first scroll.
+       *
+       * AND THE GROUND IS OPAQUE, NOT FROSTED. The scrolled state was
+       * `bg-[--background]/95 backdrop-blur-sm`. At 95% opacity the blur had
+       * almost nothing to act on, 5% of the content bleeding through, softened,
+       * so it read as a flat bar either way while still forcing the browser to
+       * hold a backdrop layer and re-filter it on every scroll frame.
+       *
+       * Paying a compositing cost for an effect nobody can see is the easy half of
+       * the argument. The other half is that frosted glass is a borrowed idiom: it
+       * belongs to floating translucent panels, and this header is neither, it is
+       * an opaque bar with a hairline under it, which is what the rest of the page
+       * is built from.
        */
-      className={`fixed inset-x-0 top-0 z-40 border-b transition-[background-color,border-color,backdrop-filter] duration-300 ${
+      className={`fixed inset-x-0 top-0 z-40 border-b transition-[background-color,border-color] [transition-duration:var(--dur-3)] [transition-timing-function:var(--ease-out)] ${
         scrolled
-          ? "border-[color:var(--border)] bg-[color:var(--background)]/95 backdrop-blur-sm"
+          ? "border-[color:var(--border)] bg-[color:var(--background)]"
           : "border-transparent bg-transparent"
       }`}
     >
@@ -231,7 +255,7 @@ export function SiteNav({
               <>
                 {localize(item.label, locale)}
                 <span
-                  className={`absolute -bottom-1.5 start-0 h-px bg-[color:var(--primary)] transition-all duration-300 ${
+                  className={`absolute -bottom-1.5 start-0 h-px bg-[color:var(--accent-cool)] transition-all [transition-duration:var(--dur-3)] [transition-timing-function:var(--ease-rule)] ${
                     isActive ? "w-full" : "w-0"
                   }`}
                 />
@@ -260,16 +284,16 @@ export function SiteNav({
         {/*
           The locale switcher and the CTA, OUTSIDE the <nav>.
 
-          LanguageToggle used to live inside it. It is not navigation — it does not
+          LanguageToggle used to live inside it. It is not navigation, it does not
           take you to another part of the document, it re-renders the current one
-          in another language — so it was inflating the "navigation" landmark's
+          in another language, so it was inflating the "navigation" landmark's
           contents for anyone listing links by landmark. It is its own labelled
           group (role="group" aria-label="Language") and belongs beside the nav,
           not in it.
         */}
         <div className="hidden items-center gap-4 lg:flex">
           <LanguageToggle />
-          <Link href={contactHref} className="btn-main btn-pill !px-6 !py-2.5 text-sm">
+          <Link href={contactHref} className="btn-main !px-6 !py-2.5 text-sm">
             {t("cta")}
           </Link>
         </div>
@@ -282,12 +306,12 @@ export function SiteNav({
             aria-label={t("menu")}
             aria-expanded={open}
             // 44x44 minimum (WCAG 2.5.5). `p-2` around a 22px icon gives 38x38,
-            // and this is the only way into the menu on a phone — the one control
+            // and this is the only way into the menu on a phone, the one control
             // where a missed tap has nowhere to fall back to.
             className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center p-2 text-[color:var(--heading)]"
           >
             {/* CSS bars rather than an icon-library <Menu>, which renders an SVG.
-                Three rules stacked IS the hamburger — it is one of the few marks
+                Three rules stacked IS the hamburger, it is one of the few marks
                 that is literally its own geometry, so nothing is approximated
                 here. aria-hidden because the button already carries aria-label. */}
             <span aria-hidden className="flex h-[22px] w-[22px] flex-col justify-center gap-[5px]">
@@ -312,14 +336,14 @@ export function SiteNav({
               className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center p-2 text-[color:var(--heading)]"
             >
               {/* The same two bars rotated into a cross, replacing the <X> mark.
-                  `absolute` inside a relative box so both bars share one centre —
+                  `absolute` inside a relative box so both bars share one centre,
                   stacked in flow they would sit above each other and rotate about
                   two different points.
 
                   THE TRANSFORM IS INLINE RATHER THAN `-translate-y-1/2 rotate-45`.
                   Those two utilities compose through Tailwind's transform custom
                   properties, and measured here the pair resolved to
-                  `transform: none` — so both bars sat unrotated on top of each
+                  `transform: none`, so both bars sat unrotated on top of each
                   other and the X rendered as a single horizontal line. One explicit
                   declaration cannot be half-applied, and the order matters: the
                   translate has to run before the rotate or the bar swings about its

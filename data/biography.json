@@ -1,5 +1,5 @@
 {
-  "_comment": "All copy here is transcribed from the profile the client supplied at intake (9 September 2026), which arrived already written in both Arabic and English. Nothing in this file is authored or inferred — where the source says nothing, the field is empty and the section hides itself.",
+  "_comment": "All copy here is transcribed from the profile the client supplied at intake (9 September 2026), which arrived already written in both Arabic and English. Nothing in this file is authored or inferred, where the source says nothing, the field is empty and the section hides itself.",
   "microBio": {
     "en": "Dutch businesswoman with close to ten years in business development, strategic partnerships and real estate, working between Europe and the Middle East.",
     "ar": "سيدة أعمال هولندية تمتلك ما يقارب عشر سنوات من الخبرة في تطوير الأعمال والشراكات الاستراتيجية والقطاع العقاري، بنشاط يمتد بين أوروبا والشرق الأوسط."
@@ -8,7 +8,7 @@
     "en": "Sanae Rakik is an entrepreneur and business development professional with extensive experience in strategic partnerships, international business development and real estate. She has built a network across Europe and the Middle East that allows her to connect businesses, investors and decision makers, and to create opportunities for long-term collaboration. She represents the International Business Council (IBC) as a Consultant and Strategic Representative.",
     "ar": "سناء رقيق سيدة أعمال ومتخصصة في تطوير الأعمال، ولديها خبرة واسعة في الشراكات الاستراتيجية والتطوير التجاري الدولي وقطاع العقارات. وقد تمكنت خلال مسيرتها المهنية من بناء شبكة علاقات قوية تمتد عبر أوروبا والشرق الأوسط، مكنتها من الربط بين رجال الأعمال والمستثمرين وصناع القرار، وخلق فرص واعدة للتعاون طويل الأمد. وتمثل مجلس الأعمال الدولي (IBC) بصفتها مستشارة وممثلة استراتيجية."
   },
-  "_comment_full": "The full professional profile as supplied, in the client's own four-part structure: profile, areas of expertise, the IBC role, and her stated philosophy. Because this field is non-empty, getSectionAvailability() reports fullBio:true and the About page renders it in place of the pending notice — no code change and no flag to flip.",
+  "_comment_full": "The full professional profile as supplied, in the client's own four-part structure: profile, areas of expertise, the IBC role, and her stated philosophy. Because this field is non-empty, getSectionAvailability() reports fullBio:true and the About page renders it in place of the pending notice, no code change and no flag to flip.",
   "fullBio": {
     "en": "Sanae Rakik is an entrepreneur and business development professional with extensive experience in strategic partnerships, international business development and real estate. Throughout her career she has built a strong network across Europe and the Middle East, allowing her to connect businesses, investors and decision makers while creating valuable opportunities for long-term collaboration.\n\nShe specialises in business development, client acquisition, strategic networking, relationship management and identifying commercial opportunities. Her work centres on bringing the right parties together, building trusted partnerships, and supporting organisations in achieving sustainable growth through meaningful business relationships.\n\nShe represents the International Business Council (IBC) as a Consultant and Strategic Representative, contributing to international business relations by connecting entrepreneurs, companies, investors and institutions across different sectors. That role focuses on facilitating strategic partnerships, encouraging cross-border collaboration, and supporting initiatives that create long-term economic value.\n\nAlongside her consulting work she is a partner in two established commercial ventures.",
     "ar": "سناء رقيق سيدة أعمال ومتخصصة في تطوير الأعمال، ولديها خبرة واسعة في الشراكات الاستراتيجية والتطوير التجاري الدولي وقطاع العقارات. وقد تمكنت خلال مسيرتها المهنية من بناء شبكة علاقات قوية تمتد عبر أوروبا والشرق الأوسط، مكنتها من الربط بين رجال الأعمال والمستثمرين وصناع القرار، وخلق فرص واعدة للتعاون طويل الأمد.\n\nتتخصص في تطوير الأعمال، واستقطاب العملاء، وبناء العلاقات الاستراتيجية، وإدارة الشراكات، وتحديد الفرص التجارية الواعدة. وتحرص دائمًا على الجمع بين الأطراف المناسبة، وبناء شراكات قائمة على الثقة، ودعم المؤسسات في تحقيق نمو مستدام من خلال علاقات عمل ذات قيمة حقيقية.\n\nوتمثل مجلس الأعمال الدولي (IBC) بصفتها مستشارة وممثلة استراتيجية، حيث تسهم في تعزيز العلاقات التجارية الدولية من خلال الربط بين رواد الأعمال والشركات والمستثمرين والمؤسسات في مختلف القطاعات. ويتركز دورها على تيسير الشراكات الاستراتيجية، وتشجيع التعاون العابر للحدود، ودعم المبادرات التي تسهم في خلق قيمة اقتصادية مستدامة.\n\nوإلى جانب نشاطها الاستشاري فهي شريكة في مشروعين تجاريين قائمين."
@@ -25,14 +25,14 @@
     "ar": "أومن بأن نجاح الأعمال يقوم على الثقة والمهنية والنزاهة والعلاقات الدائمة. وهدفي هو بناء علاقات ذات معنى، ودعم المشاريع ذات الأثر الإيجابي، والمساهمة في تحقيق نمو مستدام للمؤسسات والشركاء الذين أمثلهم."
   },
   "quoteAttribution": "Sanae Rakik",
-  "_comment_stats": "Intake form section 4: 'لا توجد جوائز أو أرقام أو صفقات قابلة للنشر والتحقق في هذه المرحلة' — no figures that can be published and verified. Section 3 additionally forbids 'أرقام ونِسب غير موثقة'. Every value stays null, so no counter renders. The hero stat bar draws only on countable records (years of experience, published positions), never on this block.",
+  "_comment_stats": "Intake form section 4: 'لا توجد جوائز أو أرقام أو صفقات قابلة للنشر والتحقق في هذه المرحلة', no figures that can be published and verified. Section 3 additionally forbids 'أرقام ونِسب غير موثقة'. Every value stays null, so no counter renders. The hero stat bar draws only on countable records (years of experience, published positions), never on this block.",
   "stats": [
     { "id": "partners", "value": null, "label": { "en": "Partners connected", "ar": "شركاء تم الربط بينهم" } },
     { "id": "markets", "value": null, "label": { "en": "Markets covered", "ar": "أسواق مغطاة" } },
     { "id": "sectors", "value": null, "label": { "en": "Sectors served", "ar": "قطاعات مخدومة" } }
   ],
-  "_comment_press": "Intake form section 4: 'الإعلام — غير مطلوب حاليًا'. Media coverage is not requested at this stage.",
+  "_comment_press": "Intake form section 4: 'الإعلام, غير مطلوب حاليًا'. Media coverage is not requested at this stage.",
   "press": [],
-  "_comment_achievements": "Intake form section 4: 'الإنجازات — لا توجد جوائز أو أرقام أو صفقات قابلة للنشر' and 'المبادرات — غير مطلوبة حاليًا'.",
+  "_comment_achievements": "Intake form section 4: 'الإنجازات, لا توجد جوائز أو أرقام أو صفقات قابلة للنشر' and 'المبادرات, غير مطلوبة حاليًا'.",
   "achievements": []
 }

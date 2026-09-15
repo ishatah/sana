@@ -1,0 +1,172 @@
+- generic [active] [ref=f6e1]:
+  - link "تخطَّ إلى المحتوى" [ref=f6e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f6e3]:
+    - generic [ref=f6e4]:
+      - link "Sanae Rakik" [ref=f6e5] [cursor=pointer]:
+        - /url: "#top"
+      - navigation "القائمة" [ref=f6e6]:
+        - link "الرئيسية" [ref=f6e7] [cursor=pointer]:
+          - /url: /ar#top
+        - link "نبذة عني" [ref=f6e8] [cursor=pointer]:
+          - /url: /ar/about
+        - link "مجالات الخبرة" [ref=f6e9] [cursor=pointer]:
+          - /url: /ar/expertise
+        - link "المناصب والعضويات" [ref=f6e10] [cursor=pointer]:
+          - /url: /ar/roles
+        - link "اتصل بي" [ref=f6e11] [cursor=pointer]:
+          - /url: /ar/contact
+      - generic [ref=f6e12]:
+        - group "Language" [ref=f6e13]:
+          - button "EN" [ref=f6e14]
+          - button "AR" [disabled] [ref=f6e15]
+        - link "اتصل بي" [ref=f6e16] [cursor=pointer]:
+          - /url: /ar/contact
+  - main [ref=f6e17]:
+    - generic [ref=f6e20]:
+      - generic [ref=f6e21]:
+        - paragraph [ref=f6e22]: أنا
+        - heading "Sanae Rakik" [level=1] [ref=f6e23]
+        - paragraph [aria-hidden] [ref=f6e24]: سيدة أعمال
+        - paragraph [ref=f6e25]: سيدة أعمال. تطوير الأعمال. الشراكات الاستراتيجية
+        - paragraph [ref=f6e27]: مستشارة وممثلة استراتيجية في مجلس الأعمال الدولي (IBC)
+        - generic [ref=f6e28]:
+          - generic [ref=f6e29]:
+            - term [ref=f6e30]: سنوات الخبرة
+            - definition [ref=f6e31]: 10+ سنوات
+          - generic [ref=f6e32]:
+            - term [ref=f6e33]: مقر الإقامة
+            - definition [ref=f6e34]: هولندا
+          - generic [ref=f6e35]:
+            - term [ref=f6e36]: نطاق النشاط
+            - definition [ref=f6e37]: أوروبا · الخليج · الشرق الأوسط
+        - generic [ref=f6e38]:
+          - link "تواصل معنا" [ref=f6e39] [cursor=pointer]:
+            - /url: /ar/contact
+          - link "عن عملها" [ref=f6e40] [cursor=pointer]:
+            - /url: /ar/about
+      - generic [ref=f6e41]:
+        - img "سناء رقيق، صورة شخصية رسمية." [ref=f6e43]
+        - figure "سناء رقيق" [ref=f6e44]:
+          - paragraph [ref=f6e45]: أؤمن بأن الأعمال الناجحة تُبنى على الثقة والاحترافية والنزاهة والعلاقات المستدامة. هدفي هو بناء علاقات ذات معنى، ودعم المشاريع ذات الأثر، والإسهام في نمو مستدام للمؤسسات والشركاء الذين أمثلهم.
+    - generic [ref=f6e48]:
+      - heading "نبذة" [level=2] [ref=f6e50]
+      - generic [ref=f6e52]:
+        - generic [ref=f6e53]:
+          - paragraph [ref=f6e54]: سناء رقيق سيدة أعمال ومتخصصة في تطوير الأعمال، ولديها خبرة واسعة في الشراكات الاستراتيجية والتطوير التجاري الدولي وقطاع العقارات. وقد تمكنت خلال مسيرتها المهنية من بناء شبكة علاقات قوية تمتد عبر أوروبا والشرق الأوسط، مكنتها من الربط بين رجال الأعمال والمستثمرين وصناع القرار، وخلق فرص واعدة للتعاون طويل الأمد. وتمثل مجلس الأعمال الدولي (IBC) بصفتها مستشارة وممثلة استراتيجية.
+          - generic [ref=f6e55]:
+            - generic [ref=f6e56]:
+              - term [ref=f6e57]: الخبرة
+              - definition [ref=f6e58]: 10+ سنوات
+            - generic [ref=f6e60]:
+              - term [ref=f6e61]: القطاع
+              - definition [ref=f6e62]: تطوير الأعمال، الشراكات الاستراتيجية، القطاع العقاري
+            - generic [ref=f6e64]:
+              - term [ref=f6e65]: المقر
+              - definition [ref=f6e66]: هولندا
+            - generic [ref=f6e68]:
+              - term [ref=f6e69]: الأسواق المشمولة
+              - definition [ref=f6e70]: أوروبا ودول مجلس التعاون الخليجي والشرق الأوسط
+            - generic [ref=f6e72]:
+              - term [ref=f6e73]: الجنسية
+              - definition [ref=f6e74]: هولندية
+        - generic [ref=f6e76]:
+          - img "سناء رقيق، صورة شخصية رسمية." [ref=f6e77]
+          - blockquote [ref=f6e78]:
+            - paragraph [ref=f6e79]: أومن بأن نجاح الأعمال يقوم على الثقة والمهنية والنزاهة والعلاقات الدائمة. وهدفي هو بناء علاقات ذات معنى، ودعم المشاريع ذات الأثر الإيجابي، والمساهمة في تحقيق نمو مستدام للمؤسسات والشركاء الذين أمثلهم.
+            - generic [ref=f6e80]: Sanae Rakik
+    - generic [ref=f6e82]:
+      - generic [ref=f6e83]:
+        - heading "مجالات الخبرة" [level=2] [ref=f6e84]
+        - paragraph [ref=f6e86]: المجالات التي يتركز عليها عملها
+      - list [ref=f6e87]:
+        - listitem [ref=f6e88]:
+          - heading "تطوير الأعمال" [level=3] [ref=f6e89]
+        - listitem [ref=f6e90]:
+          - heading "التطوير الدولي للأعمال" [level=3] [ref=f6e91]
+        - listitem [ref=f6e92]:
+          - heading "الشراكات الاستراتيجية" [level=3] [ref=f6e93]
+        - listitem [ref=f6e94]:
+          - heading "استقطاب العملاء" [level=3] [ref=f6e95]
+        - listitem [ref=f6e96]:
+          - heading "بناء الشبكات المهنية وإدارة العلاقات" [level=3] [ref=f6e97]
+        - listitem [ref=f6e98]:
+          - heading "تحديد الفرص التجارية وتقييمها" [level=3] [ref=f6e99]
+        - listitem [ref=f6e100]:
+          - heading "القطاع العقاري والمعاملات العقارية" [level=3] [ref=f6e101]
+        - listitem [ref=f6e102]:
+          - heading "التعاون التجاري العابر للحدود" [level=3] [ref=f6e103]
+    - generic [ref=f6e105]:
+      - heading "المنصب الحالي" [level=2] [ref=f6e108]
+      - list [ref=f6e111]:
+        - listitem [ref=f6e112]:
+          - article [ref=f6e113]:
+            - heading "مستشارة وممثلة استراتيجية" [level=3] [ref=f6e114]
+            - paragraph [ref=f6e115]: International Business Council (IBC)
+            - paragraph [ref=f6e116]: الربط بين رواد الأعمال والشركات والمستثمرين والمؤسسات في مختلف القطاعات، وتيسير الشراكات الاستراتيجية والتعاون العابر للحدود.
+            - generic [ref=f6e117]:
+              - generic [ref=f6e118]:
+                - img "قيد السجل قيد التأكيد" [ref=f6e119]
+                - generic [ref=f6e120]: قيد السجل قيد التأكيد
+              - generic [ref=f6e121]: أوروبا والشرق الأوسط
+              - generic [ref=f6e122]: سنة البدء بانتظار التأكيد
+    - generic [ref=f6e124]:
+      - generic [ref=f6e125]:
+        - heading "العمل معًا" [level=2] [ref=f6e126]
+        - paragraph [ref=f6e128]: أنواع التعاون التي يأخذها هذا العمل عادةً.
+      - list [ref=f6e129]:
+        - listitem [ref=f6e130]:
+          - button "تطوير الأعمال ابدأ استفسارًا" [ref=f6e131]:
+            - generic [ref=f6e132]: تطوير الأعمال
+            - generic [ref=f6e133]: ابدأ استفسارًا
+        - listitem [ref=f6e134]:
+          - button "التطوير الدولي للأعمال ابدأ استفسارًا" [ref=f6e135]:
+            - generic [ref=f6e136]: التطوير الدولي للأعمال
+            - generic [ref=f6e137]: ابدأ استفسارًا
+        - listitem [ref=f6e138]:
+          - button "الشراكات الاستراتيجية ابدأ استفسارًا" [ref=f6e139]:
+            - generic [ref=f6e140]: الشراكات الاستراتيجية
+            - generic [ref=f6e141]: ابدأ استفسارًا
+        - listitem [ref=f6e142]:
+          - button "استقطاب العملاء ابدأ استفسارًا" [ref=f6e143]:
+            - generic [ref=f6e144]: استقطاب العملاء
+            - generic [ref=f6e145]: ابدأ استفسارًا
+    - generic [ref=f6e147]:
+      - generic [ref=f6e148]:
+        - heading "اتصال" [level=2] [ref=f6e149]
+        - paragraph [ref=f6e151]: للتعاون والدعوات
+      - generic [ref=f6e152]:
+        - generic [ref=f6e155]:
+          - heading "الموقع" [level=3] [ref=f6e156]
+          - paragraph [ref=f6e157]: هولندا
+        - generic [ref=f6e159]:
+          - generic [ref=f6e160]:
+            - generic [ref=f6e161]:
+              - generic [ref=f6e162]: الاسم
+              - textbox "الاسم" [ref=f6e163]
+            - generic [ref=f6e164]:
+              - generic [ref=f6e165]: البريد الإلكتروني
+              - textbox "البريد الإلكتروني" [ref=f6e166]
+          - generic [ref=f6e167]:
+            - generic [ref=f6e168]: الجهة
+            - textbox "الجهة" [ref=f6e169]
+          - generic [ref=f6e170]:
+            - generic [ref=f6e171]: الموضوع
+            - textbox "الموضوع" [ref=f6e172]
+          - generic [ref=f6e173]:
+            - generic [ref=f6e174]: الرسالة
+            - textbox "الرسالة" [ref=f6e175]
+          - paragraph [ref=f6e176]: بإرسالك هذا النموذج فإنك توافق على معالجة بياناتك للرد على رسالتك.
+          - button "إرسال الرسالة" [ref=f6e177]
+  - contentinfo [ref=f6e178]:
+    - generic [ref=f6e179]:
+      - paragraph [ref=f6e180]: © 2026 Sanae Rakik. جميع الحقوق محفوظة.
+      - navigation "Legal" [ref=f6e181]:
+        - link "الخصوصية" [ref=f6e182] [cursor=pointer]:
+          - /url: /ar/privacy
+        - link "الشروط" [ref=f6e183] [cursor=pointer]:
+          - /url: /ar/terms
+        - link "ملفات الارتباط" [ref=f6e184] [cursor=pointer]:
+          - /url: /ar/cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f6e190] [cursor=pointer]

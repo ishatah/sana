@@ -20,7 +20,7 @@ const SECTION_FILE = "media.json"
  * data/media.json can express "this asset is cleared", but a permission recorded only in
  * a JSON field is a note; a permission checked before the bytes are written is a rule.
  * Intake question Q5 asks for the portrait AND permission for the logos in one breath
- * precisely because the two arrive separately and it is the second that gets skipped —
+ * precisely because the two arrive separately and it is the second that gets skipped,
  * someone has the file to hand, the slot is empty, and uploading is the obvious next
  * move. This refuses that move.
  *
@@ -32,12 +32,12 @@ const SECTION_FILE = "media.json"
 //
 // SVG USED TO BE ACCEPTED HERE, on the grounds that organisation logos are usually
 // vector. It is no longer, because the app no longer renders any SVG at all and an
-// upload allowlist is the one door that would let it back in — a slot filled with a
+// upload allowlist is the one door that would let it back in, a slot filled with a
 // vector logo would put drawn geometry back on a page the rest of this change took
 // it off of.
 //
 // It also closes a real risk the old comment only mitigated. SVG is an ACTIVE format
-// — it can carry script — and the mitigation was that it is served from Supabase
+//, it can carry script, and the mitigation was that it is served from Supabase
 // Storage rather than `public/` and never inlined. That is sound but it is defence
 // in depth around a format nothing needs; not accepting it is stronger than serving
 // it carefully.
@@ -57,7 +57,7 @@ function localSectionPath() {
   return path.join(process.cwd(), "data", SECTION_FILE)
 }
 
-/** The stored media section — Storage first, repo file second, matching lib/cms-section.ts. */
+/** The stored media section, Storage first, repo file second, matching lib/cms-section.ts. */
 async function readMediaSection(): Promise<any> {
   if (isStorageConfigured()) {
     try {
@@ -121,7 +121,7 @@ export async function POST(request: NextRequest) {
       {
         error: "This slot has no recorded permission, so no file can be uploaded to it.",
         reason:
-          "Holding a file is not the same as having the right to publish it. Record who granted permission, when, and what the grant covers — then upload. Open question Q5 covers the portrait and the organisation logos.",
+          "Holding a file is not the same as having the right to publish it. Record who granted permission, when, and what the grant covers, then upload. Open question Q5 covers the portrait and the organisation logos.",
         slotId,
       },
       { status: 422 },
@@ -150,7 +150,7 @@ export async function POST(request: NextRequest) {
       {
         error: "Media storage is not configured.",
         reason:
-          "Set SUPABASE_URL and SUPABASE_SERVICE_KEY. Client photography is deliberately not written into the repository — a committed image cannot be withdrawn.",
+          "Set SUPABASE_URL and SUPABASE_SERVICE_KEY. Client photography is deliberately not written into the repository, a committed image cannot be withdrawn.",
       },
       { status: 503 },
     )

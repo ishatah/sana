@@ -1,5 +1,5 @@
 {
-  "_comment": "Intake form section 1, مجالات التخصص, transcribed as supplied. The form asked for 'عبارات قصيرة دون جُمل' — short noun phrases, not sentences — and that is what these are. Nothing is described or characterised beyond the phrase itself.",
+  "_comment": "Intake form section 1, مجالات التخصص, transcribed as supplied. The form asked for 'عبارات قصيرة دون جُمل', short noun phrases, not sentences, and that is what these are. Nothing is described or characterised beyond the phrase itself.",
   "items": [
     { "id": "business-development", "icon": "network", "title": { "en": "Business development", "ar": "تطوير الأعمال" } },
     {
@@ -35,7 +35,7 @@
     }
   ],
   "languages": {
-    "_comment": "Intake form section 1, اللغات: Dutch, Arabic, French. Held as data but NOT rendered — the languages section was removed from display in an earlier build and the rows are kept so it can be restored without re-collecting anything. Proficiency levels were not supplied, so none are asserted.",
+    "_comment": "Intake form section 1, اللغات: Dutch, Arabic, French. Held as data but NOT rendered, the languages section was removed from display in an earlier build and the rows are kept so it can be restored without re-collecting anything. Proficiency levels were not supplied, so none are asserted.",
     "items": [
       { "code": "nl", "name": { "en": "Dutch", "ar": "الهولندية" }, "speaking": "", "writing": "", "business": null, "status": "to-confirm" },
       { "code": "ar", "name": { "en": "Arabic", "ar": "العربية" }, "speaking": "", "writing": "", "business": null, "status": "to-confirm" },

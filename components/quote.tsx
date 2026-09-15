@@ -7,7 +7,7 @@ import { localize, isEmpty, type LocalizedString } from "@/lib/localize"
  *
  * Guarded twice: the page only renders it when getSectionAvailability() says the
  * quote exists, and it returns null again here if the text is empty. The second
- * check is not redundant — this is the one section where a failure renders an
+ * check is not redundant, this is the one section where a failure renders an
  * attribution line under nothing, which reads as a quote the client never gave.
  * A section that fabricates a statement attributed to a named person is worth two
  * guards.
@@ -28,7 +28,14 @@ export async function Quote({ text, attribution }: { text: LocalizedString; attr
       <div className="gradient-edge-top" />
       <div className="container-page relative z-10">
         <Reveal>
-          <blockquote className="mx-auto max-w-3xl text-center">
+          {/* Effect 8: an oversized quotation mark behind the quote, in
+              --primary-tint. The tint is a SOLID near-black gold rather than a
+              transparent gold, so it renders at a fixed lightness regardless of
+              which ground the quote band lands on, which matters here, because
+              this section sits on --surface at 50% and effect 16 may move it.
+              The glyph uses the alt-text form of `content` so a screen reader
+              does not announce a stray quotation mark before the quote. */}
+          <blockquote className="quote-mark mx-auto max-w-3xl text-center">
             <p className="font-display text-xl leading-relaxed text-[color:var(--heading)] sm:text-2xl">
               {localize(text, locale)}
             </p>

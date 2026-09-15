@@ -1,4 +1,4 @@
-# Content gaps — client CL-01-SS
+# Content gaps, client CL-01-SS
 
 What is still missing from the profile, and which question unblocks each item.
 
@@ -7,14 +7,14 @@ Baseline at time of writing: **0 banned-wording violations · 10 publication blo
 14 outstanding items**.
 
 > Nothing on this site is published until intake sections 15 and 18 are both complete.
-> Every gap below is a live blocker, not a nice-to-have — the site renders a draft banner
+> Every gap below is a live blocker, not a nice-to-have, the site renders a draft banner
 > on every page and is excluded from every search index until they close.
 
 ---
 
 ## The six open questions
 
-### Q1 — Arabic and English levels, speaking and writing
+### Q1, Arabic and English levels, speaking and writing
 
 **Blocks:** the languages table in the About section.
 
@@ -24,7 +24,7 @@ renders them as *pending* rather than omitting them or guessing.
 
 Intake section 8 is one of only two fields on the whole form marked **MUST CONFIRM**, with
 the instruction: *"Never assume a language level from the material supplied."* This is a real
-trap on this file — she corresponds from an ifb-us.org address, works Iraq and the wider
+trap on this file, she corresponds from an ifb-us.org address, works Iraq and the wider
 Middle East, and supplied Arabic-language certificates, from which "Arabic: fluent, English:
 professional" is an easy and completely unevidenced inference.
 
@@ -33,7 +33,7 @@ and whether each is used in business.
 
 ---
 
-### Q2 — Which Adana office is current
+### Q2, Which Adana office is current
 
 **Blocks:** the address block in the contact section.
 
@@ -50,7 +50,7 @@ address, and neither address has been confirmed as an office rather than a resid
 
 ---
 
-### Q3 — Two or three concrete achievements with dates, plus any numbers
+### Q3, Two or three concrete achievements with dates, plus any numbers
 
 **The largest gap in the file.** Intake section 12 returned *"Nothing supplied."*
 
@@ -59,10 +59,10 @@ address, and neither address has been confirmed as an office rather than a resid
 | Field | File | Current state |
 |---|---|---|
 | `fullBio` (tr/en/ar) | `data/biography.json` | all empty, `fullBioBlocked: true` |
-| Website About page (400–600 words) | — | `status: "blocked"` in deliverables |
-| `stats[].value` × 4 | `data/biography.json` | all `null` — members, events, companies, countries |
+| Website About page (400–600 words) |: | `status: "blocked"` in deliverables |
+| `stats[].value` × 4 | `data/biography.json` | all `null`, members, events, companies, countries |
 | `achievements` | `data/biography.json` | `[]` |
-| `press` | `data/biography.json` | `[]` — press carousel hidden |
+| `press` | `data/biography.json` | `[]`, press carousel hidden |
 
 The stats block needs: members represented, events per year, companies matched, countries
 covered. Every value is `null`, so the counter section renders nothing rather than a
@@ -73,7 +73,7 @@ them. Without these the full bio cannot be written without inventing its content
 
 ---
 
-### Q4 — Start year for each federation and association role
+### Q4, Start year for each federation and association role
 
 **Blocks:** the date line on four of six positions, and `identity.careerStartYear`.
 
@@ -82,7 +82,7 @@ Businessmen Association, and UN-PAF. Present on: Institute of International Peac
 (2025–26) and World Parliament of Security and Peace (2020).
 
 Rows without a start year render *"Start year to be confirmed"* rather than omitting the
-line — silence would read as "no date available".
+line, silence would read as "no date available".
 
 `identity.careerStartYear` is also empty; the About fact list omits the row entirely rather
 than deriving "since 2016" from the "10+ years" answer.
@@ -91,7 +91,7 @@ than deriving "since 2016" from the "10+ years" answer.
 
 ---
 
-### Q5 — High resolution portrait photo, and permission to use the logos
+### Q5, High resolution portrait photo, and permission to use the logos
 
 **Blocks:** every image on the site, plus the one-pager PDF.
 
@@ -100,13 +100,13 @@ All five assets in `data/deliverables.json` are `received: false`:
 | Asset | Note |
 |---|---|
 | Portrait photo, high resolution | Needed for every deliverable |
-| Event or delegation photos | — |
+| Event or delegation photos |, |
 | Organisation logos, with permission | IFB, IFBI and the Adana association |
 | Certificates cleared for display | Only tier A or B items |
-| Brand colours or style guide | — |
+| Brand colours or style guide |, |
 
 The question asks for two separate things and **both are required**: the file, and the right
-to publish it. Holding a logo file is not permission to use it — three organisations are
+to publish it. Holding a logo file is not permission to use it, three organisations are
 involved, and using an association's mark on a personal profile without its agreement damages
 the relationship the profile exists to represent.
 
@@ -119,12 +119,12 @@ subject's, so a grant from the client alone may not be sufficient for delegation
 
 ---
 
-### Q6 — Which phone numbers and emails may be published
+### Q6, Which phone numbers and emails may be published
 
 **Blocks:** both phone numbers.
 
 `data/siteSettings.json` holds two numbers, both `visibility: "to-confirm"`: a Turkish and an
-Iraqi line. Neither renders. Emails are partly resolved — two are public
+Iraqi line. Neither renders. Emails are partly resolved, two are public
 (`President.tr@ifb-us.org`, `ifbiturkiye@gmail.com`) and one is marked internal
 (`sidikasire@gmail.com`) and never renders.
 
@@ -132,11 +132,11 @@ The contact section currently states that contact is by email only, which is acc
 than a workaround.
 
 **Needed:** confirmation of which numbers, if any, may be published. Also relevant to
-`CONTACT_TO_EMAIL` — the contact form has no delivery address configured yet.
+`CONTACT_TO_EMAIL`, the contact form has no delivery address configured yet.
 
 ---
 
-## Section 18 — sign-off
+## Section 18, sign-off
 
 All four fields in `data/deliverables.json` → `signOff` are empty:
 
@@ -147,7 +147,7 @@ All four fields in `data/deliverables.json` → `signOff` are empty:
 
 Until all four are complete the site stays `noindex` and the draft banner renders on every
 page. Note that indexing additionally requires `NEXT_PUBLIC_ALLOW_INDEXING=true` at deploy
-time — a deliberate second gate, so nobody indexes the site by ticking a checkbox.
+time, a deliberate second gate, so nobody indexes the site by ticking a checkbox.
 
 ---
 
@@ -159,7 +159,7 @@ These need a decision rather than an answer from the client:
   Intake section 13 records *Website: Not supplied*. `lib/seo.ts` and `app/sitemap.ts` both
   read it, so canonical URLs and the sitemap are wrong until the real domain is set.
 - **`social: []`.** LinkedIn was not supplied. The footer rail renders nothing rather than
-  dead links. Adding any social profile is a one-line entry (`{ id, label, url }`) — no code
+  dead links. Adding any social profile is a one-line entry (`{ id, label, url }`), no code
   change needed.
 - **Register entries outstanding for five of six organisations.** Only ifb-us.org is
   confirmed. The register note renders on the draft page as a reminder and disappears at
@@ -169,19 +169,19 @@ These need a decision rather than an answer from the client:
 
 ---
 
-## Deliberate — do not "fix" these
+## Deliberate, do not "fix" these
 
 Two empty fields look like gaps and are not:
 
 - **`identity.honorific` must stay empty.** The 2024 honorary doctorate is not from a
   recognised university, so `Dr.` cannot precede this name in any language. It is a banned
   term in `lib/verification.ts`, rejected on save with a 422, and it fails the build gate.
-  This does not change if the client asks for it — an override still cannot unlock a title
+  This does not change if the client asks for it, an override still cannot unlock a title
   prefix.
 - **`positions.previous: []`** is intake section 4 left blank on purpose (*"only include if
   they add weight"*), not an omission.
 
-Likewise, the empty sections on the live page — quote, stats, press, achievements — are
+Likewise, the empty sections on the live page, quote, stats, press, achievements, are
 hidden by `getSectionAvailability()` in `lib/profile-content.ts` and reappear on their own
 once the underlying data arrives. They do not need to be re-enabled by hand.
 
@@ -191,12 +191,12 @@ once the underlying data arrives. They do not need to be re-enabled by hand.
 
 Ordered by how much each unblocks:
 
-1. **Q3** — unblocks the full bio, the About page, the stats block and the achievements list.
+1. **Q3**, unblocks the full bio, the About page, the stats block and the achievements list.
    Four deliverables, one answer.
-2. **Q5** — unblocks every image and the one-pager PDF. Remember it is *file + permission*.
-3. **Q4** — six date lines, and the career start year.
-4. **Q1** — two languages, four cells.
-5. **Q6** and **Q2** — contact details; smallest scope, but Q6 also decides where the contact
+2. **Q5**, unblocks every image and the one-pager PDF. Remember it is *file + permission*.
+3. **Q4**, six date lines, and the career start year.
+4. **Q1**, two languages, four cells.
+5. **Q6** and **Q2**, contact details; smallest scope, but Q6 also decides where the contact
    form delivers.
-6. **Section 18 sign-off** — last, once the above are settled and the titles have been
+6. **Section 18 sign-off**, last, once the above are settled and the titles have been
    confirmed in writing.

@@ -40,7 +40,7 @@ export default function SiteSettingsAdminPage() {
             value={data.siteUrl}
             onChange={(v) => set("siteUrl", v)}
             dir="ltr"
-            hint="Canonical URLs, sitemap and structured data all read this. No domain was supplied at intake — set the real one before launch."
+            hint="Canonical URLs, sitemap and structured data all read this. No domain was supplied at intake, set the real one before launch."
           />
         </div>
         <label className="flex items-center gap-2.5 text-sm text-[color:var(--card-foreground)]">
@@ -83,7 +83,7 @@ export default function SiteSettingsAdminPage() {
           <Info size={14} className="mt-0.5 shrink-0 text-[color:var(--primary)]" aria-hidden />
           <span>
             Search-engine indexing needs two things: a complete sign-off, and the NEXT_PUBLIC_ALLOW_INDEXING environment
-            variable set to true at deploy time. The env flag is separate on purpose — a profile can be signed off for
+            variable set to true at deploy time. The env flag is separate on purpose, a profile can be signed off for
             print or LinkedIn long before anyone decides the site itself should rank, so indexing is never a side effect
             of ticking a box in here.
           </span>

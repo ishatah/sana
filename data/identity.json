@@ -5,13 +5,13 @@
   "namePrint": "Sanae Rakik",
   "nameShort": "Sanae Rakik",
   "nameArabic": "سناء رقيق",
-  "_comment_prefix": "Intake form section 6: the approved name format is 'سناء رقيق' / 'Sanae Rakik', explicitly 'دون لقب' — without a title. No prefix is used anywhere on this site. Leave this empty unless an accredited qualification is recorded in data/awards.json with accredited:true.",
+  "_comment_prefix": "Intake form section 6: the approved name format is 'سناء رقيق' / 'Sanae Rakik', explicitly 'دون لقب', without a title. No prefix is used anywhere on this site. Leave this empty unless an accredited qualification is recorded in data/awards.json with accredited:true.",
   "honorific": "",
   "pronunciationNote": "",
   "nationality": { "en": "Dutch", "ar": "هولندية" },
   "placeOfBirth": { "en": "", "ar": "" },
   "residence": { "en": "Netherlands", "ar": "هولندا" },
-  "_comment_city": "Intake form section 6: 'هولندا (المدينة تُحدَّد لاحقًا إن رُغب في ذكرها)' — country only for now, city to be decided later if she wants it named. Do not fill this with a guess.",
+  "_comment_city": "Intake form section 6: 'هولندا (المدينة تُحدَّد لاحقًا إن رُغب في ذكرها)', country only for now, city to be decided later if she wants it named. Do not fill this with a guess.",
   "mainCityOfWork": { "en": "", "ar": "" },
   "otherMarkets": {
     "en": "Europe, the Gulf states and the wider Middle East",
@@ -22,6 +22,6 @@
     "en": "Business development, strategic partnerships, real estate",
     "ar": "تطوير الأعمال، الشراكات الاستراتيجية، القطاع العقاري"
   },
-  "_comment_careerStart": "Intake form section 4: 'أما الجهات والمدن وتواريخ البداية والنهاية فلم تُعتمد بعد' — start and end dates are not yet approved. Fill in once confirmed in writing.",
+  "_comment_careerStart": "Intake form section 4: 'أما الجهات والمدن وتواريخ البداية والنهاية فلم تُعتمد بعد', start and end dates are not yet approved. Fill in once confirmed in writing.",
   "careerStartYear": ""
 }

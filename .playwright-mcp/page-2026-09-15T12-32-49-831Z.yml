@@ -1,0 +1,70 @@
+- generic:
+  - generic [active]:
+    - generic [ref=f3e3]:
+      - generic [ref=f3e4]:
+        - navigation [ref=f3e6]:
+          - button [disabled] [ref=f3e7]:
+            - img "previous" [ref=f3e8]
+          - generic [ref=f3e10]:
+            - generic [ref=f3e11]: 1/
+            - text: "1"
+          - button [disabled] [ref=f3e12]:
+            - img "next" [ref=f3e13]
+        - link "Next.js 16.2.6 (stale) Turbopack" [ref=f3e16] [cursor=pointer]:
+          - /url: https://nextjs.org/docs/messages/version-staleness
+          - generic "There is a newer version (16.3.5) available, upgrade recommended!" [ref=f3e19]: Next.js 16.2.6 (stale)
+          - generic [ref=f3e20]: Turbopack
+      - dialog "Build Error" [ref=f3e22]:
+        - generic [ref=f3e25]:
+          - generic [ref=f3e26]:
+            - generic [ref=f3e27]:
+              - generic [ref=f3e28]: Build Error
+              - generic [ref=f3e30]:
+                - button "Copy Error Info" [ref=f3e31] [cursor=pointer]
+                - button "No related documentation found" [disabled] [ref=f3e34]
+                - button "Attach Node.js inspector" [ref=f3e37] [cursor=pointer]
+            - generic [ref=f3e46]: Expected '</', got 'ident'
+          - generic [ref=f3e49]:
+            - generic [ref=f3e51]:
+              - generic [ref=f3e56]: ./components/about-section.tsx (207:23)
+              - button "Open in editor" [ref=f3e57] [cursor=pointer]
+            - generic [ref=f3e62]:
+              - generic [ref=f3e63]: Expected '</', got 'ident'
+              - generic [ref=f3e64]: 205 |
+              - generic [ref=f3e65]: read as one more ledger row that lost its label. The wider gap is what
+              - generic [ref=f3e66]: 206 |
+              - generic [ref=f3e67]: separates the closing of the table from the opening of the quote. */
+              - generic [ref=f3e68]: "}"
+              - text: ">"
+              - generic [ref=f3e69]: 207 |
+              - generic [ref=f3e70]: <blockquote data-anime=
+              - text: "\"row\""
+              - generic [ref=f3e71]: className=
+              - generic [ref=f3e72]: "\"block-rule mt-14 pt-6\""
+              - generic [ref=f3e73]: ">"
+              - generic [ref=f3e74]: "|"
+              - text: ^^^^
+              - generic [ref=f3e75]: 208 |
+              - generic [ref=f3e76]: "{/*"
+              - text: "`.about-quote`"
+              - generic [ref=f3e77]: replaces
+              - generic [ref=f3e78]: "`text-base sm:text-lg`"
+              - generic [ref=f3e79]: .
+              - text: One
+              - generic [ref=f3e80]: fluid step that
+              - generic [ref=f3e81]: 209 |
+              - generic [ref=f3e82]: starts at the bio
+              - generic [ref=f3e83]: "'s size rather than below it — this is her own"
+              - generic [ref=f3e84]: 210 |
+              - generic [ref=f3e85]: first-person statement and it was previously set SMALLER than the
+              - generic [ref=f3e86]: "Parsing ecmascript source code failed Import trace: Server Component: ./components/about-section.tsx ./app/[locale]/page.tsx"
+        - generic [ref=f3e87]: "1"
+        - generic [ref=f3e88]: "2"
+    - generic [ref=f3e93] [cursor=pointer]:
+      - button "Open Next.js Dev Tools" [ref=f3e94]
+      - button "Open issues overlay" [ref=f3e99]:
+        - generic [ref=f3e100]:
+          - generic [aria-hidden] [ref=f3e101]: "0"
+          - generic [ref=f3e102]: "1"
+        - generic [ref=f3e103]: Issue
+  - alert [ref=f3e104]

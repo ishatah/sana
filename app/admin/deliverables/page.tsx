@@ -17,7 +17,7 @@ const STATUS_STYLE: Record<string, string> = {
 }
 
 /**
- * Deliverables, open questions and sign-off — intake sections 16, 17 and 18.
+ * Deliverables, open questions and sign-off, intake sections 16, 17 and 18.
  *
  * The sign-off block at the bottom is the single most consequential control in the
  * panel. Completing it removes the draft banner from every page and, together with

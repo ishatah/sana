@@ -3,7 +3,7 @@ import { getSiteSettings } from "@/lib/site-settings"
 import { isIndexable } from "@/lib/seo"
 import { routing } from "@/i18n/routing"
 
-// The five content pages first, then the legal routes — the order the sitemap
+// The five content pages first, then the legal routes, the order the sitemap
 // lists them in is a weak relevance signal, and the profile pages are the point
 // of the site. `buildMetadata({ path })` on each page emits the matching canonical
 // and hreflang set, so these two lists have to stay in step.
@@ -24,7 +24,7 @@ const ROUTES = [
  *
  * Empty while the profile is unsigned. Listing URLs in a sitemap is an active
  * request to crawl them, which would contradict the robots disallow rather than
- * merely duplicate it — and a crawler handed conflicting signals tends to resolve
+ * merely duplicate it, and a crawler handed conflicting signals tends to resolve
  * them in the direction of indexing.
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

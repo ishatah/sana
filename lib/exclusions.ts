@@ -16,7 +16,7 @@ export interface ExclusionItem {
 }
 
 /**
- * The exclusions log — intake form section 15, "everything received but not used,
+ * The exclusions log, intake form section 15, "everything received but not used,
  * with the reason. This protects the client and us."
  *
  * It is deliberately part of the application rather than a note in a document.
@@ -34,7 +34,7 @@ export async function getBlockedTerms(): Promise<string[]> {
   const data = await getExclusions()
   const items = (data.items ?? []) as ExclusionItem[]
   return items
-    // An override lifts the ban on the wording — but per the form's FINAL CHECK,
+    // An override lifts the ban on the wording, but per the form's FINAL CHECK,
     // the item still goes in with the full organisation name and no diplomatic or
     // United Nations wording, which lib/verification.ts enforces separately and
     // unconditionally. An override can never reach those rules.
@@ -45,7 +45,7 @@ export async function getBlockedTerms(): Promise<string[]> {
 
 /**
  * Items that carry `overrideAllowed: false` plus the NEVER PUBLISHED list from the
- * red box in section 15. No client instruction unlocks these — passport and
+ * red box in section 15. No client instruction unlocks these, passport and
  * national ID numbers, identity scans, home address, bank details, family details,
  * and anything imitating a diplomatic, governmental or United Nations credential.
  *

@@ -1,0 +1,67 @@
+- generic:
+  - generic [active]:
+    - generic [ref=f4e3]:
+      - generic [ref=f4e4]:
+        - navigation [ref=f4e6]:
+          - button [disabled] [ref=f4e7]:
+            - img "previous" [ref=f4e8]
+          - generic [ref=f4e10]:
+            - generic [ref=f4e11]: 1/
+            - text: "1"
+          - button [disabled] [ref=f4e12]:
+            - img "next" [ref=f4e13]
+        - link "Next.js 16.2.6 (stale) Turbopack" [ref=f4e16] [cursor=pointer]:
+          - /url: https://nextjs.org/docs/messages/version-staleness
+          - generic "There is a newer version (16.3.5) available, upgrade recommended!" [ref=f4e19]: Next.js 16.2.6 (stale)
+          - generic [ref=f4e20]: Turbopack
+      - dialog "Build Error" [ref=f4e22]:
+        - generic [ref=f4e25]:
+          - generic [ref=f4e26]:
+            - generic [ref=f4e27]:
+              - generic [ref=f4e28]: Build Error
+              - generic [ref=f4e30]:
+                - button "Copy Error Info" [ref=f4e31] [cursor=pointer]
+                - button "No related documentation found" [disabled] [ref=f4e34]
+                - button "Attach Node.js inspector" [ref=f4e37] [cursor=pointer]
+            - generic [ref=f4e46]: Export setStyle doesn't exist in target module
+          - generic [ref=f4e49]:
+            - generic [ref=f4e51]:
+              - generic [ref=f4e57]: ./components/motion/interactions.ts (3:1)
+              - button "Open in editor" [ref=f4e58] [cursor=pointer]
+            - generic [ref=f4e63]:
+              - generic [ref=f4e64]: Export setStyle doesn't exist in target module
+              - generic [ref=f4e65]: 1 |
+              - text: import
+              - generic [ref=f4e66]: "{ animate }"
+              - text: from "motion"
+              - generic [ref=f4e67]: 2 |
+              - text: import
+              - generic [ref=f4e68]: "{"
+              - text: DUR
+              - generic [ref=f4e69]: ","
+              - text: EASE
+              - generic [ref=f4e70]: "}"
+              - text: from "./tokens" >
+              - generic [ref=f4e71]: 3 |
+              - text: import
+              - generic [ref=f4e72]: "{ setStyle, clearStyle }"
+              - text: from "./dom"
+              - generic [ref=f4e73]: "|"
+              - text: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              - generic [ref=f4e74]: 4 |
+              - generic [ref=f4e75]: 5 |
+              - generic [ref=f4e76]: /**
+              - generic [ref=f4e77]: 6 |
+              - generic [ref=f4e78]: "*"
+              - text: Interactive
+              - generic [ref=f4e79]: "behaviours — the layer that responds to input rather than to scroll. The export setStyle was not found in module [project]/components/motion/dom.ts [app-client] (ecmascript). Did you mean to import setStyles? All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist. Import traces: Client Component Browser: ./components/motion/interactions.ts [Client Component Browser] ./components/motion/anime-scope.tsx [Client Component Browser] ./components/motion/anime-scope.tsx [Server Component] ./app/[locale]/page.tsx [Server Component] Client Component SSR: ./components/motion/interactions.ts [Client Component SSR] ./components/motion/anime-scope.tsx [Client Component SSR] ./components/motion/anime-scope.tsx [Server Component] ./app/[locale]/page.tsx [Server Component]"
+        - generic [ref=f4e80]: "1"
+        - generic [ref=f4e81]: "2"
+    - generic [ref=f4e86] [cursor=pointer]:
+      - button "Open Next.js Dev Tools" [ref=f4e87]
+      - button "Open issues overlay" [ref=f4e92]:
+        - generic [ref=f4e93]:
+          - generic [aria-hidden] [ref=f4e94]: "0"
+          - generic [ref=f4e95]: "1"
+        - generic [ref=f4e96]: Issue
+  - alert [ref=f4e97]

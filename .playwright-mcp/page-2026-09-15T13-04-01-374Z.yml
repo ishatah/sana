@@ -1,0 +1,55 @@
+- generic [active] [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link "Sanae Rakik" [ref=f1e5] [cursor=pointer]:
+        - /url: "#top"
+      - navigation "Menu" [ref=f1e6]:
+        - link "Home" [ref=f1e7] [cursor=pointer]:
+          - /url: /#top
+        - link "About" [ref=f1e8] [cursor=pointer]:
+          - /url: /about
+        - link "Expertise" [ref=f1e9] [cursor=pointer]:
+          - /url: /expertise
+        - link "Roles" [ref=f1e10] [cursor=pointer]:
+          - /url: /roles
+        - link "Contact" [ref=f1e12] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=f1e13]:
+        - group "Language" [ref=f1e14]:
+          - button "EN" [disabled] [ref=f1e15]
+          - button "AR" [ref=f1e16]
+        - link "Contact me" [ref=f1e17] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=f1e18]:
+    - generic [ref=f1e22]:
+      - paragraph [ref=f1e23]: Appointments
+      - heading "Roles and Affiliations" [level=1] [ref=f1e24]
+      - paragraph [ref=f1e25]: Current roles and the organisations represented, each named in full.
+    - generic [ref=f1e27]:
+      - heading "Current Role" [level=2] [ref=f1e29]
+      - list [ref=f1e32]:
+        - listitem [ref=f1e33]:
+          - article [ref=f1e34]:
+            - heading "Consultant and Strategic Representative" [level=3] [ref=f1e35]
+            - paragraph [ref=f1e36]: International Business Council (IBC)
+            - paragraph [ref=f1e37]: Connecting entrepreneurs, companies, investors and institutions across sectors, facilitating strategic partnerships and cross-border cooperation.
+            - generic [ref=f1e38]:
+              - generic [ref=f1e39]:
+                - img "Register entry pending confirmation" [ref=f1e40]
+                - generic [ref=f1e41]: Register entry pending confirmation
+              - generic [ref=f1e42]: Europe and the Middle East
+              - generic [ref=f1e43]: Start year to be confirmed
+  - contentinfo [ref=f1e44]:
+    - generic [ref=f1e45]:
+      - paragraph [ref=f1e46]: © 2026 Sanae Rakik. All rights reserved.
+      - navigation "Legal" [ref=f1e47]:
+        - link "Privacy" [ref=f1e48] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f1e49] [cursor=pointer]:
+          - /url: /terms
+        - link "Cookies" [ref=f1e50] [cursor=pointer]:
+          - /url: /cookies
+  - region "Notifications alt+T"
+  - alert [ref=f1e51]

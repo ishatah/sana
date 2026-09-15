@@ -14,8 +14,7 @@ export default function GlobalError({ error, reset }: { error: Error & { digest?
     <div className="flex min-h-screen items-center justify-center px-5 text-center">
       <div>
         <p className="eyebrow mb-3">Error</p>
-        <h1 className="section-heading mb-4">Something went wrong</h1>
-        <div className="space-border" aria-hidden />
+        <h1 className="section-heading mb-8">Something went wrong</h1>
         <button type="button" onClick={reset} className="btn-outline">
           Try again
         </button>

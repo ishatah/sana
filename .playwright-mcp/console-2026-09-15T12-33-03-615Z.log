@@ -1,0 +1,81 @@
+[      43ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     130ms] [LOG] [Fast Refresh] done in 187ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     230ms] Error: Switched to client rendering because the server rendering errored:
+
+Module [project]/components/motion/fm/scroll-parallax.tsx [app-ssr] (ecmascript) was instantiated because it was required from module [project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/[locale]/page { METADATA_0 => "[project]/app/icon.png.mjs { IMAGE => \"[project]/app/icon.png (static in ecmascript, tag client)\" } [app-rsc] (structured image object, ecmascript)", MODULE_1 => "[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_2 => "[project]/app/error.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_3 => "[project]/app/loading.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_4 => "[project]/app/not-found.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_5 => "[project]/node_modules/next/dist/client/components/builtin/forbidden.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_6 => "[project]/node_modules/next/dist/client/components/builtin/unauthorized.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_7 => "[project]/node_modules/next/dist/client/components/builtin/global-error.js [app-rsc] (ecmascript, Next.js Server Component)", MODULE_8 => "[project]/app/[locale]/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", MODULE_9 => "[project]/app/[locale]/page.tsx [app-rsc] (ecmascript, Next.js Server Component)" } [app-rsc] (ecmascript) <locals>, but the module factory is not available.
+This is often caused by a stale browser cache, misconfigured Cache-Control headers, or a service worker serving outdated responses.
+To fix this, make sure your Cache-Control headers allow revalidation of chunks and review your service worker configuration. As an immediate workaround, try hard-reloading the page, clearing the browser cache, or unregistering any service workers.
+    at instantiateModuleShared (C:\Users\Ibra\Documents\GitHub\sana\.next\dev\server\chunks\ssr\[turbopack]_runtime.js:1256:15)
+    at instantiateModule (C:\Users\Ibra\Documents\GitHub\sana\.next\dev\server\chunks\ssr\[turbopack]_runtime.js:1557:23)
+    at getOrInstantiateModuleFromParent (C:\Users\Ibra\Documents\GitHub\sana\.next\dev\server\chunks\ssr\[turbopack]_runtime.js:1593:23)
+    at Context.commonJsRequire [as r] (C:\Users\Ibra\Documents\GitHub\sana\.next\dev\server\chunks\ssr\[turbopack]_runtime.js:302:12)
+    at Object.require (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:69:48307)
+    at globalThis.__next_require__ (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:69:49174)
+    at requireModule (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:340808)
+    at initializeModuleChunk (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:381300)
+    at readChunk (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:373369)
+    at getComponentNameFromType (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:78452)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201552)
+    at renderNodeDestructive (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201175)
+    at renderNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:213093)
+    at renderElement (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:181773)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201940)
+    at renderNodeDestructive (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201175)
+    at finishFunctionComponent (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:119349)
+    at renderElement (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:134520)
+    at renderElement (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:194974)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201940)
+    at renderNodeDestructive (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201175)
+    at renderNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:213093)
+    at renderChildrenArray (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:207654)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:202417)
+    at renderNodeDestructive (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201175)
+    at renderNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:213093)
+    at renderElement (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:181773)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201940)
+    at renderNodeDestructive (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201175)
+    at renderNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:213093)
+    at renderChildrenArray (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:207654)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:202417)
+    at renderNodeDestructive (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201175)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:202325)
+    at renderNodeDestructive (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201175)
+    at renderNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:213093)
+    at renderChildrenArray (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:207654)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:202417)
+    at renderNodeDestructive (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201175)
+    at renderElement (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:182673)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201940)
+    at renderNodeDestructive (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201175)
+    at finishFunctionComponent (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:119349)
+    at renderElement (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:134520)
+    at renderElement (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:194974)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201940)
+    at renderNodeDestructive (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:201175)
+    at renderNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:213093)
+    at renderChildrenArray (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:207654)
+    at retryNode (C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js:2:202417)
+[     255ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     288ms] [LOG] [Fast Refresh] done in 156ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     398ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1708ms] [LOG] [Fast Refresh] done in 1420ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1877ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1900ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    2118ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    2180ms] [LOG] [Fast Refresh] done in 166ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   19627ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   20337ms] [LOG] [Fast Refresh] done in 821ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   21220ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   21742ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   22102ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   22118ms] [LOG] [Fast Refresh] done in 118ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   22278ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   22306ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   28447ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   28666ms] [LOG] [Fast Refresh] done in 298ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   35217ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   35432ms] [LOG] [Fast Refresh] done in 288ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   45154ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   45363ms] [LOG] [Fast Refresh] done in 275ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   58784ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   58898ms] [LOG] [Fast Refresh] done in 201ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477

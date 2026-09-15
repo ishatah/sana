@@ -9,7 +9,7 @@ import type { LocalizedString } from "@/lib/localize"
  * comparing against the string literal `"tr"`, while components/site-footer.tsx
  * used `locale === routing.defaultLocale ? "" : "/" + locale`. Both happened to
  * produce working URLs, but only the second stays correct if the default locale
- * ever changes — and a hardcoded `"tr"` is exactly the kind of thing that is
+ * ever changes, and a hardcoded `"tr"` is exactly the kind of thing that is
  * missed on that day. The footer's form is the one kept here.
  */
 
@@ -40,7 +40,7 @@ export function localePrefix(locale: string): string {
  * Resolve every nav entry for one locale.
  *
  * An item with a `path` becomes a route link; everything else stays a fragment,
- * but an ABSOLUTE one — `/#top` rather than `#top`. That matters on a sub-page:
+ * but an ABSOLUTE one, `/#top` rather than `#top`. That matters on a sub-page:
  * a bare `#top` on /about points at an element that does not exist there and the
  * click silently does nothing, which is the bug the legal shell was working
  * around locally. Resolving against the locale root means the same item works

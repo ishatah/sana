@@ -16,7 +16,7 @@ export function getSupabase(): SupabaseClient {
  * Lazy proxy rather than a module-level client.
  *
  * Every content module imports this, and a bare `createClient()` at module scope
- * throws during `next build` on any machine without the env vars — which includes
+ * throws during `next build` on any machine without the env vars, which includes
  * a clean checkout and CI. Going through the proxy means the throw happens only if
  * something actually reaches for Storage, and lib/cms-section.ts catches it and
  * falls through to the repo copy. The site therefore builds and renders with no

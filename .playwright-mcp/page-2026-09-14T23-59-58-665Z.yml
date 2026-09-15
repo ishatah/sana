@@ -1,0 +1,51 @@
+- generic [active] [ref=e1]:
+  - link "تخطَّ إلى المحتوى" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - status [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: مسودة
+      - generic [ref=e6]: هذا الملف مسودة ولم يُعتمد للنشر. الألقاب والمناصب غير نهائية إلى أن تؤكدها العميلة كتابيًا.
+  - banner [ref=e7]:
+    - generic [ref=e8]:
+      - link "Sanae Rakik" [ref=e9] [cursor=pointer]:
+        - /url: "#top"
+      - generic [ref=e10]:
+        - group "Language" [ref=e11]:
+          - button "EN" [ref=e12]
+          - button "AR" [disabled] [ref=e13]
+        - button "القائمة" [ref=e14]
+  - main [ref=e19]:
+    - generic [ref=e22]:
+      - paragraph [ref=e23]: المناصب
+      - heading "المناصب والعضويات" [level=1] [ref=e24]
+      - paragraph [ref=e26]: المناصب الحالية والجهات التي تمثلها، كل منها باسمها الكامل.
+    - generic [ref=e28]:
+      - heading "المنصب الحالي" [level=2] [ref=e31]
+      - list [ref=e35]:
+        - listitem [ref=e36]:
+          - article [ref=e37]:
+            - generic [aria-hidden]: "01"
+            - heading "مستشارة وممثلة استراتيجية" [level=3] [ref=e38]
+            - paragraph [ref=e39]: International Business Council (IBC)
+            - paragraph [ref=e40]: الربط بين رواد الأعمال والشركات والمستثمرين والمؤسسات في مختلف القطاعات، وتيسير الشراكات الاستراتيجية والتعاون العابر للحدود.
+            - generic [ref=e41]:
+              - generic [ref=e42]:
+                - img "قيد السجل قيد التأكيد" [ref=e43]
+                - generic [ref=e44]: قيد السجل قيد التأكيد
+              - generic [ref=e45]: أوروبا والشرق الأوسط
+              - generic [ref=e46]: سنة البدء بانتظار التأكيد
+    - generic [ref=e48]:
+      - heading "الشراكات التجارية" [level=2] [ref=e51]
+      - paragraph [ref=e54]: مسودة سيُنشر هذا القسم فور استلام المعلومات المطلوبة.
+  - contentinfo [ref=e55]:
+    - generic [ref=e56]:
+      - paragraph [ref=e57]: © 2026 Sanae Rakik. جميع الحقوق محفوظة.
+      - navigation "Legal" [ref=e58]:
+        - link "الخصوصية" [ref=e59] [cursor=pointer]:
+          - /url: /ar/privacy
+        - link "الشروط" [ref=e60] [cursor=pointer]:
+          - /url: /ar/terms
+        - link "ملفات الارتباط" [ref=e61] [cursor=pointer]:
+          - /url: /ar/cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e67] [cursor=pointer]

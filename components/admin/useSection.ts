@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
  * Loads a CMS section for an admin editor.
  *
  * The naive version is `fetch(...).then(r => r.json()).then(setData)` with no
- * res.ok check — and GET /api/admin/content/[section] returns truthy JSON on both
+ * res.ok check, and GET /api/admin/content/[section] returns truthy JSON on both
  * failure branches: {error:"Unauthorized"} 401 and {error:"Failed to read"} 500.
  * That object passes an `if (!data)` guard, reaches the render, and throws on the
  * first dereference, so an expired session shows a crash instead of a login prompt.
@@ -46,7 +46,7 @@ export function useSection<T = any>(section: string) {
  *
  * The PUT returns 422 with a `violations` array when the copy contains banned
  * wording. Collapsing that into a generic "Save failed" would leave the editor
- * with no idea which phrase was refused or why — and the natural next move is to
+ * with no idea which phrase was refused or why, and the natural next move is to
  * retry the same text.
  */
 export async function saveSection(section: string, data: unknown): Promise<void> {
@@ -58,7 +58,7 @@ export async function saveSection(section: string, data: unknown): Promise<void>
 
   if (res.status === 422) {
     const body = await res.json().catch(() => ({}) as any)
-    const detail = (body.violations ?? []).map((v: any) => `"${v.phrase}" — ${v.reason}`).join("\n\n")
+    const detail = (body.violations ?? []).map((v: any) => `"${v.phrase}", ${v.reason}`).join("\n\n")
     throw new Error(detail || body.error || "This copy cannot be published.")
   }
 

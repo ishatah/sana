@@ -16,12 +16,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
  *
  * There is no consent banner on this site, and that is a factual position rather
  * than an omission: the public pages set no cookies at all. Consent is required
- * for storage that is not strictly necessary, and there is none — so a banner
+ * for storage that is not strictly necessary, and there is none, so a banner
  * would be asking permission for something that never happens, which trains people
  * to dismiss banners that do matter.
  *
  * The page exists anyway because the question is reasonable to ask, and the
- * answer — none — is worth being able to point at. Add a banner the day an
+ * answer, none, is worth being able to point at. Add a banner the day an
  * analytics or embed dependency is introduced; that is the trigger, not launch.
  */
 export default async function CookiesPage({ params }: { params: Promise<{ locale: string }> }) {

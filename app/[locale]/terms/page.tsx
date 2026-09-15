@@ -14,11 +14,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 /**
  * Terms of use.
  *
- * Short by design. This is an informational profile, not a service — there is
+ * Short by design. This is an informational profile, not a service, there is
  * nothing to buy, no account to hold, and no licence being granted to a visitor.
  *
  * THE NO-ADVICE CLAUSE IS THE LOAD-BEARING ONE HERE, and it is not boilerplate:
- * intake section 6 asks for it in as many words — "يُدرج تنبيه بأن محتوى الموقع
+ * intake section 6 asks for it in as many words, "يُدرج تنبيه بأن محتوى الموقع
  * تعريفي بالمسيرة المهنية فقط، ولا يشكّل عرضًا استثماريًا أو استشارة مالية أو
  * قانونية". The subject works in business development, strategic partnerships and
  * real estate, and a profile describing that work could be read as soliciting

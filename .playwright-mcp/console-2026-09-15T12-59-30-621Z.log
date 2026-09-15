@@ -1,0 +1,220 @@
+[     142ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     723ms] [LOG] [Fast Refresh] done in 688ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     846ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     948ms] [LOG] [Fast Refresh] done in 203ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1024ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1053ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1239ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    1302ms] [LOG] [Fast Refresh] done in 164ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[    9947ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   10039ms] [LOG] [Fast Refresh] done in 169ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   16577ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   16655ms] [LOG] [Fast Refresh] done in 182ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   22685ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   22766ms] [LOG] [Fast Refresh] done in 123ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   28531ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   28610ms] [LOG] [Fast Refresh] done in 142ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   41120ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   41140ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   41189ms] [WARNING] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   41201ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="about/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/about" tree={[...]} params={{locale:"en"}} cacheNode={{rsc:{...}, ...}} ...>
+                <SegmentViewNode type="page" pagePath="[locale]/a...">
+                  <SegmentTrieNode>
+                  <AboutPage>
+                    <PageShell>
+                      <SiteNav>
+                      <main id="main">
+                        ...
+                          <ScrollParallax className="container-..." depth={0.55}>
+                            <FmRoot>
+                              <LazyMotion features={{...}} strict={true}>
+                                <div
+                                  ref={{current:null}}
+                                  className="container-page"
++                                 style={undefined}
+-                                 style={{perspective:"1200px",transform-style:"preserve-3d"}}
+                                >
+                        <MotionScope as="section" id="about-profile" recipe="aboutSpread" interaction="hoverRule" ...>
+                          <section ref={{current:null}} id="about-profile" className="section-sk..." ...>
+                            <BandTone>
+                              <span
+                                aria-hidden={true}
+                                className="band-tone"
+-                               data-fm="true"
+-                               style={{opacity:"1",will-change:"auto",background-image:"",background-position-x:"", ...}}
+                              >
+                            ...
+                        <MotionScope as="section" id="about-focus" recipe="panelGrid" physics={true} ...>
+                          <section ref={{current:null}} id="about-focus" className="section-sk..." ...>
+                            <BandTone>
+                              <span
+                                aria-hidden={true}
+                                className="band-tone"
+-                               data-fm="true"
+-                               style={{opacity:"1",will-change:"auto",background-image:"",background-position-x:"", ...}}
+                              >
+                            ...
+                        <MotionScope as="section" id="about-full" recipe="proseArrival" physics={true} ...>
+                          <section ref={{current:null}} id="about-full" className="section-sk..." ...>
+                            <BandTone>
+                              <span
+                                aria-hidden={true}
+                                className="band-tone"
+-                               data-fm="true"
+-                               style={{opacity:"1",will-change:"auto",background-image:"",background-position-x:"", ...}}
+                              >
+                            ...
+                      ...
+                ...
+              ...
+ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   41222ms] Error: Target ref is defined but not hydrated. For more information and steps for solving, visit https://motion.dev/troubleshooting/use-scroll-ref
+    at invariant (http://localhost:3000/_next/static/chunks/node_modules_09lwcb5._.js:6368:19)
+    at useScroll.useEffect.tryStart (http://localhost:3000/_next/static/chunks/node_modules_09lwcb5._.js:20405:194)
+    at triggerCallback (http://localhost:3000/_next/static/chunks/node_modules_09lwcb5._.js:6776:9)
+    at Set.forEach (<anonymous>)
+    at Object.process (http://localhost:3000/_next/static/chunks/node_modules_09lwcb5._.js:6812:23)
+    at processBatch (http://localhost:3000/_next/static/chunks/node_modules_09lwcb5._.js:6866:14)
+[   42091ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   42187ms] [LOG] [Fast Refresh] done in 165ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   47859ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   47878ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   47927ms] [WARNING] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   47936ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="about/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/about" tree={[...]} params={{locale:"en"}} cacheNode={{rsc:{...}, ...}} ...>
+                <SegmentViewNode type="page" pagePath="[locale]/a...">
+                  <SegmentTrieNode>
+                  <AboutPage>
+                    <PageShell>
+                      <SiteNav>
+                      <main id="main">
+                        ...
+                          <ScrollParallax className="container-..." depth={0.55}>
+                            <FmRoot>
+                              <LazyMotion features={{...}} strict={true}>
+                                <div
+                                  ref={{current:null}}
+                                  className="container-page"
++                                 style={undefined}
+-                                 style={{perspective:"1200px",transform-style:"preserve-3d"}}
+                                >
+                        <MotionScope as="section" id="about-profile" recipe="aboutSpread" interaction="hoverRule" ...>
+                          <section ref={{current:null}} id="about-profile" className="section-sk..." ...>
+                            <BandTone>
+                              <span
+                                aria-hidden={true}
+                                className="band-tone"
+-                               data-fm="true"
+-                               style={{opacity:"1",will-change:"auto",background-image:"",background-position-x:"", ...}}
+                              >
+                            ...
+                        <MotionScope as="section" id="about-focus" recipe="panelGrid" physics={true} ...>
+                          <section ref={{current:null}} id="about-focus" className="section-sk..." ...>
+                            <BandTone>
+                              <span
+                                aria-hidden={true}
+                                className="band-tone"
+-                               data-fm="true"
+-                               style={{opacity:"1",will-change:"auto",background-image:"",background-position-x:"", ...}}
+                              >
+                            ...
+                        <MotionScope as="section" id="about-full" recipe="proseArrival" physics={true} ...>
+                          <section ref={{current:null}} id="about-full" className="section-sk..." ...>
+                            <BandTone>
+                              <span
+                                aria-hidden={true}
+                                className="band-tone"
+-                               data-fm="true"
+-                               style={{opacity:"1",will-change:"auto",background-image:"",background-position-x:"", ...}}
+                              >
+                            ...
+                      ...
+                ...
+              ...
+ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3318
+[   47954ms] Error: Target ref is defined but not hydrated. For more information and steps for solving, visit https://motion.dev/troubleshooting/use-scroll-ref
+    at invariant (http://localhost:3000/_next/static/chunks/node_modules_09lwcb5._.js:6368:19)
+    at useScroll.useEffect.tryStart (http://localhost:3000/_next/static/chunks/node_modules_09lwcb5._.js:20405:194)
+    at triggerCallback (http://localhost:3000/_next/static/chunks/node_modules_09lwcb5._.js:6776:9)
+    at Set.forEach (<anonymous>)
+    at Object.process (http://localhost:3000/_next/static/chunks/node_modules_09lwcb5._.js:6812:23)
+    at processBatch (http://localhost:3000/_next/static/chunks/node_modules_09lwcb5._.js:6866:14)
+[   57822ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   57951ms] [LOG] [Fast Refresh] done in 230ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   58185ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   58217ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   60472ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   60494ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   62576ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   62814ms] [LOG] [Fast Refresh] done in 339ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   62944ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   62974ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   65219ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   65246ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   67326ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   67521ms] [LOG] [Fast Refresh] done in 229ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   68686ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   68705ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   70909ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   70919ms] [LOG] [Fast Refresh] done in 111ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   71127ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   71177ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81026ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81038ms] [LOG] [Fast Refresh] done in 113ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81143ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   81166ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   82892ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   83037ms] [LOG] [Fast Refresh] done in 210ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92080ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92099ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92772ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   92810ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98379ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   98472ms] [LOG] [Fast Refresh] done in 159ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  103496ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  103560ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[  122464ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=J2DdSMM-HkmvkWLhOBdaz' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13322
+[  125807ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=J2DdSMM-HkmvkWLhOBdaz' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13322
+[  129152ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=J2DdSMM-HkmvkWLhOBdaz' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13322
+[  132483ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=J2DdSMM-HkmvkWLhOBdaz' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13322
+[  135815ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=J2DdSMM-HkmvkWLhOBdaz' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13322
+[  143160ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=J2DdSMM-HkmvkWLhOBdaz' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13322
+[  150510ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=J2DdSMM-HkmvkWLhOBdaz' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13322
+[  157849ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=J2DdSMM-HkmvkWLhOBdaz' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13322
+[  165200ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=J2DdSMM-HkmvkWLhOBdaz' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13322
+[  172543ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=J2DdSMM-HkmvkWLhOBdaz' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13322

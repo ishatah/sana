@@ -7,8 +7,8 @@ import { Toaster as SonnerToaster } from "sonner"
  *
  * WHY THIS WRAPPER EXISTS. sonner ships its own success / error / warning / info /
  * loading / close marks, and each one is an inline <svg> created inside the
- * library. They are not reachable from our own source — no import of ours draws
- * them — so removing SVG from this app could not be done by editing a component.
+ * library. They are not reachable from our own source, no import of ours draws
+ * them, so removing SVG from this app could not be done by editing a component.
  *
  * sonner's `icons` prop is the supported way to replace them, so all six slots are
  * filled here with text marks and CSS shapes. That keeps the library, its stacking,
@@ -20,7 +20,7 @@ import { Toaster as SonnerToaster } from "sonner"
  * legible without the library's own colour-carrying paths.
  *
  * EVERY MARK IS `aria-hidden`. sonner announces the toast's text through its own
- * live region — the icon is decoration on top of that, and a screen reader reading
+ * live region, the icon is decoration on top of that, and a screen reader reading
  * "heavy check mark" before the message is noise.
  */
 

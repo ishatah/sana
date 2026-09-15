@@ -1,0 +1,177 @@
+- generic [active] [ref=f7e1]:
+  - link "Skip to content" [ref=f7e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f7e3]:
+    - generic [ref=f7e4]:
+      - link "Sanae Rakik" [ref=f7e5] [cursor=pointer]:
+        - /url: "#top"
+      - navigation "Menu" [ref=f7e6]:
+        - link "Home" [ref=f7e7] [cursor=pointer]:
+          - /url: /#top
+        - link "About" [ref=f7e8] [cursor=pointer]:
+          - /url: /about
+        - link "Expertise" [ref=f7e9] [cursor=pointer]:
+          - /url: /expertise
+        - link "Roles" [ref=f7e10] [cursor=pointer]:
+          - /url: /roles
+        - link "Contact" [ref=f7e11] [cursor=pointer]:
+          - /url: /contact
+      - generic [ref=f7e12]:
+        - group "Language" [ref=f7e13]:
+          - button "EN" [disabled] [ref=f7e14]
+          - button "AR" [ref=f7e15]
+        - link "Contact me" [ref=f7e16] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=f7e17]:
+    - generic [ref=f7e20]:
+      - generic [ref=f7e21]:
+        - paragraph [ref=f7e22]: I am
+        - heading "Sanae Rakik" [level=1] [ref=f7e23]
+        - paragraph [aria-hidden] [ref=f7e25]:
+          - generic [ref=f7e26]: Entrepreneur
+        - paragraph [ref=f7e27]: Entrepreneur. Business Development. Strategic Partnerships
+        - paragraph [ref=f7e28]: Consultant and Strategic Representative, International Business Council (IBC)
+        - generic [ref=f7e29]:
+          - generic [ref=f7e30]:
+            - term [ref=f7e31]: Years experience
+            - definition [ref=f7e32]: 10+ years
+          - generic [ref=f7e33]:
+            - term [ref=f7e34]: Based in
+            - definition [ref=f7e35]: Netherlands
+          - generic [ref=f7e36]:
+            - term [ref=f7e37]: Active across
+            - definition [ref=f7e38]: Europe · Gulf · Middle East
+        - generic [ref=f7e39]:
+          - link "Get in touch" [ref=f7e40] [cursor=pointer]:
+            - /url: /contact
+          - link "About her work" [ref=f7e41] [cursor=pointer]:
+            - /url: /about
+      - generic [ref=f7e42]:
+        - img "Sanae Rakik, formal studio portrait." [ref=f7e46]
+        - figure "Sanae Rakik" [ref=f7e47]:
+          - paragraph [ref=f7e48]: I believe that successful business is built on trust, professionalism, integrity and lasting relationships. My goal is to create meaningful connections, support impactful projects, and contribute to sustainable growth for the organisations and partners I represent.
+    - generic [ref=f7e51]:
+      - heading "About" [level=2] [ref=f7e53]
+      - generic [ref=f7e54]:
+        - generic [ref=f7e55]:
+          - paragraph [ref=f7e56]: Sanae Rakik is an entrepreneur and business development professional with extensive experience in strategic partnerships, international business development and real estate. She has built a network across Europe and the Middle East that allows her to connect businesses, investors and decision makers, and to create opportunities for long-term collaboration. She represents the International Business Council (IBC) as a Consultant and Strategic Representative.
+          - generic [ref=f7e57]:
+            - generic [ref=f7e58]:
+              - term [ref=f7e59]: Experience
+              - definition [ref=f7e60]: 10+ years
+            - generic [ref=f7e61]:
+              - term [ref=f7e62]: Sector
+              - definition [ref=f7e63]: Business development, strategic partnerships, real estate
+            - generic [ref=f7e64]:
+              - term [ref=f7e65]: Based in
+              - definition [ref=f7e66]: Netherlands
+            - generic [ref=f7e67]:
+              - term [ref=f7e68]: Markets covered
+              - definition [ref=f7e69]: Europe, the Gulf states and the wider Middle East
+            - generic [ref=f7e70]:
+              - term [ref=f7e71]: Nationality
+              - definition [ref=f7e72]: Dutch
+          - blockquote [ref=f7e73]:
+            - paragraph [ref=f7e74]: I believe that successful business is built on trust, professionalism, integrity and lasting relationships. My goal is to create meaningful connections, support impactful projects, and contribute to sustainable growth for the organisations and partners I represent.
+            - generic [ref=f7e75]: Sanae Rakik
+        - img "Sanae Rakik, formal studio portrait." [ref=f7e77]
+    - generic [ref=f7e79]:
+      - generic [ref=f7e80]:
+        - heading "Areas of Expertise" [level=2] [ref=f7e81]
+        - paragraph [ref=f7e82]: Where her work is focused
+      - list [ref=f7e83]:
+        - listitem [ref=f7e84]:
+          - heading "Business development" [level=3] [ref=f7e87]
+        - listitem [ref=f7e88]:
+          - heading "International business development" [level=3] [ref=f7e91]
+        - listitem [ref=f7e92]:
+          - heading "Strategic partnerships" [level=3] [ref=f7e95]
+        - listitem [ref=f7e96]:
+          - heading "Client acquisition" [level=3] [ref=f7e99]
+        - listitem [ref=f7e100]:
+          - heading "Professional networking and relationship management" [level=3] [ref=f7e103]
+        - listitem [ref=f7e104]:
+          - heading "Identifying and evaluating commercial opportunities" [level=3] [ref=f7e107]
+        - listitem [ref=f7e108]:
+          - heading "Real estate and property transactions" [level=3] [ref=f7e111]
+        - listitem [ref=f7e112]:
+          - heading "Cross-border commercial cooperation" [level=3] [ref=f7e115]
+    - generic [ref=f7e117]:
+      - heading "Current Role" [level=2] [ref=f7e120]
+      - list [ref=f7e122]:
+        - listitem [ref=f7e123]:
+          - article [ref=f7e124]:
+            - heading "Consultant and Strategic Representative" [level=3] [ref=f7e125]
+            - paragraph [ref=f7e126]: International Business Council (IBC)
+            - paragraph [ref=f7e127]: Connecting entrepreneurs, companies, investors and institutions across sectors, facilitating strategic partnerships and cross-border cooperation.
+            - generic [ref=f7e128]:
+              - generic [ref=f7e129]:
+                - img "Register entry pending confirmation" [ref=f7e130]
+                - generic [ref=f7e131]: Register entry pending confirmation
+              - generic [ref=f7e132]: Europe and the Middle East
+              - generic [ref=f7e133]: Start year to be confirmed
+    - generic [ref=f7e136]:
+      - generic [ref=f7e137]:
+        - generic [ref=f7e138]: Working Together
+        - heading "How engagements usually begin" [level=2] [ref=f7e139]
+        - paragraph [ref=f7e140]: Each of these opens the enquiry form with the subject already filled in.
+      - list [ref=f7e141]:
+        - button "Business development Start an enquiry" [ref=f7e143] [cursor=pointer]:
+          - generic [ref=f7e144]: Business development
+          - generic [ref=f7e145]:
+            - text: Start an enquiry
+            - generic [aria-hidden] [ref=f7e146]: →
+        - button "International business development Start an enquiry" [ref=f7e148] [cursor=pointer]:
+          - generic [ref=f7e149]: International business development
+          - generic [ref=f7e150]:
+            - text: Start an enquiry
+            - generic [aria-hidden] [ref=f7e151]: →
+        - button "Strategic partnerships Start an enquiry" [ref=f7e153] [cursor=pointer]:
+          - generic [ref=f7e154]: Strategic partnerships
+          - generic [ref=f7e155]:
+            - text: Start an enquiry
+            - generic [aria-hidden] [ref=f7e156]: →
+        - button "Client acquisition Start an enquiry" [ref=f7e158] [cursor=pointer]:
+          - generic [ref=f7e159]: Client acquisition
+          - generic [ref=f7e160]:
+            - text: Start an enquiry
+            - generic [aria-hidden] [ref=f7e161]: →
+    - generic [ref=f7e163]:
+      - generic [ref=f7e164]:
+        - heading "Contact" [level=2] [ref=f7e165]
+        - paragraph [ref=f7e166]: For collaboration and invitations
+      - generic [ref=f7e167]:
+        - generic [ref=f7e170]:
+          - heading "Location" [level=3] [ref=f7e171]
+          - paragraph [ref=f7e172]: Netherlands
+        - generic [ref=f7e174]:
+          - generic [ref=f7e175]:
+            - generic [ref=f7e176]:
+              - generic [ref=f7e177]: Your name
+              - textbox "Your name" [ref=f7e178]
+            - generic [ref=f7e179]:
+              - generic [ref=f7e180]: Your email
+              - textbox "Your email" [ref=f7e181]
+          - generic [ref=f7e182]:
+            - generic [ref=f7e183]: Your organisation
+            - textbox "Your organisation" [ref=f7e184]
+          - generic [ref=f7e185]:
+            - generic [ref=f7e186]: Subject
+            - textbox "Subject" [ref=f7e187]
+          - generic [ref=f7e188]:
+            - generic [ref=f7e189]: Your message
+            - textbox "Your message" [ref=f7e190]
+          - paragraph [ref=f7e192]: By sending this form you agree to your details being processed so your message can be answered.
+          - button "Send Message" [ref=f7e194]
+  - contentinfo [ref=f7e195]:
+    - generic [ref=f7e196]:
+      - paragraph [ref=f7e197]: © 2026 Sanae Rakik. All rights reserved.
+      - navigation "Legal" [ref=f7e198]:
+        - link "Privacy" [ref=f7e199] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=f7e200] [cursor=pointer]:
+          - /url: /terms
+        - link "Cookies" [ref=f7e201] [cursor=pointer]:
+          - /url: /cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f7e207] [cursor=pointer]

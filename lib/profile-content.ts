@@ -38,8 +38,8 @@ export interface Position {
  * The positions the site is allowed to render.
  *
  * `publishable()` drops anything tier C or publish:false. Nothing tier C exists in
- * the file today — the title-selling items were caught at intake and live in
- * data/exclusions.json instead — but the filter is what guarantees that adding one
+ * the file today, the title-selling items were caught at intake and live in
+ * data/exclusions.json instead, but the filter is what guarantees that adding one
  * later through /admin cannot put it on the page.
  *
  * Note what is NOT done here: the organisation name is passed through untouched.
@@ -108,8 +108,8 @@ export async function getAwards() {
 /**
  * Which optional sections have enough content to render.
  *
- * For THIS subject `quote` and `fullBio` are both true — she supplied a complete
- * biography and an attributable philosophy statement at intake — while `stats`,
+ * For THIS subject `quote` and `fullBio` are both true, she supplied a complete
+ * biography and an attributable philosophy statement at intake, while `stats`,
  * `press` and `achievements` stay false, because intake section 4 records no
  * publishable figures, no media requirement and no awards.
  *

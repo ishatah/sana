@@ -3,14 +3,14 @@
  *
  * WHY THIS FILE EXISTS. The admin previously imported ~25 marks from lucide-react,
  * which renders every one of them as an inline <svg>. All SVG has been removed from
- * this app, so the library went with it — but the admin is a dense tool UI where a
+ * this app, so the library went with it, but the admin is a dense tool UI where a
  * mark beside a row genuinely helps scanning, so the marks are redrawn rather than
  * dropped.
  *
  * WHAT THEY ARE NOW. Unicode symbols set in a fixed-size inline-grid box. That is a
  * real trade and worth naming: a font glyph is less precise than a drawn path, it
  * varies between platforms, and a few of these (a clipboard, a dashboard) have no
- * good single character — those fall back to a geometric stand-in rather than a
+ * good single character, those fall back to a geometric stand-in rather than a
  * literal depiction. In a dense internal tool where every mark sits beside its own
  * text label, that is an acceptable cost; on the public site it would not have been,
  * which is why the three public components got hand-built CSS shapes instead.
@@ -21,8 +21,8 @@
  * 16 files rather than a rewrite of each.
  *
  * ACCESSIBILITY. Every mark is `aria-hidden`, unconditionally. These are all
- * decorative — each sits beside a visible text label or inside a button that
- * carries its own `aria-label` — and a screen reader reading out "black right
+ * decorative, each sits beside a visible text label or inside a button that
+ * carries its own `aria-label`, and a screen reader reading out "black right
  * pointing triangle" beside the word "Positions" is pure noise. Call sites that
  * passed `aria-hidden` explicitly still work; it is simply redundant now.
  *
@@ -74,7 +74,7 @@ export const AlertTriangle = (p: IconProps) => <Mark glyph="⚠" {...p} />
  *  weight that matches the rest of this set. */
 export const ShieldAlert = (p: IconProps) => <Mark glyph="⚠" {...p} />
 
-/** Complete. A heavy check rather than a circled one — the circled forms render
+/** Complete. A heavy check rather than a circled one, the circled forms render
  *  as emoji on several platforms, which would arrive in colour. */
 export const CheckCircle2 = (p: IconProps) => <Mark glyph="✔" {...p} />
 export const Check = (p: IconProps) => <Mark glyph="✔" {...p} />
@@ -89,7 +89,7 @@ export const HelpCircle = (p: IconProps) => <Mark glyph="?" {...p} />
 /* ── Actions ──────────────────────────────────────────────────────────────── */
 
 export const Plus = (p: IconProps) => <Mark glyph="+" {...p} />
-/** Delete. A multiplication sign, not a drawn bin — heavier than a plain x. */
+/** Delete. A multiplication sign, not a drawn bin, heavier than a plain x. */
 export const Trash2 = (p: IconProps) => <Mark glyph="✕" {...p} />
 export const X = (p: IconProps) => <Mark glyph="✕" {...p} />
 export const Upload = (p: IconProps) => <Mark glyph="↑" {...p} />
@@ -111,7 +111,7 @@ export function Menu({ size = 16, className = "" }: IconProps) {
   )
 }
 
-/** The pending spinner. A CSS ring — `animate-spin` is applied by the call site
+/** The pending spinner. A CSS ring, `animate-spin` is applied by the call site
  *  via className, exactly as it was on the lucide component. */
 export function Loader2({ size = 16, className = "" }: IconProps) {
   return (
@@ -133,7 +133,7 @@ export const Timer = (p: IconProps) => <Mark glyph="◴" {...p} />
 
 /* ── Sidebar section marks ────────────────────────────────────────────────────
  *
- * These are the weakest of the set as literal depictions — there is no character
+ * These are the weakest of the set as literal depictions, there is no character
  * that says "media library". They are kept because in a vertical nav the mark's
  * job is mostly to give each row a consistent left anchor and to be DISTINCT from
  * its neighbours, both of which geometric symbols do fine. The label carries the

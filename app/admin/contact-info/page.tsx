@@ -68,7 +68,7 @@ export default function ContactAdminPage() {
                 type="checkbox"
                 checked={e.primary === true}
                 onChange={(ev) => {
-                  // Exactly one primary. Setting one clears the rest — two primary
+                  // Exactly one primary. Setting one clears the rest, two primary
                   // addresses is not a state the contact block can render.
                   const list = (c.emails ?? []).map((x: any, idx: number) => ({ ...x, primary: idx === i && ev.target.checked }))
                   setContact("emails", list)
@@ -83,7 +83,7 @@ export default function ContactAdminPage() {
 
       <ContentSection
         title="Phone numbers"
-        description="Open question Q6 — which numbers may be published. Both are withheld until answered."
+        description="Open question Q6: which numbers may be published. Both are withheld until answered."
       >
         {(c.phones ?? []).map((p: any, i: number) => (
           <div key={p.id} className="space-y-3 border-b border-[color:var(--border)] pb-5 last:border-0">

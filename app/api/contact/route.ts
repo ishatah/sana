@@ -33,7 +33,7 @@ const Body = z.object({
  * In-memory fixed-window limiter: 5 submissions per IP per 10 minutes.
  *
  * Deliberately in-process. It resets on deploy and does not span regions, which
- * is the correct trade for a single contact form on a personal site — a Redis
+ * is the correct trade for a single contact form on a personal site, a Redis
  * dependency here would be more moving parts than the thing it protects. Swap in
  * a shared store if this ever fronts something that matters more.
  */
@@ -90,7 +90,7 @@ export async function POST(req: NextRequest) {
   // body. The submission belongs to the sender; it does not belong in a log
   // aggregator because an env var was missing.
   if (!apiKey || !to || !from) {
-    console.error("[contact] Mail is not configured — set RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL.")
+    console.error("[contact] Mail is not configured, set RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL.")
     return NextResponse.json({ error: "Mail is not configured" }, { status: 503 })
   }
 
@@ -99,11 +99,11 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from,
       to,
-      // `from` stays the verified sending domain — putting the visitor's address
+      // `from` stays the verified sending domain, putting the visitor's address
       // there fails SPF/DKIM and lands the mail in spam. replyTo is what makes
       // hitting reply go to the visitor.
       replyTo: email,
-      subject: subject ? `Contact: ${subject}` : `Contact form — ${name}`,
+      subject: subject ? `Contact: ${subject}` : `Contact form: ${name}`,
       text: [
         `Name: ${name}`,
         `Email: ${email}`,

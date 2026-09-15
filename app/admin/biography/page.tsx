@@ -14,7 +14,7 @@ const SECTION = "biography"
 /**
  * The biography editor.
  *
- * Intake section 12 is the largest gap in the file — no achievements, no figures,
+ * Intake section 12 is the largest gap in the file, no achievements, no figures,
  * no press, no quote. Rather than present empty inputs with no explanation, each
  * block names the open question that unblocks it, so whoever opens this page knows
  * what to ask for instead of being tempted to fill it in.
@@ -33,7 +33,7 @@ export default function BiographyAdminPage() {
   const stats = data.stats ?? []
   const setStat = (i: number, value: string) => {
     const next = [...stats]
-    // An empty input means "no figure supplied", which is null — NOT 0. A zero
+    // An empty input means "no figure supplied", which is null, NOT 0. A zero
     // would render a counter reading 0, which asserts a measured result of none.
     next[i] = { ...next[i], value: value.trim() === "" ? null : value.trim() }
     set("stats", next)
@@ -56,13 +56,13 @@ export default function BiographyAdminPage() {
           value={data.fullBio}
           onChange={(v) => set("fullBio", v)}
           multiline
-          hint="Blocked on Q3 — two or three concrete achievements with dates. Write this only once those are supplied; do not pad it with adjectives in place of facts."
+          hint="Blocked on Q3: two or three concrete achievements with dates. Write this only once those are supplied; do not pad it with adjectives in place of facts."
         />
       </ContentSection>
 
       <ContentSection
         title="Quotable line"
-        description="Nothing was supplied at intake. Ask her for two or three sentences in her own words — do not write one on her behalf. The quote section stays hidden while this is empty."
+        description="Nothing was supplied at intake. Ask her for two or three sentences in her own words, do not write one on her behalf. The quote section stays hidden while this is empty."
       >
         <LocalizedFieldRow label="Quote" value={data.quote} onChange={(v) => set("quote", v)} multiline />
         <FieldRow label="Attribution" value={data.quoteAttribution ?? ""} onChange={(v) => set("quoteAttribution", v)} />

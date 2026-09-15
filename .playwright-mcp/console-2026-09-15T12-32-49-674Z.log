@@ -1,0 +1,2950 @@
+[      50ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/about:0
+[      78ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_cjs_react-dom-client_development_0z3nh7o.js:16702
+[      86ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/development/_clientMiddlewareManifest.js' because its MIME type ('application/json') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/about:0
+[      92ms] Error: ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx
+
+
+    at <unknown> (Error: ./components/about-section.tsx:207:23)
+    at Object.getCompilationErrors (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\lib\dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\next-dev-server.js:720:42)
+    at DevServer.findPageComponents (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\dev\next-dev-server.js:690:43)
+    at async DevServer.renderErrorToResponseImpl (file://C:\Users\Ibra\Documents\GitHub\sana\node_modules\next\dist\server\base-server.js:1753:26)
+[      88ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[      93ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[      93ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/about/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     154ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/favicon.ico:0
+[     166ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     274ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[     289ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     351ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     414ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     475ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     536ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     600ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     662ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     725ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     787ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     848ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     911ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[     972ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1034ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1097ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1158ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1220ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1283ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1347ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1408ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1470ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1532ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1593ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1657ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1719ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1782ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1844ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1907ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    1969ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2030ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2092ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2154ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2215ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2275ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2337ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2400ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2461ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2522ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2583ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2645ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2707ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2801ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2862ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2923ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    2983ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3044ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3106ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3168ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3229ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3290ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3352ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3413ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3474ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3536ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3600ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3660ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3723ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3785ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3847ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3907ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    3968ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4030ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4092ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4154ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4215ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4274ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4335ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4398ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4460ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4521ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4584ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4645ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4708ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4770ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4832ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4895ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    4959ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5020ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5083ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5145ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5207ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5269ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5330ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5393ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5454ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5517ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5578ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5639ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5701ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5763ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5824ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5886ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    5949ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6010ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6073ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6135ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6198ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6261ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6322ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6384ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6445ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6505ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6565ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6628ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6705ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6766ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6827ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6889ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    6950ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7012ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7072ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7133ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7194ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7255ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7316ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7377ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7440ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7501ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7562ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7622ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7683ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7745ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7807ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7867ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7929ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    7990ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8052ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8113ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8175ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8235ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8297ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8359ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8421ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8482ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8544ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8605ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8668ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8728ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8791ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8852ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8912ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    8973ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9034ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9095ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9157ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9218ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9280ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9341ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9404ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9466ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9527ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9588ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9650ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9711ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9773ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9835ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9897ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[    9958ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10019ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10081ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10141ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10204ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10267ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10328ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10390ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10452ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10515ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10577ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10638ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10700ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10763ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10825ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10885ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   10947ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11009ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11070ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11131ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11192ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11254ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11315ms] [ERROR] ./components/about-section.tsx:207:23
+Expected '</', got 'ident'
+  205 |               read as one more ledger row that lost its label. The wider gap is what
+  206 |               separates the closing of the table from the opening of the quote. */}
+> 207 |           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
+      |                       ^^^^
+  208 |             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that
+  209 |                 starts at the bio's size rather than below it — this is her own
+  210 |                 first-person statement and it was previously set SMALLER than the
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./components/about-section.tsx
+    ./app/[locale]/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   11412ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   11543ms] [LOG] [Fast Refresh] done in 199ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   11794ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   12447ms] [LOG] [Fast Refresh] done in 755ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   12560ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   12735ms] [LOG] [Fast Refresh] done in 287ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   13846ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[   13872ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477

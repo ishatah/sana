@@ -14,7 +14,7 @@ const SECTION = "awards"
 /**
  * Awards, honours and education.
  *
- * `accredited` is a three-state control — yes / no / unclear — rather than a
+ * `accredited` is a three-state control, yes / no / unclear, rather than a
  * checkbox, because "unclear" is the honest answer for both awards in this file
  * and a checkbox has no way to say it. Collapsing unclear into unchecked would
  * record a finding nobody made.
@@ -66,7 +66,7 @@ export default function AwardsAdminPage() {
             <LocalizedFieldRow label="Award or membership" value={a.award} onChange={(v) => updateAward(i, { award: v })} />
 
             <FieldRow
-              label="Issuing body — full name"
+              label="Issuing body: full name"
               value={a.issuingBody}
               onChange={(v) => updateAward(i, { issuingBody: v })}
               hint="Written out in full. Never an acronym on its own."
@@ -88,7 +88,7 @@ export default function AwardsAdminPage() {
                   }}
                   className="w-full border border-[color:var(--input)] bg-[color:var(--background)] px-3.5 py-2.5 text-sm text-[color:var(--card-foreground)] transition-colors focus:border-[color:var(--primary)] focus:outline-none"
                 >
-                  <option value="true">Yes — verifiable</option>
+                  <option value="true">Yes, verifiable</option>
                   <option value="false">No</option>
                   <option value="unclear">Unclear</option>
                 </select>
@@ -185,7 +185,7 @@ export default function AwardsAdminPage() {
                 />
                 Publish
                 {e.accredited !== true && (
-                  <span className="text-xs text-[color:var(--danger)]">— not from a recognised institution</span>
+                  <span className="text-xs text-[color:var(--danger)]">- not from a recognised institution</span>
                 )}
               </label>
             </div>

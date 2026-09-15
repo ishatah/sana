@@ -1,6 +1,7 @@
 import { getLocale } from "next-intl/server"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
+import { MotionAudit } from "@/components/motion/fm/audit"
 import { getIdentity, getNavigation } from "@/lib/profile-content"
 import { resolveNavItems, localePrefix } from "@/lib/nav"
 
@@ -8,7 +9,7 @@ import { resolveNavItems, localePrefix } from "@/lib/nav"
  * The chrome every page that is not the home one-pager wears: nav, main, footer.
  *
  * This was `LegalPage`, which was generic sub-page furniture wearing a
- * legal-specific name — it fetched identity and navigation, resolved the nav
+ * legal-specific name, it fetched identity and navigation, resolved the nav
  * hrefs, and cleared the fixed header. All five of the new content pages need
  * exactly that, and duplicating it would mean two places to fix the next time the
  * header height or the href rules change. `LegalPage` now delegates here and
@@ -43,7 +44,7 @@ export async function PageShell({
         contactHref={`${localePrefix(locale)}/contact`}
       />
 
-      {/* `id="main"` is the skip-link target — components/skip-to-content.tsx
+      {/* `id="main"` is the skip-link target, components/skip-to-content.tsx
           points at it, so it has to be here and not on an inner wrapper. */}
       <main id="main" className={hero ? undefined : "section-pad pt-32"}>
         {hero}
@@ -51,6 +52,22 @@ export async function PageShell({
       </main>
 
       <SiteFooter />
+
+      {/*
+        THE DEV AUDIT NOW COVERS THESE ROUTES TOO, and that is a consequence of
+        the scroll layer arriving here rather than an afterthought.
+
+        app/[locale]/page.tsx mounted `MotionAudit` when the Framer layer existed
+        only on the home page. Every route rendered through this shell now carries
+        `data-fm` elements, the parallax band in `PageHero`, the band washes in
+        each section, the revealed footer above, so the ownership invariant it
+        checks is live here and was previously unchecked.
+
+        It costs nothing in production: the whole body is behind a
+        `NODE_ENV !== "production"` guard the bundler evaluates statically and
+        dead-code-eliminates, and the component renders null either way.
+      */}
+      <MotionAudit />
     </>
   )
 }

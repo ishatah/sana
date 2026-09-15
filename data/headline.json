@@ -1,5 +1,5 @@
 {
-  "_comment": "The hero and the page titles. Every role named here must correspond to a published row in data/positions.json — the hero must not claim something the positions table has not cleared.",
+  "_comment": "The hero and the page titles. Every role named here must correspond to a published row in data/positions.json, the hero must not claim something the positions table has not cleared.",
   "primaryTitle": {
     "en": "Consultant and Strategic Representative, International Business Council (IBC)",
     "ar": "مستشارة وممثلة استراتيجية في مجلس الأعمال الدولي (IBC)"
@@ -9,25 +9,56 @@
     "ar": "تطوير الأعمال والشراكات الاستراتيجية"
   },
   "heroKicker": {
-    "en": "I am Sanae Rakik",
-    "ar": "أنا سناء رقيق"
+    "en": "I am",
+    "ar": "أنا"
   },
-  "_comment_rotating": "Rendered as the large accent line in the hero, plus the peers beneath it. Intake form section 1 gives the primary professional title as 'سيدة أعمال — تطوير الأعمال والشراكات الاستراتيجية'.",
+  "_comment_rotating": "Rendered as the large accent line in the hero, plus the peers beneath it. Intake form section 1 gives the primary professional title as 'سيدة أعمال, تطوير الأعمال والشراكات الاستراتيجية'.",
   "rotatingRoles": {
-    "en": ["Entrepreneur", "Business Development", "Strategic Partnerships"],
-    "ar": ["سيدة أعمال", "تطوير الأعمال", "الشراكات الاستراتيجية"]
+    "en": [
+      "Entrepreneur",
+      "Business Development",
+      "Strategic Partnerships"
+    ],
+    "ar": [
+      "سيدة أعمال",
+      "تطوير الأعمال",
+      "الشراكات الاستراتيجية"
+    ]
+  },
+  "_comment_statement": "The personal statement under the hero portrait, supplied by the subject and rendered verbatim with her signature. It is a first-person claim about how she works, not a credential, so it is not subject to the positions gate, but it is also not paraphrased or trimmed to fit the layout. The Arabic is the same statement, not a summary of it.",
+  "heroStatement": {
+    "text": {
+      "en": "I believe that successful business is built on trust, professionalism, integrity and lasting relationships. My goal is to create meaningful connections, support impactful projects, and contribute to sustainable growth for the organisations and partners I represent.",
+      "ar": "أؤمن بأن الأعمال الناجحة تُبنى على الثقة والاحترافية والنزاهة والعلاقات المستدامة. هدفي هو بناء علاقات ذات معنى، ودعم المشاريع ذات الأثر، والإسهام في نمو مستدام للمؤسسات والشركاء الذين أمثلهم."
+    },
+    "attribution": {
+      "en": "Sanae Rakik",
+      "ar": "سناء رقيق"
+    }
   },
   "locations": [
     {
-      "label": { "en": "Based in", "ar": "مقر الإقامة" },
-      "value": { "en": "Netherlands", "ar": "هولندا" }
+      "label": {
+        "en": "Based in",
+        "ar": "مقر الإقامة"
+      },
+      "value": {
+        "en": "Netherlands",
+        "ar": "هولندا"
+      }
     },
     {
-      "label": { "en": "Active across", "ar": "نطاق النشاط" },
-      "value": { "en": "Europe · Gulf · Middle East", "ar": "أوروبا · الخليج · الشرق الأوسط" }
+      "label": {
+        "en": "Active across",
+        "ar": "نطاق النشاط"
+      },
+      "value": {
+        "en": "Europe · Gulf · Middle East",
+        "ar": "أوروبا · الخليج · الشرق الأوسط"
+      }
     }
   ],
-  "_comment_positioning": "Intake form section 2. 'الصفة المراد إبرازها: سيدة أعمال ومستشارة — مع إبراز صفة ريادة الأعمال والتطوير الدولي للأعمال'. The audience list is section 2's الجمهور الأساسي verbatim.",
+  "_comment_positioning": "Intake form section 2. 'الصفة المراد إبرازها: سيدة أعمال ومستشارة, مع إبراز صفة ريادة الأعمال والتطوير الدولي للأعمال'. The audience list is section 2's الجمهور الأساسي verbatim.",
   "positioning": {
     "primaryIdentity": {
       "en": "Businesswoman and consultant",
@@ -42,5 +73,6 @@
       "ar": "مستثمرون، عملاء، رواد أعمال، شركات، شركاء استراتيجيون، مؤسسات"
     },
     "tone": "formal-professional"
-  }
+  },
+  "_comment_kicker": "Two words, not a sentence. It read 'I am Sanae Rakik' and sat directly above an <h1> carrying the name, so the name was printed twice, a line apart, the second time at display size. The kicker now carries only the lead-in and the <h1> below it carries the name, which is the split the two elements were always meant to have."
 }

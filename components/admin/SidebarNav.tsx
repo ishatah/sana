@@ -85,7 +85,7 @@ export function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
           </p>
           <ul className="space-y-0.5">
             {group.items.map((item) => {
-              // /admin must match exactly — startsWith would light the dashboard up
+              // /admin must match exactly, startsWith would light the dashboard up
               // on every child route.
               const active = item.href === "/admin" ? pathname === "/admin" : pathname.startsWith(item.href)
               const Icon = item.icon

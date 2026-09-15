@@ -1,5 +1,5 @@
 {
-  "_comment": "Organisation names are PLAIN STRINGS, never localized objects, so no fallback path can produce a translated or shortened form of a legal name. Rows with publish:false or tier:'C' never reach the page — lib/profile-content.ts filters them before render.",
+  "_comment": "Organisation names are PLAIN STRINGS, never localized objects, so no fallback path can produce a translated or shortened form of a legal name. Rows with publish:false or tier:'C' never reach the page, lib/profile-content.ts filters them before render.",
   "current": [
     {
       "id": "ibc-consultant",
@@ -14,7 +14,7 @@
         "en": "Europe and the Middle East",
         "ar": "أوروبا والشرق الأوسط"
       },
-      "_comment_dates": "Intake form section 4: 'منصب حالي — تاريخ البداية يُزوَّد لاحقًا'. Current post, start date to follow. An empty startYear renders 'Start year to be confirmed' rather than a guess.",
+      "_comment_dates": "Intake form section 4: 'منصب حالي, تاريخ البداية يُزوَّد لاحقًا'. Current post, start date to follow. An empty startYear renders 'Start year to be confirmed' rather than a guess.",
       "startYear": "",
       "endYear": "",
       "tier": "A",
@@ -22,7 +22,7 @@
       "condition": ""
     },
     {
-      "_comment": "Intake form section 1: 'شريكة مساهمة في مشروعين تجاريين قائمين (الأسماء والتفاصيل تُزوَّد لاحقًا وتُعتمد قبل النشر)' — partner in two established commercial ventures, names and details to be supplied and approved BEFORE publication. publish:false holds both rows back; flip to true only once the names are recorded in writing. Naming them now is exactly the fabrication the gate exists to prevent.",
+      "_comment": "Intake form section 1: 'شريكة مساهمة في مشروعين تجاريين قائمين (الأسماء والتفاصيل تُزوَّد لاحقًا وتُعتمد قبل النشر)', partner in two established commercial ventures, names and details to be supplied and approved BEFORE publication. publish:false holds both rows back; flip to true only once the names are recorded in writing. Naming them now is exactly the fabrication the gate exists to prevent.",
       "id": "venture-partnership-1",
       "organisation": "",
       "organisationUrl": "",
@@ -55,7 +55,7 @@
       "condition": "name-pending-approval"
     }
   ],
-  "_comment_previous": "No previous positions were supplied at intake. An empty array is a deliberate blank, not an omission — the section hides itself.",
+  "_comment_previous": "No previous positions were supplied at intake. An empty array is a deliberate blank, not an omission, the section hides itself.",
   "previous": [],
   "registerNote": { "en": "", "ar": "" }
 }

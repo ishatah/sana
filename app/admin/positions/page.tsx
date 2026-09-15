@@ -16,19 +16,19 @@ const SECTION = "positions"
  *
  * The tier control is the reason this page exists in this shape. The intake form
  * says the tier "is set by us, not by the client", and it decides whether a row
- * is publishable at all — so it is a labelled control with its meaning written
+ * is publishable at all, so it is a labelled control with its meaning written
  * next to it, not a bare letter in a dropdown that a hurried editor sets to A to
  * make a warning go away.
  *
- * Choosing C visibly disables the publish toggle and says why. The alternative —
- * letting both be set and resolving the contradiction silently at render — means
+ * Choosing C visibly disables the publish toggle and says why. The alternative,
+ * letting both be set and resolving the contradiction silently at render, means
  * the panel shows a row as published while the site correctly refuses to render
  * it, and the editor has no way to see the disagreement.
  */
 const TIER_HELP: Record<string, string> = {
   A: "Accredited or officially registered body, verifiable in a public register. Publish freely.",
   B: "Real organisation, role confirmed by the client, limited public record. Publish with the full organisation name and no inflated wording.",
-  C: "Title-selling outfit, unregistered body, or a name that imitates an official institution. Never published — log it in the exclusions log instead.",
+  C: "Title-selling outfit, unregistered body, or a name that imitates an official institution. Never published, log it in the exclusions log instead.",
 }
 
 export default function PositionsAdminPage() {
@@ -64,7 +64,7 @@ export default function PositionsAdminPage() {
           startYear: "",
           // A new row starts at C and unpublished. The safe default is the one
           // that keeps an unverified entry off the site until someone actively
-          // assesses it — the opposite default publishes anything half-entered.
+          // assesses it, the opposite default publishes anything half-entered.
           tier: "C",
           publish: false,
           condition: "",
@@ -87,7 +87,7 @@ export default function PositionsAdminPage() {
           <ContentSection key={p.id ?? i} title={p.organisation || "Untitled position"}>
             <div className="space-y-5">
               <FieldRow
-                label="Organisation — full legal name"
+                label="Organisation: full legal name"
                 value={p.organisation}
                 onChange={(v) => update(i, { organisation: v })}
                 hint="Written out in full everywhere it appears. Never abbreviated, never shortened to an acronym on its own."
@@ -110,7 +110,7 @@ export default function PositionsAdminPage() {
               {/* Verification tier */}
               <div className="space-y-2 border border-[color:var(--border)] bg-[color:var(--background)] p-4">
                 <label className="block text-[0.7rem] uppercase tracking-widest text-[color:var(--muted-foreground)]">
-                  Verification tier — set by the studio, not the client
+                  Verification tier: set by the studio, not the client
                 </label>
                 <div className="flex gap-2">
                   {(["A", "B", "C"] as const).map((tier) => (
@@ -145,7 +145,7 @@ export default function PositionsAdminPage() {
                     className="accent-[color:var(--primary)] disabled:opacity-40"
                   />
                   Publish on the site
-                  {tierC && <span className="text-xs text-[color:var(--danger)]">— tier C is never published</span>}
+                  {tierC && <span className="text-xs text-[color:var(--danger)]">- tier C is never published</span>}
                 </label>
 
                 <label className="flex items-center gap-2.5 text-sm text-[color:var(--card-foreground)]">

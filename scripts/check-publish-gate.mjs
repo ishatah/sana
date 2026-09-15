@@ -8,17 +8,17 @@
  *
  * It reports two classes of problem and treats them very differently:
  *
- *   VIOLATIONS (exit 1) — banned wording found in copy that can reach a visitor.
+ *   VIOLATIONS (exit 1), banned wording found in copy that can reach a visitor.
  *     These are correctness failures. A bare "United Nations" next to this client's
  *     name is a false claim of UN affiliation; a "Dr." prefix is a false claim of a
  *     recognised doctorate. Neither is a style preference and neither may ship.
  *
- *   BLOCKERS (exit 0, reported) — the profile is not signed off, or open questions
+ *   BLOCKERS (exit 0, reported), the profile is not signed off, or open questions
  *     are unanswered. These are expected during production and must not fail a
  *     preview build; they are why the site is noindex by default. The script prints
  *     them so the state is visible on every run rather than discovered at launch.
  *
- * Scope: data/ and messages/ — everything a page can render. Not lib/ or scripts/,
+ * Scope: data/ and messages/, everything a page can render. Not lib/ or scripts/,
  * where the banned strings legitimately appear inside the rules themselves; a gate
  * that flags its own rulebook gets disabled within a week.
  */
@@ -36,7 +36,7 @@ const SCAN_DIRS = ["data", "messages"]
 const BANNED = [
   {
     pattern: /\b(?:our|my|her|the)\s+client\s+(?:[A-Z][\w&.-]*|is|was|include)/g,
-    reason: "Intake sections 3 and 6: no client names — the profile describes the work, never who it was for.",
+    reason: "Intake sections 3 and 6: no client names, the profile describes the work, never who it was for.",
   },
   {
     pattern: /(?:[€$£]\s?\d[\d,.]*\s?(?:k|m|bn|million|billion)?|\b\d[\d,.]*\s?(?:EUR|USD|GBP|AED|SAR)\b)/gi,
@@ -52,7 +52,7 @@ const BANNED = [
   },
   {
     pattern: /\b(?:Dr|Dr\.|Prof|Prof\.|د\.|الدكتورة)\s*(?:Sanae|سناء)/gi,
-    reason: "Intake section 6: the approved name format is 'Sanae Rakik' / 'سناء رقيق', دون لقب — no honorific.",
+    reason: "Intake section 6: the approved name format is 'Sanae Rakik' / 'سناء رقيق', دون لقب, no honorific.",
   },
   {
     pattern: /\b(?:diplomatic (?:passport|immunity|status|credential))\b/gi,
@@ -72,7 +72,7 @@ const BANNED = [
 ]
 
 // Keys that hold internal production notes rather than renderable copy. The
-// exclusions log necessarily names the excluded outfits — that is its job — so
+// exclusions log necessarily names the excluded outfits, that is its job, so
 // scanning it for those names would fail the build on the record that prevents
 // the failure. Comment keys are skipped for the same reason.
 const INTERNAL_KEY = /^_comment/
@@ -111,6 +111,64 @@ async function jsonFiles(dir) {
   return out
 }
 
+/*
+ * ── RULES ABOUT THE SOURCE, NOT THE COPY ──────────────────────────────────────
+ *
+ * Everything above this point checks DATA. These three check CODE, and they are
+ * here because the constraints they enforce were previously documentation only.
+ *
+ * The splitText ban in particular is stated in four separate files,
+ * components/motion/sections.ts, components/section-header.tsx,
+ * components/hero.tsx and components/motion/fm/variants.ts, as a hard
+ * requirement that organisation names and the subject's own name render as single
+ * intact text nodes. Nothing enforced it. A per-character reveal added in good
+ * faith by someone who had not read those files would have shipped.
+ *
+ * It belongs in THIS script rather than in eslint because it is a publishing
+ * rule, not a style rule: intake section 6 fixes the name format as «سناء رقيق» /
+ * "Sanae Rakik" and the whole point of this gate is that it runs even when the
+ * app does not build.
+ */
+const SOURCE_DIRS = ["components", "app", "lib"]
+
+const SOURCE_RULES = [
+  {
+    pattern: /\bsplitText\b/,
+    reason:
+      "splitText is forbidden. Organisation names and the subject's own name must render as single intact text nodes, see components/motion/sections.ts and intake section 6. Animate whole elements, a clip-path, or a mask instead.",
+  },
+  {
+    pattern: /from\s+["']framer-motion["']/,
+    reason:
+      "Import from 'motion/react', not 'framer-motion'. They are the same code (motion/dist/react.d.ts re-exports it), but a second direct dependency can resolve to a different minor and put two copies of the projection singleton in the bundle, which silently breaks layoutId and layout animations.",
+  },
+  {
+    pattern: /<motion\./,
+    reason:
+      "Use m.* under LazyMotion, not motion.*. A single motion.* component statically imports the full Framer feature bundle and defeats the code split for the whole page. See components/motion/fm/fm-root.tsx.",
+  },
+]
+
+/** Every .ts/.tsx file under a source directory, recursively. */
+async function sourceFiles(dir) {
+  const out = []
+  let entries
+  try {
+    entries = await readdir(join(ROOT, dir), { withFileTypes: true })
+  } catch {
+    return out
+  }
+  for (const e of entries) {
+    // node_modules and build output are not ours to police, and .next in
+    // particular contains compiled copies of this very source that would double
+    // every finding.
+    if (e.name === "node_modules" || e.name === ".next") continue
+    if (e.isDirectory()) out.push(...(await sourceFiles(join(dir, e.name))))
+    else if (/\.tsx?$/.test(e.name)) out.push(join(dir, e.name))
+  }
+  return out
+}
+
 const violations = []
 const blockers = []
 const notes = []
@@ -122,7 +180,7 @@ for (const dir of SCAN_DIRS) {
     const parsed = JSON.parse(await readFile(join(ROOT, file), "utf-8"))
     for (const { path, value } of walk(parsed)) {
       for (const { pattern, exempt, reason } of BANNED) {
-        // An exempt rule whitelists a specific safe construction — the sentence
+        // An exempt rule whitelists a specific safe construction, the sentence
         // that explicitly DENIES an affiliation is allowed to name it, since the
         // denial is the correction. Checked per-string, so a denial in one field
         // can never excuse a bare claim in another.
@@ -130,6 +188,50 @@ for (const dir of SCAN_DIRS) {
         const re = new RegExp(pattern.source, pattern.flags)
         const m = re.exec(value)
         if (m) violations.push({ file: relative(".", file), path, phrase: m[0], reason })
+      }
+    }
+  }
+}
+
+/*
+ * The source pass. Reported through the same `violations` channel as the copy
+ * rules, so a forbidden construction fails the build exactly as a banned phrase
+ * does, these are publishing requirements, not warnings.
+ *
+ * Skipped inside this script's own rule table, which necessarily contains the
+ * strings it is looking for. Same reason INTERNAL_FILES exists above: a record of
+ * what is forbidden must not itself trip the check.
+ */
+for (const dir of SOURCE_DIRS) {
+  for (const file of await sourceFiles(dir)) {
+    const source = await readFile(join(ROOT, file), "utf-8")
+    const lines = source.split("\n")
+
+    for (const { pattern, reason } of SOURCE_RULES) {
+      for (let i = 0; i < lines.length; i++) {
+        const re = new RegExp(pattern.source, pattern.flags)
+        const m = re.exec(lines[i])
+        if (!m) continue
+
+        /*
+         * Comments are skipped, and that is deliberate rather than lazy.
+         *
+         * This codebase documents its own prohibitions at length and in place,
+         * components/motion/sections.ts:136-140 names `splitText` in order to
+         * forbid it, and components/motion/fm/fm-root.tsx names `framer-motion`
+         * in order to explain why it must not be imported. Flagging those would
+         * fail the build on the very notes that prevent the mistake, and the
+         * first fix anyone reached for would be deleting the explanation.
+         */
+        const trimmed = lines[i].trim()
+        if (trimmed.startsWith("*") || trimmed.startsWith("//") || trimmed.startsWith("/*")) continue
+
+        violations.push({
+          file: relative(".", file),
+          path: `line ${i + 1}`,
+          phrase: m[0],
+          reason,
+        })
       }
     }
   }
@@ -153,7 +255,7 @@ for (const a of missingAssets) notes.push(`Media asset not received: ${a.asset}`
 /*
  * A BLOCKER, NOT A NOTE, because the placeholder is load-bearing in ways that are
  * easy to miss: `siteUrl` feeds `metadataBase`, every canonical tag and the whole
- * sitemap. Launching on an unconfirmed domain does not fail loudly — it publishes
+ * sitemap. Launching on an unconfirmed domain does not fail loudly, it publishes
  * canonicals and a sitemap pointing at a host nobody owns.
  *
  * lib/seo.ts already refuses to put an unconfirmed host in the structured-data
@@ -164,7 +266,7 @@ for (const a of missingAssets) notes.push(`Media asset not received: ${a.asset}`
 const settings = JSON.parse(await readFile(join(ROOT, "data/siteSettings.json"), "utf-8"))
 if (settings.domainConfirmed !== true) {
   blockers.push(
-    `Section 7: domain not confirmed — "${settings.siteUrl}" is a placeholder and must not be published as the canonical host`,
+    `Section 7: domain not confirmed, "${settings.siteUrl}" is a placeholder and must not be published as the canonical host`,
   )
 }
 
@@ -177,7 +279,7 @@ if (settings.domainConfirmed !== true) {
 // asset is here, it is one flag away from rendering, and nobody has established the
 // right to publish it. Intake section 14 and open question Q5 treat the file and the
 // permission as two separate deliverables precisely because the second is the one that
-// gets skipped — so it fails the build rather than printing a line someone scrolls past.
+// gets skipped, so it fails the build rather than printing a line someone scrolls past.
 try {
   const media = JSON.parse(await readFile(join(ROOT, "data/media.json"), "utf-8"))
   for (const slot of media.slots ?? []) {
@@ -190,7 +292,7 @@ try {
         path: `slots.${slot.id}.permission.granted`,
         phrase: slot.path,
         reason:
-          "A file is attached to this slot but no permission to publish it has been recorded. Holding a file is not the same as having the right to publish it — see intake section 14 and open question Q5.",
+          "A file is attached to this slot but no permission to publish it has been recorded. Holding a file is not the same as having the right to publish it, see intake section 14 and open question Q5.",
       })
     }
 
@@ -223,7 +325,7 @@ const yellow = (t) => `[33m${t}[0m`
 const green = (t) => `[32m${t}[0m`
 const dim = (t) => `[2m${t}[0m`
 
-console.log(bold("\nPublish gate — client CL-02-SR\n"))
+console.log(bold("\nPublish gate, client CL-02-SR\n"))
 
 if (violations.length) {
   console.log(red(bold(`✗ ${violations.length} banned phrase(s) in publishable copy\n`)))
@@ -237,7 +339,7 @@ if (violations.length) {
 }
 
 if (blockers.length) {
-  console.log(yellow(bold(`\n▲ ${blockers.length} publication blocker(s) — site stays noindex\n`)))
+  console.log(yellow(bold(`\n▲ ${blockers.length} publication blocker(s), site stays noindex\n`)))
   for (const b of blockers) console.log(`  ${yellow("▲")} ${b}`)
 }
 
@@ -247,7 +349,7 @@ if (notes.length) {
 }
 
 if (!blockers.length && !violations.length) {
-  console.log(green(bold("\n✓ Sections 15 and 18 complete — cleared for publication.\n")))
+  console.log(green(bold("\n✓ Sections 15 and 18 complete, cleared for publication.\n")))
 } else {
   console.log(dim("\nNothing is published until sections 15 and 18 are both complete.\n"))
 }

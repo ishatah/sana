@@ -14,7 +14,7 @@ const CHECKLIST_SECTION = "deliverables"
 const MEDIA_SECTION = "media"
 
 /**
- * Media assets — intake section 14, in two halves.
+ * Media assets, intake section 14, in two halves.
  *
  * The top half is the checklist from the form: what was asked for and what has arrived.
  * The bottom half is the slots that actually render on the site.
@@ -22,12 +22,12 @@ const MEDIA_SECTION = "media"
  * THE PERMISSION FIELDS SIT ABOVE THE FILE INPUT ON EVERY SLOT, and the input is
  * disabled until permission is recorded and saved. That ordering is the whole design of
  * this page. Holding a logo file is not the same as having the right to publish it, and
- * three organisations are involved here — using an association's mark on a personal
+ * three organisations are involved here, using an association's mark on a personal
  * profile without its agreement damages the relationship the profile exists to
  * represent. A form that takes the file first and asks about rights afterwards gets the
  * file uploaded and the question forgotten.
  *
- * The API refuses the upload too (422), so this is not the only guard — but a disabled
+ * The API refuses the upload too (422), so this is not the only guard, but a disabled
  * input that explains itself is better than a rejection after the fact.
  */
 export default function MediaAdminPage() {
@@ -93,7 +93,7 @@ export default function MediaAdminPage() {
         throw new Error(json.error ?? "Could not detach the file")
       }
       setMedia(await fetchSection(MEDIA_SECTION))
-      toast.success("File detached — the stored copy is kept for the record")
+      toast.success("File detached: the stored copy is kept for the record")
     } catch (e) {
       toast.error(e instanceof Error ? e.message : "Failed")
     } finally {
@@ -147,7 +147,7 @@ export default function MediaAdminPage() {
 
       <ContentSection
         title="Slots on the site"
-        description="Each slot renders in one place on the public page. A slot appears only once it has a file, a recorded permission and alt text — until then the site renders its built fallback."
+        description="Each slot renders in one place on the public page. A slot appears only once it has a file, a recorded permission and alt text, until then the site renders its built fallback."
       >
         <div className="space-y-8">
           {slots.map((s: any, i: number) => {
@@ -197,7 +197,7 @@ export default function MediaAdminPage() {
                       label="Granted by"
                       value={s.permission?.grantedBy ?? ""}
                       onChange={(v) => updateSlot(i, { permission: { ...(s.permission ?? {}), grantedBy: v } })}
-                      hint="The rights holder — for a photograph this is often the photographer, not the subject."
+                      hint="The rights holder: for a photograph this is often the photographer, not the subject."
                     />
                     <FieldRow
                       label="Granted on"
@@ -209,7 +209,7 @@ export default function MediaAdminPage() {
                       label="Scope"
                       value={s.permission?.scope ?? ""}
                       onChange={(v) => updateSlot(i, { permission: { ...(s.permission ?? {}), scope: v } })}
-                      hint="What the grant covers — website only, all deliverables, and so on."
+                      hint="What the grant covers: website only, all deliverables, and so on."
                     />
                     <FieldRow
                       label="Source"
@@ -252,7 +252,7 @@ export default function MediaAdminPage() {
                         // Rasters only, matching the server allowlist in
                         // app/api/admin/media/route.ts. SVG was dropped from both;
                         // see the note there. This attribute is a file-picker
-                        // convenience, not the enforcement — the route is.
+                        // convenience, not the enforcement, the route is.
                         accept="image/jpeg,image/png,image/webp,image/avif"
                         disabled={!granted || uploading}
                         className="hidden"
@@ -277,7 +277,7 @@ export default function MediaAdminPage() {
                   label="Alt text"
                   value={s.alt}
                   onChange={(next) => updateSlot(i, { alt: next })}
-                  hint="Required. A slot with no alt text in any language does not render — an image nobody has described is an image nobody has checked."
+                  hint="Required. A slot with no alt text in any language does not render, an image nobody has described is an image nobody has checked."
                 />
 
                 <FieldRow

@@ -1,10 +1,10 @@
 {
   "_comment": "Every slot passes through lib/media.ts, which withholds an image unless FIVE things are true at once: a non-empty path, permission.granted === true, publish !== false, tier !== 'C', and alt text in at least one locale. A slot missing any one of them resolves to null and the component renders its designed placeholder instead.",
   "_comment_permission": "permission.granted is a SEPARATE field from path on purpose. Having the file and having the right to publish it are two different things, and the first is never evidence of the second. scripts/check-publish-gate.mjs fails the build (exit 1) on any slot that has a path without a recorded permission, so the two are always set together.",
-  "_comment_alt": "Alt text is part of the gate rather than a nicety: an image that cannot be described has not been understood well enough to publish. Intake form section 5 also requires that people in a photo be named and that event photos carry dates — neither portrait here contains anyone but the subject.",
+  "_comment_alt": "Alt text is part of the gate rather than a nicety: an image that cannot be described has not been understood well enough to publish. Intake form section 5 also requires that people in a photo be named and that event photos carry dates, neither portrait here contains anyone but the subject.",
   "slots": [
     {
-      "_comment_cutout": "THE PATH IS THE DERIVED CUTOUT, NOT THE SUPPLIED JPEG. The original photograph is a studio shot on a white seamless; on this page's near-black ground that white rendered as a bright disc with a hard edge, reading as a sticker rather than a portrait. scripts/build-portrait-cutout.mjs removes the seamless with a soft alpha ramp and writes the -cutout.png beside it. The SUPPLIED FILE IS UNTOUCHED and still sits at /assets/sanae-rakik-portrait.jpg — the cutout is a derived asset, so re-running the script reproduces it and the permission recorded below still describes the same photograph of the same person. No retouching of the subject is performed: only the background is removed.",
+      "_comment_cutout": "THE PATH IS THE DERIVED CUTOUT, NOT THE SUPPLIED JPEG. The original photograph is a studio shot on a white seamless; on this page's near-black ground that white rendered as a bright disc with a hard edge, reading as a sticker rather than a portrait. scripts/build-portrait-cutout.mjs removes the seamless with a soft alpha ramp and writes the -cutout.png beside it. The SUPPLIED FILE IS UNTOUCHED and still sits at /assets/sanae-rakik-portrait.jpg, the cutout is a derived asset, so re-running the script reproduces it and the permission recorded below still describes the same photograph of the same person. No retouching of the subject is performed: only the background is removed.",
       "id": "portrait",
       "kind": "portrait",
       "path": "/assets/sanae-rakik-portrait-cutout.png",
@@ -17,7 +17,7 @@
         "granted": true,
         "grantedBy": "Sanae Rakik",
         "grantedOn": "2026-09-09",
-        "scope": "Website use — this profile site, all pages and locales.",
+        "scope": "Website use: this profile site, all pages and locales.",
         "source": "Supplied by the subject with the completed intake form, 9 September 2026."
       },
       "tier": "A",
@@ -39,7 +39,7 @@
         "granted": true,
         "grantedBy": "Sanae Rakik",
         "grantedOn": "2026-09-09",
-        "scope": "Website use — this profile site, including social share previews.",
+        "scope": "Website use: this profile site, including social share previews.",
         "source": "Supplied by the subject with the completed intake form, 9 September 2026."
       },
       "tier": "A",
@@ -59,7 +59,7 @@
       "publish": false
     },
     {
-      "_comment": "organisationId must match a row id in data/positions.json for getOrganisationLogo() to find it. A third-party logo needs the organisation's own permission, not the subject's — that is why this stays closed even though her own photographs are cleared.",
+      "_comment": "organisationId must match a row id in data/positions.json for getOrganisationLogo() to find it. A third-party logo needs the organisation's own permission, not the subject's, that is why this stays closed even though her own photographs are cleared.",
       "id": "logo-ibc",
       "kind": "logo",
       "organisationId": "ibc-consultant",

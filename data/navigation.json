@@ -1,5 +1,5 @@
 {
-  "_comment": "`enabled:false` hides an entry until the section it points at has content. The page set is intake form section 3's checked list, merged where her content does not fill two pages: المناصب and العضويات والشراكات are one route because both describe the same organisation, and السيرة والمسيرة sits inside /about. NOTE: `href` must match the id of the matching section on the home page — components/site-nav.tsx builds its scroll-spy from it, and a mismatch observes nothing and fails silently.",
+  "_comment": "`enabled:false` hides an entry until the section it points at has content. The page set is intake form section 3's checked list, merged where her content does not fill two pages: المناصب and العضويات والشراكات are one route because both describe the same organisation, and السيرة والمسيرة sits inside /about. NOTE: `href` must match the id of the matching section on the home page, components/site-nav.tsx builds its scroll-spy from it, and a mismatch observes nothing and fails silently.",
   "main": [
     {
       "id": "top",

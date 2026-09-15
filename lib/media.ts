@@ -10,8 +10,8 @@ import mediaLocal from "@/data/media.json"
  * is built the same way and for the same reason: the default is WITHHELD, so an asset
  * that arrives without an explicit decision stays invisible until someone makes one.
  *
- * The opposite default — render anything with a file path, hide only what is marked
- * private — publishes whatever anyone forgets to mark. On this file that failure has a
+ * The opposite default, render anything with a file path, hide only what is marked
+ * private, publishes whatever anyone forgets to mark. On this file that failure has a
  * specific shape: intake section 14 lists every media asset as not received, and open
  * question Q5 asks for the portrait AND permission for the logos together, precisely
  * because holding a file and having the right to publish it are different things. An
@@ -28,7 +28,7 @@ export type MediaKind = "portrait" | "background" | "logo" | "og"
 
 export interface MediaPermission {
   granted?: boolean
-  /** The rights holder who granted it — not always the client. Event photography is
+  /** The rights holder who granted it, not always the client. Event photography is
    *  usually the photographer's copyright, so a grant from the subject alone may not
    *  be sufficient. */
   grantedBy?: string
@@ -71,10 +71,10 @@ export interface ResolvedMedia {
  *
  * Four independent conditions, and none of them implies another:
  *
- *   1. a file exists                    — `path`
- *   2. someone recorded permission      — `permission.granted`
- *   3. it has not been withheld         — `publish !== false`
- *   4. the source is not tier C         — via isPublishable(), the same rule the
+ *   1. a file exists, `path`
+ *   2. someone recorded permission, `permission.granted`
+ *   3. it has not been withheld, `publish !== false`
+ *   4. the source is not tier C, via isPublishable(), the same rule the
  *                                         positions and awards lists run
  *
  * Condition 4 reuses lib/verification.ts rather than restating the tier logic. A
@@ -92,7 +92,7 @@ export function isRenderable(slot: MediaSlot): boolean {
  *
  * ALT TEXT IS PART OF THE GATE, not a nicety applied afterwards. A record with no alt
  * text in any locale resolves to null even when the permission block is complete,
- * because an image nobody has described is an image nobody has checked — and on a
+ * because an image nobody has described is an image nobody has checked, and on a
  * profile whose credibility is the product, an undescribed photograph of a person is
  * exactly the asset that should not slip out.
  *
@@ -120,7 +120,7 @@ async function slots(): Promise<MediaSlot[]> {
   return (data.slots ?? []) as MediaSlot[]
 }
 
-/** One slot by id, gated. Returns null when it may not render — which is every slot today. */
+/** One slot by id, gated. Returns null when it may not render, which is every slot today. */
 export async function getMedia(id: string, locale: string): Promise<ResolvedMedia | null> {
   const all = await slots()
   return resolveMedia(
@@ -135,7 +135,7 @@ export async function getMedia(id: string, locale: string): Promise<ResolvedMedi
  * Note what this does NOT do: it takes no view on which organisations may have a mark.
  * Any per-row logo exclusion is enforced at the call site in
  * components/role-entry.tsx, in code, because that is a rule about a specific row
- * rather than about the data — and a rule that lives only in the absence of a data
+ * rather than about the data, and a rule that lives only in the absence of a data
  * entry is one an admin save can undo.
  */
 export async function getOrganisationLogo(organisationId: string, locale: string): Promise<ResolvedMedia | null> {
@@ -152,14 +152,14 @@ export async function getOrganisationLogo(organisationId: string, locale: string
  * This is the failure the whole module exists to prevent, so it is surfaced rather than
  * merely handled: scripts/check-publish-gate.mjs fails the build on a non-empty result,
  * and /admin/media lists them. A file sitting in storage that nobody cleared is not a
- * quiet no-op — it is an asset one careless edit away from being published.
+ * quiet no-op, it is an asset one careless edit away from being published.
  */
 export async function getUnclearedMedia(): Promise<MediaSlot[]> {
   const all = await slots()
   return all.filter((s) => s.path && s.path.trim() !== "" && s.permission?.granted !== true)
 }
 
-/** Production status for /admin — what is present, what is cleared, what is still missing. */
+/** Production status for /admin, what is present, what is cleared, what is still missing. */
 export async function getMediaStatus() {
   const all = await slots()
   return all.map((s) => ({

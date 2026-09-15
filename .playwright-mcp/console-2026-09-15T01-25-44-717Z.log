@@ -1,0 +1,13 @@
+[     131ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     217ms] [LOG] [Fast Refresh] done in 186ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     379ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     402ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     543ms] Error: Target ref is defined but not hydrated. For more information and steps for solving, visit https://motion.dev/troubleshooting/use-scroll-ref
+    at invariant (http://localhost:3000/_next/static/chunks/node_modules_12jqi3u._.js:74:19)
+    at useScroll.useEffect.tryStart (http://localhost:3000/_next/static/chunks/node_modules_framer-motion_dist_es_0uqsm6k._.js:5534:194)
+    at triggerCallback (http://localhost:3000/_next/static/chunks/node_modules_motion-dom_dist_es_0pwnp-x._.js:120:9)
+    at Set.forEach (<anonymous>)
+    at Object.process (http://localhost:3000/_next/static/chunks/node_modules_motion-dom_dist_es_0pwnp-x._.js:156:23)
+    at processBatch (http://localhost:3000/_next/static/chunks/node_modules_motion-dom_dist_es_0pwnp-x._.js:210:14)
+[     587ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477
+[     642ms] [LOG] [Fast Refresh] done in 163ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2477

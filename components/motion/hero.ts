@@ -1,4 +1,6 @@
-import { animate, stagger, utils } from "animejs"
+import { animate, stagger } from "motion"
+import { DUR, EASE, ms } from "./tokens"
+import { setStyles, clearStyles, type Handle } from "./dom"
 
 /**
  * The hero's motion, and the only motion left on the page that is not driven by a
@@ -10,7 +12,7 @@ import { animate, stagger, utils } from "animejs"
  * triggered by scrolling, none of it observes the viewport, and none of it runs on
  * a loop. That distinction is the whole design: the scroll-triggered entrances and
  * the one-section-per-gesture controller were removed because they took the page
- * away from the reader, and nothing in this file can do that — by the time a
+ * away from the reader, and nothing in this file can do that, by the time a
  * visitor has scrolled at all, everything here has finished and will not run again.
  *
  * ── THE FLOOR ──────────────────────────────────────────────────────────────────
@@ -22,9 +24,17 @@ import { animate, stagger, utils } from "animejs"
  * and reveals them in JS, which renders a blank hero whenever the JS does not
  * arrive. Here the from-state is written by the same code that animates it away, so
  * a bundle that never loads leaves the content exactly where it already was.
+ *
+ * ── UNITS, WHICH ARE THE ONE REAL HAZARD IN THIS FILE ──────────────────────────
+ *
+ * Motion takes `duration` and `delay` in SECONDS. The choreography below is
+ * authored in MILLISECONDS, because "the rule lands at 320" is how a sequence is
+ * read and reasoned about. Every crossing of that boundary goes through `ms()`
+ * from ./tokens, a raw millisecond number reaching Motion does not throw, it just
+ * schedules the hero to assemble over the next several minutes.
  */
 
-/** How far each element travels on entry. Small on purpose — a long slide reads as
+/** How far each element travels on entry. Small on purpose, a long slide reads as
  *  a page assembling itself, which is the template effect this avoids. */
 const RISE = 18
 
@@ -32,38 +42,93 @@ const RISE = 18
  * The order the hero assembles in, and the reason it is this order.
  *
  * It follows READING order, not visual weight: the eyebrow names the subject, the
- * name lands, the role qualifies it, the rule closes the block, the title and the
+ * name lands, the role qualifies it, the title and the
  * detail follow, and the CTAs arrive last because an action offered before its
  * context is an advert. The portrait fades in alongside the name rather than after
- * everything else — it is the other half of the same statement.
+ * everything else, it is the other half of the same statement.
+ *
+ * `at` is in MILLISECONDS. See the units note above.
  */
 const SEQUENCE: Array<{ selector: string; at: number }> = [
   { selector: '[data-anime="eyebrow"]', at: 0 },
   { selector: '[data-anime="name"]', at: 90 },
   { selector: '[data-anime="role-lead"]', at: 210 },
-  { selector: '[data-anime="hero-rule"]', at: 320 },
-  { selector: '[data-anime="hero-title"]', at: 390 },
+  /*
+   * `[data-anime="hero-title"]` IS DELIBERATELY ABSENT, AND THIS NOTE IS THE
+   * REASON, do not add it back.
+   *
+   * The full legal title used to sit here at 390. It is now uncovered by a mask
+   * sweep instead (components/motion/fm/sweep-text.tsx), which holds that same
+   * 390 beat through its own `delay` prop, so the SEQUENCE is unchanged and only
+   * the effect at that position differs.
+   *
+   * Two writers on one element is the failure this avoids. `entrance()` below
+   * writes an inline `transform` and `opacity` synchronously via `setStyles`;
+   * the sweep writes `mask-image`. Both on the same node means the vanilla layer
+   * animating a line the mask is still hiding, and, worse, `clearStyles` in
+   * this file's teardown would run against an element the Framer component also
+   * cleans up. See components/motion/fm/variants.ts for the ownership rule.
+   */
   // One hook where there were three. The roles list, the stat bar and the
   // locations list were separate blocks with separate entrances; they are now a
   // single meta row, so they arrive together as one object rather than as three
   // things queueing up.
   { selector: '[data-anime="hero-meta"]', at: 480 },
+  /*
+   * THE CELLS INSIDE THE META ROW, ON THEIR OWN BEAT.
+   *
+   * The entry above fades the <dl> in as one object. This one matches the three
+   * <div> cells inside it, and because `stagger()` below spaces anything a
+   * selector matches more than once, they arrive 70ms apart, the row assembles
+   * across the reading direction instead of appearing whole.
+   *
+   * IT STARTS AFTER THE ROW IT IS INSIDE, not with it. At 480 the parent is
+   * still at opacity 0, so a child animating then would be invisible for its own
+   * entrance and simply be there once the parent caught up. 540 puts the cells
+   * just behind their container.
+   *
+   * THE NESTING IS SAFE because the two writers touch different NODES: the <dl>
+   * and the <div>s inside it. Opacity multiplies down the tree, so the parent's
+   * fade and the child's fade compose rather than fight, which is exactly what
+   * two writers on the SAME node would do. This is the same ownership rule the
+   * portrait obeys by splitting its entrance and its camera across two wrappers.
+   */
+  { selector: '[data-anime="meta-item"]', at: 540 },
   { selector: '[data-anime="hero-cta"]', at: 580 },
+  // The signed statement under the portrait. Last, and after the CTAs: it is the
+  // closing remark of the band, so it arrives once the rest has settled rather
+  // than competing with the name for the opening beat.
+  { selector: '[data-anime="hero-statement"]', at: 660 },
 ]
+
+/** Milliseconds between two elements matched by the same selector. */
+const STAGGER = 70
+
 
 /**
  * Mounts every hero behaviour. Returns a teardown that reverts each one.
  *
  * The caller (components/motion/hero-scope.tsx) is responsible for the
- * reduced-motion check — this is never called when the visitor has asked for less
+ * reduced-motion check, this is never called when the visitor has asked for less
  * motion, so nothing here needs its own guard.
  */
 export function mountHero(root: HTMLElement): () => void {
   const cleanups: Array<() => void> = []
 
+  /*
+   * ONE BEHAVIOUR LEFT HERE, AND THAT IS THE POINT.
+   *
+   * This file mounted three: the entrance, the role rotation and the portrait
+   * drift. The last two moved to the Framer layer (components/motion/fm/) and
+   * were DELETED here rather than left dormant, see the two docblocks below for
+   * each, and components/motion/fm/variants.ts for why a dormant copy is not a
+   * safe state.
+   *
+   * What remains is exactly what this file's own docblock describes: an entrance
+   * that fires once, on load, from a known state, and settles. Nothing here
+   * observes the scroll position any more.
+   */
   cleanups.push(entrance(root))
-  cleanups.push(shimmer(root))
-  cleanups.push(rotateRoles(root))
 
   return () => cleanups.forEach((fn) => fn())
 }
@@ -71,39 +136,51 @@ export function mountHero(root: HTMLElement): () => void {
 /**
  * The staggered entrance.
  *
- * `utils.set` writes the from-state immediately and synchronously, then each
- * element animates back to rest. Because this runs in an effect — after first
- * paint — there is a frame where the content is already at its final position, and
+ * `setStyles` writes the from-state immediately and SYNCHRONOUSLY, then each
+ * element animates back to rest. Because this runs in an effect, after first
+ * paint, there is a frame where the content is already at its final position, and
  * that is the correct trade: a brief correct state is better than a hidden one, and
  * it is what guarantees the no-JS floor described at the top of this file.
+ *
+ * The synchronous part is load-bearing and is why this does not use a Motion
+ * keyframe array (`opacity: [0, 1]`) to declare the from-state instead. A keyframe
+ * array applies on the next animation frame; between the effect running and that
+ * frame the element would paint at its REST state, then jump back to the offset to
+ * animate in. Writing the style directly closes that window.
  */
 function entrance(root: HTMLElement): () => void {
   const targets: Element[] = []
+  const running: Handle[] = []
 
   for (const { selector, at } of SEQUENCE) {
     const els = Array.from(root.querySelectorAll(selector))
     if (!els.length) continue
     targets.push(...els)
 
-    utils.set(els, { opacity: 0, translateY: RISE })
-    animate(els, {
-      opacity: 1,
-      translateY: 0,
-      duration: 760,
-      /*
-       * The parameters are OPTIONAL, and that is not cosmetic. anime.js types a
-       * function-valued tween param as `FunctionValue`, whose signature is
-       * `(target?, index?, targets?, prevTween?)`. Declaring them as required
-       * makes the function fail to match, TypeScript falls through to the next
-       * member of the union — `EasingParam` — and reports the confusing
-       * "Target signature provides too few arguments" against an easing type this
-       * line has nothing to do with.
-       */
-      delay: (_target?: unknown, i?: number) => at + (i ?? 0) * 70,
-      // A long, decelerating ease. The motion is almost over by the time the eye
-      // reaches it, so what registers is the settle rather than the travel.
-      ease: "out(3)",
-    })
+    setStyles(els, { opacity: 0, y: RISE })
+    running.push(
+      animate(
+        els,
+        { opacity: 1, y: 0 },
+        {
+          duration: DUR.d5,
+          /*
+           * `stagger` REPLACES the hand-written index function this used to carry.
+           *
+           * Under anime.js the delay was `(_target, i) => at + i * 70`, plus a long
+           * comment explaining why both parameters had to be declared optional to
+           * satisfy that library's `FunctionValue` overload. Motion has a first-
+           * class stagger with a start offset, so the whole overload problem and the
+           * note explaining it are gone: `startDelay` is the sequence position and
+           * the stagger spaces anything the selector matched more than once.
+           */
+          delay: stagger(ms(STAGGER), { startDelay: ms(at) }),
+          // A long, decelerating ease. The motion is almost over by the time the eye
+          // reaches it, so what registers is the settle rather than the travel.
+          ease: EASE.out,
+        },
+      ),
+    )
   }
 
   const figure = root.querySelector('[data-hero="portrait"]')
@@ -112,193 +189,92 @@ function entrance(root: HTMLElement): () => void {
     // The portrait scales from slightly large rather than small: a figure growing
     // into place reads as a UI element appearing, while one settling back from a
     // push-in reads as a camera coming to rest.
-    utils.set(figure, { opacity: 0, scale: 1.04 })
-    animate(figure, { opacity: 1, scale: 1, duration: 1100, delay: 120, ease: "out(3)" })
+    setStyles(figure, { opacity: 0, scale: 1.04 })
+    running.push(animate(figure, { opacity: 1, scale: 1 }, { duration: DUR.d6, delay: ms(120), ease: EASE.out }))
   }
 
   const glow = root.querySelector('[data-hero="portrait-glow"]')
   if (glow) {
     targets.push(glow)
-    utils.set(glow, { opacity: 0 })
-    animate(glow, { opacity: 1, duration: 1600, delay: 240, ease: "out(2)" })
+    setStyles(glow, { opacity: 0 })
+    running.push(animate(glow, { opacity: 1 }, { duration: DUR.d6 * 1.45, delay: ms(240), ease: EASE.soft }))
   }
 
   /*
-   * Teardown clears the inline styles this wrote rather than reversing the
-   * animation. Anything left behind — an opacity, a transform — would be a value
-   * the stylesheet no longer controls, and on a client-side navigation back to this
-   * page it would fight the fresh mount.
-   */
-  return () => utils.remove(targets)
-}
-
-/**
- * One champagne highlight travelling across the name.
- *
- * IT RUNS ONCE AND STOPS. A looping shimmer is the single clearest "premium
- * template" tell — it turns a person's name into signage. Fired once as the name
- * lands, it reads instead as light catching a surface, and then the name is simply
- * set in the heading colour like any other heading.
- *
- * The effect is a background-clipped gradient, so it costs no extra element and
- * cannot be read by a screen reader. The name text is the real text throughout: it
- * is never split into per-character spans, which is the rule this site keeps for
- * any rendering of a real person's name.
- */
-function shimmer(root: HTMLElement): () => void {
-  const name = root.querySelector<HTMLElement>('[data-anime="name"]')
-  if (!name) return () => {}
-
-  const RESTORE = {
-    backgroundImage: name.style.backgroundImage,
-    backgroundSize: name.style.backgroundSize,
-    backgroundPosition: name.style.backgroundPosition,
-    backgroundRepeat: name.style.backgroundRepeat,
-  }
-
-  /*
-   * The gradient is mostly the heading colour with a narrow champagne band in the
-   * middle, and it is sized at 220% so that band can travel the full width of the
-   * text without either end of the gradient entering the frame.
-   */
-  name.style.backgroundImage =
-    "linear-gradient(100deg, var(--heading) 38%, var(--primary-hover) 48%, var(--primary) 52%, var(--heading) 62%)"
-  name.style.backgroundSize = "220% 100%"
-  name.style.backgroundRepeat = "no-repeat"
-  name.style.backgroundPosition = "120% 0"
-  name.style.setProperty("-webkit-background-clip", "text")
-  name.style.setProperty("background-clip", "text")
-  name.style.setProperty("-webkit-text-fill-color", "transparent")
-
-  const anim = animate(name, {
-    backgroundPosition: ["120% 0", "-40% 0"],
-    duration: 1500,
-    delay: 420,
-    ease: "inOut(2)",
-    /*
-     * THE CLIP IS REMOVED WHEN THE SWEEP ENDS, and that is a correctness fix rather
-     * than tidiness. `-webkit-text-fill-color: transparent` means the glyphs are
-     * painted only by the background; if anything later repaints that background —
-     * a theme change, a print stylesheet, a browser that drops background-clip —
-     * the name renders as invisible text. Restoring the normal fill the moment the
-     * animation is done means the failure window is 1.5 seconds rather than the
-     * life of the page.
-     */
-    onComplete: () => restore(),
-  })
-
-  function restore() {
-    name!.style.removeProperty("-webkit-text-fill-color")
-    name!.style.removeProperty("-webkit-background-clip")
-    name!.style.removeProperty("background-clip")
-    name!.style.backgroundImage = RESTORE.backgroundImage
-    name!.style.backgroundSize = RESTORE.backgroundSize
-    name!.style.backgroundPosition = RESTORE.backgroundPosition
-    name!.style.backgroundRepeat = RESTORE.backgroundRepeat
-  }
-
-  return () => {
-    anim.revert()
-    restore()
-  }
-}
-
-/**
- * The role line cycles through her supplied roles.
- *
- * ── THIS IS NOT THE TYPEWRITER THAT WAS REMOVED, AND THE DIFFERENCES ARE THE
- *    REASONS IT IS ACCEPTABLE ────────────────────────────────────────────────────
- *
- * The original hero ran jQuery.typed: the roles were typed in and deleted one
- * character at a time under a blinking cursor. It was removed for four documented
- * reasons, and this rebuild answers each of them rather than ignoring them:
- *
- *   1. IT UNDERMINED THE CONTENT. Typing a title letter by letter presents it as ad
- *      copy. A crossfade does not perform the text; it changes which of several
- *      true statements is on screen, the way a caption changes.
- *
- *   2. IT WAS THE PAGE'S <h1>. The heading was whatever had been typed at the
- *      moment a screen reader read it — sampled live, it announced "Civil Societ".
- *      HERE THE <h1> IS THE NAME AND IS NEVER TOUCHED. This animates a <p> beneath
- *      it.
- *
- *   3. IT FORCED AN ACCESSIBILITY WORKAROUND — a visually-hidden true title plus
- *      `aria-hidden` on the animation. Instead this element is marked
- *      `aria-hidden` and the COMPLETE list of roles is rendered beside it in the
- *      markup for assistive technology, so nothing is announced mid-word and
- *      nothing is announced twice.
- *
- *   4. IT COST A CLIENT COMPONENT. It still does — but one client boundary now
- *      serves the whole hero rather than being spent on this alone.
- *
- * Every string comes from `headline.rotatingRoles`, which is supplied intake data.
- * No role is invented, abbreviated or reordered here.
- */
-function rotateRoles(root: HTMLElement): () => void {
-  const line = root.querySelector<HTMLElement>('[data-anime="role-lead"]')
-  if (!line) return () => {}
-
-  const raw = line.getAttribute("data-roles")
-  const roles = raw ? (JSON.parse(raw) as string[]) : []
-  // Nothing to cycle between: one role is a statement, not a rotation.
-  if (roles.length < 2) return () => {}
-
-  let index = 0
-  let timer: ReturnType<typeof setTimeout> | undefined
-  let stopped = false
-
-  /*
-   * 2 seconds on screen, and the crossfade is tightened to match.
+   * Teardown STOPS each animation, then clears the inline styles this wrote.
    *
-   * These are two-word titles — "Business Development", "Strategic Partnerships"
-   * — so the read is quick and a long hold reads as a stall rather than as calm.
-   * The transition durations below were sized for the old 4.2s cadence; left
-   * alone they would eat almost half of a 2s cycle and the line would spend more
-   * time moving than resting, which is the thing that actually makes a rotating
-   * headline feel frantic.
+   * The stop is the half that anime.js did for free through `scope.revert()`.
+   * Without it, clearing the styles is pointless: a still-running animation owns
+   * the element and writes its own value back on the very next frame, so the hero
+   * would keep animating into a component that has already unmounted.
    *
-   * HOLD is the time the text is STILL. The cycle is HOLD plus the two tween
-   * durations, so the visible rhythm is roughly 2.6s per role.
+   * Clearing rather than reversing is deliberate. Anything left behind, an
+   * opacity, a transform, would be a value the stylesheet no longer controls, and
+   * on a client-side navigation back to this page it would fight the fresh mount.
    */
-  const HOLD = 2000
-
-  const step = () => {
-    if (stopped) return
-    index = (index + 1) % roles.length
-
-    animate(line, {
-      opacity: [1, 0],
-      translateY: [0, -8],
-      duration: 240,
-      ease: "in(2)",
-      onComplete: () => {
-        if (stopped) return
-        line.textContent = roles[index]
-        animate(line, {
-          opacity: [0, 1],
-          translateY: [8, 0],
-          duration: 320,
-          ease: "out(3)",
-        })
-      },
-    })
-
-    timer = setTimeout(step, HOLD)
-  }
-
-  // The first change waits a full hold plus the entrance, so the role the page
-  // loaded with is the one a visitor actually reads first.
-  timer = setTimeout(step, HOLD + 600)
-
   return () => {
-    stopped = true
-    if (timer) clearTimeout(timer)
-    // Restore the first role: whatever is in the DOM on teardown would otherwise
-    // become the server/client mismatch on the next mount.
-    line.textContent = roles[0]
-    utils.remove(line)
+    running.forEach((animation) => animation.stop())
+    clearStyles(targets)
   }
 }
+
+/*
+ * THE NAME SHIMMER IS GONE, AND ITS REMOVAL FIXED A RENDERING BUG AS WELL AS A
+ * TASTE ONE.
+ *
+ * What stood here painted the name with `background-clip: text` and
+ * `-webkit-text-fill-color: transparent`, then swept a champagne band across it.
+ *
+ * THE BUG: `background-clip: text` clips to the ELEMENT BOX, not to the glyphs.
+ * The h1 is a block, 672px wide at 1440px viewport, while the name itself only
+ * inks 467px of that. With `background-size: 220%` starting at `120% 0`, the
+ * gradient's opaque region sat off past the right of the text, so the first ~200px
+ * of glyphs were painted with the transparent tail. "Sanae Rakik" rendered as
+ * "akik" for the 1.5s of the sweep, and permanently for anyone whose
+ * `onComplete` never fired, a tab backgrounded during the delay, most obviously.
+ *
+ * THE TASTE: it was gradient text, on a person's name. A moving highlight is what
+ * a logo does, not what a name does. The entrance already gives the name its
+ * moment; it does not need to also glint.
+ *
+ * Deliberately not replaced with a "fixed" version. The correct fix would be
+ * `background-clip` on an inline-block shrink-wrapped to the text, which still
+ * leaves gradient text on the one string on this page that must never fail to
+ * render.
+ */
+
+/*
+ * THE ROLE ROTATION MOVED TO THE FRAMER LAYER.
+ *
+ * `rotateRoles()` lived here and is now components/motion/fm/role-cycle.tsx. It
+ * was ~180 lines, and almost all of them existed to answer one question: how wide
+ * is this box about to be. It measured each role by writing the text into the live
+ * element and reading `scrollWidth`, cached the results in a Map, invalidated that
+ * Map on resize, drove a separately-tracked width spring, and carried four
+ * promise-rejection arms so that tearing down mid-crossfade did not log unhandled
+ * rejections into the console on every navigation.
+ *
+ * `layout` projection answers that question by measuring the real box after React
+ * has rendered the new text, so the measurement, the cache, the resize handler and
+ * a forced layout per role are all simply gone.
+ *
+ * THE VISUAL CONTRACT DID NOT CHANGE. Same 2000ms hold, same first change at
+ * HOLD + 600, same out-then-in crossfade on the same two curves, same `bounce: 0`
+ * on the width so the edge never overshoots, that constraint comes from intake
+ * section 3 and is restated at the new call site.
+ *
+ * WHY IT HAD TO BE DELETED RATHER THAN LEFT DORMANT: both versions write
+ * `textContent` and `style.width` on the same element. Two systems writing one
+ * property is the exact failure the ownership rule in
+ * components/motion/fm/variants.ts exists to prevent, and a dormant copy is one
+ * `mountHero` edit away from being live again.
+ *
+ * `[data-anime="role-lead"]` still exists in components/hero.tsx and is still
+ * animated by `entrance()` below, but it is now the WRAPPER around the animated
+ * line, not the line itself. The vanilla layer fades the wrapper in on load; the
+ * Framer layer rotates the text inside it. Two elements, two effects, no shared
+ * property.
+ */
 
 /*
  * THE PORTRAIT NO LONGER FOLLOWS THE POINTER.
@@ -311,7 +287,44 @@ function rotateRoles(root: HTMLElement): () => void {
  * site responding to the visitor, which is the opposite of the register intake
  * section 3 asks for ("رسمي · قيادي", and no "عناصر حركية زائدة").
  *
- * The entrance animation stays — that plays once, on arrival, and settles. What
+ * The entrance animation stays, that plays once, on arrival, and settles. What
  * is gone is the part that never settled.
+ *
+ * `portraitDrift` below is NOT that effect returning, and the difference is the
+ * input. See the note on it.
  */
 
+/*
+ * THE PORTRAIT DRIFT MOVED TO THE FRAMER LAYER TOO.
+ *
+ * `portraitDrift()` scrubbed the figure 8px downward across the hero's exit. It is
+ * now components/motion/fm/hero-camera.tsx, where those 8px survive as ONE TERM of
+ * a larger move: the portrait recedes in Z, tilts its top edge away, trails
+ * downward and dims as the hero leaves.
+ *
+ * ── THE ARGUMENT ABOVE STILL GOVERNS IT ────────────────────────────────────────
+ *
+ * The note above this one removed a parallax that tracked the CURSOR, and the
+ * objection was never that the figure moved, it is that tying a photograph of a
+ * person to the pointer makes her an element of the interface. Scroll carries none
+ * of that: it is the reader leaving, the frame settling as they go is how a camera
+ * behaves rather than how a widget behaves, and it ENDS once the hero is off
+ * screen. That reasoning transferred with the code and is restated at the new
+ * call site, along with the ceiling on every number.
+ *
+ * ── WHY IT COULD NOT STAY HERE ALONGSIDE THE NEW ONE ───────────────────────────
+ *
+ * `entrance()` above also writes this element, `opacity` and `scale`, on load.
+ * The camera writes `opacity`, `scale`, `y`, `z` and `rotateX`. Three writers on
+ * one node, two of them on the same two properties.
+ *
+ * The fix is in the markup rather than here: components/hero.tsx now nests a
+ * second element inside `[data-hero="portrait"]`, so the entrance owns the outer
+ * node and the camera owns the inner one. One effect per element, which is the
+ * rule components/motion/sections.ts:371-383 states and
+ * components/motion/fm/variants.ts carries into the Framer layer.
+ *
+ * `DRIFT` and the `scroll` import went with it. Nothing in this file observes the
+ * scroll position any more, which is what lets the docblock at the top say so
+ * without qualification.
+ */

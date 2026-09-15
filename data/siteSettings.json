@@ -1,19 +1,19 @@
 {
-  "_comment": "Intake form section 6. Each contact line carries `visibility`: public goes on the website, internal never leaves our file, to-confirm is withheld until confirmed in writing. lib/site-settings.ts renders ONLY visibility === public. Every line is withheld today because section 6 defers all of them — 'لا يُنشر في هذه المرحلة' for phone and WhatsApp, 'يُزوَّد لاحقًا' for email. The contact page therefore offers the form and the country, which is the honest state rather than a gap.",
+  "_comment": "Intake form section 6. Each contact line carries `visibility`: public goes on the website, internal never leaves our file, to-confirm is withheld until confirmed in writing. lib/site-settings.ts renders ONLY visibility === public. Every line is withheld today because section 6 defers all of them, 'لا يُنشر في هذه المرحلة' for phone and WhatsApp, 'يُزوَّد لاحقًا' for email. The contact page therefore offers the form and the country, which is the honest state rather than a gap.",
   "siteName": "Sanae Rakik",
   "siteUrl": "https://sanaerakik.com",
-  "_comment_url": "PLACEHOLDER — not a chosen domain. Intake section 7: 'لم يُحدَّد. يُطلب من فريق هبّة اقتراح نطاقات متاحة مبنية على الاسم الشخصي لاعتماد أحدها' — the client asked us to propose available domains built on her name. domainConfirmed stays false until one is approved. lib/seo.ts and app/sitemap.ts both read this.",
+  "_comment_url": "PLACEHOLDER, not a chosen domain. Intake section 7: 'لم يُحدَّد. يُطلب من فريق هبّة اقتراح نطاقات متاحة مبنية على الاسم الشخصي لاعتماد أحدها', the client asked us to propose available domains built on her name. domainConfirmed stays false until one is approved. lib/seo.ts and app/sitemap.ts both read this.",
   "domainConfirmed": false,
   "contact": {
-    "_comment_email": "Intake section 6: 'يُزوَّد لاحقًا (يُفعَّل بريد رسمي باسم النطاق بعد إنشائه)' — an official domain mailbox is to be created once the domain is chosen. No address exists yet, so none is listed. The contact form posts to CONTACT_TO_EMAIL and needs no published address to work.",
+    "_comment_email": "Intake section 6: 'يُزوَّد لاحقًا (يُفعَّل بريد رسمي باسم النطاق بعد إنشائه)', an official domain mailbox is to be created once the domain is chosen. No address exists yet, so none is listed. The contact form posts to CONTACT_TO_EMAIL and needs no published address to work.",
     "emails": [],
-    "_comment_phones": "Intake section 6: both the phone and the WhatsApp number are 'لا يُنشر في هذه المرحلة' — not published at this stage.",
+    "_comment_phones": "Intake section 6: both the phone and the WhatsApp number are 'لا يُنشر في هذه المرحلة', not published at this stage.",
     "phones": [],
     "addresses": [],
     "_comment_addresses": "Intake section 6 forbids publishing the home address, personal numbers, personal email, client or partner names, and any deal detail or financial value. No address is held here at all.",
     "cityOnly": { "en": "Netherlands", "ar": "هولندا" }
   },
-  "_comment_social": "Intake section 9: Instagram, Facebook, LinkedIn and TikTok/YouTube/X all recorded as 'لم يُزوَّد' — not supplied. A unified handle is to be proposed after the domain is approved. The empty array makes the social rail render decorative rings rather than dead links.",
+  "_comment_social": "Intake section 9: Instagram, Facebook, LinkedIn and TikTok/YouTube/X all recorded as 'لم يُزوَّد', not supplied. A unified handle is to be proposed after the domain is approved. The empty array makes the social rail render decorative rings rather than dead links.",
   "social": [],
   "visibility": {
     "contactForm": true,

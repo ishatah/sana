@@ -1,9 +1,9 @@
 /**
- * The hero stat bar — three figures in a ruled row.
+ * The hero stat bar, three figures in a ruled row.
  *
  * EVERY NUMBER IS COUNTED, NOT CLAIMED. This is the component most likely to
  * drift into fabrication, because the reference design it copies reads
- * "5+ Experiences / 20+ Project done / 80+ Happy Clients" — three figures that
+ * "5+ Experiences / 20+ Project done / 80+ Happy Clients", three figures that
  * sound like achievements and are, in a template, entirely arbitrary.
  *
  * `data/biography.json` already refuses to play that game: its `stats[]` block
@@ -18,8 +18,8 @@
  * marked tier C or `publish: false` can never silently inflate a number the
  * visitor reads as verified.
  *
- * A ZERO IS NEVER SHOWN. lib/profile-content.ts argues the point directly — "an
- * empty stat counter reading 0 is worse than no counter" — so a cell with nothing
+ * A ZERO IS NEVER SHOWN. lib/profile-content.ts argues the point directly, "an
+ * empty stat counter reading 0 is worse than no counter", so a cell with nothing
  * to count is dropped, and the bar disappears entirely if none survive.
  */
 
@@ -28,7 +28,7 @@ export interface Stat {
   value: string
   label: string
   /**
-   * `count` marks a cell whose value is a TALLY of records — published positions,
+   * `count` marks a cell whose value is a TALLY of records, published positions,
    * published memberships. Anything else (a duration, a market list) is left
    * undefined and is never suppressed for being small.
    *
@@ -74,7 +74,7 @@ export function StatBar({ stats, className = "" }: { stats: Stat[]; className?: 
           key={s.label}
           /*
            * `border-s` on every cell except the first draws the dividers with no
-           * separate elements — and `-s` rather than `-l` means the rules fall on
+           * separate elements, and `-s` rather than `-l` means the rules fall on
            * the correct side in Arabic without a second rule set, the same
            * logical-direction approach the timeline rail uses.
            */
@@ -82,7 +82,13 @@ export function StatBar({ stats, className = "" }: { stats: Stat[]; className?: 
         >
           <dt className="sr-only">{s.label}</dt>
           <dd>
-            <span className="block font-display text-2xl leading-none text-[color:var(--primary)] sm:text-3xl">
+            {/* Effect 5: the figure carries the gold gradient, the label below
+                stays --muted-foreground, so the pair still reads as
+                figure-plus-caption rather than as two competing marks. The
+                class declares a plain --primary fallback before the clip, so a
+                browser without background-clip: text shows a solid gold figure
+                rather than an invisible one. */}
+            <span className="stat-figure-gradient block font-display text-2xl leading-none sm:text-3xl">
               {s.value}
             </span>
             <span className="mt-2 block text-xs text-[color:var(--muted-foreground)]">{s.label}</span>

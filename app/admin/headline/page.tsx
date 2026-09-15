@@ -49,7 +49,7 @@ export default function HeadlineAdminPage() {
           value={data.primaryTitle}
           onChange={(v) => set("primaryTitle", v)}
           multiline
-          hint="One line, sits under the name. Name the organisation in full — never an acronym on its own."
+          hint="One line, sits under the name. Name the organisation in full, never an acronym on its own."
         />
         <LocalizedFieldRow
           label="Alternate short title"
@@ -62,7 +62,7 @@ export default function HeadlineAdminPage() {
 
       <ContentSection
         title="Rotating roles"
-        description="Typed one after another in the hero. Comma-separated. Every entry must correspond to a published position — the hero must not claim a role the positions table has not cleared."
+        description="Typed one after another in the hero. Comma-separated. Every entry must correspond to a published position, the hero must not claim a role the positions table has not cleared."
       >
         {/* Driven by routing.locales rather than a literal list, so adding or
             removing a locale never leaves this editor one column short. */}
@@ -85,7 +85,7 @@ export default function HeadlineAdminPage() {
 
       <ContentSection
         title="Positioning"
-        description="Intake section 9. Internal — this does not render on the site, it steers the copy."
+        description="Intake section 9. Internal, this does not render on the site, it steers the copy."
       >
         <LocalizedFieldRow
           label="Primary professional identity"

@@ -8,17 +8,17 @@ import type { ContactEmail, ContactPhone, OfficeAddress } from "@/lib/site-setti
  *
  * What it shows is decided entirely by lib/site-settings.ts, which allowlists on
  * `visibility === "public"`. Today that resolves to two email addresses and
- * nothing else — both phone numbers and both office addresses are marked
+ * nothing else, both phone numbers and both office addresses are marked
  * to-confirm pending open question Q6, and the third email is internal.
  *
  * So this component has to degrade well when most of the block is missing, and it
  * does that by saying so: `emailOnlyNote` tells the visitor contact is by email
  * rather than leaving them to notice an absence. A contact section that silently
  * shows one column reads as unfinished; one that states its channel reads as
- * deliberate — and it is deliberate.
+ * deliberate, and it is deliberate.
  *
  * The address column falls back to the country alone. No address has been supplied
- * for publication, and section 15 forbids publishing a home address outright —
+ * for publication, and section 15 forbids publishing a home address outright,
  * "Netherlands" is the most precise location that is certainly safe to publish.
  * Intake section 6 leaves the city to be named later only if she wants it.
  */
@@ -45,7 +45,7 @@ export async function ContactSection({
       {/* No `Reveal` wrapper: `arcArrival` animates each [data-anime="row"] and
           the form directly, both guarded by `ensureVisible`. A wrapper here was a
           second visibility gate that failed inside the full-viewport scope and
-          hid rows the recipe had already revealed — see about-section.tsx. */}
+          hid rows the recipe had already revealed, see about-section.tsx. */}
       <div>
         <div className="space-y-9">
           {emails.length > 0 && (
@@ -57,7 +57,7 @@ export async function ContactSection({
                 {emails.map((e) => (
                   <li key={e.id} className="flex items-center gap-1">
                     {/*
-                      The mailto link is untouched — the copy button is an ADDITION
+                      The mailto link is untouched, the copy button is an ADDITION
                       beside it, not a replacement. Someone with a mail client
                       configured still gets one click to compose; someone without
                       one gets the address on their clipboard instead of a dead link.
@@ -81,7 +81,7 @@ export async function ContactSection({
                     >
                       {/*
                         CSS-DRAWN MARKS, replacing the icon-library <Copy> and
-                        <Check> — both rendered SVG.
+                        <Check>, both rendered SVG.
 
                         Copy is two offset rounded squares, which is the same
                         "sheet behind a sheet" the glyph drew. Check is one box
@@ -90,7 +90,7 @@ export async function ContactSection({
 
                         The wrappers keep `.copy-icon` and their `data-interact`
                         hooks untouched, so the JS that swaps idle for done is
-                        unchanged — only what sits inside each layer differs.
+                        unchanged, only what sits inside each layer differs.
                       */}
                       <span aria-hidden className="copy-icon" data-interact="copy-idle">
                         <span className="relative block h-[14px] w-[14px]">
@@ -111,7 +111,7 @@ export async function ContactSection({
                       </span>
                       {/*
                         The icon swap is aria-hidden, so without this a screen
-                        reader gets no confirmation that anything happened — the
+                        reader gets no confirmation that anything happened, the
                         button would simply appear inert. `aria-live` announces
                         the result the moment the interaction writes it.
                       */}

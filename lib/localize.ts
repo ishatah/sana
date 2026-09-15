@@ -22,7 +22,7 @@ export type LocalizedString = Partial<Record<Locale, string>> | string
  *
  * THIS LIST MUST NAME ONLY LOCALES THAT EXIST. It previously read
  * `["tr", "en"]`, and when Turkish was removed that first entry became a lookup
- * for a key no data file carries any more — silently falling through to the
+ * for a key no data file carries any more, silently falling through to the
  * `Object.values` sweep on every field, which returns whatever key happens to be
  * declared first rather than a chosen language. It still rendered text, which is
  * exactly why it would not have been noticed.
@@ -52,7 +52,7 @@ export function localize(field: LocalizedString | null | undefined, locale: stri
 }
 
 /** True when a localized field has no usable copy in any locale. Drives the
- *  "hide the whole section" checks — an empty quote must not render an empty
+ *  "hide the whole section" checks, an empty quote must not render an empty
  *  blockquote with a stray attribution under it. */
 export function isEmpty(field: LocalizedString | null | undefined): boolean {
   return localize(field, routing.defaultLocale) === ""
