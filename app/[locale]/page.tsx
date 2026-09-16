@@ -24,7 +24,6 @@ import { HeroScope } from "@/components/motion/hero-scope"
    <li> wrapper for each row it is passed; see the header note in the component
    for why this is a pinned ledger and not the 3D card deck first planned. */
 import { PinnedLedger } from "@/components/motion/fm/pinned-ledger"
-import { SectionThread } from "@/components/motion/fm/section-thread"
 /* Dev-only invariant checks on the rendered tree. Null in production. */
 import { MotionAudit } from "@/components/motion/fm/audit"
 import {
@@ -225,17 +224,25 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div aria-hidden className="hero-field" />
 
         {/*
-          THE CONNECTED THREAD, one glowing line through every band.
+          THE CONNECTED THREAD WAS REMOVED FROM DISPLAY.
 
-          It is mounted HERE, as a sibling of the sections rather than inside any
-          one of them, because that is what makes it one line: a thread rendered
-          per-section would restart its stroke at each box and put a join on every
-          band boundary it exists to cross. See the component for the full note.
+          `<SectionThread targetId="main" />` stood here: one SVG measured across
+          every band, drawing itself on scroll and carrying a travelling spark.
+          Removed at the client's request as too decorative for a formal
+          consultant profile.
 
-          It measures `#main`, so it picks up every `<section>` below it
-          automatically; adding or removing a band needs no change here.
+          IT WAS ALSO A SECOND READOUT OF THE FIRST. `<ReadingRail />` in
+          app/[locale]/layout.tsx already reports document progress, and two
+          elements answering "how far down am I" is one more than the question
+          has. The rail is the one that stayed, because it is a 2px hairline at
+          the viewport edge rather than a lit curve through the content column.
+
+          components/motion/fm/section-thread.tsx and its `.section-thread` rules
+          in styles/globals.css are left in place, unmounted. Restoring it is the
+          import plus this line; the component carries a long note on why the
+          geometry is measured rather than hardcoded, which is worth keeping
+          whether or not it renders.
         */}
-        <SectionThread targetId="main" />
 
 
         {/*

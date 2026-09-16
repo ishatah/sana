@@ -30,6 +30,27 @@ import type { ResolvedMedia } from "@/lib/media"
  * copy is therefore in the HTML source, not injected after hydration, which is
  * what keeps it indexable and readable with JS disabled.
  *
+ * ── NO BOX-DRAWING RULES INSIDE JSX COMMENTS IN THIS FILE ────────────────────
+ *
+ * The section dividers in the markup below are plain one-line comments rather
+ * than the box-drawing rule comments this codebase uses elsewhere in markup,
+ * and that is a workaround for a real crash rather than a style choice.
+ *
+ * Next 16.2.6's Rust code-frame highlighter slices source lines by BYTE offset
+ * without checking char boundaries. `─` (U+2500) is three bytes, so a long rule
+ * inside a JSX comment gives it a line whose byte length is far past its char
+ * length, and when it tries to frame that line it panics:
+ *
+ *     thread '<unnamed>' panicked at crates/next-code-frame/src/highlight.rs
+ *     end byte index 121 is not a char boundary; it is inside '─'
+ *
+ * That took down the dev server on every home-page compile, because this file is
+ * what the home route rebuilds. The rules in the DOCBLOCKS above are fine and are
+ * left alone — the crash needs a JSX-comment line for the highlighter to frame.
+ *
+ * It is an upstream bug, not invalid source, so this is worth revisiting when
+ * Next is upgraded. Until then, keep JSX comments here short and ASCII.
+ *
  * ── THE PROP CONTRACT IS THE ORIGINAL'S, UNCHANGED ───────────────────────────
  *
  * Identical shape to components/hero.tsx so the two are interchangeable at the
@@ -121,7 +142,7 @@ export async function HeroVvip({
       <VvipField />
 
       <div className="container-page relative z-10 grid items-center gap-12 py-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20 lg:py-14">
-        {/* ── The text column ──────────────────────────────────────────────── */}
+        {/* The text column. */}
         <VvipStagger className="flex flex-col gap-7">
           {kickerText && (
             <VvipRise>
@@ -184,8 +205,8 @@ export async function HeroVvip({
           </VvipRise>
         </VvipStagger>
 
-        {/* ── The portrait column ──────────────────────────────────────────── */}
-        <VvipPortraitReveal className="relative mx-auto w-full max-w-sm lg:max-w-none">
+        {/* The portrait column. */}
+        <VvipPortraitReveal className="relative mx-auto w-full max-w-md lg:max-w-none">
           {/*
             THE RATIO IS THE PHOTOGRAPH'S OWN, 1206x1748, NOT A CHOSEN 4/5.
 

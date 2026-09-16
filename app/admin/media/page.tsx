@@ -172,7 +172,7 @@ export default function MediaAdminPage() {
                   </span>
                 </div>
 
-                {/* ── Permission, first ─────────────────────────────────────────── */}
+                {/* Permission, first. */}
                 <div
                   className={`space-y-3 border-s-2 ps-4 ${
                     granted ? "border-[color:var(--success)]/40" : "border-[color:var(--warning)]/40"
@@ -220,7 +220,7 @@ export default function MediaAdminPage() {
                   </div>
                 </div>
 
-                {/* ── Then the file ─────────────────────────────────────────────── */}
+                {/* Then the file. */}
                 <div className="space-y-2">
                   {hasFile ? (
                     <div className="flex flex-wrap items-center gap-3">

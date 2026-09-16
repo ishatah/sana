@@ -3946,6 +3946,29 @@ body[data-nav-scrolled] .masthead-name {
  * narrow as it shortens rather than stretching, and `margin-inline: auto` centres
  * what is left in the column it no longer fills.
  */
+/*
+ * ── THE ABOUT PORTRAIT DISSOLVES THE SAME WAY THE HERO'S DOES ────────────────
+ *
+ * Same photograph, same problem, so the same fix rather than a second one: the
+ * file is a cut-out cropped at her lap, opaque clean across the frame at 95% of
+ * its height, so rendered as-is it ends in a hard horizontal line. See the note
+ * on `.vvip-portrait img` for why this is a MASK and not a painted gradient — the
+ * ground behind it is not one flat colour, so anything painted on top would be
+ * correct in one place and wrong everywhere else.
+ *
+ * The ramp is identical to the hero's (55% > 78% > 100%) because the two are the
+ * same subject on the same site and a reader scrolling from one to the other
+ * would notice them dissolving differently. If one ramp is retuned, retune both.
+ *
+ * SCOPED TO THE <img>, NOT `.about-figure`. When the portrait slot is empty the
+ * figure renders `SectionFigure`'s ruled placeholder frame, and masking THAT
+ * would fade out a border that is meant to hold the column's shape.
+ */
+.about-figure img {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, rgba(0, 0, 0, 0.5) 86%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 68%, rgba(0, 0, 0, 0.5) 86%, transparent 100%);
+}
+
 @media (min-width: 1024px) {
   .about-figure-capped img {
     max-height: min(62svh, 34rem);
@@ -7703,7 +7726,21 @@ body[data-nav-scrolled] .masthead-name {
    * white ground still runs edge to edge behind the header: a margin here would
    * expose the page beneath as a strip above the hero.
    */
-  padding-top: var(--nav-height, 0px);
+  /*
+   * THE TALL HEIGHT, PINNED — NOT `--nav-height`, FOR THE SAME REASON AS THE
+   * PORTRAIT CAP BELOW.
+   *
+   * `--nav-height` swaps from 9.5rem to 4.75rem the moment `body` gains
+   * `data-nav-scrolled`, so reading it here made this padding collapse by 76px
+   * on the first scroll and jerked the entire hero upward — the other half of
+   * the "components suddenly get large" jump.
+   *
+   * --masthead-tall is the height the header actually has WHILE the hero is in
+   * view, which is the only time this padding matters: the collapse happens as
+   * the reader leaves the band, and by then the clearance is irrelevant. Pinning
+   * it keeps the hero geometrically still for its whole time on screen.
+   */
+  padding-top: var(--masthead-tall);
   /* The floor is the viewport LESS the header, since the header is now inside
      this band's own box. min-height, not height: at Arabic and Dutch string
      lengths the content runs taller and must grow rather than clip. */
@@ -7866,9 +7903,37 @@ body[data-nav-scrolled] .masthead-name {
  * spent on empty space.
  */
 .vvip-portrait img {
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 92%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 92%, transparent 100%);
+  /*
+   * THE RAMP WAS 92%>100% AND IS NOW 55%>100%, on request: a longer, softer
+   * dissolve rather than a short one at the very bottom edge.
+   *
+   * The two stops do different jobs. The first (55%) is where the fade BEGINS,
+   * and moving it up the frame is the whole change: the figure now loses density
+   * gradually from about her waist rather than staying opaque to her lap and
+   * ending in a hurry. The second stays at 100% because the frame's bottom edge
+   * is the one place the image must reach zero, wherever the ramp started.
+   *
+   * The middle stop is what keeps her face and shoulders untouched: alpha is held
+   * at full to 55%, so nothing above that line is touched at all. A single
+   * two-stop gradient from 0% would have thinned the whole figure evenly,
+   * including her face, which is not a fade but a reduction in opacity.
+   */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, rgba(0, 0, 0, 0.5) 86%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 68%, rgba(0, 0, 0, 0.5) 86%, transparent 100%);
 }
+
+/*
+ * THE RAMP STARTS AT 68%, NOT 55%, AND THE DIFFERENCE IS HER HANDS.
+ *
+ * At 55% the fade began around her waist, which put her folded hands — the most
+ * human detail in the frame, and the thing that makes the portrait read as a
+ * person rather than a headshot — inside the ramp at roughly half alpha. The
+ * dissolve was long and soft and it was eating the subject.
+ *
+ * 68% puts the start just below them. The ramp is still long (32% of the frame
+ * against the 8% it began as), so there is no line anywhere, and what dissolves
+ * is the hem of the abaya, which is the part with nothing to lose.
+ */
 
 /*
  * THE PORTRAIT IS CAPPED, BECAUSE IT WAS SETTING THE BAND'S HEIGHT.
@@ -7884,7 +7949,40 @@ body[data-nav-scrolled] .masthead-name {
  */
 @media (min-width: 1024px) {
   .vvip-portrait {
-    max-height: calc(100svh - var(--nav-height, 0px) - 15rem);
+    /*
+     * 9rem of reserve rather than 15rem, which is the "make it bigger" change.
+     *
+     * The subtrahend is the height this band owes to things that are not the
+     * portrait: the fixed masthead (--nav-height) plus the grid's own padding.
+     * Shrinking it lets the figure claim more of the column. It cannot go to zero:
+     * the band still has to fit one viewport, and the text column beside it is
+     * ~640px tall, so the portrait overtaking that is what starts pushing the
+     * hero past a single screen again.
+     */
+    /*
+     * ── IT SUBTRACTS THE MASTHEAD'S *SHORT* HEIGHT, NOT `--nav-height` ────────
+     *
+     * THE BUG THIS FIXES: the portrait visibly JUMPED LARGER the instant you
+     * began scrolling. Measured at 1440x900, the image went 384x556 -> 436x632
+     * between scrollY 0 and 150, a ~13% size change with no transform involved.
+     *
+     * The cause is that `--nav-height` is not a constant. The masthead has two
+     * heights and `body[data-nav-scrolled]` swaps the token from
+     * --masthead-tall (9.5rem) to --masthead-short (4.75rem) as soon as the page
+     * moves. That is 76px, and this cap subtracts the token, so the ceiling rose
+     * by exactly 76px and the image grew into it. A layout change, not an
+     * animation, which is why it read as a sudden jump rather than a transition.
+     *
+     * Reading --masthead-short pins the ceiling to ONE number in both states. The
+     * portrait is therefore always at its larger size, including before any
+     * scroll has happened, which is the behaviour asked for.
+     *
+     * A cap that tracks a collapsing header is wrong here in principle too: the
+     * hero is the one band where the header is overlaid rather than flowed past,
+     * so the space the portrait may occupy does not actually change when the
+     * header shrinks. Only the token did.
+     */
+    max-height: calc(100svh - var(--masthead-short) - 12rem);
   }
   .vvip-portrait img {
     height: 100%;
@@ -8037,5 +8135,179 @@ body[data-nav-scrolled] .masthead-name {
   .vvip-cta-primary:hover,
   .vvip-cta-secondary:hover {
     transform: translateY(-2px);
+  }
+}
+
+/*
+ * ═══════════════════════════════════════════════════════════════════════════
+ * THE ROUTE LOADING SCREEN. See app/loading.tsx for the reasoning.
+ * ═══════════════════════════════════════════════════════════════════════════
+ */
+
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* svh, not vh: on mobile the browser chrome collapsing mid-transition would
+     otherwise resize this screen while it is on display. */
+  min-height: 100svh;
+  background: var(--background);
+  /* The same faint blue wash the hero's ground carries, at a fraction of the
+     strength. It stops a white screen reading as a blank page failing to load,
+     which is the thing a loading state most needs to avoid looking like. */
+  background-image: radial-gradient(60% 50% at 50% 40%, rgba(30, 144, 214, 0.05) 0%, transparent 70%);
+}
+
+.loading-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/*
+ * The wordmark.
+ *
+ * It FADES IN RATHER THAN APPEARING, and the delay is the point: a transition
+ * that resolves in under ~250ms never shows this at full strength, so a fast
+ * navigation stays visually silent instead of flashing a loading screen at the
+ * reader. Only a genuinely slow route gets a visible loader. A loader that
+ * appears instantly on every click makes a fast site feel slow.
+ */
+.loading-wordmark {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--heading);
+  opacity: 0;
+  animation: loading-mark-in var(--dur-4, 720ms) var(--ease-out) 180ms forwards;
+}
+
+/* Arabic has no small caps, and letterspacing an Arabic run breaks the joins
+   between letters. The wordmark is Latin in every locale (her published name is
+   fixed by intake section 6), so this only guards a future change. */
+[dir="rtl"] .loading-wordmark {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* The track. A hairline in the border tone, so the rule has something to travel
+   along rather than appearing out of nothing. */
+.loading-rule {
+  position: relative;
+  display: block;
+  width: 8rem;
+  height: 1px;
+  overflow: hidden;
+  background: var(--border);
+}
+
+/*
+ * The fill. A short segment that sweeps the track rather than a bar growing from
+ * 0 to 100%, because a bar that fills and resets reads as a restart — as though
+ * the thing you are waiting for failed and began again.
+ *
+ * It carries a gradient with transparent ends so the segment has no hard edges:
+ * a solid block sliding along a line reads as an object moving, where a soft
+ * segment reads as light passing along the rule, which is the register the rest
+ * of this design works in.
+ */
+.loading-rule-fill {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 45%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--primary) 50%,
+    transparent 100%
+  );
+  animation: loading-sweep 1.4s var(--ease-soft) infinite;
+}
+
+@keyframes loading-mark-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*
+ * ── THE TRAVEL IS SIZED SO THE TRACK IS NEVER EMPTY ──────────────────────────
+ *
+ * The segment is 45% of the track, so one track-width is ~222% of the segment's
+ * own width, and `translateX` is a percentage OF THE ELEMENT, not of the track.
+ *
+ * It first ran -100% -> 322%, which put the segment fully clear at both ends.
+ * Sampling the live animation showed the cost: across one cycle the segment sat
+ * off the track for several consecutive frames (measured x=139..184 against a
+ * 128px track), so the rule went blank between passes and the loader read as
+ * having stalled — the exact thing a loading state must never suggest.
+ *
+ * -100% -> 200% OVERLAPS the turn. 222% would land the trailing edge exactly at
+ * the track's end, which is correct on paper but still allowed one boundary frame
+ * per cycle to catch the segment fully clear (measured: 1 blank frame in 24).
+ * Stopping 22% short means the outgoing sweep is still on the track when the next
+ * one enters, so there is no frame without light on the rule.
+ */
+@keyframes loading-sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+
+/* RTL: the sweep must travel toward the reading edge, the same mirror
+   `.reading-rail` and `.band-edge` already carry. Without it the light runs
+   backwards against the text on an Arabic page. */
+[dir="rtl"] .loading-rule-fill {
+  animation-name: loading-sweep-rtl;
+}
+
+@keyframes loading-sweep-rtl {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+/*
+ * THE NO-MOTION FLOOR.
+ *
+ * A travelling light is exactly the kind of repeating motion `prefers-reduced-
+ * motion` exists to suppress, and a loader is shown at every navigation, so it is
+ * one of the most repeated animations on the site.
+ *
+ * What replaces it is a STATIC, FULLY VISIBLE rule rather than nothing: the
+ * element still has to say "something is happening", and an empty track says the
+ * opposite. The wordmark drops its fade for the same reason and simply renders,
+ * which is also the correct fallback if the animation never runs at all.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .loading-wordmark {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+
+  .loading-rule-fill {
+    position: static;
+    width: 100%;
+    animation: none;
+    background: var(--primary);
+    /* At 1px a gradient with transparent ends is nearly invisible when it is not
+       moving, so the static state takes the flat accent instead. */
+    opacity: 0.5;
   }
 }
