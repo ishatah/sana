@@ -222,8 +222,50 @@ function entrance(
    * the hidden state would show the content retreating before it arrives, which is
    * the backwards-entrance failure this file warns about elsewhere.
    */
+  /*
+   * ── STATIC PROPERTIES ARE ASSIGNED, NOT ANIMATED ─────────────────────────────
+   *
+   * `mirrorFrom`'s own note already states the fact this depends on:
+   * "transformOrigin, willChange are not animated values at all". They travel in
+   * the same `from` object as the animated properties purely because that object
+   * is also the from-STATE, and they were being passed straight into `animate()`
+   * with everything else.
+   *
+   * Motion treats every key it is handed as a value to interpolate. For
+   * `willChange` that is harmless, the strings are swapped whole. For
+   * `transformOrigin` it is not: Motion reads the element's current computed
+   * origin, which the browser resolves to a PIXEL PAIR ("448px 100.3px"), and
+   * tries to interpolate that toward the keyword pair "center top". Keywords are
+   * not interpolatable, so it logs
+   *
+   *   You are trying to animate transformOrigin from "448px 100.3px" to
+   *   "center top". "center top" is not an animatable value.
+   *
+   * on every mount of the `ledgerRows` recipe, i.e. on every load of the homepage.
+   *
+   * Splitting them here fixes it at the one chokepoint every recipe passes through,
+   * rather than in the six from-objects that happen to carry such a key today.
+   * They are written straight to `el.style` rather than through `setStyles`,
+   * because `setStyles` composes `transform` as a string and the docblock below
+   * records what mixing that with Motion's transform state costs. Neither property
+   * is a transform, so neither goes near that path.
+   */
+  const STATIC_PROPS = new Set(["transformOrigin", "willChange"])
+
   const rearm = (values: Record<string, string | number>) => {
-    animate(targets as never, values as never, { duration: 0 } as never)
+    const animated: Record<string, string | number> = {}
+
+    for (const [key, value] of Object.entries(values)) {
+      if (STATIC_PROPS.has(key)) {
+        for (const el of targets) {
+          ;(el as HTMLElement).style[key as "transformOrigin" | "willChange"] = String(value)
+        }
+        continue
+      }
+      animated[key] = value
+    }
+
+    animate(targets as never, animated as never, { duration: 0 } as never)
   }
 
   rearm(mirrorFrom(from, edgeOf(root)))
@@ -289,7 +331,23 @@ function entrance(
       clearTimeout(timer)
       stopObserver()
       animation?.stop()
-      clearStyles(targets)
+      /*
+       * `transform-origin` and `will-change` are appended to the default list
+       * because `rearm` above now writes them as inline styles rather than handing
+       * them to `animate()`. Teardown removes what this module wrote, and leaving
+       * them off would strand a permanent `will-change` on every animated element,
+       * which is a compositor layer held for the life of the page, exactly the cost
+       * the `.section-skew` and `.stack-item` notes in styles/globals.css decline.
+       */
+      clearStyles(targets, [
+        "opacity",
+        "transform",
+        "clip-path",
+        "height",
+        "overflow",
+        "transform-origin",
+        "will-change",
+      ])
     },
   }
 }

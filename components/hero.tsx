@@ -7,7 +7,6 @@ import { HeroBackdrop } from "@/components/motion/objects"
 /* A client component rendered from this server one, a valid boundary, and the
    reason `Hero` does not itself need "use client". Only the canvas and its effect
    ship to the browser; every `localize` call above still runs once on the server. */
-import { WebGLShader } from "@/components/ui/web-gl-shader"
 /* Same boundary, same reason: the role line animates on the client, but the roles
    themselves were localized on the server and arrive here as finished strings. */
 import { RoleCycle } from "@/components/motion/fm/role-cycle"
@@ -229,9 +228,11 @@ export async function Hero({
         --heading text measures 15.4:1 on the declared ground and about 14.9:1 at
         that worst point, so nothing here needs a per-layer recomputation.
       */}
+      {/* The aurora (two drifting conic sweeps) and the bloom (one centred radial)
+          are both gone: each read as a glowing circle rather than as atmosphere.
+          `.mesh-hero` now paints a flat block-axis ramp and carries the ground on
+          its own. */}
       <div aria-hidden className="mesh-hero" />
-      <div aria-hidden className="aurora" />
-      <div aria-hidden className="hero-bloom" />
 
       {/*
         THE SHADER LAYER, third, and third for a reason.
@@ -274,7 +275,17 @@ export async function Hero({
         reach the top and bottom. The result sweeps the entire hero, so every ray
         leaves through a corner rather than stopping in open ground.
       */}
-      <WebGLShader opacity={0.34} distortion={0.03} speed={0.3} xScale={0.55} yScale={0.9} />
+      {/*
+        THE SHADER IS GONE, and what replaced it spans the whole page rather than
+        this one band.
+
+        It painted a diagonal ray field confined to the hero: a light that began
+        and ended at the hero's own box, which is the same discontinuity the
+        per-band washes had. `<SectionThread />` in app/[locale]/page.tsx is the
+        replacement, ONE glowing line that enters here and runs through every
+        section below, so the hero opens the page's line instead of owning a
+        separate effect that stops at its floor.
+      */}
 
       {/*
         TWO COLUMNS, COLLAPSING TO ONE BELOW `lg`.
@@ -590,49 +601,29 @@ export async function Hero({
         */}
         <div className="relative mx-auto w-full max-w-[19rem] lg:max-w-[26rem]">
           {/*
-            The light she is standing in.
+            ── THERE IS NO BLOOM BEHIND HER, AND THE SEPARATION IS IN THE FILE ────
 
-            A warm, off-centre bloom placed BEHIND the figure and biased to the
-            portrait side, so the brightest part of the ground sits just behind her
-            shoulder, the same place a key light would fall in the studio the
-            photograph came from. It is what stops the cutout reading as a flat
-            sticker: a figure with no light behind it has no depth to occupy.
+            This column used to carry a warm elliptical wash at z-0, described as
+            the key light she is standing in, on the argument that a figure with no
+            light behind it has no depth to occupy. The element is gone: on a page
+            that is now black end to end it was the last off-centre tinted radial
+            left, and it read as exactly what the discs before it read as, a glow
+            placed under the subject rather than light falling on her.
 
-            aria-hidden decoration at z-0, beneath the photograph, so nothing is
-            ever drawn over the subject herself.
+            What replaced it is a fix at the source rather than a layer on top.
+            The cutout's edge used to keep a 2-4px rim of the white seamless it was
+            shot against, fully opaque (measured: 1,642 bright pixels sitting
+            directly against transparency), and THAT was what made her read as a
+            sticker, an outline lit by nothing in the scene. A bloom behind the
+            figure does not remove that rim, it backlights it.
+
+            scripts/build-portrait-cutout.mjs now ramps alpha across the blend band
+            and un-premultiplies the seamless out of the colour of every partly
+            transparent pixel, so the edge carries her own colour at partial
+            coverage and composites correctly onto whatever is behind it. The rim
+            measures zero. She meets the ground directly, which is why nothing has
+            to be painted behind her to explain the join.
           */}
-          {/*
-            The warm bloom behind the figure, a key light, not a halo.
-
-            ── IT IS AN ELLIPSE, NOT A CIRCLE, AND THAT IS THE WHOLE DIFFERENCE ────
-
-            This previously used `radial-gradient(closest-side …)`. On a box 45%
-            larger than the portrait, `closest-side` resolves the SHORTEST side as
-            the radius, so the wash rendered as a ~980px gold circle centred behind
-            her shoulder, a disc, which on a near-black ground reads as a halo
-            placed under the subject rather than as light falling on her.
-
-            Explicit `70% 55%` percentages size the two axes independently, so the
-            bloom is wider than it is tall and follows the shape of a lit area
-            rather than a drawn shape. It is also weaker than the original (0.14
-            against 0.20 at the core), because its job is to lift her off the ground
-            by a little, not to announce itself.
-
-            NO `blur()` FILTER. It carried `blur-3xl` once: a filter cannot paint
-            outside its own element box, and the section above is `overflow: hidden`,
-            so the blur was clipped flat at all four edges and rendered as a large
-            soft-cornered RECTANGLE. A radial gradient is already a soft falloff, so
-            the filter bought nothing but that bug.
-          */}
-          <div
-            aria-hidden
-            data-hero="portrait-glow"
-            className="pointer-events-none absolute -inset-[40%] -z-0"
-            style={{
-              background:
-                "radial-gradient(70% 55% at 56% 42%, rgba(var(--primary-rgb), 0.14), rgba(var(--primary-rgb), 0.06) 40%, rgba(var(--primary-rgb), 0.02) 62%, transparent 80%)",
-            }}
-          />
 
           {/*
             TWO NESTED ELEMENTS, ONE EFFECT EACH, and the nesting is the point.
@@ -682,53 +673,55 @@ export async function Hero({
                * deleted, so the treatment is recoverable for a decorative image.
                *
                * EFFECT 40 IS ALSO NOT ADDED HERE even though the portrait is the
-               * obvious place for an edge fade: the mask documented below
-               * already IS that effect, tuned over two rounds against this
-               * specific photograph (the radial and linear stops below record
-               * why each number is what it is). Adding .edge-fade would install
-               * a second mask-image on the same element, and the later
-               * declaration would silently replace that tuning with a generic
-               * 12%/88% ramp, undoing the crop fix, not adding to it.
+               * obvious place for an edge fade: the client has asked that the
+               * supplied cut-out's edges be left alone, so an edge fade is
+               * exactly what must not be added here. `.edge-fade` would also
+               * install a second mask-image on this element and the later
+               * declaration would replace the bottom-of-frame dissolve below
+               * with a generic 12%/88% ramp, reinstating a side fade as a
+               * side effect of the one that is deliberately gone.
                */
               className="h-auto w-full select-none object-contain"
               /*
-               * THE FADE IS A MASK, NOT A GRADIENT OVERLAY, and the difference
-               * matters on a page whose ground is not a flat colour. An overlay
-               * would have to paint the exact backdrop colour on top of the image
-               * to hide its edge, and the backdrop behind her is a gold bloom, not
-               * a flat value, so any painted colour would be visibly wrong wherever
-               * the two disagreed.
+               * ── THE RADIAL IS GONE. NOTHING TOUCHES THE SILHOUETTE ANY MORE ────
                *
-               * A mask removes the pixels instead, so whatever is behind shows
-               * through correctly by construction. The bottom fade is the longer of
-               * the two because that edge is where the photograph is cropped by the
-               * frame; the sides only need their corners softened.
+               * This carried two masks composited together: a linear fade down the
+               * block axis AND a radial that softened the sides and corners. The
+               * radial is removed at the client's explicit instruction that no edge
+               * treatment be applied to the supplied cut-out.
                *
-               * ── BOTH STOPS WERE TOO TIGHT AND CLIPPED HER ──────────────────────
+               * It was also obsolete on its own terms. It existed because the
+               * portrait used to be derived from a studio shot on a white seamless,
+               * where the matte could not be trusted at the outline and a soft
+               * corner hid what it got wrong. The file rendered now arrives with the
+               * background already removed and its edges intact (data/media.json),
+               * so softening them is subtracting from a good matte rather than
+               * rescuing a poor one.
                *
-               * The radial was 75% x 85% at 60% solid, which is an ellipse narrower
-               * than the photograph it was masking: it ate into her shoulders and
-               * forearms, and the linear fade then began at 62%, around her waist.
-               * Together they cut the figure off mid-torso with a visible horizontal
-               * edge rather than letting her dissolve into the ground.
+               * ── WHAT REMAINS IS NOT AN EDGE EFFECT ────────────────────────────
                *
-               * The radial now covers the frame (100% x 108%) and holds solid to
-               * 78%, so it only softens the actual corners.
+               * The linear fade is kept, and it is a different thing from the
+               * radial: it does not touch the OUTLINE, it dissolves the BOTTOM OF
+               * THE FRAME. Measured on the supplied file, rows at 94-97% of its
+               * height are opaque edge to edge (1206/1206 px), so without this the
+               * photograph would end in a hard horizontal line straight across the
+               * column, the photograph visibly stopping rather than ending.
                *
-               * THE LINEAR FADE STARTS AT 86%, NOT 74%. At 74% the lower quarter of
-               * the frame was spent going transparent, so the bottom of the portrait
-               * column was empty ground that still occupied layout height, part of
-               * what read as dead space under the hero. Starting the ramp lower and
-               * running it faster keeps the figure present nearly to the frame edge
-               * while still dissolving rather than cutting.
+               * 86% to 100% keeps her present almost to the frame edge and spends
+               * only the last sliver dissolving, so no layout height is wasted on
+               * empty ground.
+               *
+               * A MASK RATHER THAN A GRADIENT OVERLAY: an overlay would have to
+               * paint the backdrop colour over the image to hide the edge, which is
+               * only correct while the backdrop is exactly that colour. A mask
+               * removes the pixels, so whatever is behind shows through by
+               * construction.
                */
               style={{
                 maskImage:
-                  "linear-gradient(to bottom, #000 0%, #000 86%, rgba(0,0,0,0.55) 96%, transparent 100%), radial-gradient(100% 108% at 50% 44%, #000 78%, transparent 100%)",
+                  "linear-gradient(to bottom, #000 0%, #000 86%, rgba(0,0,0,0.55) 96%, transparent 100%)",
                 WebkitMaskImage:
-                  "linear-gradient(to bottom, #000 0%, #000 86%, rgba(0,0,0,0.55) 96%, transparent 100%), radial-gradient(100% 108% at 50% 44%, #000 78%, transparent 100%)",
-                maskComposite: "intersect",
-                WebkitMaskComposite: "source-in",
+                  "linear-gradient(to bottom, #000 0%, #000 86%, rgba(0,0,0,0.55) 96%, transparent 100%)",
               }}
             />
             </HeroCamera>

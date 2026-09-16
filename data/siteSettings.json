@@ -11,7 +11,7 @@
     "phones": [],
     "addresses": [],
     "_comment_addresses": "Intake section 6 forbids publishing the home address, personal numbers, personal email, client or partner names, and any deal detail or financial value. No address is held here at all.",
-    "cityOnly": { "en": "Netherlands", "ar": "هولندا" }
+    "cityOnly": { "en": "Netherlands", "ar": "هولندا", "nl": "Nederland" }
   },
   "_comment_social": "Intake section 9: Instagram, Facebook, LinkedIn and TikTok/YouTube/X all recorded as 'لم يُزوَّد', not supplied. A unified handle is to be proposed after the domain is approved. The empty array makes the social rail render decorative rings rather than dead links.",
   "social": [],
@@ -21,5 +21,5 @@
     "statsSection": false,
     "quoteSection": true
   },
-  "maintenance": { "enabled": false, "message": { "en": "", "ar": "" } }
+  "maintenance": { "enabled": false, "message": { "en": "", "ar": "", "nl": "" } }
 }

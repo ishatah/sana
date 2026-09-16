@@ -32,7 +32,7 @@ export const LOCALE_HEADER = "x-app-locale"
  *    document language.
  *
  * /admin is deliberately NOT localised. It is an internal tool with one user, and
- * running it through the locale matcher would create /tr/admin, /en/admin and
+ * running it through the locale matcher would create /nl/admin, /ar/admin and
  * /ar/admin, each needing its own auth check and redirect target.
  */
 export default function proxy(request: NextRequest) {

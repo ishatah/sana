@@ -16,7 +16,7 @@ import { TIME_ZONE } from "@/i18n/routing"
  *
  * This sits in the ROOT layout, which wraps /admin as well as /[locale]. The admin
  * panel is deliberately not localised, it is an internal tool with one user, and
- * routing it through the locale matcher would create /tr/admin, /en/admin and
+ * routing it through the locale matcher would create /nl/admin, /ar/admin and
  * /ar/admin, each needing its own auth check. But that means an /admin route has
  * no locale segment and therefore no request config, so `useMessages()` throws
  * during prerender and takes the whole build down with an opaque digest.

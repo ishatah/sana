@@ -2,7 +2,7 @@
 
 import { toast } from "sonner"
 import { useSection, saveSection } from "@/components/admin/useSection"
-import { routing } from "@/i18n/routing"
+import { routing, isRtl } from "@/i18n/routing"
 import { LoadState } from "@/components/admin/LoadState"
 import { ContentSection } from "@/components/admin/ContentSection"
 import { LocalizedFieldRow } from "@/components/admin/LocalizedFieldRow"
@@ -66,7 +66,7 @@ export default function HeadlineAdminPage() {
       >
         {/* Driven by routing.locales rather than a literal list, so adding or
             removing a locale never leaves this editor one column short. */}
-        <div className="grid gap-3 lg:grid-cols-2">
+        <div className={`grid gap-3 ${routing.locales.length >= 3 ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}>
           {routing.locales.map((locale) => (
             <div key={locale} className="space-y-1.5">
               <label className="block text-[0.7rem] uppercase tracking-widest text-[color:var(--muted-foreground)]">
@@ -75,7 +75,7 @@ export default function HeadlineAdminPage() {
               <input
                 value={(roles[locale] ?? []).join(", ")}
                 onChange={(e) => setRoles(locale, e.target.value)}
-                dir={locale === "ar" ? "rtl" : "ltr"}
+                dir={isRtl(locale) ? "rtl" : "ltr"}
                 className="w-full border border-[color:var(--input)] bg-[color:var(--background)] px-3.5 py-2.5 text-sm text-[color:var(--card-foreground)] transition-colors focus:border-[color:var(--primary)] focus:outline-none"
               />
             </div>

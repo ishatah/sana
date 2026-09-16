@@ -8,11 +8,13 @@
       "registerConfirmed": false,
       "role": {
         "en": "Consultant and Strategic Representative",
-        "ar": "مستشارة وممثلة استراتيجية"
+        "ar": "مستشارة وممثلة استراتيجية",
+        "nl": "Consultant en Strategic Representative"
       },
       "city": {
         "en": "Europe and the Middle East",
-        "ar": "أوروبا والشرق الأوسط"
+        "ar": "أوروبا والشرق الأوسط",
+        "nl": "Europa en het Midden-Oosten"
       },
       "_comment_dates": "Intake form section 4: 'منصب حالي, تاريخ البداية يُزوَّد لاحقًا'. Current post, start date to follow. An empty startYear renders 'Start year to be confirmed' rather than a guess.",
       "startYear": "",
@@ -29,9 +31,10 @@
       "registerConfirmed": false,
       "role": {
         "en": "Partner",
-        "ar": "شريكة مساهمة"
+        "ar": "شريكة مساهمة",
+        "nl": "Partner"
       },
-      "city": { "en": "", "ar": "" },
+      "city": { "en": "", "ar": "", "nl": "" },
       "startYear": "",
       "endYear": "",
       "tier": "A",
@@ -45,9 +48,10 @@
       "registerConfirmed": false,
       "role": {
         "en": "Partner",
-        "ar": "شريكة مساهمة"
+        "ar": "شريكة مساهمة",
+        "nl": "Partner"
       },
-      "city": { "en": "", "ar": "" },
+      "city": { "en": "", "ar": "", "nl": "" },
       "startYear": "",
       "endYear": "",
       "tier": "A",
@@ -57,5 +61,5 @@
   ],
   "_comment_previous": "No previous positions were supplied at intake. An empty array is a deliberate blank, not an omission, the section hides itself.",
   "previous": [],
-  "registerNote": { "en": "", "ar": "" }
+  "registerNote": { "en": "", "ar": "", "nl": "" }
 }

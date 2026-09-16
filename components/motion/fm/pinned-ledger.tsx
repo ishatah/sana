@@ -90,7 +90,17 @@ export function PinnedLedger({
    * than a progress readout, so a little lag is correct, it is what makes the
    * rows feel like they have weight instead of snapping to attention.
    */
-  const progress = useSpring(scrollYProgress, { stiffness: 110, damping: 30, mass: 0.7 })
+  /* `restDelta` is scaled to the SIGNAL, not copied from the velocity springs: this
+     tracks `scrollYProgress`, which is 0..1, so the 0.5 that parks a px/s velocity
+     spring would be half the entire range. 0.0005 matches SCRUB_SPRING in
+     ./tokens.ts, the other progress-driven spring on this site. Without it the
+     spring never settles and holds a rAF loop open on an idle page. */
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 110,
+    damping: 30,
+    mass: 0.7,
+    restDelta: 0.0005,
+  })
 
   const rows = Children.toArray(children)
   const n = rows.length || 1

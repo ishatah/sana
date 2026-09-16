@@ -125,7 +125,15 @@ export function LedgerRail({ children }: { children: ReactNode }) {
    * reader has already passed. This is enough inertia to round off trackpad steps
    * and not enough to be wrong.
    */
-  const fill = useSpring(scrollYProgress, { stiffness: 140, damping: 30, mass: 0.5 })
+  /* `restDelta` at progress scale (0..1), same value as SCRUB_SPRING in ./tokens.ts.
+     Without it this spring never parks, and because `useVelocity` below is chained
+     off it, the whole chain stayed awake on an idle page. */
+  const fill = useSpring(scrollYProgress, {
+    stiffness: 140,
+    damping: 30,
+    mass: 0.5,
+    restDelta: 0.0005,
+  })
 
   /*
    * Velocity is taken from the SPRING, not from raw progress. Raw progress

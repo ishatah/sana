@@ -47,13 +47,24 @@ export default async function LocaleLayout({
   // before setRequestLocale has taken effect in this render pass, which yields the
   // default locale's messages inside a non-default locale's tree.
   //
-  // English is the fallthrough because it is `defaultLocale`. The unreachable-
-  // locale case is already handled above, `notFound()` fires on anything outside
-  // `routing.locales`, so this branch only ever sees "en" or "ar".
-  const messages =
-    locale === "ar"
-      ? (await import("@/messages/ar.json")).default
-      : (await import("@/messages/en.json")).default
+  // ── DRIVEN BY THE LOCALE, NOT BRANCHING ON IT ─────────────────────────────────
+  //
+  // This was `locale === "ar" ? ar.json : en.json`, with a note claiming the branch
+  // "only ever sees 'en' or 'ar'". That was true when there were two locales and
+  // became false the moment a third was added, in the worst possible way: Dutch fell
+  // down the else and rendered the ENGLISH catalogue inside a lang="nl" document. No
+  // throw, no warning, no failed build. A page that looks finished and is not.
+  //
+  // The template literal cannot have that failure mode, because there is no fallback
+  // arm for a locale to fall into, a catalogue either exists or the import throws
+  // loudly at build time. Same shape as i18n/request.ts, which loads the server
+  // config this way for the same reason.
+  //
+  // Safe as a dynamic segment because `notFound()` above has already rejected
+  // anything outside `routing.locales`, so this only ever interpolates a locale the
+  // routing config declares. Adding a fourth locale needs a catalogue file and
+  // nothing in this file.
+  const messages = (await import(`@/messages/${locale}.json`)).default
 
   const jsonLd = await buildPersonJsonLd(locale)
 

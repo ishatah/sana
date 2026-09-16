@@ -53,8 +53,9 @@ export function resolveNavItems(items: NavItem[], locale: string): ResolvedNavIt
     if (item.path) {
       return { ...item, resolved: `${prefix}${item.path}`, isRoute: true }
     }
-    // `prefix || "/"` because the Turkish prefix is "", and "" + "#top" is a
-    // same-page fragment rather than a link to the home page.
+    // `prefix || "/"` because the DEFAULT locale's prefix is "" (English today,
+    // under localePrefix: "as-needed"), and "" + "#top" is a same-page fragment
+    // rather than a link to the home page.
     return { ...item, resolved: `${prefix || "/"}${item.href}`, isRoute: false }
   })
 }

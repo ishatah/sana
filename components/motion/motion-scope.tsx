@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react"
 import { INTERACTIONS, type InteractionName } from "./interactions"
 import { mountSection, type RecipeName } from "./sections"
-import { useSectionSkew } from "./fm/use-section-skew"
 
 /**
  * The single client boundary for the input-driven interaction layer.
@@ -58,7 +57,14 @@ import { useSectionSkew } from "./fm/use-section-skew"
 export function MotionScope({
   interaction,
   recipe,
-  physics,
+  /*
+   * DESTRUCTURED BUT DELIBERATELY UNUSED. It must stay in this list even though the
+   * body no longer reads it: `...rest` is spread onto `<Tag>`, so removing it here
+   * would forward `physics` to the DOM as an unknown attribute and React would warn
+   * on every band. Pulling it out of `rest` is the point. See the note at the
+   * return for where the effect went.
+   */
+  physics: _physics,
   children,
   className,
   id,
@@ -316,16 +322,25 @@ export function MotionScope({
   }, [recipe])
 
   /*
-   * The hook is called UNCONDITIONALLY and branches on `physics` internally,
-   * never `physics && useSectionSkew()`, which would change hook order between
-   * renders the moment a caller toggled the prop. That is the same discipline
-   * ./fm/use-entrance.ts states as "branch OUTPUT RANGES on this, never hook
-   * order", applied one level up.
+   * ── `physics` IS NOW A CSS OPT-IN, NOT A HOOK ────────────────────────────────
+   *
+   * This used to call `useSectionSkew(Boolean(physics))` and spread the returned
+   * `--skew` onto the element as an inline style. That hook integrated its own
+   * spring in a per-section rAF loop and set React state on every frame, so every
+   * band carrying `physics` re-rendered this whole subtree once per frame while the
+   * page scrolled. It is deleted; styles/globals.css now composes `.section-skew`
+   * from the `--scroll-speed` / `--scroll-dir` pair that ./fm/page-physics.tsx
+   * already publishes to <html> once for the entire document, with no renders.
+   *
+   * The prop is kept because it still carries meaning at the call site: it marks a
+   * band as participating in page physics, and the `.section-skew` class in the
+   * caller's `className` is what actually applies it. Nothing here re-renders on
+   * scroll any more, so this component is now inert during scrolling, which is the
+   * whole point.
    */
-  const skewStyle = useSectionSkew(Boolean(physics))
 
   return (
-    <Tag ref={root} id={id} className={className} style={skewStyle} {...rest}>
+    <Tag ref={root} id={id} className={className} {...rest}>
       {children}
     </Tag>
   )

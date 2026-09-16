@@ -7,12 +7,21 @@ import { routing } from "@/i18n/routing"
 // lists them in is a weak relevance signal, and the profile pages are the point
 // of the site. `buildMetadata({ path })` on each page emits the matching canonical
 // and hreflang set, so these two lists have to stay in step.
+// ⚠️ THIS LIST HAD DRIFTED FROM THE ROUTER. It carried `/positions` and
+// `/recognition`, both of which were removed from app/[locale]/ (the Recognition
+// page was deleted rather than left to render an empty shell, see data/awards.json),
+// and it omitted `/roles`, the route that replaced them. A sitemap is an active
+// request to crawl, so that was two guaranteed 404s submitted to every search
+// engine and the one real appointments page left out of the index entirely.
+//
+// It has never shipped: the sitemap returns [] while the profile is unsigned, so
+// the drift was latent rather than live. It would have gone out with the first
+// signed deploy.
 const ROUTES = [
   "",
   "/about",
   "/expertise",
-  "/positions",
-  "/recognition",
+  "/roles",
   "/contact",
   "/privacy",
   "/terms",

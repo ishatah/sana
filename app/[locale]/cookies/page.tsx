@@ -52,7 +52,29 @@ export default async function CookiesPage({ params }: { params: Promise<{ locale
       changeHeading: "إذا تغيّر ذلك",
       change: "إذا أُضيفت أدوات تحليل أو محتوى مضمَّن مستقبلًا، ستُحدَّث هذه الصفحة وتُضاف آلية الموافقة المناسبة.",
     },
-  }[locale as "en" | "ar"] ?? { intro: "", whyHeading: "", why: "", adminHeading: "", admin: "", changeHeading: "", change: "" }
+    /*
+     * "er worden geen cookies geplaatst", NOT "ingesteld". Cookies are *placed* in
+     * Dutch, and this page's whole claim is that none are, so the one verb it turns
+     * on should be the one a Dutch reader actually uses.
+     *
+     * "strikt noodzakelijk" is deliberate and is a term of art: it is the AVG /
+     * ePrivacy category that exempts a cookie from requiring consent, and it is the
+     * precise reason this site has no banner. The English says "strictly necessary"
+     * for the same reason. Softening it to "nodig" would drop the legal basis and
+     * leave the page asserting an exemption it no longer explains.
+     */
+    nl: {
+      intro: "Op de openbare pagina's van deze website worden geen cookies geplaatst.",
+      whyHeading: "Waarom er geen cookiemelding is",
+      why: "Toestemming is vereist voor opslag die niet strikt noodzakelijk is. Deze site heeft geen statistieksoftware, geen advertentietrackers en geen ingesloten inhoud van derden, dus er is niets waarvoor toestemming gevraagd moet worden.",
+      adminHeading: "Beheersessie",
+      admin:
+        "Bij het inloggen op het beheerpaneel wordt één cookie aangemaakt om die sessie open te houden. Die is strikt noodzakelijk, houdt niets bij, en raakt bezoekers niet.",
+      changeHeading: "Als dit verandert",
+      change:
+        "Als er in de toekomst statistieksoftware of ingesloten inhoud wordt toegevoegd, wordt deze pagina bijgewerkt en wordt de juiste toestemmingsmelding toegevoegd.",
+    },
+  }[locale as "en" | "ar" | "nl"] ?? { intro: "", whyHeading: "", why: "", adminHeading: "", admin: "", changeHeading: "", change: "" }
 
   return (
     <LegalPage title={t("cookies")} updated={UPDATED}>

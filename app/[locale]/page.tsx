@@ -2,7 +2,10 @@ import type { Metadata } from "next"
 import { setRequestLocale, getTranslations } from "next-intl/server"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
-import { Hero } from "@/components/hero"
+/* The light IBC-blue hero. The dark/gold original stays at components/hero.tsx:
+   swap this import back to restore it, no other edit needed — the two share a
+   prop contract precisely so the theme can be reversed in one line. */
+import { HeroVvip as Hero } from "@/components/hero-vvip"
 import { SectionHeader } from "@/components/section-header"
 import { AboutSection } from "@/components/about-section"
 import { ExpertiseGrid } from "@/components/expertise-grid"
@@ -21,6 +24,7 @@ import { HeroScope } from "@/components/motion/hero-scope"
    <li> wrapper for each row it is passed; see the header note in the component
    for why this is a pinned ledger and not the 3D card deck first planned. */
 import { PinnedLedger } from "@/components/motion/fm/pinned-ledger"
+import { SectionThread } from "@/components/motion/fm/section-thread"
 /* Dev-only invariant checks on the rendered tree. Null in production. */
 import { MotionAudit } from "@/components/motion/fm/audit"
 import {
@@ -122,21 +126,33 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
    * the raw arrays would advertise a number the visitor cannot then find, and
    * would quietly present unverified records as verified ones.
    *
-   * The experience figure comes from `identity.yearsOfExperience`, the DATA, not
-   * a translation string. It was previously `t("about.experienceValue")`, which
-   * hardcoded "10+ years" in messages/en.json and messages/ar.json and left the
-   * data field unread: the one number on this page that looks like a verified
-   * statistic was the only one bypassing the data layer the rest of the build is
-   * organised around. The unit word stays in the message catalogue (it has to be
-   * translated); the VALUE comes from data.
-   *
    * StatBar drops any cell whose value is empty or "0", and any `kind: "count"`
    * cell below 2, so nothing here needs a guard: if every position were withheld,
    * or only one publishes, the bar simply loses that cell.
+   *
+   * WITH THE EXPERIENCE CELL REMOVED (see below) THIS ARRAY IS ONE ENTRY, and
+   * that entry is a `count` currently resolving to 1, so both the bar and the
+   * hero meta row drop it and render nothing from `stats` today. That is the
+   * suppression rules working as written rather than a hole: the moment a second
+   * position publishes, the cell returns on its own.
    */
   const prefix = localePrefix(locale)
+  /*
+   * THE EXPERIENCE FIGURE IS REMOVED FROM DISPLAY, at the client's request.
+   *
+   * It was the first cell here and it fed the hero meta row (components/hero.tsx
+   * assembles that row from `stats`). `data/identity.json` still holds
+   * `yearsOfExperience`, and /admin/identity still edits it, so nothing is lost
+   * from the record; it simply no longer renders.
+   *
+   * Open question Q8 in data/deliverables.json is what made it worth removing
+   * rather than correcting: the supplied biography says "close to ten years"
+   * while the profile figure says "10+", and the two cannot both be right. A
+   * number in a stat row reads as verified, so the unverifiable one is the wrong
+   * thing to keep on the page while the question is open. Restoring it is putting
+   * this entry back once Q8 is answered.
+   */
   const stats = [
-    { value: t("about.experienceValue", { years: identity.yearsOfExperience }), label: t("hero.statExperience") },
     {
       value: String(publishable(positions.current ?? []).length),
       label: t("hero.statPositions"),
@@ -168,7 +184,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     .filter((e: { label: string }) => e.label)
 
   const facts = [
-    { label: t("about.experienceLabel"), value: t("about.experienceValue", { years: identity.yearsOfExperience }) },
+    // The experience row is removed here for the same reason it is removed from
+    // `stats` above; see that note. The field survives in data/identity.json.
     { label: t("about.sectorLabel"), value: localize(identity.sector, locale) },
     { label: t("about.baseLabel"), value: localize(identity.residence, locale) },
     { label: t("about.marketsLabel"), value: localize(identity.otherMarkets, locale) },
@@ -206,7 +223,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           open with `.page-hero` and keep the hero's own `.mesh-hero` markup.
         */}
         <div aria-hidden className="hero-field" />
-        <div aria-hidden className="hero-field-aurora" />
+
+        {/*
+          THE CONNECTED THREAD, one glowing line through every band.
+
+          It is mounted HERE, as a sibling of the sections rather than inside any
+          one of them, because that is what makes it one line: a thread rendered
+          per-section would restart its stroke at each box and put a join on every
+          band boundary it exists to cross. See the component for the full note.
+
+          It measures `#main`, so it picks up every `<section>` below it
+          automatically; adding or removing a band needs no change here.
+        */}
+        <SectionThread targetId="main" />
+
 
         {/*
           The hero is wrapped rather than carrying its own scope, because it is a
@@ -265,7 +295,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           physics
           className="section-skew snap-section section-pad"
         >
-          <span aria-hidden className="band-edge" />
           <div className="section-content container-page">
             <SectionHeader title={t("about.heading")} animate maskReveal />
             {/*
@@ -304,7 +333,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           */
           className="section-skew snap-section section-pad"
         >
-          <span aria-hidden className="band-edge" />
           <ExpertiseLattice />
           <div className="section-content container-page">
             <SectionHeader title={t("expertise.heading")} subtitle={t("expertise.subheading")} animate maskReveal />
@@ -345,10 +373,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           components/role-entry.tsx for why the merge happens at render rather
           than in the data.
 
-          THE ONE LIGHT BAND. `.section-invert` re-points the palette tokens for
-          this subtree only (styles/globals.css), so every component inside it,
-          the panels, the eyebrow, the rules, paints itself light with no
-          per-component branch.
+          THE LIGHT BAND IS GONE. This section carried `.section-invert`, which
+          re-points the palette tokens for its subtree (styles/globals.css) so
+          every component inside it painted itself on a near-white ground.
+
+          It is removed on request: the page is black end to end, and one
+          near-white band in the middle of it was the single largest departure
+          from that. The class and all of its dependent rules survive untouched in
+          the stylesheet, so restoring the band is putting one class name back
+          here, nothing else has to be rebuilt.
         */}
         {roles.length > 0 && (
           <MotionScope
@@ -356,7 +389,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             id="section-roles"
             interaction={["ledgerMarks", "verifyMarks"]}
             recipe="ledgerRows"
-            className="section-invert snap-section section-pad"
+            className="snap-section section-pad"
           >
             <PositionsThread />
             <div className="section-content container-page grid items-start gap-y-8 lg:grid-cols-[minmax(0,16rem)_1fr] lg:gap-x-20">
@@ -411,7 +444,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           physics
           className="section-skew snap-section section-pad"
         >
-          <span aria-hidden className="band-edge" />
           <div className="section-content container-page">
             {/*
               `PinnedLedger` owns the two-column grid so it can pin the left
@@ -492,7 +524,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           physics
           className="section-skew snap-section section-pad"
         >
-          <span aria-hidden className="band-edge" />
           <ContactArcs />
           <div className="section-content container-page">
             <SectionHeader title={t("contact.heading")} subtitle={t("contact.subheading")} animate maskReveal />

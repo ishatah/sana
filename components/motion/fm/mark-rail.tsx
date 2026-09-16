@@ -105,7 +105,11 @@ export function MarkRail({ children, className }: { children: ReactNode; classNa
    * within its rest delta, so an idle page costs nothing. That is what the plan's
    * leak test checks for.
    */
-  const smoothed = useSpring(velocity, { stiffness: 320, damping: 42, mass: 0.28 })
+  /* `restDelta` matches ./page-physics.tsx, which springs the same velocity signal
+     with the same constants. Without it the comment above was aspirational: a
+     spring with no rest delta never formally settles, so it kept scheduling frames
+     on a page nobody was scrolling. */
+  const smoothed = useSpring(velocity, { stiffness: 320, damping: 42, mass: 0.28, restDelta: 0.5 })
   const skewY = useTransform(
     smoothed,
     [-SHEAR_AT, 0, SHEAR_AT],

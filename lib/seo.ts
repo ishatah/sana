@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { getSiteSettings, getDeliverables } from "@/lib/site-settings"
-import { getProfileStrings, getPositions, getAwards } from "@/lib/profile-content"
+import { getProfileStrings, getPositions, getAwards, getExpertise } from "@/lib/profile-content"
 import { getMedia } from "@/lib/media"
 import { isSignedOff } from "@/lib/verification"
 import { routing } from "@/i18n/routing"
@@ -115,11 +115,12 @@ function truncate(text: string, max: number): string {
  *     would not qualify if it were.
  */
 export async function buildPersonJsonLd(locale: string) {
-  const [settings, profile, positions, awards] = await Promise.all([
+  const [settings, profile, positions, awards, expertise] = await Promise.all([
     getSiteSettings(),
     getProfileStrings(locale),
     getPositions(),
     getAwards(),
+    getExpertise(),
   ])
 
   const base = settings.siteUrl as string
@@ -185,14 +186,45 @@ export async function buildPersonJsonLd(locale: string) {
       // wants it named, so no locality is asserted in structured data either.
       address: { "@type": "PostalAddress", addressCountry: "NL" },
     },
-    knowsLanguage: [
-      // Intake section 1 lists all three by name. Proficiency levels were not
-      // supplied and none is asserted here, a Language entry states that she
-      // knows the language, which is what the form records.
-      { "@type": "Language", name: "Dutch", alternateName: "nl" },
-      { "@type": "Language", name: "Arabic", alternateName: "ar" },
-      { "@type": "Language", name: "French", alternateName: "fr" },
-    ],
+    /*
+     * ── DERIVED FROM data/expertise.json, NOT A SECOND HARDCODED LIST ────────────
+     *
+     * This was a literal array of three Language nodes maintained by hand alongside
+     * the rows in data/expertise.json. Two lists of the same facts, and this is the
+     * copy nobody looks at, so it is the copy that silently goes stale: adding the
+     * English row to the data would have left the structured data claiming three
+     * languages while the page showed four.
+     *
+     * ── NO PROFICIENCY IS EMITTED, AND THAT IS A DELIBERATE BOUNDARY ─────────────
+     *
+     * The rows now carry speaking and writing levels, and those levels are INFERRED
+     * rather than supplied by her (see the `_comment_levels` block in
+     * data/expertise.json, and open question Q9). None of them appears here.
+     *
+     * Two reasons, and the second is the one that matters. First, schema.org's
+     * Language type has no proficiency property, so there is no correct field to put
+     * one in. Second, and this is the standard this file's header sets out: structured
+     * data is consumed by machines that cannot read a disclaimer sitting next to it.
+     * On the page an inferred level renders beside a caption saying it is not her own
+     * answer; a machine reading a proficiency claim here would get the assertion with
+     * no way to receive the caveat. So the inference stops at the page boundary.
+     *
+     * What IS emitted is exactly what intake section 1 records: that she knows each of
+     * these languages. That claim is hers, and it survives Q9 being answered either
+     * way, which is why this block needs no revisiting when the levels are confirmed.
+     *
+     * `name` is the English name rather than localize()'d, because this is read by
+     * machines: a stable English label plus the ISO code in `alternateName` is more
+     * useful than a name that changes with whichever page happened to render. Rows
+     * with no code or no English name are filtered, same as `organisations` above.
+     */
+    knowsLanguage: ((expertise.languages?.items ?? []) as { code?: string; name?: { en?: string } }[])
+      .filter((l) => l.code && l.name?.en && l.name.en.trim() !== "")
+      .map((l) => ({
+        "@type": "Language",
+        name: l.name!.en,
+        alternateName: l.code,
+      })),
     /*
      * `worksFor` IS DELIBERATELY NOT EMITTED, and the omission is the accurate
      * statement rather than a missing field.

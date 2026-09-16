@@ -2,6 +2,7 @@
 
 import { Atmosphere } from "./atmosphere"
 import { PagePhysics } from "./page-physics"
+import { PerfTier } from "./perf-tier"
 import { FmRoot } from "./fm-root"
 
 /**
@@ -45,6 +46,13 @@ export function AtmosphereRoot() {
     <FmRoot>
       <Atmosphere />
       <PagePhysics />
+      {/*
+        The third publisher, and it belongs here for the same reason as the other
+        two: it writes one document-level signal that the stylesheet consumes, and
+        the overlays below are among the layers it switches off. See ./perf-tier.tsx
+        for what it probes and why it is not `prefers-reduced-motion`.
+      */}
+      <PerfTier />
 
       {/*
         `aria-hidden` on all three, and none is focusable or in the accessibility

@@ -40,7 +40,7 @@ export async function PageShell({
         items={resolveNavItems(navigation.main ?? [], locale)}
         name={identity.nameShort}
         // `localePrefix` rather than a hand-built string, so the CTA follows the
-        // same "tr is unprefixed" rule the nav links already use.
+        // same "the default locale is unprefixed" rule the nav links already use.
         contactHref={`${localePrefix(locale)}/contact`}
       />
 

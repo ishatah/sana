@@ -4,13 +4,14 @@
   "_comment_alt": "Alt text is part of the gate rather than a nicety: an image that cannot be described has not been understood well enough to publish. Intake form section 5 also requires that people in a photo be named and that event photos carry dates, neither portrait here contains anyone but the subject.",
   "slots": [
     {
-      "_comment_cutout": "THE PATH IS THE DERIVED CUTOUT, NOT THE SUPPLIED JPEG. The original photograph is a studio shot on a white seamless; on this page's near-black ground that white rendered as a bright disc with a hard edge, reading as a sticker rather than a portrait. scripts/build-portrait-cutout.mjs removes the seamless with a soft alpha ramp and writes the -cutout.png beside it. The SUPPLIED FILE IS UNTOUCHED and still sits at /assets/sanae-rakik-portrait.jpg, the cutout is a derived asset, so re-running the script reproduces it and the permission recorded below still describes the same photograph of the same person. No retouching of the subject is performed: only the background is removed.",
+      "_comment_cutout": "THE PATH IS A SUPPLIED CUT-OUT AND IS NOT DERIVED OR PROCESSED BY THIS REPO. The client supplied sanae-rakik-portrait-supplied-cutout.png with the background already removed, and asked explicitly that no edge treatment of any kind be applied to it. It is therefore copied in BYTE FOR BYTE (verified with cmp) and nothing in the build touches it. scripts/build-portrait-cutout.mjs still exists and still targets the original JPEG, but its output is NO LONGER WHAT THE SITE RENDERS; do not re-point this path at it without asking, that would silently reinstate the edge processing the client declined. KNOWN AND ACCEPTED: 601,698 of the transparent pixels in this file still carry white in their colour channels. That is invisible at full size, but next/image resizes non-premultiplied, so a downscale averages that white into the silhouette and can re-create a faint pale rim at larger widths (measured: 0 bright edge pixels at w=384, 1 at w=544, 60 at w=1080, 182 at w=1200). The client chose the file as supplied over having this corrected. If a pale edge is ever reported on a high-DPI screen, this is the cause and the fix is a colour-bleed pass that fills transparent pixels with their neighbours' colour and never touches the alpha channel or the silhouette.",
       "id": "portrait",
       "kind": "portrait",
-      "path": "/assets/sanae-rakik-portrait-cutout.png",
+      "path": "/assets/sanae-rakik-portrait-supplied-cutout.png",
       "alt": {
         "en": "Sanae Rakik, formal studio portrait.",
-        "ar": "سناء رقيق، صورة شخصية رسمية."
+        "ar": "سناء رقيق، صورة شخصية رسمية.",
+        "nl": "Sanae Rakik, formeel studioportret."
       },
       "credit": "",
       "permission": {
@@ -18,7 +19,7 @@
         "grantedBy": "Sanae Rakik",
         "grantedOn": "2026-09-09",
         "scope": "Website use: this profile site, all pages and locales.",
-        "source": "Supplied by the subject with the completed intake form, 9 September 2026."
+        "source": "Supplied by the subject with the completed intake form, 9 September 2026. The background-removed version now rendered was supplied by the client on 15 September 2026 and is the same photograph of the same person, so the permission recorded here continues to describe it."
       },
       "tier": "A",
       "publish": true,
@@ -32,7 +33,8 @@
       "path": "/assets/sanae-rakik-wide.jpg",
       "alt": {
         "en": "Sanae Rakik, studio portrait.",
-        "ar": "سناء رقيق، صورة استوديو."
+        "ar": "سناء رقيق، صورة استوديو.",
+        "nl": "Sanae Rakik, studioportret."
       },
       "credit": "",
       "permission": {
@@ -52,7 +54,7 @@
       "id": "hero-background",
       "kind": "background",
       "path": "",
-      "alt": { "en": "", "ar": "" },
+      "alt": { "en": "", "ar": "", "nl": "" },
       "credit": "",
       "permission": { "granted": false, "grantedBy": "", "grantedOn": "", "scope": "", "source": "" },
       "tier": "",
@@ -64,7 +66,7 @@
       "kind": "logo",
       "organisationId": "ibc-consultant",
       "path": "",
-      "alt": { "en": "", "ar": "" },
+      "alt": { "en": "", "ar": "", "nl": "" },
       "credit": "",
       "permission": { "granted": false, "grantedBy": "", "grantedOn": "", "scope": "", "source": "" },
       "tier": "",

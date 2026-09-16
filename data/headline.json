@@ -2,15 +2,18 @@
   "_comment": "The hero and the page titles. Every role named here must correspond to a published row in data/positions.json, the hero must not claim something the positions table has not cleared.",
   "primaryTitle": {
     "en": "Consultant and Strategic Representative, International Business Council (IBC)",
-    "ar": "مستشارة وممثلة استراتيجية في مجلس الأعمال الدولي (IBC)"
+    "ar": "مستشارة وممثلة استراتيجية في مجلس الأعمال الدولي (IBC)",
+    "nl": "Consultant en Strategic Representative, International Business Council (IBC)"
   },
   "shortTitle": {
     "en": "Business development and strategic partnerships",
-    "ar": "تطوير الأعمال والشراكات الاستراتيجية"
+    "ar": "تطوير الأعمال والشراكات الاستراتيجية",
+    "nl": "Bedrijfsontwikkeling en strategische partnerschappen"
   },
   "heroKicker": {
     "en": "I am",
-    "ar": "أنا"
+    "ar": "أنا",
+    "nl": "Ik ben"
   },
   "_comment_rotating": "Rendered as the large accent line in the hero, plus the peers beneath it. Intake form section 1 gives the primary professional title as 'سيدة أعمال, تطوير الأعمال والشراكات الاستراتيجية'.",
   "rotatingRoles": {
@@ -23,38 +26,51 @@
       "سيدة أعمال",
       "تطوير الأعمال",
       "الشراكات الاستراتيجية"
+    ],
+    "nl": [
+      "Onderneemster",
+      "Bedrijfsontwikkeling",
+      "Strategische partnerschappen"
     ]
   },
   "_comment_statement": "The personal statement under the hero portrait, supplied by the subject and rendered verbatim with her signature. It is a first-person claim about how she works, not a credential, so it is not subject to the positions gate, but it is also not paraphrased or trimmed to fit the layout. The Arabic is the same statement, not a summary of it.",
+  "_comment_statement_nl": "DEZELFDE ZIN STAAT OOK IN data/biography.json ALS `quote`, EN DAT IS OPZET. In het Engels zijn de twee tekenreeksen identiek; het Nederlands houdt dat zo. Wie hier iets wijzigt, wijzigt daar hetzelfde, anders leest dezelfde uitspraak op /nl op twee manieren: één keer in de hero en één keer in het citaatblok. (Het Arabisch is tussen de twee licht uiteengelopen; dat is niet nagevolgd.)",
   "heroStatement": {
     "text": {
       "en": "I believe that successful business is built on trust, professionalism, integrity and lasting relationships. My goal is to create meaningful connections, support impactful projects, and contribute to sustainable growth for the organisations and partners I represent.",
-      "ar": "أؤمن بأن الأعمال الناجحة تُبنى على الثقة والاحترافية والنزاهة والعلاقات المستدامة. هدفي هو بناء علاقات ذات معنى، ودعم المشاريع ذات الأثر، والإسهام في نمو مستدام للمؤسسات والشركاء الذين أمثلهم."
+      "ar": "أؤمن بأن الأعمال الناجحة تُبنى على الثقة والاحترافية والنزاهة والعلاقات المستدامة. هدفي هو بناء علاقات ذات معنى، ودعم المشاريع ذات الأثر، والإسهام في نمو مستدام للمؤسسات والشركاء الذين أمثلهم.",
+      "nl": "Ik geloof dat succesvol ondernemen berust op vertrouwen, professionaliteit, integriteit en duurzame relaties. Mijn doel is betekenisvolle verbindingen tot stand brengen, projecten met impact ondersteunen, en bijdragen aan duurzame groei voor de organisaties en partners die ik vertegenwoordig."
     },
+    "_comment_attribution_nl": "De Latijnse schrijfwijze, gelijk aan `en`. Dit is haar naam zoals die volgens sectie 6 van het intakeformulier gepubliceerd moet worden en wordt nooit getranscribeerd of aangepast per taal.",
     "attribution": {
       "en": "Sanae Rakik",
-      "ar": "سناء رقيق"
+      "ar": "سناء رقيق",
+      "nl": "Sanae Rakik"
     }
   },
   "locations": [
     {
       "label": {
         "en": "Based in",
-        "ar": "مقر الإقامة"
+        "ar": "مقر الإقامة",
+        "nl": "Gevestigd in"
       },
       "value": {
         "en": "Netherlands",
-        "ar": "هولندا"
+        "ar": "هولندا",
+        "nl": "Nederland"
       }
     },
     {
       "label": {
         "en": "Active across",
-        "ar": "نطاق النشاط"
+        "ar": "نطاق النشاط",
+        "nl": "Actief in"
       },
       "value": {
         "en": "Europe · Gulf · Middle East",
-        "ar": "أوروبا · الخليج · الشرق الأوسط"
+        "ar": "أوروبا · الخليج · الشرق الأوسط",
+        "nl": "Europa · Golfregio · Midden-Oosten"
       }
     }
   ],
@@ -62,15 +78,18 @@
   "positioning": {
     "primaryIdentity": {
       "en": "Businesswoman and consultant",
-      "ar": "سيدة أعمال ومستشارة"
+      "ar": "سيدة أعمال ومستشارة",
+      "nl": "Onderneemster en consultant"
     },
     "secondaryIdentity": {
       "en": "Entrepreneurship and international business development",
-      "ar": "ريادة الأعمال والتطوير الدولي للأعمال"
+      "ar": "ريادة الأعمال والتطوير الدولي للأعمال",
+      "nl": "Ondernemerschap en internationale bedrijfsontwikkeling"
     },
     "audience": {
       "en": "Investors, clients, entrepreneurs, companies, strategic partners, institutions",
-      "ar": "مستثمرون، عملاء، رواد أعمال، شركات، شركاء استراتيجيون، مؤسسات"
+      "ar": "مستثمرون، عملاء، رواد أعمال، شركات، شركاء استراتيجيون، مؤسسات",
+      "nl": "Investeerders, klanten, ondernemers, bedrijven, strategische partners, instellingen"
     },
     "tone": "formal-professional"
   },

@@ -75,8 +75,10 @@ export function ContactArcs() {
  * ground. Without it the band is a flat rectangle of charcoal with a photograph
  * dropped on it, and a long shallow gradient on an 8-bit display bands visibly.
  *
- * IT IS NOW PURE CSS. The meridian linework and the SVG grain tile are gone; what
- * remains is four gradient passes, none of which is vector geometry:
+ * IT IS NOW PURE CSS, AND IT IS ENTIRELY BLACK. The meridian linework and the SVG
+ * grain tile are gone, and so are the two tinted passes (see the note in the body).
+ * What remains is three gradient passes, none of which is vector geometry and none
+ * of which adds colour, they only subtract light:
  *
  *   1. THE VIGNETTE, in two passes. One ellipse is the wrong shape, a single
  *      radial sized to the band gives an oval of light with visibly curved top and
@@ -85,21 +87,12 @@ export function ContactArcs() {
  *      ramp that seats the top and bottom. Together they darken all four edges with
  *      none of them curving.
  *
- *   2. A WARM WASH ANCHORED TO THE PORTRAIT SIDE, not the centre. An ellipse at
- *      roughly 78% across reads as light falling across the band rather than as a
- *      vignette applied to it, and it puts the brightest ground behind the
- *      portrait, which is where a photograph wants its separation. Under RTL the
- *      whole layer is mirrored (`.hero-backdrop` in styles/globals.css) so the
- *      light stays with the portrait, which has itself swapped sides.
+ *   2. A FINAL CORNER VIGNETTE over the top of those, pushing the eye back toward
+ *      the centre of the band.
  *
- *   3. A WIDER, COOLER PASS lifting the lower-left corner just enough that the band
- *      does not read as a rectangle of flat charcoal.
- *
- *   4. ONE HAIRLINE HORIZON at the optical baseline of the text block, carrying the
- *      accent at the low alpha the rest of the page uses. It gives the band a floor
- *      without drawing a box around anything. Inline gradient rather than a border
- *      so it can fade at both ends; a hard-stopped rule would read as an underline
- *      for whatever sat above it.
+ * THE BAND CARRIES NO TINT OF ITS OWN. Every stop here is black-alpha over
+ * `--background`, so the hero's ground is the same charcoal as every other section
+ * on the page, only shaped at its edges.
  *
  * Nothing here moves. A pulsing background behind a headline is the one thing in
  * this vocabulary that would be impossible to read past.
@@ -126,30 +119,21 @@ export function HeroBackdrop() {
         }}
       />
       {/*
-        Pass 3, the off-axis warm wash.
+        PASSES 3 AND 4 ARE GONE, the off-axis warm wash and the cool corner lift.
 
-        ITS STOPS REACH PAST THE BOX, DELIBERATELY. At `60% 70%` ending at `70%`
-        the gradient completed well inside the band, and the radius at which it hit
-        transparent was a visible arc, on a near-black ground a broad, low-contrast
-        arc reads as a straight-ish band edge rather than as light falling off.
-        Sized past the element (`120% 130%`) the falloff is still running when it
-        leaves the frame, so there is no radius inside the band where it ends.
+        Both were off-centre radials over a near-black ground, and both failed the
+        same way the aurora and the bloom did in components/hero.tsx: an isolated
+        radial on near-black does not read as a room being lit, it reads as a
+        glowing circle sitting on the page, because there is no lit surface around
+        it for the falloff to be measured against. The warm one was the louder of
+        the two, a gold disc off to the right of the headline.
+
+        Removing them costs nothing this band needs. The vignette below still gives
+        it edges, the top-and-bottom seats still give it a floor and a ceiling, and
+        the portrait is still separated from the ground by its own treatment. The
+        band is now flat charcoal shaped only by black, which is what every other
+        band on the page already is.
       */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(120% 130% at 74% 40%, rgba(var(--primary-rgb), 0.055), rgba(var(--primary-rgb), 0.02) 45%, transparent 100%)",
-        }}
-      />
-      {/* Pass 4, the cool corner lift. */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(90% 90% at 8% 92%, rgba(255, 255, 255, 0.035), transparent 65%)",
-        }}
-      />
       {/*
         PASSES 5 AND 6 ARE GONE, the concentric arcs and the hairline column rules.
 
@@ -170,14 +154,14 @@ export function HeroBackdrop() {
         it a floor. What is gone is a ring pattern and a set of vertical rules that
         no one would have asked for.
 
-        What remains in this component is all grounding rather than ornament: four
-        light passes that shape how the band is lit, and one hairline horizon.
+        What remains in this component is all grounding rather than ornament: the
+        black passes that shape how the band is edged.
       */}
 
       {/*
-        Pass 5, the vignette. Darkens the four corners so the band has edges and
-        the eye is pushed back toward the centre. Still last, now simply because a
-        vignette has to sit over the light passes it is darkening.
+        Pass 3, the corner vignette. Darkens the four corners so the band has edges
+        and the eye is pushed back toward the centre. Last, because a vignette has
+        to sit over the passes it is darkening.
       */}
       <div
         className="absolute inset-0"

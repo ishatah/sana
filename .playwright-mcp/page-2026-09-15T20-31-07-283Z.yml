@@ -1,0 +1,83 @@
+- generic [active] [ref=f11e1]:
+  - link "تخطَّ إلى المحتوى" [ref=f11e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f11e3]:
+    - generic [ref=f11e4]:
+      - group "اللغة" [ref=f11e6]:
+        - button "EN" [ref=f11e7]
+        - button "AR" [disabled] [ref=f11e8]
+        - button "NL" [ref=f11e9]
+      - link "اتصل بي" [ref=f11e11] [cursor=pointer]:
+        - /url: /ar/contact
+      - link "Sanae Rakik" [ref=f11e12] [cursor=pointer]:
+        - /url: "#top"
+      - navigation "القائمة" [ref=f11e15]:
+        - link "الرئيسية" [ref=f11e16] [cursor=pointer]:
+          - /url: /ar#top
+        - link "نبذة عني" [ref=f11e17] [cursor=pointer]:
+          - /url: /ar/about
+        - link "مجالات الخبرة" [ref=f11e19] [cursor=pointer]:
+          - /url: /ar/expertise
+        - link "المناصب والعضويات" [ref=f11e20] [cursor=pointer]:
+          - /url: /ar/roles
+  - main [ref=f11e21]:
+    - generic [ref=f11e25]:
+      - paragraph [ref=f11e26]: الملف الشخصي
+      - heading "نبذة" [level=1] [ref=f11e27]
+      - paragraph [ref=f11e28]: تطوير الأعمال والشراكات الاستراتيجية بين أوروبا والشرق الأوسط.
+    - generic [ref=f11e30]:
+      - heading "الملف الشخصي" [level=2] [ref=f11e32]
+      - generic [ref=f11e33]:
+        - generic [ref=f11e34]:
+          - paragraph [ref=f11e35]: سناء رقيق سيدة أعمال ومتخصصة في تطوير الأعمال، ولديها خبرة واسعة في الشراكات الاستراتيجية والتطوير التجاري الدولي وقطاع العقارات. وقد تمكنت خلال مسيرتها المهنية من بناء شبكة علاقات قوية تمتد عبر أوروبا والشرق الأوسط، مكنتها من الربط بين رجال الأعمال والمستثمرين وصناع القرار، وخلق فرص واعدة للتعاون طويل الأمد. وتمثل مجلس الأعمال الدولي (IBC) بصفتها مستشارة وممثلة استراتيجية.
+          - generic [ref=f11e36]:
+            - generic [ref=f11e37]:
+              - term [ref=f11e38]: القطاع
+              - definition [ref=f11e39]: تطوير الأعمال، الشراكات الاستراتيجية، القطاع العقاري
+            - generic [ref=f11e40]:
+              - term [ref=f11e41]: المقر
+              - definition [ref=f11e42]: هولندا
+            - generic [ref=f11e43]:
+              - term [ref=f11e44]: الأسواق المشمولة
+              - definition [ref=f11e45]: أوروبا ودول مجلس التعاون الخليجي والشرق الأوسط
+            - generic [ref=f11e46]:
+              - term [ref=f11e47]: الجنسية
+              - definition [ref=f11e48]: هولندية
+            - generic [ref=f11e49]:
+              - term [ref=f11e50]: اللغات
+              - definition [ref=f11e51]: الهولندية · العربية · الإنجليزية · الفرنسية
+          - blockquote [ref=f11e52]:
+            - paragraph [ref=f11e53]: أومن بأن نجاح الأعمال يقوم على الثقة والمهنية والنزاهة والعلاقات الدائمة. وهدفي هو بناء علاقات ذات معنى، ودعم المشاريع ذات الأثر الإيجابي، والمساهمة في تحقيق نمو مستدام للمؤسسات والشركاء الذين أمثلهم.
+            - generic [ref=f11e54]: Sanae Rakik
+        - img "سناء رقيق، صورة شخصية رسمية." [ref=f11e56]
+    - generic [ref=f11e58]:
+      - heading "مجال التركيز" [level=2] [ref=f11e60]
+      - generic [ref=f11e61]:
+        - generic [ref=f11e62]:
+          - term [ref=f11e63]: التركيز الأساسي
+          - definition [ref=f11e64]: سيدة أعمال ومستشارة
+        - generic [ref=f11e65]:
+          - term [ref=f11e66]: التركيز الثانوي
+          - definition [ref=f11e67]: ريادة الأعمال والتطوير الدولي للأعمال
+        - generic [ref=f11e68]:
+          - term [ref=f11e69]: تعمل مع
+          - definition [ref=f11e70]: مستثمرون، عملاء، رواد أعمال، شركات، شركاء استراتيجيون، مؤسسات
+    - generic [ref=f11e72]:
+      - heading "السيرة الكاملة" [level=2] [ref=f11e74]
+      - generic [ref=f11e75]:
+        - paragraph [ref=f11e76]: سناء رقيق سيدة أعمال ومتخصصة في تطوير الأعمال، ولديها خبرة واسعة في الشراكات الاستراتيجية والتطوير التجاري الدولي وقطاع العقارات. وقد تمكنت خلال مسيرتها المهنية من بناء شبكة علاقات قوية تمتد عبر أوروبا والشرق الأوسط، مكنتها من الربط بين رجال الأعمال والمستثمرين وصناع القرار، وخلق فرص واعدة للتعاون طويل الأمد.
+        - paragraph [ref=f11e77]: تتخصص في تطوير الأعمال، واستقطاب العملاء، وبناء العلاقات الاستراتيجية، وإدارة الشراكات، وتحديد الفرص التجارية الواعدة. وتحرص دائمًا على الجمع بين الأطراف المناسبة، وبناء شراكات قائمة على الثقة، ودعم المؤسسات في تحقيق نمو مستدام من خلال علاقات عمل ذات قيمة حقيقية.
+        - paragraph [ref=f11e78]: وتمثل مجلس الأعمال الدولي (IBC) بصفتها مستشارة وممثلة استراتيجية، حيث تسهم في تعزيز العلاقات التجارية الدولية من خلال الربط بين رواد الأعمال والشركات والمستثمرين والمؤسسات في مختلف القطاعات. ويتركز دورها على تيسير الشراكات الاستراتيجية، وتشجيع التعاون العابر للحدود، ودعم المبادرات التي تسهم في خلق قيمة اقتصادية مستدامة.
+        - paragraph [ref=f11e79]: وإلى جانب نشاطها الاستشاري فهي شريكة في مشروعين تجاريين قائمين.
+  - contentinfo [ref=f11e80]:
+    - generic [ref=f11e81]:
+      - paragraph [ref=f11e82]: © 2026 Sanae Rakik. جميع الحقوق محفوظة.
+      - navigation "Legal" [ref=f11e83]:
+        - link "الخصوصية" [ref=f11e84] [cursor=pointer]:
+          - /url: /ar/privacy
+        - link "الشروط" [ref=f11e85] [cursor=pointer]:
+          - /url: /ar/terms
+        - link "ملفات الارتباط" [ref=f11e86] [cursor=pointer]:
+          - /url: /ar/cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f11e92] [cursor=pointer]

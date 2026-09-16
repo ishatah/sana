@@ -4,10 +4,15 @@ import type { ResolvedMedia } from "@/lib/media"
 /**
  * An image slot with a designed empty state.
  *
- * EVERY MEDIA SLOT ON THIS SITE IS EMPTY TODAY. lib/media.ts withholds an image
- * until it has a file, a recorded permission, a publishable tier AND alt text,
- * and intake section 14 lists every asset as not received, so `getMedia` returns
- * null for all six slots, and `ProfileImage` correspondingly renders nothing.
+ * SOME SLOTS ARE FILLED AND SOME ARE NOT, and this component exists for the
+ * second kind. lib/media.ts withholds an image until it has a file, a recorded
+ * permission, a publishable tier AND alt text; `getMedia` returns null for any
+ * slot missing one of those, and `ProfileImage` correspondingly renders nothing.
+ *
+ * Of the four slots in data/media.json, `portrait` and `og-image` are live, and
+ * `hero-background` and `logo-ibc` are still empty: the horizontal hero image is
+ * outstanding at intake, and the IBC logo needs the organisation's written
+ * permission rather than merely the file.
  *
  * That is the correct data behaviour and a bad layout outcome: a design built
  * around a figure beside a column collapses to a lone text block, and the section

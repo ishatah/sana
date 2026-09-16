@@ -1,5 +1,6 @@
 {
   "_comment": "Intake form section 3's 'ما يجب تجنبه' plus section 6's 'بيانات لا يجوز نشرها'. This file is the record of what must NOT appear in published copy, and why. It is read by /admin/exclusions and mirrored by the banned-phrase rules in lib/verification.ts and scripts/check-publish-gate.mjs. `override` stays false unless the client overrides in writing; the neverPublished list below cannot be overridden at all.",
+  "_comment_no_nl": "THE `reason` FIELDS HERE ARE THE ONLY LOCALIZED OBJECTS IN data/ WITH NO `nl` VALUE, AND THAT IS DELIBERATE RATHER THAN AN OVERSIGHT. Dutch was added as a third site locale and every other localized field in every other data file carries it. These do not, because nothing here is ever rendered to a visitor: this file is an internal compliance record, it has no public surface, and it is in the INTERNAL_FILES skip list in scripts/check-publish-gate.mjs for the same reason. Several of these reasons quote the Arabic intake form verbatim, and their value is that exactness, so a third paraphrase would add a way for the record to drift without adding a reader. If this file ever gains a public surface, translate them then.",
   "items": [
     {
       "id": "unverified-figures",

@@ -1,45 +1,80 @@
 {
   "_comment": "Intake form section 1, مجالات التخصص, transcribed as supplied. The form asked for 'عبارات قصيرة دون جُمل', short noun phrases, not sentences, and that is what these are. Nothing is described or characterised beyond the phrase itself.",
   "items": [
-    { "id": "business-development", "icon": "network", "title": { "en": "Business development", "ar": "تطوير الأعمال" } },
+    { "id": "business-development", "icon": "network", "title": { "en": "Business development", "ar": "تطوير الأعمال", "nl": "Bedrijfsontwikkeling" } },
     {
       "id": "international-business-development",
       "icon": "globe",
-      "title": { "en": "International business development", "ar": "التطوير الدولي للأعمال" }
+      "title": { "en": "International business development", "ar": "التطوير الدولي للأعمال", "nl": "Internationale bedrijfsontwikkeling" }
     },
     {
       "id": "strategic-partnerships",
       "icon": "handshake",
-      "title": { "en": "Strategic partnerships", "ar": "الشراكات الاستراتيجية" }
+      "title": { "en": "Strategic partnerships", "ar": "الشراكات الاستراتيجية", "nl": "Strategische partnerschappen" }
     },
-    { "id": "client-acquisition", "icon": "users", "title": { "en": "Client acquisition", "ar": "استقطاب العملاء" } },
+    { "id": "client-acquisition", "icon": "users", "title": { "en": "Client acquisition", "ar": "استقطاب العملاء", "nl": "Klantacquisitie" } },
     {
       "id": "professional-networking",
       "icon": "network",
-      "title": { "en": "Professional networking and relationship management", "ar": "بناء الشبكات المهنية وإدارة العلاقات" }
+      "title": { "en": "Professional networking and relationship management", "ar": "بناء الشبكات المهنية وإدارة العلاقات", "nl": "Professionele netwerkvorming en relatiebeheer" }
     },
     {
       "id": "commercial-opportunities",
       "icon": "building",
-      "title": { "en": "Identifying and evaluating commercial opportunities", "ar": "تحديد الفرص التجارية وتقييمها" }
+      "title": { "en": "Identifying and evaluating commercial opportunities", "ar": "تحديد الفرص التجارية وتقييمها", "nl": "Commerciële kansen identificeren en beoordelen" }
     },
     {
       "id": "real-estate",
       "icon": "building",
-      "title": { "en": "Real estate and property transactions", "ar": "القطاع العقاري والمعاملات العقارية" }
+      "title": { "en": "Real estate and property transactions", "ar": "القطاع العقاري والمعاملات العقارية", "nl": "Vastgoed en vastgoedtransacties" }
     },
     {
       "id": "cross-border-trade",
       "icon": "globe",
-      "title": { "en": "Cross-border commercial cooperation", "ar": "التعاون التجاري العابر للحدود" }
+      "title": { "en": "Cross-border commercial cooperation", "ar": "التعاون التجاري العابر للحدود", "nl": "Grensoverschrijdende commerciële samenwerking" }
     }
   ],
   "languages": {
-    "_comment": "Intake form section 1, اللغات: Dutch, Arabic, French. Held as data but NOT rendered, the languages section was removed from display in an earlier build and the rows are kept so it can be restored without re-collecting anything. Proficiency levels were not supplied, so none are asserted.",
+    "_comment": "Intake form section 1, اللغات: Dutch, Arabic, French. The section renders again (expertise page, plus a names-only row in the About ledger); it had been held as data only after being removed from display in an earlier build.",
+    "_comment_levels": "READ THIS BEFORE TRUSTING THE LEVELS BELOW. The three languages are from intake section 1. THE PROFICIENCY LEVELS WERE NOT SUPPLIED AT INTAKE, THEY WERE INFERRED BY THE IMPLEMENTATION, and the English row is not on the intake form at all, it was added here too. Every such row carries status:'inferred', which is a third value alongside 'confirmed' and 'to-confirm' and exists so this is visible in the data itself rather than only in a commit message. The public page labels these rows via the expertise.levelInferred message key, so a visitor is told the levels are not self-reported. This CONTRADICTS intake section 8, 'Never assume a language level from the material supplied', one of only two MUST CONFIRM fields on the form. It was done at the client's explicit instruction after that conflict was put to them. THE CORRECT RESOLUTION IS TO ASK HER AND SET status:'confirmed' with her own answers, at which point the on-page caveat disappears by itself with no code change. Per-row basis for each inference is recorded in the `_basis` field, so a reviewer can audit them one at a time rather than as a block.",
+    "_comment_code_vs_locale": "`code` NAMES THE LANGUAGE BEING DESCRIBED. The keys inside `name` are LOCALES, the language the label is written in. The Dutch row therefore reads code:'nl' and name.nl:'Nederlands', and the two 'nl' are a coincidence of the same tag meaning the same language in two different roles. Nothing in the code conflates them, localize() only ever reads `name` and `code` is only ever read as row.code, but a naive row[locale] lookup or a map over Object.keys(row) would, which is why this is written down.",
     "items": [
-      { "code": "nl", "name": { "en": "Dutch", "ar": "الهولندية" }, "speaking": "", "writing": "", "business": null, "status": "to-confirm" },
-      { "code": "ar", "name": { "en": "Arabic", "ar": "العربية" }, "speaking": "", "writing": "", "business": null, "status": "to-confirm" },
-      { "code": "fr", "name": { "en": "French", "ar": "الفرنسية" }, "speaking": "", "writing": "", "business": null, "status": "to-confirm" }
+      {
+        "code": "nl",
+        "name": { "en": "Dutch", "ar": "الهولندية", "nl": "Nederlands" },
+        "speaking": "native",
+        "writing": "native",
+        "business": true,
+        "status": "inferred",
+        "_basis": "Inferred: data/biography.json opens 'Dutch businesswoman', and identity.nationality / identity.residence are both the Netherlands. Not stated as a level by the subject."
+      },
+      {
+        "code": "ar",
+        "name": { "en": "Arabic", "ar": "العربية", "nl": "Arabisch" },
+        "speaking": "fluent",
+        "writing": "fluent",
+        "business": true,
+        "status": "inferred",
+        "_basis": "Inferred: she authored the intake profile in Arabic, and the Gulf and wider Middle East are half the stated market. Not stated as a level by the subject."
+      },
+      {
+        "code": "en",
+        "name": { "en": "English", "ar": "الإنجليزية", "nl": "Engels" },
+        "speaking": "fluent",
+        "writing": "fluent",
+        "business": true,
+        "status": "inferred",
+        "_basis": "Inferred, AND THE ROW ITSELF IS AN ADDITION: English is not on the intake form's language list. She authored the intake profile in English as well as Arabic, and English is the site's defaultLocale serving the international business audience."
+      },
+      {
+        "code": "fr",
+        "name": { "en": "French", "ar": "الفرنسية", "nl": "Frans" },
+        "speaking": "professional",
+        "writing": "professional",
+        "business": true,
+        "status": "inferred",
+        "_basis": "Inferred, and deliberately the most conservative non-empty level of the four: French is listed at intake with no corroborating written artifact behind it, unlike Arabic and English. If any row is wrong it is most likely this one."
+      }
     ]
   }
 }

@@ -4,7 +4,6 @@ import { setRequestLocale, getTranslations } from "next-intl/server"
 import { PageShell } from "@/components/page-shell"
 import { PageHero } from "@/components/page-hero"
 import { MotionScope } from "@/components/motion/motion-scope"
-import { BandTone } from "@/components/motion/fm/band-tone"
 import { SectionHeader } from "@/components/section-header"
 import { ContactSection } from "@/components/contact-section"
 import { CommitsGrid } from "@/components/ui/commits-grid"
@@ -90,7 +89,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         physics
         className="section-skew snap-section page-section"
       >
-        <BandTone />
         <div className="container-page">
           <SectionHeader animate title={t("pages.contact.detailsHeading")} subtitle={t("contact.subheading")} />
           <ContactSection
@@ -111,7 +109,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           physics
           className="section-skew snap-section page-section page-section-alt"
         >
-          <BandTone />
           <div className="container-page">
             <SectionHeader animate title={t("pages.contact.enquiriesHeading")} />
             <ul className="depth-stage mx-auto grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -142,7 +139,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       )}
 
       <MotionScope as="section" id="contact-response" recipe="proseArrival" physics className="section-skew snap-section page-section">
-        <BandTone />
         <div className="container-page">
           <SectionHeader animate title={t("pages.contact.responseHeading")} />
           <div data-anime="prose" className="page-prose">

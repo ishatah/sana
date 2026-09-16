@@ -8,20 +8,26 @@ import type { ResolvedMedia } from "@/lib/media"
 /**
  * The About block: the short bio, a fact list, and the portrait.
  *
- * THE LANGUAGES TABLE USED TO LIVE HERE AND HAS BEEN REMOVED FROM DISPLAY ONLY.
- * Intake section 8 is one of only two fields on the whole form marked MUST
- * CONFIRM, "Never assume a language level from the material supplied", and only
- * Turkish is confirmed; Arabic and English are still `status: "to-confirm"`.
+ * ── THE LANGUAGES TABLE USED TO LIVE HERE AND IS NOT COMING BACK TO THIS FILE ──
  *
- * None of that has been resolved, so none of it has been deleted: the rows remain
- * in data/expertise.json, the editor remains at /admin/expertise, and open
- * question q1 in data/deliverables.json still tracks the missing levels. What is
- * gone is the rendering, at the client's request. The distinction matters,
- * because the original component carried an explicit warning that omitting these
- * languages "would silently drop two of her three languages", that warning is
- * about inventing or hiding a CREDENTIAL, and it is honoured by the data and the
- * open question surviving intact. Restoring the section is one commit; recovering
- * discarded intake data is not.
+ * It was removed from display at the client's request, and the rows stayed in
+ * data/expertise.json throughout. It renders again now, but in two other places:
+ * the full table with levels on /expertise (components/languages-table.tsx), and a
+ * NAMES-ONLY row in the fact list this component receives via `facts`.
+ *
+ * It does not return to this file because the column it occupied is the portrait's
+ * now, and that figure is load-bearing for the two-column grid, see the note further
+ * down. A table reinstated here would either fight the portrait for the column or
+ * collapse the layout back to a single block.
+ *
+ * WHY THE FACT-LIST ROW CARRIES NO LEVELS. Intake section 8 is one of only two
+ * fields on the whole form marked MUST CONFIRM, "Never assume a language level from
+ * the material supplied", and no level was ever supplied. Levels are nonetheless
+ * shown on /expertise, by inference and at the client's explicit instruction, under
+ * a caption stating they are not her answer (open question Q9 tracks getting the real
+ * ones). This ledger is a two-column label/value list with nowhere to put that
+ * caption, so it lists the names alone, which asserts only what intake does record.
+ * The caveat and the claim needing it stay together on the other page.
  *
  * The same restraint still governs the fact list: `careerStartYear` is empty on
  * the form and so the row is not rendered at all, rather than showing a derived
@@ -197,11 +203,13 @@ export async function AboutSection({
             the paragraph above and open a separate region; this quote is by the
             same subject as the prose it follows, so the mark opens a passage
             instead of ending one. See styles/globals.css. */}
-        {/* `mt-14`, not the `mt-8` this carried in the figure column. The ledger
-            above now ends in a full-width rule of its own, and `.block-rule` draws
-            another one a third of the way across, at a short gap the two read as
-            one more ledger row that lost its label. The wider gap is what separates
-            the closing of the table from the opening of the quote. */}
+        {/* `mt-14`, not the `mt-8` this carried in the figure column, and the gap
+            is doing MORE work than it used to. The ledger above ends in a
+            full-width rule, and `.block-rule` is now full width too rather than a
+            third of the way across, so the two marks are the same length and the
+            spacing is the only thing left telling them apart. At a short gap they
+            would read as one more ledger row that lost its label; `mt-14` is what
+            separates the closing of the table from the opening of the quote. */}
         {quoteText && (
           <blockquote data-anime="row" className="block-rule mt-14 pt-6">
             {/* `.about-quote` replaces `text-base sm:text-lg`. One fluid step that

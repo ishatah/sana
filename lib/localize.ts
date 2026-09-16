@@ -20,7 +20,9 @@ export type LocalizedString = Partial<Record<Locale, string>> | string
  * Fallback order is English → the first non-empty value. English leads because it
  * is `defaultLocale` and the locale whose copy is authored rather than translated.
  *
- * THIS LIST MUST NAME ONLY LOCALES THAT EXIST. It previously read
+ * THIS LIST MUST NAME ONLY LOCALES THAT EXIST, and it is still just `["en"]` after
+ * Dutch was added: a missing Dutch value should fall back to the authored English,
+ * not to whichever other locale happens to be declared first. It previously read
  * `["tr", "en"]`, and when Turkish was removed that first entry became a lookup
  * for a key no data file carries any more, silently falling through to the
  * `Object.values` sweep on every field, which returns whatever key happens to be

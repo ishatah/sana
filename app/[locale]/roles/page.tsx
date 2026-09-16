@@ -3,7 +3,6 @@ import { setRequestLocale, getTranslations } from "next-intl/server"
 import { PageShell } from "@/components/page-shell"
 import { PageHero } from "@/components/page-hero"
 import { MotionScope } from "@/components/motion/motion-scope"
-import { BandTone } from "@/components/motion/fm/band-tone"
 import { SectionHeader } from "@/components/section-header"
 import { RoleEntryList, composeRoles } from "@/components/role-entry"
 import { getAwards, getPositions } from "@/lib/profile-content"
@@ -55,7 +54,6 @@ export default async function RolesPage({ params }: { params: Promise<{ locale: 
     >
       {roles.length > 0 && (
         <MotionScope as="section" id="roles-current" recipe="ledgerRows" interaction="hoverRule" physics className="section-skew snap-section page-section">
-          <BandTone />
           <div className="container-page">
             <SectionHeader animate title={t("pages.roles.currentHeading")} />
             {/*
@@ -84,7 +82,6 @@ export default async function RolesPage({ params }: { params: Promise<{ locale: 
           physics
           className="section-skew snap-section page-section page-section-alt"
         >
-          <BandTone />
           <div className="container-page">
             <SectionHeader animate title={t("positions.previous")} />
             <RoleEntryList roles={previous} />

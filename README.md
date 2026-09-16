@@ -1,6 +1,13 @@
-# Sıdıka Şire — profile site
+# Sanae Rakik — profile site
 
-Client `CL-01-SS`. Next.js 16 · next-intl · Tailwind v4.
+Client `CL-02-SR`. Next.js 16 · next-intl · Tailwind v4.
+
+> ⚠️ **PARTS OF THIS FILE STILL DESCRIBE THE PREVIOUS SUBJECT, `CL-01-SS` (Sıdıka Şire,
+> IFB, Türkiye), and are wrong for this project.** The brand table, the "Brand" section
+> and the "What is deliberately empty" table below were written for that client and have
+> not been re-verified. `docs/content-gaps.md` was rewritten against the live data and is
+> the trustworthy document; where the two disagree, believe it, and `npm run check:copy`
+> over both. The locale list and layout below ARE current.
 
 Design: **Kyros** HTML template structure, wearing the **IFB** brand identity
 (ifb-us.org). Directory structure mirrors **ryzo-website**. Content comes from the
@@ -55,7 +62,7 @@ Resend is configured.
 
 ```
 app/
-  [locale]/          tr (default, unprefixed) · en · ar
+  [locale]/          en (default, unprefixed) · ar · nl
     page.tsx         the one-page profile
     privacy/ terms/ cookies/
   admin/             editors, not localised — one internal user
@@ -71,7 +78,7 @@ lib/
   exclusions.ts      section 15 log, feeds the build gate
   cms-section.ts     storage-first loader with local fallback
   seo.ts             metadata, JSON-LD, the indexing gate
-messages/            tr.json · en.json · ar.json
+messages/            en.json · ar.json · nl.json
 scripts/
   check-publish-gate.mjs       CI gate, exits 1 on banned wording
 proxy.ts             admin guard + locale routing + locale header
@@ -106,8 +113,12 @@ Verification tiers from section 3 are applied in `lib/verification.ts`:
   university, so `Dr.` before this name is rejected in every language.
 - **Contact details are an allowlist.** Only `visibility: "public"` renders. Both
   phone numbers and both addresses are withheld pending Q6 and Q2.
-- **Language levels are never inferred.** Only Turkish is confirmed; Arabic and
-  English render as pending, not as a guess.
+- **Language levels.** ⚠️ This read "never inferred", which is no longer true: the
+  levels in `data/expertise.json` were set by inference at the client's explicit
+  instruction. Every such row carries `status: "inferred"`, renders on the site under a
+  caption saying it is not her answer, and contributes no proficiency to the JSON-LD.
+  Open question **Q9** is how it closes. The rule itself still stands for every other
+  field.
 
 ## What is deliberately empty
 
@@ -118,7 +129,7 @@ They appear automatically once the data arrives.
 
 | Blocked on | What it unblocks |
 |---|---|
-| Q1 | Arabic and English language levels |
+| Q9 | Confirmed language levels, replacing the inferred ones now shown |
 | Q2 | Which Adana office is current |
 | Q3 | Full bio, About page, achievements, results counters |
 | Q4 | Start years on four positions |

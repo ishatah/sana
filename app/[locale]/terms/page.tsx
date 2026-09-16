@@ -71,7 +71,40 @@ export default async function TermsPage({ params }: { params: Promise<{ locale: 
       linksHeading: "الروابط الخارجية",
       links: "هذا الموقع غير مسؤول عن محتوى المواقع الخارجية التي يرتبط بها.",
     },
-  }[locale as "en" | "ar"] ?? {
+    /*
+     * THE DISCLAIMERS ARE THE POINT OF THIS PAGE, SO THE DUTCH MUST DISCLAIM THE
+     * SAME THINGS.
+     *
+     * This file's header explains that the "no investment offer" clause exists
+     * because the subject works in business development and real estate, which is
+     * adjacent enough to investment solicitation that the distinction has to be
+     * stated rather than assumed. That reasoning is not language-specific: a Dutch
+     * reader arriving from the Dutch market needs the same clause, so "geen
+     * beleggingsaanbod" carries the same weight here as its English counterpart and
+     * must not be softened into something vaguer.
+     *
+     * "vertegenwoordiging" rather than "eigendom" in the third-party clause is the
+     * same careful distinction data/positions.json holds: she represents the IBC,
+     * she does not own it. The organisation's name stays in English because it is a
+     * legal name (see lib/localize.ts).
+     */
+    nl: {
+      intro: "Deze website presenteert het professionele profiel van Sanae Rakik ter informatie.",
+      adviceHeading: "Geen aanbod of advies",
+      advice:
+        "De inhoud van deze website beschrijft uitsluitend een professionele loopbaan. Niets op deze site vormt een beleggingsaanbod, een uitnodiging om te beleggen, of financieel of juridisch advies. Door deze site te bezoeken of er een bericht via te versturen ontstaat geen professionele relatie.",
+      accuracyHeading: "Juistheid van de informatie",
+      accuracy:
+        "Functies en titels worden gepubliceerd samen met de volledige juridische naam van de betreffende organisatie. De informatie is juist op de datum van publicatie; als u een fout ziet, meld die dan en die wordt gecorrigeerd.",
+      thirdPartyHeading: "Organisaties van derden",
+      thirdParty:
+        "Het noemen van een organisatie op deze website betekent niet dat die organisatie deze site onderschrijft. Waar een vertegenwoordigende of adviserende functie wordt beschreven, wordt die als zodanig beschreven en impliceert die geen eigendom van de genoemde organisatie.",
+      ipHeading: "Rechten op de inhoud",
+      ip: "De tekst en het ontwerp van deze website zijn auteursrechtelijk beschermd, tenzij anders vermeld. Logo's van organisaties blijven eigendom van de respectieve eigenaren.",
+      linksHeading: "Externe links",
+      links: "Deze website is niet verantwoordelijk voor de inhoud van externe sites waarnaar wordt gelinkt.",
+    },
+  }[locale as "en" | "ar" | "nl"] ?? {
     intro: "",
     adviceHeading: "",
     advice: "",

@@ -7,6 +7,7 @@ import { LoadState } from "@/components/admin/LoadState"
 import { ContentSection } from "@/components/admin/ContentSection"
 import { FieldRow } from "@/components/admin/FieldRow"
 import { LocalizedFieldRow } from "@/components/admin/LocalizedFieldRow"
+import { emptyLocalized } from "@/components/admin/emptyLocalized"
 import { SaveButton } from "@/components/admin/SaveButton"
 
 const SECTION = "positions"
@@ -59,8 +60,8 @@ export default function PositionsAdminPage() {
           organisation: "",
           organisationUrl: "",
           registerConfirmed: false,
-          role: { tr: "", en: "", ar: "" },
-          city: { tr: "", en: "", ar: "" },
+          role: emptyLocalized(),
+          city: emptyLocalized(),
           startYear: "",
           // A new row starts at C and unpublished. The safe default is the one
           // that keeps an unverified entry off the site until someone actively

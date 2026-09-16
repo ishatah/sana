@@ -7,6 +7,7 @@ import { LoadState } from "@/components/admin/LoadState"
 import { ContentSection } from "@/components/admin/ContentSection"
 import { FieldRow } from "@/components/admin/FieldRow"
 import { LocalizedFieldRow } from "@/components/admin/LocalizedFieldRow"
+import { emptyLocalized } from "@/components/admin/emptyLocalized"
 import { SaveButton } from "@/components/admin/SaveButton"
 
 const SECTION = "awards"
@@ -127,7 +128,7 @@ export default function AwardsAdminPage() {
                 ...awards,
                 {
                   id: `award-${Date.now()}`,
-                  award: { tr: "", en: "", ar: "" },
+                  award: emptyLocalized(),
                   issuingBody: "",
                   year: "",
                   refNo: "",

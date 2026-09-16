@@ -9,11 +9,13 @@
       "organisationUrl": "",
       "role": {
         "en": "Consultant and Strategic Representative",
-        "ar": "مستشارة وممثلة استراتيجية"
+        "ar": "مستشارة وممثلة استراتيجية",
+        "nl": "Consultant en Strategic Representative"
       },
       "summary": {
         "en": "Connecting entrepreneurs, companies, investors and institutions across sectors, facilitating strategic partnerships and cross-border cooperation.",
-        "ar": "الربط بين رواد الأعمال والشركات والمستثمرين والمؤسسات في مختلف القطاعات، وتيسير الشراكات الاستراتيجية والتعاون العابر للحدود."
+        "ar": "الربط بين رواد الأعمال والشركات والمستثمرين والمؤسسات في مختلف القطاعات، وتيسير الشراكات الاستراتيجية والتعاون العابر للحدود.",
+        "nl": "Ondernemers, bedrijven, investeerders en instellingen uit verschillende sectoren met elkaar verbinden, en strategische partnerschappen en grensoverschrijdende samenwerking faciliteren."
       },
       "_comment_period": "Intake form section 4: 'الفترة تُزوَّد لاحقًا', the period is to be supplied later. Empty renders as unconfirmed rather than as a guess.",
       "period": "",

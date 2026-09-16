@@ -7,7 +7,8 @@
       "kind": "anchor",
       "label": {
         "en": "Home",
-        "ar": "الرئيسية"
+        "ar": "الرئيسية",
+        "nl": "Home"
       },
       "enabled": true
     },
@@ -18,7 +19,8 @@
       "kind": "both",
       "label": {
         "en": "About",
-        "ar": "نبذة عني"
+        "ar": "نبذة عني",
+        "nl": "Over"
       },
       "enabled": true
     },
@@ -29,7 +31,8 @@
       "kind": "both",
       "label": {
         "en": "Expertise",
-        "ar": "مجالات الخبرة"
+        "ar": "مجالات الخبرة",
+        "nl": "Expertise"
       },
       "enabled": true
     },
@@ -40,7 +43,8 @@
       "kind": "both",
       "label": {
         "en": "Roles",
-        "ar": "المناصب والعضويات"
+        "ar": "المناصب والعضويات",
+        "nl": "Functies"
       },
       "enabled": true
     },
@@ -50,7 +54,8 @@
       "kind": "anchor",
       "label": {
         "en": "Press",
-        "ar": "الصحافة"
+        "ar": "الصحافة",
+        "nl": "Pers"
       },
       "enabled": false
     },
@@ -61,7 +66,8 @@
       "kind": "both",
       "label": {
         "en": "Contact",
-        "ar": "اتصل بي"
+        "ar": "اتصل بي",
+        "nl": "Contact"
       },
       "enabled": false
     }
@@ -72,7 +78,8 @@
       "href": "/privacy",
       "label": {
         "en": "Privacy",
-        "ar": "الخصوصية"
+        "ar": "الخصوصية",
+        "nl": "Privacy"
       }
     },
     {
@@ -80,7 +87,8 @@
       "href": "/terms",
       "label": {
         "en": "Terms",
-        "ar": "الشروط"
+        "ar": "الشروط",
+        "nl": "Voorwaarden"
       }
     },
     {
@@ -88,7 +96,8 @@
       "href": "/cookies",
       "label": {
         "en": "Cookies",
-        "ar": "ملفات الارتباط"
+        "ar": "ملفات الارتباط",
+        "nl": "Cookies"
       }
     }
   ]

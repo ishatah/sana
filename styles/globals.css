@@ -478,6 +478,133 @@
 }
 
 /*
+ * ═══════════════════════════════════════════════════════════════════════════
+ * THE LIGHT + IBC BLUE SCHEME. This block re-themes the whole site.
+ * ═══════════════════════════════════════════════════════════════════════════
+ *
+ * WHY IT IS AN OVERRIDE BLOCK RATHER THAN AN EDIT TO THE :root ABOVE.
+ *
+ * The dark scheme above is ~450 lines, and most of them are not values, they are
+ * the MEASUREMENTS AND REASONING behind the values: which ground each ratio was
+ * computed against, why the surface ladder was widened, why the greys carry a
+ * cream cast. Rewriting those in place would destroy that record to change about
+ * thirty declarations. Overriding keeps the dark scheme intact and legible, makes
+ * this change one reviewable unit, and makes reverting it a single deletion.
+ *
+ * ── THE TWO-TIER BLUE, WHICH IS THE WHOLE ACCESSIBILITY STORY HERE ──────────
+ *
+ * The IBC mark is a bright corporate azure. Measured on white, that blue is
+ * #1E90D6 = 3.49:1. That clears 1.4.3's 3:1 for LARGE text and non-text contrast,
+ * and it FAILS the 4.5:1 that anything at body size needs. A brand colour used
+ * flat for every accent would therefore be unreadable in exactly the places a
+ * reader has to read, and it would fail the same way the gold did on white
+ * (#DCB75F = 1.78:1, see the .section-invert note further down).
+ *
+ * So the ramp splits, exactly as the gold's did:
+ *   --primary        #1E90D6  3.49:1  rules, fills, large display type ONLY
+ *   --primary-strong #0B6FC4  5.14:1  accent text at body size
+ *   --primary-deep   #08477F  9.47:1  focus ring, so a focused control reads as
+ *                                     a state CHANGE rather than the same blue
+ *
+ * Every ratio in this block was computed with the WCAG relative-luminance
+ * formula against the ground named beside it, not estimated. Change a ground and
+ * the numbers must be recomputed, not assumed to still hold.
+ *
+ * ── THE FOUR TOKENS THAT MUST BE DECLARED HERE OR THE PAGE SHIPS GOLD ───────
+ *
+ * --primary, --primary-rgb, --primary-hover and --primary-foreground are the
+ * four colour tokens the pre-existing .section-invert light block never
+ * overrode. On a dark ground that was invisible; on a white one each would leak
+ * its gold value straight through. --primary-hover is the worst of them: it is
+ * the fill of `.cta-fill`, the primary call to action, so the single most
+ * prominent control on the page would have rendered gold-on-white at 1.91:1.
+ * They are declared first, deliberately, so the omission cannot recur silently.
+ */
+:root {
+  /* Light document: without this the native scrollbar, date picker and Chrome's
+     autofill background stay dark, painting a black block inside form fields
+     whose own background is now white. The mirror of the note above. */
+  color-scheme: light;
+
+  /* ── The four that would otherwise leak gold ──────────────────────────── */
+  /* 3.49:1 on #FFFFFF. DECORATIVE AND LARGE TYPE ONLY. Never set body-size text
+     in this; that is what --primary-strong exists for. */
+  --primary: #1e90d6;
+  --primary-rgb: 30, 144, 214;
+  /* The CTA fill. White text on it measures 5.14:1, so the button's own label
+     clears AA. The brighter --primary would have put white on 3.49:1 and failed. */
+  --primary-hover: #0b6fc4;
+  /* Text ON a primary fill. 5.14:1 against --primary-hover above. */
+  --primary-foreground: #ffffff;
+
+  /* ── Surfaces. Pure white ground, cool rather than warm ────────────────── */
+  /* The greys carry a faint BLUE cast, the mirror of the dark scheme's cream
+     one and for the identical reason: the accent should read as belonging to the
+     same light rather than as a colour dropped onto a neutral screen. */
+  --background: #ffffff;
+  --surface: #f6f8fb;
+  --surface-raised: #edf2f8;
+  --card: #f6f8fb;
+
+  /* ── Text. Deep charcoal, not pure black ──────────────────────────────── */
+  /* 18.91:1 on white. Pure #000 measures 21:1 and is the one value that reads as
+     cheap on a white ground: it vibrates against the page and belongs to screens
+     rather than to print. A deep charcoal keeps the authority and loses the buzz,
+     which is the whole difference between "stark" and "expensive". */
+  --heading: #0e1116;
+  /* 11.35:1 on white. */
+  --foreground: #3a3a3c;
+  /* 12.81:1 on --card. */
+  --card-foreground: #2b2e33;
+  --muted: #f6f8fb;
+  /* 5.84:1 on white, 5.48:1 on --surface. Carries dates, field labels and the
+     hero's meta row, so it has to clear AA at normal size rather than merely look
+     quieter than the body text. Cool-neutral to match the surfaces. */
+  --muted-foreground: #5c6672;
+
+  /* ── Lines. Black-alpha, mirroring the dark scheme's white-alpha pair ──── */
+  /* --border is decorative (dividers, rails, panel edges) so 1.4.11 does not
+     apply and it stays faint. --input is the entire visible boundary of a form
+     control and must clear 3:1, which rgba(14,17,22,0.42) does on white. */
+  --border: rgba(14, 17, 22, 0.12);
+  --input: rgba(14, 17, 22, 0.42);
+
+  /* ── The rest of the blue ramp ─────────────────────────────────────────── */
+  /* 5.14:1 on white. Accent text at body size lives here. */
+  --primary-strong: #0b6fc4;
+  /* 9.47:1 on white. The focus ring reads as a state change against
+     --primary-strong rather than as the same blue twice. */
+  --primary-deep: #08477f;
+  /* Pale fills and washes. Decorative only, never a text ground. */
+  --primary-tint: #dceafa;
+  --primary-soft: rgba(30, 144, 214, 0.1);
+  --ring: rgba(8, 71, 127, 0.55);
+
+  /* ── The cool accent, now a slate that supports the blue ───────────────── */
+  --accent-cool: #33506b;
+  --accent-cool-rgb: 51, 80, 107;
+  --accent-cool-hover: #41627f;
+  --accent-cool-soft: rgba(51, 80, 107, 0.12);
+  --accent-cool-foreground: #ffffff;
+
+  /* ── Status. Each still reads AS ITS STATUS on white ───────────────────── */
+  /* These are deliberately NOT pulled toward the blue. A warning that has been
+     tinted toward the brand stops being a warning; 5.08 / 6.01 / 6.57:1 on white
+     and each keeps its own hue. */
+  --success: #1a7f37;
+  --warning: #9a4f00;
+  --danger: #b42318;
+
+  /* ── Shadows, TINTED WITH THE BLUE rather than neutral grey ────────────── */
+  /* A neutral grey shadow on white reads as a dropped rectangle; a shadow
+     carrying a trace of the accent hue reads as the same light that lights the
+     rest of the page. This is most of the difference between a page that looks
+     premium and one that looks like a default card. */
+  --shadow-brand: 0 18px 40px -12px rgba(11, 111, 196, 0.18);
+  --shadow-brand-sm: 0 2px 8px -2px rgba(11, 111, 196, 0.14);
+}
+
+/*
  * ARABIC NEVER SEES A LATIN-ONLY DISPLAY FACE.
  *
  * THIS IS CURRENTLY A NO-OP, AND IT IS KEPT ON PURPOSE. --font-display and
@@ -2677,7 +2804,14 @@
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: 0;
-  width: min(34%, 11rem);
+  /*
+   * Full column width, matching `.band-edge`. These two were 11rem and 30rem
+   * respectively, deliberately short so each read as the start of a passage
+   * rather than a divider. They are now one length so that, stacked down the
+   * page, every rule begins and ends on the same two lines and the set reads as
+   * one continuous line rather than a ragged column of marks.
+   */
+  width: 100%;
   height: 1px;
   background: var(--border);
   pointer-events: none;
@@ -2808,33 +2942,63 @@
  * ══════════════════════════════════════════════════════════════════════════════
  *
  * A band leans on the block axis in proportion to how fast it is being scrolled
- * past. The angle is integrated by a spring in
- * components/motion/fm/use-section-skew.ts and arrives here as `--skew`; this rule
- * is what turns that number into a transform.
+ * past. The angle is composed HERE, in CSS, from the two custom properties
+ * components/motion/fm/page-physics.tsx publishes to <html>.
  *
- * ── WHY THE COMPOSITION LIVES IN CSS AND THE NUMBER IN JS ────────────────────
+ * ── THIS USED TO BE A PER-SECTION JS SPRING, AND THAT WAS THE BUG ────────────
  *
- * The hook could have written `transform` directly and saved this rule. It does
- * not, and the reason is the footgun components/motion/interactions.ts:90-136
+ * The angle arrived as an inline `--skew` written by a deleted hook,
+ * use-section-skew.ts, which integrated a spring in its own rAF loop and set React
+ * state every frame. With ~14 bands carrying it, that was 14 loops, 14 scroll
+ * listeners and 14 subtree re-renders per frame, and on hardware that could not
+ * absorb it the bands shook. The signal is now derived once, for the whole
+ * document, by a component that writes no React state at all.
+ *
+ * ── THE COMPOSITION STILL LIVES IN CSS, FOR THE ORIGINAL REASON ──────────────
+ *
+ * The stylesheet still owns `transform` outright, and nothing writes an inline
+ * transform to these bands. That is the footgun components/motion/interactions.ts
  * records in full: an inline style written by JS outranks a stylesheet rule, and
  * that is how a `transform-origin` written inline once silently defeated the
- * `[dir="rtl"]` mirror sitting right beside it.
- *
- * With the angle in a custom property, the stylesheet still owns `transform`. The
- * reduced-motion override below is a plain declaration that cannot be raced or
- * outranked, rather than an `!important` fighting an inline value mid-flight.
+ * `[dir="rtl"]` mirror sitting right beside it. The reduced-motion override below
+ * is therefore a plain declaration that cannot be raced or outranked.
  *
  * ── THE FALLBACK IS THE NO-JS FLOOR ──────────────────────────────────────────
  *
- * `var(--skew, 0deg)`. With no JavaScript the property is never set, the fallback
- * resolves, and the band renders `skewY(0deg)`, which is identical to no
- * transform at all. Nothing is hidden, nothing is displaced, and there is no
- * deadline to arm, because unlike an entrance this effect's resting state IS its
- * declared state. That is the three-layer model in components/motion/sections.ts
- * reaching its cheapest case.
+ * Both properties have `0` floors declared at `:root`, and the `var()` fallbacks
+ * here repeat them. With no JavaScript neither is ever written, the calc resolves
+ * to `skewY(0deg)`, and that is identical to no transform at all. Nothing is
+ * hidden, nothing is displaced, and there is no deadline to arm, because unlike an
+ * entrance this effect's resting state IS its declared state.
  */
 .section-skew {
-  transform: skewY(var(--skew, 0deg));
+  /*
+   * ── THE ANGLE IS NOW COMPOSED FROM THE GLOBAL SIGNAL, NOT WRITTEN PER SECTION ─
+   *
+   * This used to read `skewY(var(--skew, 0deg))`, where `--skew` was an inline
+   * style written by components/motion/fm/use-section-skew.ts. That hook ran its
+   * own rAF spring per band and called `setSkew` EVERY FRAME, so each of the ~14
+   * bands on this site re-rendered its entire <section> subtree once per frame
+   * while scrolling, each with its own scroll listener and its own `window.scrollY`
+   * read. On a device that could not render that inside the frame budget the angle
+   * arrived late, desynchronised from the scroll, and the band visibly shook.
+   *
+   * `--scroll-speed` (0..1) and `--scroll-dir` (-1|0|1) are ALREADY published to
+   * <html> by components/motion/fm/page-physics.tsx, which is mounted once for the
+   * whole document and writes with NO React renders at all: one sprung, rounded,
+   * dead-zoned signal, parked the moment scrolling stops. That component's own
+   * docblock states it exists precisely so effects stop deriving this number
+   * independently, which is what the skew hook was doing.
+   *
+   * Multiplying the two reconstructs the signed lean the hook produced: magnitude
+   * from speed, sign from direction. 2.4deg is the hook's own MAX_SKEW, kept so the
+   * gesture is unchanged. The spring, the clamp and the settle-to-flat all still
+   * happen, once, upstream, in page-physics.tsx.
+   *
+   * The floors at `:root` mean this resolves to `skewY(0deg)` with no JavaScript,
+   * which is identical to no transform, so the no-JS behaviour is unchanged.
+   */
+  transform: skewY(calc(var(--scroll-speed, 0) * var(--scroll-dir, 0) * 2.4deg));
   /*
    * `transform-origin` is centred on the INLINE axis and top on the block axis, so
    * a leaning band pivots about the edge the reader is approaching rather than
@@ -2874,6 +3038,26 @@
 }
 
 .depth-stage {
+  /*
+   * ── ONE STATIC PERSPECTIVE, AND WHY IT IS NO LONGER SCROLL-LINKED ────────────
+   *
+   * This value used to be shadowed. A SECOND `.depth-stage` rule later in this file
+   * set `perspective: calc(1200px - var(--scroll-speed) * 220px)`, same specificity,
+   * so the later rule won and the 1400px here was dead, while the wall's camera was
+   * recomputed on every frame the page was scrolling.
+   *
+   * `perspective` is not a compositor property. Changing it on a `transform-style:
+   * preserve-3d` container invalidates the rasterisation of the WHOLE 3D subtree,
+   * and this container's subtree is the expertise wall: eight cards that each carry
+   * their own `rotateX`/`rotateY` and a `backdrop-filter`. Re-rastering that every
+   * frame is the most expensive thing the stylesheet was asking for, and it was the
+   * band that shook first on weaker GPUs.
+   *
+   * The breathing camera is dropped rather than moved to another property: there is
+   * no compositor-safe way to animate a perspective, and the effect it bought was a
+   * few px of apparent depth that no reader was tracking. The duplicate is deleted
+   * at its old site so this value is the only one and is live again.
+   */
   perspective: 1400px;
   /* The vanishing point sits at the top of the stage rather than its centre, so
      cards recede INTO the page along the axis the reader is travelling. A centred
@@ -3031,13 +3215,39 @@
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: var(--gutter);
-  width: min(38%, 30rem);
+  /*
+   * FULL COLUMN WIDTH. The rule begins at the leading gutter, so spanning the
+   * column means stopping at the matching gutter on the other side, not 100%,
+   * which would run it under the trailing margin and off the screen edge.
+   * `.container-page` insets content by exactly this much on both sides, so the
+   * rule now lands on the same two optical lines every heading and grid on the
+   * page does.
+   */
+  width: calc(100% - 2 * var(--gutter));
   height: 1px;
   background: var(--border);
   transform: scaleX(1);
   transform-origin: left;
   pointer-events: none;
 }
+
+/*
+ * NO CSS DRAW ANIMATION ON `.band-edge`, DELIBERATELY, and this is the one place
+ * the "every rule animates the same way" rule is not implemented the same way.
+ *
+ * The edge ALREADY draws itself on entry, from JavaScript: mountSection() in
+ * components/motion/sections.ts runs an `entrance` from `scaleX: 0` on every
+ * band's own `:scope > .band-edge`. Adding the hero's scroll-driven
+ * `block-rule-draw` here as well would mean two animations writing `transform`
+ * on one element, and a running CSS animation beats an inline style, so the CSS
+ * would silently win and the JS entrance, with its recipe timing and its
+ * cleanup, would stop having any visible effect.
+ *
+ * So the widths are unified and the MOTION IS LEFT WHERE IT ALREADY LIVED. What
+ * the hero's rule and the band edges now share is the thing that was actually
+ * asked for, one length and one pair of optical lines down the page; they were
+ * never going to share one keyframe, because only one of them is CSS's to move.
+ */
 
 /* The mirror every transform-origin on this site needs, the same footgun
    `.hover-rule` and `.field-underline` already carry. Without it the rule would
@@ -4259,31 +4469,44 @@ body[data-nav-scrolled] .masthead-name {
  * distracting thing it is possible to do to a page of running text, and it would
  * land squarely in the register data/exclusions.json rules out.
  */
-@supports (font-variation-settings: "wght" 400) {
-  .weight-react {
-    font-variation-settings: "wght" calc(var(--type-weight, 600) + var(--scroll-speed) * 40);
-  }
-}
+/*
+ * ⚠️ NEUTRALISED, AND CURRENTLY UNUSED BY ANY COMPONENT.
+ *
+ * This read `font-variation-settings: "wght" calc(var(--type-weight, 600) +
+ * var(--scroll-speed) * 40)`. Changing a variation axis re-shapes and re-measures
+ * the text, so every heading carrying this class was re-laid-out on every scrolling
+ * frame. On low-end Android that is one of the most reliable ways to produce
+ * exactly the judder this change is fixing.
+ *
+ * The declaration is removed rather than the class, and the class has no call site
+ * in components/ or app/ today, so nothing loses an effect. The static weight the
+ * stylesheet already declares is the design, which is what the note above says the
+ * @supports fallback was relying on anyway.
+ *
+ * If a moving weight is ever wanted again it must be driven per-heading on a
+ * discrete step (a class toggled at a velocity threshold), never as a continuous
+ * calc over `--scroll-speed`.
+ */
 
 /*
- * ── #23, LENS BREATHING ─────────────────────────────────────────────────────
+ * ── #23, LENS BREATHING ───────────────── REMOVED, AND NOT COMING BACK ───────
  *
- * The camera's focal length changes very slightly with scroll speed. Any subtree
- * that establishes a perspective can opt in, and everything projected inside it
- * inherits the change, so one declaration re-lenses a whole band.
+ * This declared a SECOND `.depth-stage` rule, `perspective: calc(1200px -
+ * var(--scroll-speed) * 220px)`, so the camera's focal length changed with scroll
+ * speed. It is deleted, and the single static `perspective` at the first
+ * `.depth-stage` rule earlier in this file is now the only one.
  *
- * Longer lens (larger value) when still, shorter when moving. That is the correct
- * direction: a shorter lens exaggerates depth, so the page gains dimensionality
- * as it moves and settles back to a calm, flat, editorial projection at rest.
+ * WHY: two rules, same class, same specificity, meant this one silently won and the
+ * earlier `1400px` had never applied. Worse, `perspective` is not a compositor
+ * property: recomputing it on a `preserve-3d` container re-rasters the entire 3D
+ * subtree, and this container's subtree is the expertise wall, eight cards each
+ * carrying `rotateX`/`rotateY` plus a `backdrop-filter`. That was a full 3D
+ * re-raster on every scrolling frame, and it is why that band juddered first on
+ * weaker hardware.
  *
- * ⚠️ `.depth-stage` is ALREADY ON THE EXPERTISE WALL (components/expertise-grid.tsx)
- * and this gives the class its meaning. It does NOT conflict with the per-card
- * perspective in ./expertise-card.tsx: that one is on the card's own wrapper and
- * is the camera for the tilt, while this is the camera for the band.
+ * There is no compositor-safe property to move the effect to, so it is dropped
+ * rather than rewritten. The depth it bought was a few pixels nobody was tracking.
  */
-.depth-stage {
-  perspective: calc(1200px - var(--scroll-speed) * 220px);
-}
 
 /*
  * ── #24, THE VIGNETTE FOLLOWS ATTENTION ─────────────────────────────────────
@@ -4650,6 +4873,57 @@ body[data-nav-scrolled] .masthead-name {
  * Belt and braces, on the one preference where getting it wrong is a genuine
  * accessibility failure rather than a cosmetic one.
  */
+/*
+ * ══════════════════════════════════════════════════════════════════════════════
+ *  THE LITE TIER, FOR HARDWARE THAT CANNOT HOLD THE FULL STACK
+ * ══════════════════════════════════════════════════════════════════════════════
+ *
+ * `<html data-perf="lite">` is written by components/motion/fm/perf-tier.tsx when
+ * the device reports low memory, few cores, Save-Data, or a slow display. See that
+ * file for what each signal means and why this is NOT `prefers-reduced-motion`:
+ * a visitor on a cheap phone has not asked for less motion, and someone who asks
+ * for less motion may be on a workstation.
+ *
+ * WHAT IS DROPPED, AND WHY THESE FOUR. Each is a layer whose cost is paid on every
+ * composited frame rather than once:
+ *
+ *   backdrop-filter   Re-samples and re-blurs whatever is behind the element every
+ *                     frame it moves. On `.glass-card` that element is also carrying
+ *                     `rotateX`/`rotateY`, which is the single most expensive
+ *                     combination on this site and the first thing to judder.
+ *   .page-grain       A fixed full-viewport SVG-turbulence layer over the entire
+ *                     document, with a scroll-linked opacity.
+ *   .page-aberration  A second fixed full-viewport layer.
+ *   thread glow       Five stacked stroked paths the height of the document under
+ *                     `mix-blend-mode: plus-lighter`, which forces the group into
+ *                     its own blended layer.
+ *
+ * WHAT IS KEPT, DELIBERATELY: the section lean, the 3D recession, the card tilt and
+ * the thread itself. Those are the design, they are all compositor-only after the
+ * fixes in this change, and a lite device is not a device that should get a
+ * different site. This tier removes the layers that are expensive AND decorative,
+ * never the ones that carry the page's character.
+ *
+ * The thread's own structure is kept so the line still reads: only the glow stack's
+ * blending and its animated breathe come off, leaving a clean single-weight line.
+ */
+:root[data-perf="lite"] .glass-card,
+:root[data-perf="lite"] .glass-card:hover {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+:root[data-perf="lite"] .page-grain,
+:root[data-perf="lite"] .page-aberration {
+  display: none;
+}
+
+:root[data-perf="lite"] .section-thread-stack {
+  mix-blend-mode: normal;
+  animation: none;
+  will-change: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
   :root {
     --light-x: 50% !important;
@@ -5114,11 +5388,10 @@ body[data-nav-scrolled] .masthead-name {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background: radial-gradient(
-      120% 80% at 50% 45%,
-      rgba(var(--primary-rgb), 0.06),
-      transparent 70%
-    );
+    /* The bloom WAS the circle: one broad radial centred at 50% 45%. The ramp on
+       `.mesh-hero` above now carries the whole of the hero's warmth, so painting
+       a second centred wash over it would only put the circle back. */
+    background: none;
   }
 
   /* ── 18. FOOTER COOL BLOOM ────────────────────────────────────────────────
@@ -5734,12 +6007,15 @@ body[data-nav-scrolled] .masthead-name {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background-image:
-      radial-gradient(42% 46% at 18% 22%, rgba(var(--primary-rgb), 0.09), transparent 70%),
-      radial-gradient(38% 42% at 82% 18%, rgba(var(--accent-cool-rgb), 0.07), transparent 70%),
-      radial-gradient(52% 48% at 72% 78%, rgba(var(--primary-rgb), 0.06), transparent 72%),
-      radial-gradient(44% 40% at 28% 82%, rgba(var(--accent-cool-rgb), 0.05), transparent 70%),
-      radial-gradient(64% 56% at 50% 50%, var(--primary-tint), transparent 76%);
+    /* NO RADIAL BLOBS, for the reason given on `.hero-field`: five superimposed
+       radials on a near-black ground read as glowing circles rather than as a
+       field. A block-axis ramp gives the same ground with no centre to see. */
+    background-image: linear-gradient(
+      to bottom,
+      rgba(var(--primary-rgb), 0.05),
+      rgba(var(--primary-rgb), 0.02) 40%,
+      transparent 74%
+    );
   }
 
   /* ── 43. AURORA DRIFT ─────────────────────────────────────────────────────
@@ -6536,8 +6812,22 @@ body[data-nav-scrolled] .masthead-name {
    *
    * 2px at full speed. Past about 4px the cards visibly reflow, which is a
    * layout change rather than a physical one. */
+  /*
+   * ⚠️ NEUTRALISED. `gap` IS A LAYOUT PROPERTY AND THIS RAN EVERY SCROLL FRAME.
+   *
+   * This read `gap: calc(1.5rem + (2px * var(--scroll-speed, 0)))`, so the wall's
+   * track sizing was recomputed on every frame the page moved: a full grid reflow
+   * per frame, on the same element that carries `.depth-stage` and a `skewY`
+   * spring, with `backdrop-filter` children. The note below already conceded that
+   * past ~4px "the cards visibly reflow", which is the tell, the mechanism was a
+   * reflow at every amplitude, and 2px only made it a small one.
+   *
+   * The gap is now static. The class is KEPT rather than removed from
+   * components/expertise-grid.tsx so the wall's spacing still has one named owner
+   * here, and so this note sits where the next person will look for the effect.
+   */
   .grid-breath {
-    gap: calc(1.5rem + (2px * var(--scroll-speed, 0)));
+    gap: 1.5rem;
   }
 
   /* ── #20, RAIL WEIGHT ────────────────────────────────────────────────────
@@ -7044,13 +7334,40 @@ body[data-nav-scrolled] .masthead-name {
    * screen, and holding them there keeps the page's warm opening where it was
    * instead of parking a gold centre halfway down the scroll.
    */
-  background-image:
-    radial-gradient(42% 38% at 18% 12%, rgba(var(--primary-rgb), 0.09), transparent 70%),
-    radial-gradient(38% 34% at 82% 10%, rgba(var(--accent-cool-rgb), 0.07), transparent 70%),
-    radial-gradient(52% 44% at 72% 72%, rgba(var(--primary-rgb), 0.06), transparent 72%),
-    radial-gradient(44% 38% at 28% 88%, rgba(var(--accent-cool-rgb), 0.05), transparent 70%),
-    radial-gradient(64% 52% at 50% 46%, var(--primary-tint), transparent 76%),
-    radial-gradient(120% 70% at 50% 40%, rgba(var(--primary-rgb), 0.06), transparent 70%);
+  /*
+   * NO RADIAL GRADIENTS. This carried six of them, four positional blobs plus two
+   * broad centre washes, and every one of them read as exactly what it was: a
+   * glowing circle floating behind the content. On a near-black ground a
+   * low-alpha radial does not read as atmosphere, it reads as a lens flare parked
+   * on the page, and because the layer is `fixed` the circles sat still in the
+   * viewport while the bands scrolled over them, which is what made them legible
+   * as discrete objects rather than as light.
+   *
+   * What replaces them is a LINEAR ramp on the block axis. It still does the one
+   * job the field exists for, giving the page a single continuous ground so the
+   * bands below the hero do not read as flat boxes, but it has no centre, so
+   * there is no circle to see. A vertical ramp is also the one gradient shape
+   * that cannot band visibly across a wide viewport, since its stops run along
+   * the short axis.
+   */
+  /*
+   * THE RAMP IS NOW BLACK RATHER THAN GOLD. The note above solved the SHAPE
+   * problem (no centre, so no circle) but kept the tint, and the tint was the
+   * other half of it: a 5% gold wash across the top of a fixed, document-level
+   * layer warms the ground of every band on the page at once, so "black" read as
+   * brown everywhere above the fold.
+   *
+   * The ramp stays, because the job it does is real, it gives the page one
+   * continuous ground so the bands do not read as flat boxes. It simply does that
+   * job by subtracting light instead of adding colour, which is the same move
+   * `HeroBackdrop` now makes in components/motion/objects.tsx.
+   */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.28),
+    rgba(0, 0, 0, 0.12) 38%,
+    transparent 72%
+  );
 }
 
 /*
@@ -7106,6 +7423,27 @@ body[data-nav-scrolled] .masthead-name {
 .main-field {
   position: relative;
   isolation: isolate;
+  /*
+   * ── NO SIDEWAYS SCROLL, AND THIS IS A PRE-EXISTING BUG RATHER THAN A NEW ONE ─
+   *
+   * Measured at 1440x900: `document.body.scrollWidth` was 1506 against a 1440
+   * client width, so the home page scrolled 66px horizontally. Walking the tree
+   * for elements whose scrollWidth exceeds the viewport finds it inside a
+   * `.section-skew` band further down the page, NOT in the hero — the same 66px
+   * is present with the previous dark hero mounted, which is how it was
+   * confirmed as pre-existing rather than introduced by the retheme.
+   *
+   * It was invisible in LTR, where the overflow sits off the right edge and
+   * nothing anchors to it. IT IS NOT INVISIBLE IN RTL: the browser anchors the
+   * scroll origin to the right in an RTL document, so those 66px shifted the
+   * whole Arabic page and clipped the hero's text column off the screen edge.
+   *
+   * `clip` rather than `hidden` deliberately: `overflow: hidden` on an ancestor
+   * would make it a scroll container and break `position: sticky` for every
+   * descendant, which this page uses for the pinned ledger and the reading rail.
+   * `clip` contains the overflow without creating a scroll port.
+   */
+  overflow-x: clip;
 }
 
 /*
@@ -7134,5 +7472,570 @@ body[data-nav-scrolled] .masthead-name {
   .hero-field,
   .hero-field-aurora {
     display: none !important;
+  }
+}
+
+/*
+ * ── THE CONNECTED THREAD ───────────────────────────────────────────────────────
+ *
+ * The frame for components/motion/fm/section-thread.tsx: ONE glowing line measured
+ * across every band on the page, drawn as the visitor scrolls and carrying a
+ * travelling spark of its own. The geometry is built in the component, from the
+ * real offsets of the sections; this rule only places the layer and says what it
+ * may not do.
+ *
+ * ABSOLUTE, NOT FIXED, and that is the whole difference between a thread and a
+ * gauge. `.hero-field` above is fixed because a ground must not travel with the
+ * content; this must, because it connects bands to each other and a line that
+ * stays put while the bands move past connects nothing. It is sized to `<main>`
+ * and scrolls with it.
+ *
+ * Z-INDEX 0, the same layer the field occupies, so it sits behind
+ * `.section-content` (z-index 1) and can never cross the type. `<main>` carries
+ * `isolation: isolate` (`.main-field`), so the thread cannot rise past the fixed
+ * header or the footer either.
+ */
+.section-thread {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  /*
+   * The glow stack widens the outermost layer to 6px, so the halo around the entry
+   * and exit stubs, which sit at the very top and bottom edges of the box, would
+   * otherwise bleed past it. Clipping is also what guarantees this layer cannot
+   * widen the page and break the `overflow-x: hidden` contract, a stronger
+   * guarantee now that something here is 6px wide rather than 1px.
+   *
+   * The clip is invisible in practice: every waypoint is computed as a fraction of
+   * the measured width, so the thread never approaches the left or right edge
+   * except at the stubs, where it travels straight down and the halo is symmetric
+   * about a vertical line.
+   */
+  overflow: hidden;
+}
+
+/*
+ * ── THE GLOW STACK ─────────────────────────────────────────────────────────────
+ *
+ * `plus-lighter` is what turns three stacked strokes into light rather than into
+ * paint. Under `normal` the widest, faintest layer is painted over by the ones
+ * above it, so the stack reads as one thick soft line; `plus-lighter` ADDS the
+ * channels, which is what overlapping light actually does, so the core sits at the
+ * sum of the three and the falloff away from it is genuinely additive. It is also
+ * why the halo can be as low as 0.05 and still do visible work.
+ *
+ * IT IS SCOPED TO THE GROUP, deliberately. `isolation: isolate` gives the stack its
+ * own blending context, so the three strokes add against each other and NOT against
+ * whatever the page has painted behind them. Without it the mode would reach
+ * through to the ground and the thread would lighten the band it crosses, which is
+ * the one thing a layer at z-index 0 behind body text must never do.
+ *
+ * ── THE BREATHE ───────────────────────────────────────────────────────────────
+ *
+ * A slow swell and fall on the whole stack, so the thread is never completely
+ * static even where the spark is not currently passing. 9s is long enough that it
+ * is never caught moving, and the range is narrow (0.82 to 1) for the same reason
+ * the spark is capped: this sits behind text that people are reading.
+ *
+ * OPACITY ONLY, which is a compositor property, so the breathe costs no repaint at
+ * all; it is a composited layer being drawn at a different alpha. Same constraint
+ * the aurora note in this file argues for animating transform rather than stops.
+ */
+.section-thread-stack {
+  isolation: isolate;
+  mix-blend-mode: plus-lighter;
+  animation: thread-breathe 9s ease-in-out infinite alternate;
+  will-change: opacity;
+}
+
+@keyframes thread-breathe {
+  from {
+    opacity: 0.82;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+ * `plus-lighter` is relatively recent. Where it is unsupported the stack falls back
+ * to `screen`, the nearest older mode that still lightens rather than covers.
+ */
+@supports not (mix-blend-mode: plus-lighter) {
+  .section-thread-stack {
+    mix-blend-mode: screen;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /*
+   * The breathe stops and the stack rests at full. THE GLOW ITSELF IS KEPT: it is
+   * colour, not movement, and the component already drops the travelling spark on
+   * this branch. Colour is not motion, the same line the aurora rule took.
+   */
+  .section-thread-stack {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (forced-colors: active) {
+  /* Decorative, the same removal every other ground layer in this file takes. */
+  .section-thread {
+    display: none !important;
+  }
+}
+
+/*
+ * ═══════════════════════════════════════════════════════════════════════════
+ * THE VVIP HERO. Light ground, IBC blue, and a great deal of white space.
+ * ═══════════════════════════════════════════════════════════════════════════
+ *
+ * The register this aims at is a private bank or a maison, not a SaaS landing
+ * page, and the difference between those is almost entirely restraint: one accent
+ * colour used sparingly, type given room, rules kept to hairlines, and nothing
+ * that glows. Blue is the jewel here; white is the setting.
+ */
+
+/* The animated ground. Pinned to the hero band, behind everything, and inert to
+   the pointer so it can never eat a click meant for the content above it. */
+.vvip-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  /* Contains the wash's scale() so it cannot paint outside the band. */
+  isolation: isolate;
+}
+
+.vvip-field-wash {
+  position: absolute;
+  /*
+   * ── inset: 0 AND scale(), NOT inset: -25% ────────────────────────────────
+   *
+   * This was `inset: -25%`, which oversized the box so the wash's own translate
+   * could never drag an edge into view. It also gave the element a layout box
+   * 360px wider than the viewport on each side, and `overflow: hidden` on the
+   * ancestors did NOT stop that box contributing to the document's scroll width:
+   * measured at 1440px, `document.body.scrollWidth` came out 1506 and the page
+   * genuinely scrolled 66px sideways.
+   *
+   * A clipped overflow still counts toward scrollWidth in this arrangement, so
+   * the box has to be the right size in the first place. `inset: 0` keeps it
+   * exactly viewport-sized, and the oversizing that the drift needs is done with
+   * `scale()` in the transform instead, which is a PAINT operation and creates no
+   * layout box at all.
+   */
+  inset: 0;
+  background:
+    radial-gradient(42% 46% at 22% 28%, rgba(30, 144, 214, 0.1) 0%, transparent 70%),
+    radial-gradient(38% 42% at 80% 68%, rgba(11, 111, 196, 0.08) 0%, transparent 72%),
+    radial-gradient(30% 34% at 62% 12%, rgba(127, 196, 236, 0.09) 0%, transparent 70%);
+  /* The resting oversize. The animation's keyframes all carry their own scale,
+     but under reduced motion nothing animates, so without this the wash would sit
+     at exactly viewport size and its radial gradients would show hard edges at
+     the band's corners. */
+  transform: scale(1.25);
+  will-change: transform;
+}
+
+/* One square of the IBC grid motif. No border-radius and no rotation: the mark is
+   axis-aligned and square, and rounding or tilting it makes it someone else's. */
+.vvip-square {
+  position: absolute;
+  display: block;
+  background: linear-gradient(135deg, rgba(30, 144, 214, 0.55) 0%, rgba(127, 196, 236, 0.3) 100%);
+  will-change: transform, opacity;
+}
+
+/*
+ * THE NO-MOTION FLOOR, AND IT IS CSS RATHER THAN ONLY JS ON PURPOSE.
+ *
+ * VvipField already checks useReducedMotion() and renders no squares at all. This
+ * block is the second line: it holds during the server render before hydration,
+ * and it holds if the bundle fails outright. An accessibility guarantee that
+ * depends on JavaScript loading is not a guarantee.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .vvip-field-wash,
+  .vvip-square {
+    animation: none !important;
+    transition: none !important;
+  }
+  /* The wash keeps its resting scale rather than `transform: none`: the scale is
+     the oversize that hides its gradient edges, not part of the animation. */
+  .vvip-field-wash {
+    transform: scale(1.25) !important;
+  }
+  .vvip-square {
+    transform: none !important;
+  }
+  .vvip-square {
+    display: none;
+  }
+}
+
+/* The band itself. min-height rather than height, matching `.snap-section`: at
+   Arabic and Dutch string lengths the content runs taller, and it must grow
+   rather than clip. */
+.vvip-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* Belt and braces with `.vvip-field`'s own `overflow: hidden`: the wash paints
+     at scale(1.25) and this band is the element whose width the document
+     measures, so the clip is declared on both rather than relying on the inner
+     one alone. */
+  overflow: clip;
+  /*
+   * THE MASTHEAD IS `position: fixed`, SO IT TAKES NO FLOW SPACE AND THE HERO
+   * MUST MAKE ITS OWN.
+   *
+   * This band starts at y:0 like every other section, and the header floats over
+   * it at 152px tall (--nav-height, 9.5rem). Without the padding below, the
+   * eyebrow and the portrait's upper corner mark render UNDERNEATH it — measured
+   * at 1440x900, the mark sat at y:84 with the header occupying 0-152.
+   *
+   * Padding rather than margin, and on the band rather than the grid, so the
+   * white ground still runs edge to edge behind the header: a margin here would
+   * expose the page beneath as a strip above the hero.
+   */
+  padding-top: var(--nav-height, 0px);
+  /* The floor is the viewport LESS the header, since the header is now inside
+     this band's own box. min-height, not height: at Arabic and Dutch string
+     lengths the content runs taller and must grow rather than clip. */
+  min-height: 100svh;
+  background: var(--background);
+  overflow: hidden;
+}
+
+/* The eyebrow above the name. It takes --primary-strong (5.14:1) rather than the
+   bright --primary, because at 0.7rem this is small text and 1.4.3 wants 4.5:1
+   here; the bright blue is 3.49:1 and is reserved for display sizes and rules. */
+.vvip-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--primary-strong);
+}
+
+/* Arabic has no small caps, and letterspacing an Arabic run breaks the joins
+   between letters. Same rule the rest of the site applies to eyebrows. */
+[dir="rtl"] .vvip-eyebrow {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* The name. Fluid from phone to desktop and set tight: at display size the
+   default leading opens gaps that read as separate lines rather than one name. */
+.vvip-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 7vw, 5.25rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--heading);
+}
+
+/*
+ * The rotating role.
+ *
+ * IT TAKES --primary-strong, NOT THE BRIGHT --primary, AND THAT WAS A BUG FIXED
+ * AFTER LOOKING AT IT.
+ *
+ * It was written as `var(--primary)` on the reasoning that this is large display
+ * type, where 1.4.3 permits 3:1 and the bright blue's 3.49:1 clears. That
+ * reasoning was wrong on the threshold: WCAG "large" means 18.66px BOLD or 24px
+ * regular, and this line starts at clamp()'s floor of 1.15rem = 18.4px at
+ * weight 600. At the small end it is NOT large text, so it needs the full 4.5:1
+ * and 3.49:1 fails. On screen it read visibly washed out, like disabled text,
+ * which is what sent me back to measure it.
+ *
+ * --primary-strong is 5.14:1 on white and clears at every size the clamp can
+ * produce. The bright --primary stays where it is genuinely safe: rules, fills,
+ * and the decorative squares.
+ */
+.vvip-role {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.6vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--primary-strong);
+}
+
+/* The full legal title. Body-size, so it takes the AA-clearing foreground rather
+   than any blue. Never abbreviated to fit; it wraps. */
+.vvip-title {
+  font-size: clamp(0.98rem, 1.15vw, 1.1rem);
+  line-height: 1.65;
+  color: var(--foreground);
+  max-width: 46ch;
+}
+
+/* The meta row: a hairline ledger of label/value pairs. `align-items: start` so a
+   value that wraps to two lines does not drag its label down with it. */
+.vvip-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 0 2.75rem;
+}
+
+.vvip-meta-cell {
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--border);
+  min-width: 8rem;
+}
+
+.vvip-meta-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  margin-bottom: 0.3rem;
+}
+
+[dir="rtl"] .vvip-meta-label {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.vvip-meta-value {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--heading);
+}
+
+/*
+ * THE PORTRAIT IS NOT IN A FRAME, AND THAT IS THE WHOLE POINT.
+ *
+ * This was a hairline-edged panel: `background: var(--surface)`, a 1px border and
+ * a blue-tinted shadow. All three were correct for a RECTANGULAR PHOTOGRAPH, and
+ * all three are wrong for what is actually in the slot.
+ *
+ * The file is a CUT-OUT with a transparent background (data/media.json). A panel
+ * fill behind a transparent PNG does not sit behind the photograph, it sits behind
+ * the SUBJECT, so the surface colour floods every pixel she does not occupy and
+ * the cut-out is put back in the white box it was made to escape. The border and
+ * the shadow then draw that box's outline explicitly. The client's brief for the
+ * asset was that she should read as part of the ground rather than pasted onto it,
+ * and a frame is the one thing that cannot do.
+ *
+ * So the figure now carries NO fill, NO border and NO shadow, and she meets the
+ * hero's own wash directly. What used to separate her from the ground is now doing
+ * it in the right place: she is a dark, high-contrast shape on a pale field, which
+ * is separation by VALUE rather than by drawn edge.
+ *
+ * `overflow: visible` matters as much as the rest. It was `hidden` to clip the
+ * image to the panel; with the panel gone there is nothing to clip to, and leaving
+ * it would cut her at the box bounds, the identical hard edge one layer in.
+ */
+.vvip-portrait {
+  position: relative;
+  overflow: visible;
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+
+/*
+ * THE BOTTOM OF THE FRAME DISSOLVES, AND THIS IS NOT AN EDGE EFFECT.
+ *
+ * It does not touch her OUTLINE, which the client asked be left alone and which
+ * nothing in this stylesheet now modifies. It addresses a different edge: the
+ * photograph is cropped at her lap, and rows at 95% of its height are opaque from
+ * one side of the file to the other (measured 1206/1206 px). Rendered as-is she
+ * therefore ends in a hard horizontal line straight across the column, the image
+ * visibly stopping rather than the figure ending.
+ *
+ * A mask rather than a painted gradient, for the reason a mask is always right
+ * over a ground that is not one flat colour: the hero's wash is a gradient, so any
+ * colour painted on top to hide the cut would be correct in one place and wrong
+ * everywhere else. A mask removes the pixels and lets the real ground through.
+ *
+ * The ramp is SHORT, 92% to 100%. Long enough that there is no line to see, short
+ * enough that she is present almost to the frame edge and no layout height is
+ * spent on empty space.
+ */
+.vvip-portrait img {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 92%, transparent 100%);
+}
+
+/*
+ * THE PORTRAIT IS CAPPED, BECAUSE IT WAS SETTING THE BAND'S HEIGHT.
+ *
+ * Measured at 1440x900 with the header allowance in place: the band came out
+ * 1084px against a 900px viewport, and the 4/5 figure was the tallest thing in
+ * it. A hero that does not fit one screen is not a hero, it is the top of a
+ * scroll, and the dark original solved the identical problem the identical way
+ * (see its note about capping the portrait at 26rem).
+ *
+ * A max-height rather than a crop: the image still shows whole, it is simply
+ * scaled to fit a share of the viewport instead of dictating it.
+ */
+@media (min-width: 1024px) {
+  .vvip-portrait {
+    max-height: calc(100svh - var(--nav-height, 0px) - 15rem);
+  }
+  .vvip-portrait img {
+    height: 100%;
+    /*
+     * `contain`, NOT `cover`, and the cut-out is the reason.
+     *
+     * `cover` fills the box by cropping whatever does not fit. That is right for a
+     * rectangular photograph, where the frame is the composition and the crop is
+     * how you choose it. Here the subject IS the composition: she has no
+     * background to lose, so a crop takes her hands, her sleeves or the top of her
+     * hijab and stops at a straight line with nothing to justify it.
+     *
+     * `contain` fits the whole figure inside the available height and leaves the
+     * surplus as empty space, which now costs nothing: with no panel fill behind
+     * her (see above) that space is the hero's own ground, not a visible box.
+     */
+    object-fit: contain;
+    /*
+     * Bottom-aligned. With `contain` the spare space collects wherever the
+     * alignment puts it, and it belongs ABOVE her: she is a standing figure whose
+     * frame is cropped at the hands, so seating her on the band's floor keeps her
+     * weight at the bottom of the column and lets the space fall under the
+     * headline opposite, where the layout already has air.
+     */
+    object-position: 50% 100%;
+  }
+}
+
+/*
+ * The corner mark: a small IBC-blue square bracketing the frame. Decorative and
+ * aria-hidden at the call site, so the bright --primary is free here.
+ *
+ * NO CALL SITE TODAY. components/hero-vvip.tsx stopped rendering these when the
+ * portrait panel was removed: a mark that registers the corner of a frame has
+ * nothing to register once the frame is gone. The rule is kept rather than
+ * deleted because it is correct and is the obvious treatment if a framed image
+ * ever returns to this layout; it simply matches nothing at present.
+ */
+.vvip-portrait-mark {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--primary);
+  opacity: 0.9;
+}
+
+/* The signed statement under the portrait. */
+.vvip-statement {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--foreground);
+}
+
+.vvip-statement-attribution {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-strong);
+}
+
+[dir="rtl"] .vvip-statement-attribution {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/*
+ * THE CALL TO ACTION PAIR.
+ *
+ * The filled button takes --primary-hover (#0B6FC4), NOT the bright --primary,
+ * and that is accessibility rather than taste: white text on #1E90D6 measures
+ * 3.49:1 and FAILS AA, while on #0B6FC4 it measures 5.14:1 and passes. The
+ * brand's brightest blue cannot carry white text at button size. Anyone
+ * "correcting" this to the logo blue would be shipping an illegible primary CTA.
+ */
+.vvip-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0 1.9rem;
+  border-radius: 2px;
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-foreground);
+  background: var(--primary-hover);
+  border: 1px solid var(--primary-hover);
+  box-shadow: var(--shadow-brand-sm);
+  transition:
+    background-color 0.45s var(--ease-out),
+    box-shadow 0.45s var(--ease-out),
+    transform 0.45s var(--ease-out);
+}
+
+.vvip-cta-primary:hover {
+  background: var(--primary-deep);
+  border-color: var(--primary-deep);
+  box-shadow: var(--shadow-brand);
+}
+
+.vvip-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0 1.9rem;
+  border-radius: 2px;
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-strong);
+  background: transparent;
+  border: 1px solid var(--border);
+  transition:
+    border-color 0.45s var(--ease-out),
+    background-color 0.45s var(--ease-out),
+    transform 0.45s var(--ease-out);
+}
+
+.vvip-cta-secondary:hover {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+[dir="rtl"] .vvip-cta-primary,
+[dir="rtl"] .vvip-cta-secondary {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Both keep a visible focus ring. --primary-deep at 9.47:1 means a keyboard user
+   reads the focused control as a clear state change, not the same blue twice. */
+.vvip-cta-primary:focus-visible,
+.vvip-cta-secondary:focus-visible {
+  outline: 2px solid var(--primary-deep);
+  outline-offset: 3px;
+}
+
+/* The hover LIFT is CSS rather than a Framer whileHover so it degrades with the
+   media query. Under reduced motion the colour change still happens, because it
+   is a state signal and must survive, while the movement does not. */
+@media (prefers-reduced-motion: no-preference) {
+  .vvip-cta-primary:hover,
+  .vvip-cta-secondary:hover {
+    transform: translateY(-2px);
   }
 }

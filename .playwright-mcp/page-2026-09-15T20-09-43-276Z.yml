@@ -1,0 +1,71 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Sanae Rakik" [ref=e5] [cursor=pointer]:
+        - /url: "#top"
+      - generic [ref=e6]:
+        - group "Language" [ref=e7]:
+          - button "EN" [disabled] [ref=e8]
+          - button "AR" [ref=e9]
+        - button "Menu" [ref=e10]
+  - main [ref=e15]:
+    - generic [ref=e19]:
+      - paragraph [ref=e20]: Capabilities
+      - heading "Areas of Expertise" [level=1] [ref=e21]
+      - paragraph [ref=e22]: Where her work is concentrated, and the markets it covers.
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - heading "Core Areas" [level=2] [ref=e26]
+        - paragraph [ref=e27]: Where her work is focused
+      - list [ref=e28]:
+        - listitem [ref=e29]:
+          - heading "Business development" [level=3] [ref=e32]
+        - listitem [ref=e33]:
+          - heading "International business development" [level=3] [ref=e36]
+        - listitem [ref=e37]:
+          - heading "Strategic partnerships" [level=3] [ref=e40]
+        - listitem [ref=e41]:
+          - heading "Client acquisition" [level=3] [ref=e44]
+        - listitem [ref=e45]:
+          - heading "Professional networking and relationship management" [level=3] [ref=e48]
+        - listitem [ref=e49]:
+          - heading "Identifying and evaluating commercial opportunities" [level=3] [ref=e52]
+        - listitem [ref=e53]:
+          - heading "Real estate and property transactions" [level=3] [ref=e56]
+        - listitem [ref=e57]:
+          - heading "Cross-border commercial cooperation" [level=3] [ref=e60]
+    - generic [ref=e62]:
+      - heading "Markets" [level=2] [ref=e64]
+      - generic [ref=e65]:
+        - generic [ref=e68]:
+          - term [ref=e69]: Sector
+          - definition [ref=e70]: Business development, strategic partnerships, real estate
+        - generic [ref=e73]:
+          - term [ref=e74]: Based in
+          - definition [ref=e75]: Netherlands
+        - generic [ref=e78]:
+          - term [ref=e79]: Markets covered
+          - definition [ref=e80]: Europe, the Gulf states and the wider Middle East
+      - list [ref=e81]:
+        - listitem [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: Based in
+            - text: Netherlands
+        - listitem [ref=e85]:
+          - generic [ref=e86]:
+            - generic [ref=e87]: Active across
+            - text: Europe · Gulf · Middle East
+  - contentinfo [ref=e88]:
+    - generic [ref=e89]:
+      - paragraph [ref=e90]: © 2026 Sanae Rakik. All rights reserved.
+      - navigation "Legal" [ref=e91]:
+        - link "Privacy" [ref=e92] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms" [ref=e93] [cursor=pointer]:
+          - /url: /terms
+        - link "Cookies" [ref=e94] [cursor=pointer]:
+          - /url: /cookies
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e100] [cursor=pointer]

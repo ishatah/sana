@@ -12,26 +12,54 @@ import { defineRouting } from "next-intl/routing"
 // Naming the zone rather than an offset keeps that correct without thinking.
 export const TIME_ZONE = "Europe/Amsterdam"
 
-// TWO LOCALES, ENGLISH DEFAULT AND THEREFORE UNPREFIXED.
+// THREE LOCALES, ENGLISH DEFAULT AND THEREFORE UNPREFIXED.
 //
-// Section 3 of the intake form asks for exactly this pair: "يُقترح إصدار الموقع
-// باللغتين العربية والإنجليزية بما يناسب الجمهور الدولي". English carries the
-// international business audience the profile is aimed at; Arabic serves the Gulf
-// and wider Middle East side of the same work.
+// Each one is an audience, not a language she happens to speak:
+//   en  the international business audience the profile is aimed at, and the only
+//       locale whose copy is authored rather than translated
+//   ar  the Gulf and wider Middle East side of the same work. Section 3 of the
+//       intake form asks for this pair by name: "يُقترح إصدار الموقع باللغتين
+//       العربية والإنجليزية بما يناسب الجمهور الدولي"
+//   nl  her home market. She is a Dutch national based in the Netherlands, so this
+//       is the audience that reads her in her own first language
 //
-// Dutch and French are NOT locales here even though the subject speaks both. They
-// are facts about her, recorded in data/expertise.json, not audiences the client
-// asked the site to address, and a locale with no approved copy behind it is a
-// half-translated site, which reads worse than a deliberate two.
+// ── WHY THIS USED TO ARGUE FOR TWO, AND WHY THAT ARGUMENT IS SPENT ──────────────
+//
+// This comment previously said Dutch must NOT be a locale, on the grounds that "a
+// locale with no approved copy behind it is a half-translated site, which reads
+// worse than a deliberate two". That reasoning was right and it has not been
+// overturned, it has been SATISFIED: messages/nl.json is complete, every localized
+// object in data/*.json carries an `nl` value, and the three legal pages have Dutch
+// bodies rather than falling through to blank. The condition was the copy, and the
+// copy now exists. Remove the copy and the old argument applies again immediately.
+//
+// ── FRENCH IS STILL NOT A LOCALE, AND THAT IS THE SAME RULE STILL RUNNING ───────
+//
+// She speaks French too (data/expertise.json). It stays a fact about her rather
+// than a locale, because nobody has asked the site to address a French audience and
+// there is no approved French copy. The test for adding a locale is an audience
+// plus copy, never "she speaks it", or this list grows one entry per language on the
+// languages table and each one ships half-finished.
 export const routing = defineRouting({
-  locales: ["en", "ar"] as const,
+  locales: ["en", "ar", "nl"] as const,
   defaultLocale: "en",
   localePrefix: "as-needed",
 })
 
 export type Locale = (typeof routing.locales)[number]
 
-/** Arabic is the RTL locale; English is LTR. */
+/**
+ * Arabic is the RTL locale; English and Dutch are LTR.
+ *
+ * Dutch was added to `routing.locales` above and deliberately NOT added here, because
+ * it is a Latin-script LTR language. The omission is a decision rather than an
+ * oversight, which is worth stating: this list and the locale list are edited in the
+ * same breath, so a reader finding three locales and one RTL entry should not have to
+ * wonder whether the third was simply forgotten.
+ *
+ * Everything that sets direction goes through `isRtl` rather than comparing against
+ * "ar" inline, so there is exactly one place to change if that ever stops being true.
+ */
 export const RTL_LOCALES: readonly string[] = ["ar"]
 
 export function isRtl(locale: string): boolean {

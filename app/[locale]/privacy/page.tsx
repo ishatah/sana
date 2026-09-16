@@ -63,7 +63,53 @@ export default async function PrivacyPage({ params }: { params: Promise<{ locale
       rights: "يمكنك طلب نسخة من الرسالة التي أرسلتها أو طلب حذفها بالكتابة إلى العنوان أدناه.",
       contactHeading: "الاتصال",
     },
-  }[locale as "en" | "ar"] ?? {
+    /*
+     * DUTCH USES AVG TERMINOLOGY, NOT TRANSLATED-ENGLISH GDPR TERMINOLOGY.
+     *
+     * "de AVG" (Algemene verordening gegevensbescherming) is what the regulation
+     * is called in Dutch; a privacy page that says "GDPR" to a Dutch reader reads
+     * as translated from English. Likewise "persoonsgegevens" rather than
+     * "persoonlijke data", and cookies are "geplaatst" rather than "ingesteld",
+     * which is the settled Dutch idiom.
+     *
+     * THE SUBSTANCE IS IDENTICAL TO THE ENGLISH AND MUST STAY THAT WAY. Every
+     * sentence here is a factual claim about this specific site, no analytics, no
+     * advertising trackers, no third-party embeds, one admin session cookie. These
+     * are verifiable statements, not marketing copy, so a translation is only
+     * correct if it asserts exactly the same set of facts. Rewording for flow is
+     * fine; changing what is claimed is not.
+     */
+    nl: {
+      /*
+       * THE AVG IS NAMED HERE AND NOWHERE IN THE ENGLISH, AND THAT IS NOT A DRIFT.
+       *
+       * The English intro names no regulation, so a literal translation would name
+       * none either. A Dutch privacy notice that never says which law it is written
+       * under reads as a translated foreign document, and "de AVG" is how a Dutch
+       * reader identifies that law, so the reference is added rather than carried over.
+       *
+       * It adds no CLAIM the English does not make: naming the regulation the notice
+       * already operates under is a pointer, not a new fact about what is collected or
+       * how it is used. Every factual sentence below still matches the English exactly,
+       * which is the constraint that matters. If the English intro ever names the GDPR
+       * itself, collapse the two back together.
+       */
+      intro:
+        "In deze verklaring staat welke persoonsgegevens deze website verzamelt en hoe die worden gebruikt, zoals bedoeld in de Algemene verordening gegevensbescherming (AVG).",
+      collectHeading: "Welke gegevens worden verzameld",
+      collect:
+        "Deze site ontvangt uitsluitend wat u zelf in het contactformulier invult: uw naam, uw e-mailadres, optioneel uw organisatie, en uw bericht. Er is geen statistieksoftware, er zijn geen advertentietrackers en er is geen ingesloten inhoud van derden op de site.",
+      useHeading: "Waarvoor ze worden gebruikt",
+      use: "Ze worden uitsluitend gebruikt om uw bericht te beantwoorden. Ze worden niet gebruikt voor marketing en ze worden niet verkocht of gedeeld.",
+      cookiesHeading: "Cookies",
+      cookies:
+        "Op de openbare pagina's van deze website worden geen cookies geplaatst. Er wordt één sessiecookie aangemaakt bij het inloggen op het beheerpaneel; die betreft bezoekers niet.",
+      rightsHeading: "Uw rechten",
+      rights:
+        "U hebt recht op inzage in het bericht dat u hebt verstuurd en u kunt verzoeken om verwijdering daarvan. Schrijf daarvoor naar het onderstaande adres.",
+      contactHeading: "Contact",
+    },
+  }[locale as "en" | "ar" | "nl"] ?? {
     intro: "",
     collectHeading: "",
     collect: "",

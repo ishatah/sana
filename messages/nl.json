@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Over",
+    "expertise": "Expertise",
+    "roles": "Functies",
+    "press": "Pers",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Sluiten",
+    "skipToContent": "Naar de inhoud",
+    "cta": "Neem contact op"
+  },
+  "hero": {
+    "scrollDown": "Naar beneden",
+    "basedIn": "Gevestigd in",
+    "statPositions": "Functies bekleed",
+    "statExperience": "Jaar ervaring",
+    "contactCta": "Neem contact op",
+    "aboutCta": "Over haar werk"
+  },
+  "about": {
+    "heading": "Over",
+    "experienceLabel": "Ervaring",
+    "_comment_experienceValue": "De WAARDE komt uit data/identity.json (yearsOfExperience) en wordt geïnterpoleerd als {years}; alleen het eenheidswoord wordt hier vertaald. Vul hier nooit een vast getal in: deze tekst verschijnt in de statistiekbalk van de hero en in de feitenlijst op de Over-pagina, waar een getal als bevestigd wordt gelezen.",
+    "experienceValue": "{years} jaar",
+    "sectorLabel": "Sector",
+    "baseLabel": "Gevestigd in",
+    "marketsLabel": "Actieve markten",
+    "nationalityLabel": "Nationaliteit"
+  },
+  "expertise": {
+    "heading": "Expertisegebieden",
+    "subheading": "Waar haar werk zich op richt",
+    "_comment_languages": "De sleutel `levelInferred` bestaat OMDAT de niveaus in data/expertise.json zijn afgeleid en niet door betrokkene zijn opgegeven. Wie deze sleutel verwijdert, verandert een afleiding stilzwijgend in een bewering. Verwijder hem pas wanneer de rijen in data/expertise.json op `status: \"confirmed\"` staan.",
+    "languagesHeading": "Talen",
+    "languagesLede": "Talen die in een professionele omgeving worden gebruikt.",
+    "speakingLabel": "Spreken",
+    "writingLabel": "Schrijven",
+    "businessLabel": "Zakelijk gebruikt",
+    "level": {
+      "native": "Moedertaal",
+      "fluent": "Vloeiend",
+      "professional": "Professioneel",
+      "basic": "Basis"
+    },
+    "levelInferred": "Niveau afgeleid, niet door betrokkene bevestigd"
+  },
+  "positions": {
+    "heading": "Functies",
+    "current": "Huidige functies",
+    "previous": "Eerdere functies",
+    "since": "Sinds",
+    "role": "Functie",
+    "organisation": "Organisatie",
+    "location": "Locatie",
+    "visitSite": "Website van de organisatie",
+    "sinceUnconfirmed": "Beginjaar nog te bevestigen",
+    "details": "Details",
+    "registerConfirmed": "Inschrijving in het register bevestigd",
+    "registerPending": "Inschrijving in het register nog te bevestigen"
+  },
+  "contact": {
+    "heading": "Contact",
+    "subheading": "Voor samenwerking en uitnodigingen",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefoon",
+    "addressLabel": "Adres",
+    "locationLabel": "Locatie",
+    "emailOnlyNote": "Contact verloopt momenteel uitsluitend via e-mail.",
+    "form": {
+      "name": "Uw naam",
+      "email": "Uw e-mailadres",
+      "organisation": "Uw organisatie",
+      "subject": "Onderwerp",
+      "message": "Uw bericht",
+      "send": "Bericht versturen",
+      "sending": "Versturen…",
+      "sentShort": "Bericht verzonden",
+      "success": "Uw bericht is verzonden. U ontvangt binnenkort een antwoord.",
+      "error": "Het bericht kon niet worden verzonden. Stuur in plaats daarvan een e-mail.",
+      "required": "Dit veld is verplicht",
+      "invalidEmail": "Vul een geldig e-mailadres in",
+      "consent": "Door dit formulier te versturen gaat u ermee akkoord dat uw gegevens worden verwerkt om uw bericht te kunnen beantwoorden."
+    },
+    "copied": "Gekopieerd",
+    "copyAddress": "E-mailadres kopiëren"
+  },
+  "pages": {
+    "about": {
+      "eyebrow": "Profiel",
+      "lede": "Bedrijfsontwikkeling en strategische partnerschappen tussen Europa en het Midden-Oosten.",
+      "profileHeading": "Profiel",
+      "focusHeading": "Focus",
+      "primaryIdentityLabel": "Primaire focus",
+      "secondaryIdentityLabel": "Secundaire focus",
+      "audienceLabel": "Werkt met",
+      "fullBioHeading": "Volledige biografie"
+    },
+    "expertise": {
+      "eyebrow": "Vaardigheden",
+      "lede": "Waar haar werk zich op concentreert, en de markten die het bestrijkt.",
+      "areasHeading": "Kerngebieden",
+      "marketsHeading": "Markten",
+      "_comment_languagesHeading": "De taalsectie toont per taal het niveau voor spreken en schrijven. DE NIVEAUS ZIJN AFGELEID EN NIET BIJ DE INTAKE OPGEGEVEN (zie _comment_levels in data/expertise.json en openstaande vraag Q9); daarom bestaat expertise.levelInferred en staat die tekst onder de tabel. Verwijder die tekst niet zolang de rijen status:'inferred' hebben.",
+      "languagesHeading": "Talen",
+      "sectorLabel": "Sector",
+      "baseLabel": "Gevestigd in",
+      "marketsLabel": "Actieve markten"
+    },
+    "contact": {
+      "eyebrow": "Neem contact op",
+      "lede": "Voor vragen over samenwerking, advies en introducties.",
+      "detailsHeading": "Hoe u haar bereikt",
+      "enquiriesHeading": "Vragen zijn welkom van",
+      "responseHeading": "Voordat u schrijft",
+      "responseNote": "Berichten worden rechtstreeks gelezen. Vermeld namens welke organisatie u schrijft en waar uw vraag over gaat.",
+      "privacyNote": "Gegevens die via dit formulier worden verstuurd, worden uitsluitend gebruikt om te antwoorden. Zie de privacyverklaring."
+    },
+    "roles": {
+      "eyebrow": "Benoemingen",
+      "title": "Functies en samenwerkingen",
+      "lede": "Huidige functies en de vertegenwoordigde organisaties, elk volledig bij naam genoemd.",
+      "currentHeading": "Huidige functie"
+    },
+    "workingTogether": {
+      "heading": "Samenwerken",
+      "lede": "De vormen die dit werk gewoonlijk aanneemt.",
+      "cta": "Start een aanvraag",
+      "splitHeading": "Hoe opdrachten gewoonlijk beginnen",
+      "splitLede": "Elk van deze opent het contactformulier met het onderwerp al ingevuld."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} {name}. Alle rechten voorbehouden.",
+    "language": "Taal"
+  },
+  "legal": {
+    "privacy": "Privacyverklaring",
+    "terms": "Gebruiksvoorwaarden",
+    "cookies": "Cookiebeleid",
+    "lastUpdated": "Laatst bijgewerkt"
+  },
+  "draft": {
+    "badge": "Concept",
+    "pendingField": "Nog te bevestigen",
+    "pendingSection": "Dit onderdeel wordt gepubliceerd zodra de benodigde informatie is ontvangen."
+  },
+  "error": {
+    "title": "Er is iets misgegaan",
+    "description": "Er was een probleem bij het laden van deze pagina.",
+    "retry": "Opnieuw proberen",
+    "backHome": "Terug naar home",
+    "notFoundTitle": "Pagina niet gevonden",
+    "notFoundDescription": "De pagina die u zoekt bestaat niet."
+  },
+  "memberships": {
+    "heading": "Lidmaatschappen en samenwerkingen",
+    "role": "Functie",
+    "period": "Periode",
+    "periodUnconfirmed": "Periode nog te bevestigen"
+  }
+}

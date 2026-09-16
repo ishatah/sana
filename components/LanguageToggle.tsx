@@ -1,25 +1,42 @@
 "use client"
 
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { usePathname, useRouter } from "next/navigation"
 import { useTransition } from "react"
 import { routing } from "@/i18n/routing"
 
-const LABELS: Record<string, string> = { en: "EN", ar: "AR" }
+/**
+ * The visible label per locale, and the one thing here that a new locale must touch.
+ *
+ * Two-letter uppercase codes rather than native names ("Nederlands", "العربية"): the
+ * control sits in the masthead beside the nav, where three native names would not fit
+ * at phone width, and a code is what a returning visitor scans for. A missing entry
+ * renders an EMPTY BUTTON rather than throwing, so this list is the reason a new
+ * locale gets checked visually and not only in a build log.
+ */
+const LABELS: Record<string, string> = { en: "EN", ar: "AR", nl: "NL" }
 
 /**
  * Locale switcher.
  *
  * The current path is rewritten rather than pushed to a fixed route, so switching
- * language on /privacy stays on /privacy. Turkish is `defaultLocale` with
- * `localePrefix: "as-needed"`, so its URLs carry no prefix at all, the stripping
- * below has to handle both shapes.
+ * language on /privacy stays on /privacy. English is `defaultLocale` with
+ * `localePrefix: "as-needed"`, so its URLs carry no prefix at all while /ar and /nl
+ * do, and the stripping below has to handle both shapes.
+ *
+ * The button list itself comes from `routing.locales`, so the count follows the
+ * routing config; only LABELS above needs a line per locale.
  */
 export function LanguageToggle() {
   const locale = useLocale()
   const pathname = usePathname()
   const router = useRouter()
   const [pending, startTransition] = useTransition()
+  // The group needs a name for screen readers, and "Language" was hardcoded English
+  // on the one control whose entire purpose is to leave English. `footer.language`
+  // already carries the word in every catalogue, so the label now switches with the
+  // rest of the interface.
+  const t = useTranslations("footer")
 
   const switchTo = (next: string) => {
     // Strip any existing locale segment, then re-add unless the target is the
@@ -30,7 +47,7 @@ export function LanguageToggle() {
   }
 
   return (
-    <div className="flex items-center gap-1" role="group" aria-label="Language">
+    <div className="flex items-center gap-1" role="group" aria-label={t("language")}>
       {routing.locales.map((l) => (
         <button
           key={l}
