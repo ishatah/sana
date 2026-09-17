@@ -1,9 +1,17 @@
 "use client"
 
 import { m, useReducedMotion } from "motion/react"
+import { VvipWave } from "@/components/motion/fm/vvip-wave"
 
 /**
- * The hero's animated ground: a slow blue gradient wash plus drifting squares.
+ * The hero's animated ground: a glowing blue wave, a slow gradient wash, and
+ * drifting squares, in that paint order.
+ *
+ * The wave is a WebGL canvas and lives in its own file, components/motion/fm/
+ * vvip-wave.tsx, which carries the reasoning for it. It is mounted HERE rather
+ * than beside VvipField in components/hero-vvip.tsx because this component is
+ * already a client leaf: mounting inside it adds the canvas to an existing
+ * client subtree instead of opening the hero's fourth one.
  *
  * ── WHY `motion/react` AND `m.*` RATHER THAN `framer-motion` / `motion.*` ─────
  *
@@ -18,13 +26,21 @@ import { m, useReducedMotion } from "motion/react"
  * This file is a decorative LEAF: no children, so it re-opens no client boundary
  * around the hero's server-rendered content.
  *
- * ── THE SQUARES ARE THE IBC MARK, NOT DECORATION PICKED AT RANDOM ─────────────
+ * ── THE DOTS ARE THE IBC MARK, NOT DECORATION PICKED AT RANDOM ───────────────
  *
- * The IBC logo is a grid of squares in azure. The drifting squares here are that
- * motif at very low opacity, which is why they are squares rather than the
- * circles or blobs a generic "premium background" reaches for, and why they never
- * rotate: the mark is axis-aligned, and a tilted square reads as a diamond, which
- * is a different shape and not theirs.
+ * CORRECTED. This said "The IBC logo is a grid of SQUARES in azure" and drew
+ * squares on that basis. The logo is a cluster of CIRCLES: seven dots of varying
+ * size in two blues, loosely gridded in two rows, reading as connection rather
+ * than as a grid. The old note was a factual claim about somebody else's mark,
+ * used as the justification for the shape, and it was wrong.
+ *
+ * It matters more now than it did, because the real lockup renders in the same
+ * hero (see the affiliation block in components/hero-vvip.tsx). A background of
+ * squares beside a mark made of circles is a contradiction on one screen.
+ *
+ * The varying sizes below are part of the same echo: the IBC cluster is not a
+ * uniform grid, so a uniform one would be a different mark. They never rotate,
+ * which for circles is now moot but stays true of the composition.
  *
  * ── EVERY VALUE IS SLOW ON PURPOSE ────────────────────────────────────────────
  *
@@ -37,8 +53,8 @@ import { m, useReducedMotion } from "motion/react"
 
 /** Deterministic, not random: `Math.random()` would give every render a different
  *  layout and make the hero impossible to screenshot-diff. Hand-placed so the
- *  squares cluster in the outer margins and leave the text column clear. */
-const SQUARES = [
+ *  dots cluster in the outer margins and leave the text column clear. */
+const DOTS = [
   { left: "6%", top: "18%", size: 118, delay: 0, drift: -26, dur: 23, peak: 0.1 },
   { left: "13%", top: "64%", size: 66, delay: 2.4, drift: 22, dur: 26, peak: 0.08 },
   { left: "78%", top: "12%", size: 152, delay: 1.2, drift: 30, dur: 25, peak: 0.09 },
@@ -62,6 +78,15 @@ export function VvipField() {
 
   return (
     <div aria-hidden className="vvip-field">
+      {/* The wave, FIRST so it paints UNDER the wash and the squares.
+          That order is the effect: a moving band beneath the static haze reads
+          as atmosphere the light is travelling through, which is what sells the
+          glow. The reverse — a sharp moving band on top of the haze — reads as
+          an overlay pasted onto the hero. It also keeps the wave off the
+          squares, so the IBC mark is never dimmed by decoration that is not the
+          mark. VvipWave owns its own reduced-motion and no-WebGL handling. */}
+      <VvipWave />
+
       {/* The wash. Two large, very low-opacity blue radials that breathe against
           each other. On a white ground this is what stops the page reading as a
           blank sheet, and it is kept under 10% opacity so it never competes with
@@ -91,14 +116,14 @@ export function VvipField() {
         transition={{ duration: 34, ease: "easeInOut", repeat: Infinity, repeatType: "loop" }}
       />
 
-      {/* The squares. Skipped entirely under reduced motion rather than frozen in
-          place: six faint static rectangles are visual noise with no purpose, so
-          the honest reduced state is the wash alone. */}
+      {/* The dots. Skipped entirely under reduced motion rather than frozen in
+          place: six faint static circles are visual noise with no purpose, so the
+          honest reduced state is the wash alone. */}
       {!reduced &&
-        SQUARES.map((s, i) => (
+        DOTS.map((s, i) => (
           <m.span
             key={i}
-            className="vvip-square"
+            className="vvip-dot"
             style={{ left: s.left, top: s.top, width: s.size, height: s.size }}
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: [0, s.peak, s.peak, 0], y: [0, s.drift, s.drift * 0.4, 0] }}

@@ -1,8 +1,7 @@
 "use client"
 
 import { useLocale, useTranslations } from "next-intl"
-import { usePathname, useRouter } from "next/navigation"
-import { useTransition } from "react"
+import { usePathname } from "next/navigation"
 import { routing } from "@/i18n/routing"
 
 /**
@@ -26,12 +25,32 @@ const LABELS: Record<string, string> = { en: "EN", ar: "AR", nl: "NL" }
  *
  * The button list itself comes from `routing.locales`, so the count follows the
  * routing config; only LABELS above needs a line per locale.
+ *
+ * IT FORCES A FULL PAGE LOAD, AND THAT IS NOT LAZINESS.
+ *
+ * This used `router.push()` inside a `useTransition`, which is the idiomatic App
+ * Router navigation and is WRONG for this one control. `<html lang>` and
+ * `<html dir>` are written by the ROOT layout (app/layout.tsx), which sits above
+ * the `[locale]` segment and reads the locale from the `x-app-locale` header that
+ * proxy.ts attaches to each REQUEST. A soft navigation re-renders the route tree
+ * without a new document request, so the root layout never re-runs and those two
+ * attributes keep whatever the first load set.
+ *
+ * Measured before the change: clicking AR from `/` gave `/ar` with Arabic copy
+ * ("أنا", "تواصل معنا") inside `<html lang="en" dir="ltr">`. Arabic text in a
+ * left-to-right document, with the wrong language announced to a screen reader.
+ * The content switched and the document did not, which is the worst shape for
+ * this bug because it looks like it worked.
+ *
+ * `window.location.assign()` issues a real request, so the proxy runs, the header
+ * is set, the root layout re-renders, and `lang`/`dir` land correctly. The cost is
+ * a full reload on one click, which is the right trade: a language switch is a
+ * deliberate, infrequent act, and it is the single navigation on this site where
+ * the document element itself has to change.
  */
 export function LanguageToggle() {
   const locale = useLocale()
   const pathname = usePathname()
-  const router = useRouter()
-  const [pending, startTransition] = useTransition()
   // The group needs a name for screen readers, and "Language" was hardcoded English
   // on the one control whose entire purpose is to leave English. `footer.language`
   // already carries the word in every catalogue, so the label now switches with the
@@ -43,7 +62,16 @@ export function LanguageToggle() {
     // unprefixed default.
     const stripped = pathname.replace(new RegExp(`^/(${routing.locales.join("|")})(?=/|$)`), "") || "/"
     const target = next === routing.defaultLocale ? stripped : `/${next}${stripped === "/" ? "" : stripped}`
-    startTransition(() => router.push(target))
+
+    /*
+     * `assign`, not `replace`: the page they came from is a real step in their
+     * history and Back should return to it in the language they were reading.
+     * `replace` would swallow that entry and send Back to whatever preceded it,
+     * which on a first visit is the site they arrived from.
+     *
+     * Not `router.push` - see the docblock. This has to be a document request.
+     */
+    window.location.assign(target)
   }
 
   return (
@@ -53,7 +81,7 @@ export function LanguageToggle() {
           key={l}
           type="button"
           onClick={() => switchTo(l)}
-          disabled={pending || l === locale}
+          disabled={l === locale}
           aria-current={l === locale ? "true" : undefined}
           // min-h/min-w 44px: the visible label is 11px type in a 28x28 box,
           // which is under the 44x44 touch target WCAG 2.5.5 asks for and the

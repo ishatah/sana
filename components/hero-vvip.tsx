@@ -6,6 +6,7 @@ import { type SocialLink } from "@/components/social-row"
 import { RoleCycle } from "@/components/motion/fm/role-cycle"
 import { VvipField } from "@/components/motion/fm/vvip-field"
 import { VvipStagger, VvipRise, VvipPortraitReveal } from "@/components/motion/fm/vvip-entrance"
+import { OrganisationLogo } from "@/components/organisation-logo"
 import { localize, type LocalizedString } from "@/lib/localize"
 import type { ResolvedMedia } from "@/lib/media"
 
@@ -71,6 +72,7 @@ export async function HeroVvip({
   contactHref,
   aboutHref,
   portrait = null,
+  organisationLogo = null,
   statement = null,
 }: {
   kicker: LocalizedString
@@ -98,6 +100,15 @@ export async function HeroVvip({
   contactHref: string
   aboutHref: string
   portrait?: ResolvedMedia | null
+  /**
+   * The organisation's mark, already gated by lib/media.ts.
+   *
+   * Null whenever the slot is closed, which it is until a permission record
+   * exists, so the affiliation block below simply does not render. That is the
+   * whole reason this is a resolved slot rather than a hardcoded path: the rights
+   * question is answered in data, not by remembering to comment out some JSX.
+   */
+  organisationLogo?: ResolvedMedia | null
   /** The signed personal statement. Optional, and all-or-nothing: see below. */
   statement?: { text: LocalizedString; attribution: LocalizedString } | null
 }) {
@@ -177,6 +188,27 @@ export async function HeroVvip({
           {titleText && (
             <VvipRise>
               <p className="vvip-title">{titleText}</p>
+            </VvipRise>
+          )}
+
+          {/* The affiliation. Renders only when the logo slot is open, which is
+              gated on a recorded permission in data/media.json. The legal name
+              above stays as text either way; this accompanies it, it does not
+              replace it. */}
+          {organisationLogo && (
+            <VvipRise>
+              <div className="vvip-affiliation">
+                <p className="vvip-affiliation-label">{t("affiliationLabel")}</p>
+                {/* decorative: the organisation is already named in full in the
+                    title directly above, so real alt text here would make a screen
+                    reader announce the same name twice in a row. */}
+                <OrganisationLogo
+                  media={organisationLogo}
+                  decorative
+                  sizes="(max-width: 1024px) 60vw, 14rem"
+                  className="vvip-affiliation-mark"
+                />
+              </div>
             </VvipRise>
           )}
 

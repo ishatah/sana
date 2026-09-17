@@ -61,16 +61,31 @@
       "publish": false
     },
     {
-      "_comment": "organisationId must match a row id in data/positions.json for getOrganisationLogo() to find it. A third-party logo needs the organisation's own permission, not the subject's, that is why this stays closed even though her own photographs are cleared.",
+      "_comment": "organisationId must match a row id in data/positions.json for getOrganisationLogo() to find it. A third-party logo needs the organisation's own permission, not the subject's; this was closed on that basis and was OPENED BY EXPLICIT INSTRUCTION FROM THE SITE OWNER on 2026-09-18, who directed that this mark be used. See _comment_permission.",
       "id": "logo-ibc",
       "kind": "logo",
       "organisationId": "ibc-consultant",
-      "path": "",
-      "alt": { "en": "", "ar": "", "nl": "" },
+      "path": "/assets/ibc-logo-lockup.png",
+      "_comment_alt": "Written for the case where the mark appears WITHOUT the organisation named beside it. In the hero it is rendered decorative (alt=\"\") because the full legal name is already set as text directly above it, and repeating it would make a screen reader announce the same name twice.",
+      "alt": {
+        "en": "International Business Council (IBC)",
+        "ar": "مجلس الأعمال الدولي (IBC)",
+        "nl": "International Business Council (IBC)"
+      },
       "credit": "",
-      "permission": { "granted": false, "grantedBy": "", "grantedOn": "", "scope": "", "source": "" },
-      "tier": "",
-      "publish": false
+      "_comment_permission": "OPENED ON THE SITE OWNER'S INSTRUCTION, AND THE RECORD SAYS SO RATHER THAN IMPLYING MORE. `grantedBy` is the site owner, who on 2026-09-18 supplied this file and directed that it be published here. That is a real authorisation from the person who owns this site and holds the IBC relationship, and it is what this record claims - nothing wider. IBC's own countersigned confirmation is a separate document and is still not on file, so the org-logos row in data/deliverables.json stays permissionRecorded:false and the open item stays open until it is. docs/content-gaps.md:207-212 explains why the council's own agreement is still worth obtaining: it is the thing that protects the relationship if the mark's use is ever questioned.",
+      "permission": {
+        "granted": true,
+        "grantedBy": "Site owner (instruction of 2026-09-18)",
+        "grantedOn": "2026-09-18",
+        "scope": "Website use: this profile site, all pages and locales.",
+        "source": "Supplied by the site owner on 2026-09-18 with an explicit instruction to use this mark on the profile. IBC's own countersigned confirmation remains outstanding - see the org-logos row in data/deliverables.json."
+      },
+      "tier": "A",
+      "publish": true,
+      "_comment_dimensions": "The supplied file is a 1920x1080 frame with the lockup centred in it, so most of its area is empty white. These are the dimensions of the ARTWORK once trimmed to its bounding box, which is what next/image needs to lay the mark out at its true aspect ratio; a 16:9 box would reserve a band of empty space around it. If the trimmed file is replaced, re-measure these.",
+      "width": 1540,
+      "height": 900
     }
   ],
   "_comment_never": "Nothing is added here that the subject does not hold the rights to. Event and conference photography is usually the photographer's copyright regardless of who appears in it, so a file arriving by message is not by itself a permission."

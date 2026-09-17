@@ -211,6 +211,19 @@ On the logos: holding a file is not permission to publish it. Using the IBC mark
 personal profile without the council's written agreement damages the relationship the
 profile exists to represent. Record who granted it, when, and what the grant covers.
 
+**The presentation is now built and waiting on exactly that.** `components/organisation-logo.tsx`
+renders the mark, and the hero carries an affiliation block (hairline, "In affiliation
+with", the mark) under the legal title in `components/hero-vvip.tsx`. All of it is wired
+to the `logo-ibc` slot, which is **still closed**, so nothing renders today and the build
+stays green. Opening it is a data edit, not a code change: drop the file into
+`public/assets/`, set `path`, and record the permission.
+
+⚠️ **When that permission is recorded, record what is actually true.** The `grantedBy`
+field is an audit trail of who consented. If the file reaches us from the client rather
+than from IBC, it says so, and this row stays ❌ until the council's own written
+confirmation arrives. A permission record naming IBC when IBC has not been asked is worse
+than an empty slot, because it looks settled.
+
 ---
 
 ## Not blocked on a question

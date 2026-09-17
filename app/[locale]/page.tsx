@@ -94,8 +94,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     settings,
     deliverables,
     heroBackground,
-    portrait,
-  ] = await Promise.all([
+    portrait, organisationLogo] = await Promise.all([
     getIdentity(),
     getHeadline(),
     getExpertise(),
@@ -112,6 +111,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     // both photographs arrived with the form and carry a recorded permission.
     getMedia("hero-background", locale),
     getMedia("portrait", locale),
+    // The IBC mark. Resolves to null while the slot has no recorded permission,
+    // which is the state it ships in, so the hero's affiliation block is simply
+    // absent rather than empty. Opening the slot in data/media.json is the only
+    // change needed to make it appear.
+    getMedia("logo-ibc", locale),
   ])
 
   const t = await getTranslations()
@@ -278,6 +282,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             // reading `heroBackground`, which is permanently empty, so it could
             // never have shown a photograph.
             portrait={portrait}
+            organisationLogo={organisationLogo}
           />
         </HeroScope>
 

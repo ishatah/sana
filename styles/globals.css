@@ -7665,13 +7665,120 @@ body[data-nav-scrolled] .masthead-name {
   will-change: transform;
 }
 
-/* One square of the IBC grid motif. No border-radius and no rotation: the mark is
-   axis-aligned and square, and rounding or tilting it makes it someone else's. */
-.vvip-square {
+/*
+ * One dot of the IBC cluster motif.
+ *
+ * CORRECTED FROM A SQUARE. This rule and the component that uses it both claimed
+ * the IBC mark was "a grid of squares in azure" and drew squares to match. The
+ * mark is a cluster of CIRCLES, so the claim was wrong and the echo was echoing
+ * nothing. See the docblock in components/motion/fm/vvip-field.tsx.
+ *
+ * `border-radius: 50%` on an element whose width and height are set equal from
+ * the component gives a true circle at every size, which is why the sizes stay in
+ * the data rather than being expressed here.
+ */
+.vvip-dot {
   position: absolute;
   display: block;
+  border-radius: 50%;
   background: linear-gradient(135deg, rgba(30, 144, 214, 0.55) 0%, rgba(127, 196, 236, 0.3) 100%);
   will-change: transform, opacity;
+}
+
+/*
+ * THE WAVE. A WebGL canvas, and the only thing on this site that glows.
+ *
+ * ── THE ONE RULE THIS BREAKS, AND THE PERMISSION IT HAS ──────────────────────
+ *
+ * The register note at the top of this section says "nothing that glows". That
+ * is still the rule for the rest of the site, and it is why there is exactly one
+ * glowing element in the whole stylesheet. This one is a deliberate override for
+ * the hero band alone, at an alpha ceiling (0.24, set in vvip-wave.tsx) whose
+ * darkest composited pixel is #dfeff9 — a shade off --primary-tint (#dceafa),
+ * a colour this palette already contains. A glow that never leaves the palette
+ * is a different thing from a glow that announces itself.
+ *
+ * The ceiling is not a taste setting: it is bounded by the contrast of the hero
+ * text that sits over it, and raising it already forced .vvip-eyebrow from
+ * --primary-strong to --primary-deep. The table is in vvip-wave.tsx.
+ *
+ * ── inset: 0 AND NOTHING ELSE. THE NEGATIVE-INSET RULE APPLIES HERE TOO ──────
+ *
+ * The same trap documented on .vvip-field-wash above: `inset: -25%` there gave
+ * the element a layout box wider than the viewport, and the document genuinely
+ * scrolled 66px sideways at 1440px DESPITE overflow:hidden on both ancestors.
+ *
+ * This element needs no oversizing at all. Its content is a fragment shader whose
+ * four-edge Gaussian window already drives alpha to zero before any border, so
+ * there is no edge to hide. That is strictly better than oversizing: the
+ * containment is in the math rather than in the box. Nothing may add a negative
+ * inset, a transform: scale(), or a dimension above 100% here.
+ *
+ * ── display: block IS LOAD-BEARING ──────────────────────────────────────────
+ *
+ * <canvas> is inline-level by default, which gives it a baseline and a few pixels
+ * of descender space beneath it. Inside an absolutely-positioned inset:0 box that
+ * is harmless today, but it is exactly the kind of thing that grows into a
+ * phantom scrollbar later. Blocked here rather than debugged then.
+ */
+.vvip-wave {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* .vvip-field already declares this, but a canvas is a replaced element and
+     this is cheap insurance that it can never eat a click meant for a CTA. */
+  pointer-events: none;
+}
+
+/*
+ * THE NO-MOTION FLOOR FOR THE WAVE, AND IT DIFFERS FROM THE WASH BELOW.
+ *
+ * display: none rather than a frozen frame. The wash is KEPT under reduced
+ * motion because a static soft gradient is a finished-looking ground. A frozen
+ * wave is not: it is a hard blue diagonal stripe across the hero with no reason
+ * to be there, and a static diagonal is MORE visually assertive than the moving
+ * one it would replace. The honest reduced state is the wash alone, which is the
+ * same call VvipField already makes for the squares.
+ *
+ * VvipWave also checks matchMedia and never schedules a frame when reduced. This
+ * block is the second line for the same reason as the one below it: it holds
+ * before hydration and it holds if the three.js chunk never loads. That
+ * reasoning applies with more force to a ~150KB WebGL bundle than to a keyframe.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .vvip-wave {
+    display: none !important;
+  }
+}
+
+/*
+ * FORCED COLORS. The same removal every other decorative ground layer here takes.
+ *
+ * A canvas is a replaced element, so forced-colors mode does NOT recolour its
+ * contents the way it recolours CSS backgrounds: the user's chosen palette is
+ * enforced everywhere on the page EXCEPT here, and a strip of arbitrary blue
+ * would survive into a high-contrast theme as the one thing that ignored it.
+ * That is worse than a missing decoration for the exact people the mode is for.
+ */
+@media (forced-colors: active) {
+  .vvip-wave {
+    display: none !important;
+  }
+}
+
+/*
+ * THE LITE TIER. A full-bleed fragment shader is the most expensive per-frame
+ * layer on this site, and it is the same shape of cost as .page-grain and
+ * .page-aberration, which this tier already drops.
+ *
+ * On these devices the hero keeps the wash and the squares — the design's
+ * character, which the tier must never remove — and loses only the layer whose
+ * cost is paid on every composited frame.
+ */
+:root[data-perf="lite"] .vvip-wave {
+  display: none;
 }
 
 /*
@@ -7684,7 +7791,7 @@ body[data-nav-scrolled] .masthead-name {
  */
 @media (prefers-reduced-motion: reduce) {
   .vvip-field-wash,
-  .vvip-square {
+  .vvip-dot {
     animation: none !important;
     transition: none !important;
   }
@@ -7693,10 +7800,10 @@ body[data-nav-scrolled] .masthead-name {
   .vvip-field-wash {
     transform: scale(1.25) !important;
   }
-  .vvip-square {
+  .vvip-dot {
     transform: none !important;
   }
-  .vvip-square {
+  .vvip-dot {
     display: none;
   }
 }
@@ -7749,16 +7856,50 @@ body[data-nav-scrolled] .masthead-name {
   overflow: hidden;
 }
 
-/* The eyebrow above the name. It takes --primary-strong (5.14:1) rather than the
-   bright --primary, because at 0.7rem this is small text and 1.4.3 wants 4.5:1
-   here; the bright blue is 3.49:1 and is reserved for display sizes and rules. */
+/* The eyebrow above the name. It takes --primary-deep rather than the bright
+   --primary: the clamp below still reaches down to 0.95rem on a phone, which is
+   small text, and 1.4.3 wants 4.5:1 there; the bright blue is 3.49:1 and is
+   reserved for display sizes and rules.
+
+   ── IT IS --primary-deep AND NOT --primary-strong, BECAUSE OF THE WAVE ───────
+
+   This was --primary-strong, which is 5.14:1 on plain white and passed. It no
+   longer sits on plain white: .vvip-wave paints a blue band underneath it, and
+   contrast has to be measured against the DARKEST pixel that band can produce
+   (#dfeff9), not against the page colour. There --primary-strong falls to
+   4.37:1, which is a real 1.4.3 failure at this size, not a rounding argument.
+
+   --primary-deep is 8.05:1 against the same pixel. The headroom is deliberate:
+   it means the wave's brightness can be retuned without this line quietly
+   dropping below the floor again. See the uAlpha note in
+   components/motion/fm/vvip-wave.tsx, which carries the full table. */
+/*
+ * IT IS NO LONGER A 0.7rem LABEL, AND THE TRACKING CAME DOWN WITH THE SIZE.
+ *
+ * At 0.7rem with 0.24em of tracking this was set as metadata — the same
+ * treatment as the meta-row labels four elements below it. But this string is
+ * "I am": it is not a label on the name, it is the first half of a sentence the
+ * name completes, and reading it as a caption broke the one utterance the two
+ * elements are meant to form.
+ *
+ * It is now fluid and sized as a FRACTION OF THE NAME rather than picked on its
+ * own: .vvip-name is clamp(2.75rem, 7vw, 5.25rem), and this is the same clamp
+ * shape at roughly 0.3x of each stop, so the ratio between the lead-in and the
+ * name holds at every width instead of only at the one it was eyeballed at.
+ *
+ * TRACKING DROPS 0.24em -> 0.06em. Tracking that wide is what makes small caps
+ * legible at label size and what makes display type look stretched; keeping it
+ * while tripling the size would have read as a gap between the two words rather
+ * than as a phrase. It keeps a little, because the uppercase is still here.
+ */
 .vvip-eyebrow {
   font-family: var(--font-display);
-  font-size: 0.7rem;
+  font-size: clamp(0.95rem, 2.1vw, 1.6rem);
   font-weight: 600;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--primary-strong);
+  color: var(--primary-deep);
+  line-height: 1.1;
 }
 
 /* Arabic has no small caps, and letterspacing an Arabic run breaks the joins
@@ -7788,19 +7929,59 @@ body[data-nav-scrolled] .masthead-name {
  * It was written as `var(--primary)` on the reasoning that this is large display
  * type, where 1.4.3 permits 3:1 and the bright blue's 3.49:1 clears. That
  * reasoning was wrong on the threshold: WCAG "large" means 18.66px BOLD or 24px
- * regular, and this line starts at clamp()'s floor of 1.15rem = 18.4px at
- * weight 600. At the small end it is NOT large text, so it needs the full 4.5:1
- * and 3.49:1 fails. On screen it read visibly washed out, like disabled text,
- * which is what sent me back to measure it.
+ * regular, and this line started at clamp()'s floor of 1.15rem = 18.4px at
+ * weight 600. At the small end it was NOT large text, so it needed the full
+ * 4.5:1 and 3.49:1 fails. On screen it read visibly washed out, like disabled
+ * text, which is what sent me back to measure it.
  *
  * --primary-strong is 5.14:1 on white and clears at every size the clamp can
  * produce. The bright --primary stays where it is genuinely safe: rules, fills,
  * and the decorative squares.
+ *
+ * THE SIZE INCREASE BELOW DOES NOT REOPEN THAT CHOICE. The new floor is 1.6rem
+ * = 25.6px, which does clear WCAG's "large" threshold, so --primary at 3.49:1
+ * would now be permissible by the letter of 1.4.3. It still is not used: the
+ * measured reason it was reverted was that it LOOKED disabled next to the name,
+ * and that does not change with a few more pixels. --primary-strong stays.
+ *
+ * ── THE SIZE, AND WHAT SETS ITS CEILING ───────────────────────────────────────
+ *
+ * Sized as a fraction of .vvip-name's clamp(2.75rem, 7vw, 5.25rem) rather than
+ * chosen on its own, at roughly 0.6x of each stop. With the lead-in at ~0.3x
+ * that gives three fixed steps down the column — name, role, lead-in — holding
+ * at every viewport width rather than only at one.
+ *
+ * THE LONGEST ROLE IS WHAT SETS THE CEILING, NOT THE FIRST ONE. This element
+ * wraps (`white-space: normal`, unlike the dark hero's nowrap variant), so the
+ * size cannot clip text — but the string that decides how it reads is the
+ * longest one, not "Entrepreneur", which is merely the one that renders first.
+ * Measured at 1024px, the narrowest the column gets while still sitting beside
+ * the portrait: Dutch "Strategische partnerschappen" needs 575px in a 481px
+ * column and takes TWO lines. Raising 3.1rem means re-measuring there.
+ *
+ * `min-height: 2.2em` IS WHY THE HERO DOES NOT JUMP AS THE ROLES CYCLE.
+ *
+ * Because the line wraps, the roles are not all the same height: at 1024px the
+ * Dutch and Arabic longest roles take two lines while the other two take one.
+ * Without a floor the element's box changed height every few seconds, and since
+ * everything below it in this flex column is laid out after it, the title, the
+ * meta ledger and both buttons all slid up and down on the rotation timer. That
+ * is the same class of defect as a layout shift, just on a loop.
+ *
+ * 2.2em is two lines at this element's own line-height, so the taller state is
+ * reserved up front and the shorter roles simply sit in a box with room to
+ * spare. It is in `em`, so it tracks the clamp rather than restating it.
+ *
+ * It does NOT cap the element: a role needing three lines would still grow. The
+ * floor removes the jitter between the states that exist; it does not clip a
+ * state that does not.
  */
 .vvip-role {
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 2.6vw, 1.85rem);
+  font-size: clamp(1.6rem, 4vw, 3.1rem);
   font-weight: 600;
+  line-height: 1.1;
+  min-height: 2.2em;
   letter-spacing: -0.01em;
   color: var(--primary-strong);
 }
@@ -7850,6 +8031,99 @@ body[data-nav-scrolled] .masthead-name {
   font-size: 0.92rem;
   color: var(--heading);
 }
+
+/*
+ * THE HERO AFFILIATION BLOCK.
+ *
+ * A hairline, a small label, and the organisation's mark, sitting under the legal
+ * title in the hero's text column.
+ *
+ * IT IS A CREDENTIAL, NOT A BADGE, and the composition is what says so. A logo
+ * dropped into a hero on its own reads as sponsorship or as decoration; a logo
+ * under a labelled rule reads as an affiliation the subject holds, which is the
+ * fact being communicated. The label carries that meaning in text, so it survives
+ * with images off and is not left to the reader to infer from a picture.
+ *
+ * THE RULE IS ON THE BLOCK-START EDGE, matching `.vvip-meta-cell` and
+ * `.about-ledger-row` directly below it. Hairlines on top edges are already this
+ * page's way of opening a new band of information, so this reads as one more
+ * entry in that system rather than as a new device.
+ */
+.vvip-affiliation {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.875rem;
+  padding-block-start: 1.25rem;
+  border-block-start: 1px solid var(--border);
+}
+
+/*
+ * The label. Same treatment as `.vvip-meta-label` so the two read as siblings,
+ * and in --muted-foreground (5.84:1 on white) rather than the accent: the accent
+ * belongs to the mark below it, and a blue label above a blue logo would compete
+ * with the thing it is introducing.
+ */
+.vvip-affiliation-label {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+/*
+ * Arabic has no small caps, and letterspacing an Arabic run breaks the joins
+ * between its letters. The same correction every eyebrow on this site carries.
+ */
+[dir="rtl"] .vvip-affiliation-label {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/*
+ * THE MARK'S CEILING, AND WHY IT IS A max-width RATHER THAN A HEIGHT.
+ *
+ * The supplied lockup is a horizontal composition: the dot cluster and "IBC" on
+ * one line, then the full English name, then the Arabic name, each smaller than
+ * the last. Its legibility floor is therefore set by its WIDTH, because the
+ * Arabic sub-line is the smallest element and is the first thing to turn into a
+ * grey smudge as the whole thing scales down.
+ *
+ * 14rem (224px) keeps that line readable at the 1200px-wide source this is built
+ * against. Capping height instead would let a wide crop scale itself past that
+ * floor while still satisfying the rule, which is the failure this avoids.
+ *
+ * `OrganisationLogo` sets `h-auto w-full object-contain`, so this is the only
+ * number that decides the rendered size, and the aspect ratio is the file's own.
+ */
+.vvip-affiliation-mark {
+  max-width: 14rem;
+}
+
+/*
+ * Slightly smaller on a phone, where the text column is the full page width and a
+ * 224px mark next to 16px body copy starts to read as the loudest thing in the
+ * hero. 11rem holds the Arabic line at typical phone DPR, which is higher than
+ * desktop and buys back some of the legibility the smaller box costs.
+ */
+@media (max-width: 640px) {
+  .vvip-affiliation-mark {
+    max-width: 11rem;
+  }
+}
+
+/*
+ * NO RTL MIRROR ON THE BLOCK ITSELF, DELIBERATELY.
+ *
+ * `.reading-rail` and `.band-edge` need `transform-origin` flipped because they
+ * are directional: they fill from the reading edge. This is a stacked flow whose
+ * horizontal behaviour is entirely `align-items: start`, which is already
+ * logical, so it resolves to the right edge in Arabic with no correction. The
+ * hairline is full-width and symmetric, and the logo is a raster that must NOT be
+ * mirrored: flipping a trademark is altering it.
+ */
 
 /*
  * THE PORTRAIT IS NOT IN A FRAME, AND THAT IS THE WHOLE POINT.
