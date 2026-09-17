@@ -83,9 +83,16 @@ export default function HeadlineAdminPage() {
         </div>
       </ContentSection>
 
+      {/*
+        THIS SECTION IS PUBLISHED. Its description used to read "Internal, this
+        does not render on the site, it steers the copy", which was true when it
+        was written and is not true now: the three identity fields are the three
+        panels under مجال التركيز on /about, and the `*Detail` field beside each
+        one is the sentence inside that panel. Anything typed here is live copy.
+      */}
       <ContentSection
         title="Positioning"
-        description="Intake section 9. Internal, this does not render on the site, it steers the copy."
+        description="Intake section 9. These are the three panels in the Focus section on the About page. Each has a short answer and a supporting sentence; the sentence is optional and the panel renders without it."
       >
         <LocalizedFieldRow
           label="Primary professional identity"
@@ -93,11 +100,26 @@ export default function HeadlineAdminPage() {
           onChange={(v) => setPos("primaryIdentity", v)}
         />
         <LocalizedFieldRow
+          label="Primary identity — supporting line"
+          value={data.positioning?.primaryIdentityDetail}
+          onChange={(v) => setPos("primaryIdentityDetail", v)}
+        />
+        <LocalizedFieldRow
           label="Secondary identity"
           value={data.positioning?.secondaryIdentity}
           onChange={(v) => setPos("secondaryIdentity", v)}
         />
+        <LocalizedFieldRow
+          label="Secondary identity — supporting line"
+          value={data.positioning?.secondaryIdentityDetail}
+          onChange={(v) => setPos("secondaryIdentityDetail", v)}
+        />
         <LocalizedFieldRow label="Audience" value={data.positioning?.audience} onChange={(v) => setPos("audience", v)} />
+        <LocalizedFieldRow
+          label="Audience — supporting line"
+          value={data.positioning?.audienceDetail}
+          onChange={(v) => setPos("audienceDetail", v)}
+        />
       </ContentSection>
 
       <SaveButton onSave={save} />

@@ -1,37 +1,118 @@
 {
   "_comment": "Intake form section 1, مجالات التخصص, transcribed as supplied. The form asked for 'عبارات قصيرة دون جُمل', short noun phrases, not sentences, and that is what these are. Nothing is described or characterised beyond the phrase itself.",
   "items": [
-    { "id": "business-development", "icon": "network", "title": { "en": "Business development", "ar": "تطوير الأعمال", "nl": "Bedrijfsontwikkeling" } },
+    {
+      "id": "business-development",
+      "icon": "network",
+      "title": {
+        "en": "Business development",
+        "ar": "تطوير الأعمال",
+        "nl": "Bedrijfsontwikkeling"
+      },
+      "detail": {
+        "en": "Building commercial activity for the organisations and partners she represents, from first introduction through to a working arrangement.",
+        "ar": "بناء النشاط التجاري للمؤسسات والشركاء الذين تمثلهم، من التعارف الأول وحتى الوصول إلى ترتيب عمل قائم.",
+        "nl": "Het opbouwen van commerciële activiteit voor de organisaties en partners die zij vertegenwoordigt, van eerste kennismaking tot een werkende samenwerking."
+      }
+    },
     {
       "id": "international-business-development",
       "icon": "globe",
-      "title": { "en": "International business development", "ar": "التطوير الدولي للأعمال", "nl": "Internationale bedrijfsontwikkeling" }
+      "title": {
+        "en": "International business development",
+        "ar": "التطوير الدولي للأعمال",
+        "nl": "Internationale bedrijfsontwikkeling"
+      },
+      "detail": {
+        "en": "Work that runs between Europe and the Middle East, with a professional practice recurring across the Gulf states.",
+        "ar": "عمل يمتد بين أوروبا والشرق الأوسط، بنشاط مهني متكرر في دول مجلس التعاون الخليجي.",
+        "nl": "Werk dat loopt tussen Europa en het Midden-Oosten, met een professionele praktijk die terugkeert in de Golfstaten."
+      }
     },
     {
       "id": "strategic-partnerships",
       "icon": "handshake",
-      "title": { "en": "Strategic partnerships", "ar": "الشراكات الاستراتيجية", "nl": "Strategische partnerschappen" }
+      "title": {
+        "en": "Strategic partnerships",
+        "ar": "الشراكات الاستراتيجية",
+        "nl": "Strategische partnerschappen"
+      },
+      "detail": {
+        "en": "Facilitating partnerships between entrepreneurs, companies, investors and institutions across different sectors.",
+        "ar": "تيسير الشراكات بين رواد الأعمال والشركات والمستثمرين والمؤسسات في مختلف القطاعات.",
+        "nl": "Het faciliteren van partnerschappen tussen ondernemers, bedrijven, investeerders en instellingen in verschillende sectoren."
+      }
     },
-    { "id": "client-acquisition", "icon": "users", "title": { "en": "Client acquisition", "ar": "استقطاب العملاء", "nl": "Klantacquisitie" } },
+    {
+      "id": "client-acquisition",
+      "icon": "users",
+      "title": {
+        "en": "Client acquisition",
+        "ar": "استقطاب العملاء",
+        "nl": "Klantacquisitie"
+      },
+      "detail": {
+        "en": "Bringing the right parties together, and holding the relationship that follows the introduction.",
+        "ar": "الجمع بين الأطراف المناسبة، والحفاظ على العلاقة التي تعقب التعارف.",
+        "nl": "Het samenbrengen van de juiste partijen, en het onderhouden van de relatie die op de kennismaking volgt."
+      }
+    },
     {
       "id": "professional-networking",
       "icon": "network",
-      "title": { "en": "Professional networking and relationship management", "ar": "بناء الشبكات المهنية وإدارة العلاقات", "nl": "Professionele netwerkvorming en relatiebeheer" }
+      "title": {
+        "en": "Professional networking and relationship management",
+        "ar": "بناء الشبكات المهنية وإدارة العلاقات",
+        "nl": "Professionele netwerkvorming en relatiebeheer"
+      },
+      "detail": {
+        "en": "A network built over years across Europe and the Middle East, connecting businesses, investors and decision makers.",
+        "ar": "شبكة علاقات بُنيت عبر سنوات في أوروبا والشرق الأوسط، تربط بين رجال الأعمال والمستثمرين وصنّاع القرار.",
+        "nl": "Een netwerk dat over jaren is opgebouwd door Europa en het Midden-Oosten, dat bedrijven, investeerders en besluitvormers verbindt."
+      }
     },
     {
       "id": "commercial-opportunities",
       "icon": "building",
-      "title": { "en": "Identifying and evaluating commercial opportunities", "ar": "تحديد الفرص التجارية وتقييمها", "nl": "Commerciële kansen identificeren en beoordelen" }
+      "title": {
+        "en": "Identifying and evaluating commercial opportunities",
+        "ar": "تحديد الفرص التجارية وتقييمها",
+        "nl": "Commerciële kansen identificeren en beoordelen"
+      },
+      "detail": {
+        "en": "Assessing an opportunity on its merits and reaching the parties it concerns.",
+        "ar": "تقييم الفرصة التجارية على أساس جدواها، والوصول إلى الأطراف المعنية بها.",
+        "nl": "Een kans op haar merites beoordelen en de betrokken partijen bereiken."
+      }
     },
     {
       "id": "real-estate",
       "icon": "building",
-      "title": { "en": "Real estate and property transactions", "ar": "القطاع العقاري والمعاملات العقارية", "nl": "Vastgoed en vastgoedtransacties" }
+      "title": {
+        "en": "Real estate and property transactions",
+        "ar": "القطاع العقاري والمعاملات العقارية",
+        "nl": "Vastgoed en vastgoedtransacties"
+      },
+      "detail": {
+        "en": "Practical experience in property transactions and in managing a sale from first introduction through to completion.",
+        "ar": "خبرة عملية في المعاملات العقارية وبيع العقارات، وفي إدارة مسار التعامل من التعريف بالفرصة حتى إتمامها.",
+        "nl": "Praktijkervaring in vastgoedtransacties en in het begeleiden van een verkoop van eerste kennismaking tot afronding."
+      }
     },
     {
       "id": "cross-border-trade",
       "icon": "globe",
-      "title": { "en": "Cross-border commercial cooperation", "ar": "التعاون التجاري العابر للحدود", "nl": "Grensoverschrijdende commerciële samenwerking" }
+      "title": {
+        "en": "Cross-border commercial cooperation",
+        "ar": "التعاون التجاري العابر للحدود",
+        "nl": "Grensoverschrijdende commerciële samenwerking"
+      },
+      "detail": {
+        "en": "Encouraging cross-border collaboration and supporting initiatives that create long-term economic value.",
+        "ar": "تشجيع التعاون التجاري العابر للحدود، ودعم المبادرات ذات القيمة الاقتصادية المستدامة.",
+        "nl": "Het stimuleren van grensoverschrijdende samenwerking en het ondersteunen van initiatieven die op lange termijn economische waarde creëren."
+      }
     }
-  ]
+  ],
+  "_comment_detail": "The supporting line under each area's phrase in components/expertise-grid.tsx. Each one is drawn from the supplied intake document (9 September 2026) and from the four-part profile in data/biography.json, not authored here: the نبذة شخصية خام bullets in section 1 supply the real-estate, opportunity-assessment and networking lines, and the IBC paragraph supplies the partnership and cross-border lines. A detail is OPTIONAL. An area with none renders as the phrase alone, which is what every area did before this field existed, so adding an area in /admin never leaves a broken cell. Keep these to one sentence: the grid is four columns at lg and the cells set their own height."
 }

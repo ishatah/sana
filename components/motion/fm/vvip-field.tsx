@@ -1,17 +1,27 @@
 "use client"
 
 import { m, useReducedMotion } from "motion/react"
-import { VvipWave } from "@/components/motion/fm/vvip-wave"
+import { VvipAtmosphere } from "@/components/motion/fm/vvip-atmosphere"
 
 /**
- * The hero's animated ground: a glowing blue wave, a slow gradient wash, and
- * drifting squares, in that paint order.
+ * The hero's animated ground: the atmosphere field and the drifting IBC dots,
+ * in that paint order.
  *
- * The wave is a WebGL canvas and lives in its own file, components/motion/fm/
- * vvip-wave.tsx, which carries the reasoning for it. It is mounted HERE rather
- * than beside VvipField in components/hero-vvip.tsx because this component is
- * already a client leaf: mounting inside it adds the canvas to an existing
+ * The atmosphere is a WebGL canvas and lives in its own file, components/motion/
+ * fm/vvip-atmosphere.tsx, which carries the reasoning for it. It is mounted HERE
+ * rather than beside VvipField in components/hero-vvip.tsx because this component
+ * is already a client leaf: mounting inside it adds the canvas to an existing
  * client subtree instead of opening the hero's fourth one.
+ *
+ * ── THE WASH IS GONE, AND SO IS THE WAVE ─────────────────────────────────────
+ *
+ * This used to paint a CSS radial wash, then a travelling sine band, then the
+ * dots. The wash and the band are both folded into the shader now. The reason
+ * was not that either was individually bad: it was that the wash, the band and
+ * the dots were ALL soft, all the same blue, all between 0.06 and 0.30 alpha,
+ * so three layers meant to read as depth composited into one haze. The shader
+ * replaces them with a soft mesh under a CRISP contour grid, which is the
+ * contrast this ground never had. See that file's docblock.
  *
  * ── WHY `motion/react` AND `m.*` RATHER THAN `framer-motion` / `motion.*` ─────
  *
@@ -69,66 +79,27 @@ export function VvipField() {
    *
    * `prefers-reduced-motion` is an accessibility setting, not a preference about
    * taste: for a vestibular-disorder sufferer, drifting background geometry is
-   * the exact stimulus that triggers symptoms. When it is set, this component
-   * renders the STATIC gradient and no squares at all, rather than the same
-   * animation slowed down. It also subscribes, so toggling the OS setting takes
-   * effect without a reload.
+   * the exact stimulus that triggers symptoms. When it is set, the dots are not
+   * rendered at all, rather than frozen or slowed, and the stylesheet hides the
+   * canvas — so the reduced state is the plain white hero. It also subscribes,
+   * so toggling the OS setting takes effect without a reload.
    */
   const reduced = useReducedMotion()
 
   return (
     <div aria-hidden className="vvip-field">
-      {/* The wash, FIRST. It is the GROUND the wave is lit against, not a haze
-          the wave shines through.
+      {/* The atmosphere, FIRST: the ground everything else sits on.
 
-          This used to sit on top, on the theory that a moving band beneath a
-          static haze reads as atmosphere the light travels through. Good idea,
-          wrong numbers: the wash painted the same three blues as the wave at a
-          comparable alpha, and blue over blue gives the eye no hue difference to
-          resolve depth from. In practice it did not read as atmosphere at all,
-          it just raised the ground the wave had to contrast against and erased
-          the band. Its alphas are now roughly halved and one radial has moved to
-          the slate, so it still stops the page reading as a blank sheet while
-          leaving the wave something to be brighter than. */}
-      <m.div
-        className="vvip-field-wash"
-        animate={
-          reduced
-            ? undefined
-            : {
-                // Deliberately not a loop back through the same position: the
-                // keyframes walk out and return by a different route, so the
-                // cycle is hard to perceive as a cycle.
-                // Every keyframe holds a scale >= 1.25, which is what replaces
-                // the old `inset: -25%`: the element stays exactly viewport-sized
-                // in LAYOUT (so it adds nothing to document scrollWidth) and is
-                // oversized only in PAINT, where a translate cannot expose an
-                // edge. See the note on .vvip-field-wash in styles/globals.css.
-                transform: [
-                  "translate3d(0%, 0%, 0) scale(1.25)",
-                  "translate3d(2.5%, -2%, 0) scale(1.32)",
-                  "translate3d(-1.5%, 2.5%, 0) scale(1.28)",
-                  "translate3d(0%, 0%, 0) scale(1.25)",
-                ],
-              }
-        }
-        transition={{ duration: 34, ease: "easeInOut", repeat: Infinity, repeatType: "loop" }}
-      />
-
-      {/* The wave, SECOND: above the wash, below the dots.
-
-          Above the wash because it is the subject and the wash is its ground.
           Below the dots because those are the IBC mark, and a mark dimmed by
-          decoration is a brand error — that reason was true when the wave was at
-          the bottom of the stack and is unchanged by moving it up. The wash has
-          no comparable claim; it is unbranded atmosphere.
+          decoration is a brand error. That reason was true when a wave occupied
+          this slot and is unchanged by what replaced it.
 
-          VvipWave owns its own reduced-motion and no-WebGL handling. */}
-      <VvipWave />
+          VvipAtmosphere owns its own reduced-motion and no-WebGL handling. */}
+      <VvipAtmosphere />
 
       {/* The dots. Skipped entirely under reduced motion rather than frozen in
           place: six faint static circles are visual noise with no purpose, so the
-          honest reduced state is the wash alone. */}
+          honest reduced state is the bare hero. */}
       {!reduced &&
         DOTS.map((s, i) => (
           <m.span

@@ -33,11 +33,26 @@ import { MarkRail } from "@/components/motion/fm/mark-rail"
  * is the ornament. (This leaned on the display serif before the site moved to a
  * single family; size now carries it alone.)
  *
- * Kyros pairs each panel with a paragraph of body copy. There is none to write
- * here: intake section 5 asks for "five to eight short noun phrases, no sentences"
- * and that is exactly what was supplied. Inventing a descriptive sentence per area
- * would be writing claims about her practice that nobody has confirmed, so each
- * row carries the phrase alone and is sized for it.
+ * ── WHY THERE IS A SECOND LINE NOW ─────────────────────────────────────────────
+ *
+ * This comment used to say there was no body copy to write, on the grounds that
+ * intake section 5 asked for "short noun phrases, no sentences" and inventing a
+ * sentence per area would be asserting things about her practice that nobody had
+ * confirmed. The second half of that still holds absolutely. The first half was
+ * too strong: the phrases are all section 5 supplied, but they are not all the
+ * DOCUMENT supplied. Section 1's نبذة شخصية خام bullets and the four-part profile
+ * in data/biography.json describe the same eight areas at length, in her own
+ * words, already approved for publication.
+ *
+ * So `detail` carries a sentence per area and every one of them is sourced from
+ * that material, not authored here, see data/expertise.json `_comment_detail` for
+ * which passage feeds which area. Nothing in it is a claim the supplied documents
+ * do not already make, and section 3's ban on "أرقام ونِسب غير موثقة" is why no
+ * detail carries a figure.
+ *
+ * `detail` IS OPTIONAL. An area without one renders as the phrase alone, exactly
+ * as every area did before the field existed, so adding an area at /admin never
+ * produces a half-built cell.
  *
  * NOTE ON `icon`: the field is still accepted in the item type because
  * data/expertise.json and the /admin editor both still carry it. It is simply not
@@ -48,7 +63,7 @@ import { MarkRail } from "@/components/motion/fm/mark-rail"
 export async function ExpertiseGrid({
   items,
 }: {
-  items: { id: string; icon?: string; title: LocalizedString }[]
+  items: { id: string; icon?: string; title: LocalizedString; detail?: LocalizedString }[]
 }) {
   const locale = await getLocale()
 
@@ -149,12 +164,27 @@ export async function ExpertiseGrid({
          * --heading measures 15.2:1, so the phrase stays well clear of AA
          * through the tint.
          */
-        <h3
-          key={item.id}
-          className="cell-tint text-base font-medium leading-snug text-[color:var(--heading)]"
-        >
-          {localize(item.title, locale)}
-        </h3>
+        /*
+         * THE TINT MOVES TO THE WRAPPER, NOT THE HEADING. `cell-tint` fills the
+         * cell on hover, so it has to sit on the element that IS the cell. With
+         * a detail line below it, the <h3> is no longer that element, and
+         * leaving the class there would tint the phrase's own box while the
+         * sentence beneath it stayed on the untinted ground.
+         *
+         * `MarkRail` renders the <li>; this div is the cell's content box.
+         */
+        <div key={item.id} className="cell-tint">
+          <h3 className="text-base font-medium leading-snug text-[color:var(--heading)]">
+            {localize(item.title, locale)}
+          </h3>
+          {item.detail && (
+            /* Muted, one step down from the phrase. The phrase is the area; this
+               says what the area consists of, and must not compete with it. */
+            <p className="mt-2 text-sm leading-relaxed text-[color:var(--muted-foreground)]">
+              {localize(item.detail, locale)}
+            </p>
+          )}
+        </div>
       ))}
     </MarkRail>
   )

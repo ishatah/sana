@@ -7430,9 +7430,9 @@ body[data-nav-scrolled] .masthead-name {
    *
    * MEASURED in the browser at an 828px viewport, before this change: veil alpha
    * 0.259 at y=41, 0.217 at y=124, 0.154 at y=248, 0.095 at y=373. The hero's
-   * white ground was composited down to #bd, #c8, #d8, #e7 — and .vvip-wave's
-   * brightest pixel landed on #a6b6c1, a muddy grey-blue, instead of the #deeff9
-   * azure it paints on clean white.
+   * white ground was composited down to #bd, #c8, #d8, #e7 — and the hero
+   * shader's brightest pixel landed on #a6b6c1, a muddy grey-blue, instead of
+   * the azure it paints on clean white.
    *
    * That is why the wave read as "faint and not pro" at TWO different alpha
    * ceilings (0.16 and 0.24): it was never dim, it was grey. Blue glow on a grey
@@ -7715,62 +7715,6 @@ body[data-nav-scrolled] .masthead-name {
   isolation: isolate;
 }
 
-.vvip-field-wash {
-  position: absolute;
-  /*
-   * ── inset: 0 AND scale(), NOT inset: -25% ────────────────────────────────
-   *
-   * This was `inset: -25%`, which oversized the box so the wash's own translate
-   * could never drag an edge into view. It also gave the element a layout box
-   * 360px wider than the viewport on each side, and `overflow: hidden` on the
-   * ancestors did NOT stop that box contributing to the document's scroll width:
-   * measured at 1440px, `document.body.scrollWidth` came out 1506 and the page
-   * genuinely scrolled 66px sideways.
-   *
-   * A clipped overflow still counts toward scrollWidth in this arrangement, so
-   * the box has to be the right size in the first place. `inset: 0` keeps it
-   * exactly viewport-sized, and the oversizing that the drift needs is done with
-   * `scale()` in the transform instead, which is a PAINT operation and creates no
-   * layout box at all.
-   */
-  inset: 0;
-  /*
-   * ── DIMMED, AND PULLED OFF THE WAVE'S HUE ──────────────────────────────────
-   *
-   * These were 0.10 / 0.08 / 0.09 of rgba(30,144,214), rgba(11,111,196) and
-   * rgba(127,196,236) — which is to say the wash painted THE SAME THREE BLUES
-   * the wave paints, overlapping to about 0.17 alpha, directly over it.
-   *
-   * Blue over blue is not atmosphere. With no hue difference there is nothing
-   * for the eye to resolve depth from, so the wash simply raised the ground the
-   * wave had to contrast against and erased its local contrast. That was the
-   * second reason the band read as faint at two different alpha ceilings.
-   *
-   * Two changes, and both matter:
-   *
-   * 1. ALPHA ROUGHLY HALVED. The wash now paints UNDER the wave (see the paint
-   *    order in components/motion/fm/vvip-field.tsx), so it is a ground rather
-   *    than a veil. A ground does not need to be strong to stop the page reading
-   *    as a blank sheet, it needs to be PRESENT — and it is still plainly
-   *    visible in the hero's outer margins, which is where its job actually is.
-   *
-   * 2. THE THIRD RADIAL TAKES --accent-cool. Two stay in the blue ramp so the
-   *    field still belongs to the palette; the third moves to the slate, which
-   *    gives the wash a hue axis of its own. The wave then reads AGAINST it
-   *    instead of merging into it.
-   */
-  background:
-    radial-gradient(42% 46% at 22% 28%, rgba(30, 144, 214, 0.055) 0%, transparent 70%),
-    radial-gradient(38% 42% at 80% 68%, rgba(11, 111, 196, 0.045) 0%, transparent 72%),
-    radial-gradient(30% 34% at 62% 12%, rgba(51, 80, 107, 0.05) 0%, transparent 70%);
-  /* The resting oversize. The animation's keyframes all carry their own scale,
-     but under reduced motion nothing animates, so without this the wash would sit
-     at exactly viewport size and its radial gradients would show hard edges at
-     the band's corners. */
-  transform: scale(1.25);
-  will-change: transform;
-}
-
 /*
  * One dot of the IBC cluster motif.
  *
@@ -7792,33 +7736,32 @@ body[data-nav-scrolled] .masthead-name {
 }
 
 /*
- * THE WAVE. A WebGL canvas, and the only thing on this site that glows.
+ * THE ATMOSPHERE. A WebGL canvas: mesh gradient, contour grid and light shafts.
  *
- * ── THE ONE RULE THIS BREAKS, AND THE PERMISSION IT HAS ──────────────────────
+ * ── THIS NO LONGER BREAKS THE REGISTER NOTE ─────────────────────────────────
  *
- * The register note at the top of this section says "nothing that glows". That
- * is still the rule for the rest of the site, and it is why there is exactly one
- * glowing element in the whole stylesheet. This one is a deliberate override for
- * the hero band alone, at an alpha ceiling (0.30, set in vvip-wave.tsx) whose
- * brightest composited pixel is #d2e9f7 - a shade off --primary-tint (#dceafa),
- * a colour this palette already contains. A glow that never leaves the palette
- * is a different thing from a glow that announces itself.
+ * The element that used to sit here was the wave, and it held the stylesheet's
+ * ONLY exception to the register note at the top of this section, "nothing that
+ * glows". That exception is retired. A mesh wash and a hairline contour are not
+ * a bloom, so the rule now holds everywhere on the site without a carve-out.
  *
- * The ceiling is not a taste setting: it is bounded by the contrast of the hero
- * text that sits over it, and raising it already forced .vvip-eyebrow from
- * --primary-strong to --primary-deep. The table is in vvip-wave.tsx.
+ * What remains is the CONTRAST bound, which was never about glow: hero text sits
+ * over this layer, and the alpha ceiling is set by the ratio that text needs.
+ * The measured table is in vvip-atmosphere.tsx. Raising it already forced
+ * .vvip-eyebrow from --primary-strong to --primary-deep and .vvip-meta-label to
+ * a hardcoded #525c67, and there is no third concession available.
  *
- * ── inset: 0 AND NOTHING ELSE. THE NEGATIVE-INSET RULE APPLIES HERE TOO ──────
+ * ── inset: 0 AND NOTHING ELSE ───────────────────────────────────────────────
  *
- * The same trap documented on .vvip-field-wash above: `inset: -25%` there gave
- * the element a layout box wider than the viewport, and the document genuinely
- * scrolled 66px sideways at 1440px DESPITE overflow:hidden on both ancestors.
+ * `inset: -25%` on the old wash gave the element a layout box wider than the
+ * viewport, and the document genuinely scrolled 66px sideways at 1440px DESPITE
+ * overflow:hidden on both ancestors.
  *
  * This element needs no oversizing at all. Its content is a fragment shader whose
- * four-edge Gaussian window already drives alpha to zero before any border, so
- * there is no edge to hide. That is strictly better than oversizing: the
- * containment is in the math rather than in the box. Nothing may add a negative
- * inset, a transform: scale(), or a dimension above 100% here.
+ * four-edge window already drives alpha to zero before any border, so there is no
+ * edge to hide. That is strictly better than oversizing: the containment is in
+ * the math rather than in the box. Nothing may add a negative inset, a
+ * transform: scale(), or a dimension above 100% here.
  *
  * ── display: block IS LOAD-BEARING ──────────────────────────────────────────
  *
@@ -7827,7 +7770,7 @@ body[data-nav-scrolled] .masthead-name {
  * is harmless today, but it is exactly the kind of thing that grows into a
  * phantom scrollbar later. Blocked here rather than debugged then.
  */
-.vvip-wave {
+.vvip-atmosphere {
   position: absolute;
   inset: 0;
   display: block;
@@ -7839,22 +7782,21 @@ body[data-nav-scrolled] .masthead-name {
 }
 
 /*
- * THE NO-MOTION FLOOR FOR THE WAVE, AND IT DIFFERS FROM THE WASH BELOW.
+ * THE NO-MOTION FLOOR FOR THE ATMOSPHERE.
  *
- * display: none rather than a frozen frame. The wash is KEPT under reduced
- * motion because a static soft gradient is a finished-looking ground. A frozen
- * wave is not: it is a hard blue diagonal stripe across the hero with no reason
- * to be there, and a static diagonal is MORE visually assertive than the moving
- * one it would replace. The honest reduced state is the wash alone, which is the
- * same call VvipField already makes for the squares.
+ * display: none rather than a frozen frame. A frozen field is a static blue
+ * composition across the hero with no reason to be there, and a still image is
+ * MORE visually assertive than the drifting one it would replace, because
+ * nothing about it resolves. The honest reduced state is the plain white hero,
+ * which is the same call VvipField already makes for the squares.
  *
- * VvipWave also checks matchMedia and never schedules a frame when reduced. This
- * block is the second line for the same reason as the one below it: it holds
- * before hydration and it holds if the three.js chunk never loads. That
- * reasoning applies with more force to a ~150KB WebGL bundle than to a keyframe.
+ * VvipAtmosphere also checks matchMedia and never schedules a frame when reduced.
+ * This block is the second line for the same reason as the one below it: it holds
+ * before hydration and it holds if the three.js chunk never loads. That reasoning
+ * applies with more force to a ~150KB WebGL bundle than to a keyframe.
  */
 @media (prefers-reduced-motion: reduce) {
-  .vvip-wave {
+  .vvip-atmosphere {
     display: none !important;
   }
 }
@@ -7869,7 +7811,7 @@ body[data-nav-scrolled] .masthead-name {
  * That is worse than a missing decoration for the exact people the mode is for.
  */
 @media (forced-colors: active) {
-  .vvip-wave {
+  .vvip-atmosphere {
     display: none !important;
   }
 }
@@ -7879,11 +7821,11 @@ body[data-nav-scrolled] .masthead-name {
  * layer on this site, and it is the same shape of cost as .page-grain and
  * .page-aberration, which this tier already drops.
  *
- * On these devices the hero keeps the wash and the squares — the design's
- * character, which the tier must never remove — and loses only the layer whose
- * cost is paid on every composited frame.
+ * On these devices the hero keeps the IBC squares — the design's character,
+ * which the tier must never remove — and loses only the layer whose cost is paid
+ * on every composited frame.
  */
-:root[data-perf="lite"] .vvip-wave {
+:root[data-perf="lite"] .vvip-atmosphere {
   display: none;
 }
 
@@ -7896,20 +7838,10 @@ body[data-nav-scrolled] .masthead-name {
  * depends on JavaScript loading is not a guarantee.
  */
 @media (prefers-reduced-motion: reduce) {
-  .vvip-field-wash,
   .vvip-dot {
     animation: none !important;
     transition: none !important;
-  }
-  /* The wash keeps its resting scale rather than `transform: none`: the scale is
-     the oversize that hides its gradient edges, not part of the animation. */
-  .vvip-field-wash {
-    transform: scale(1.25) !important;
-  }
-  .vvip-dot {
     transform: none !important;
-  }
-  .vvip-dot {
     display: none;
   }
 }
@@ -7967,18 +7899,19 @@ body[data-nav-scrolled] .masthead-name {
    small text, and 1.4.3 wants 4.5:1 there; the bright blue is 3.49:1 and is
    reserved for display sizes and rules.
 
-   ── IT IS --primary-deep AND NOT --primary-strong, BECAUSE OF THE WAVE ───────
+   ── IT IS --primary-deep, BECAUSE OF THE GROUND BEHIND IT ────────────────────
 
    This was --primary-strong, which is 5.14:1 on plain white and passed. It no
-   longer sits on plain white: .vvip-wave paints a blue band underneath it, and
-   contrast has to be measured against the DARKEST pixel that band can produce
-   (#dfeff9), not against the page colour. There --primary-strong falls to
-   4.37:1, which is a real 1.4.3 failure at this size, not a rounding argument.
+   longer sits on plain white: .vvip-atmosphere paints a blue field underneath
+   it, and contrast has to be measured against the DARKEST pixel that field can
+   produce, not against the page colour. There --primary-strong falls to 4.37:1,
+   which is a real 1.4.3 failure at this size, not a rounding argument.
 
-   --primary-deep is 8.05:1 against the same pixel. The headroom is deliberate:
-   it means the wave's brightness can be retuned without this line quietly
-   dropping below the floor again. See the uAlpha note in
-   components/motion/fm/vvip-wave.tsx, which carries the full table. */
+   --primary-deep keeps several points of headroom against the same pixel, and
+   the headroom is deliberate: it means the ground's brightness can be retuned
+   without this line quietly dropping below the floor again. THAT HEADROOM IS NOW
+   LARGELY SPENT — the atmosphere runs near its ceiling. See the uAlpha note in
+   components/motion/fm/vvip-atmosphere.tsx, which carries the measured table. */
 /*
  * IT IS NO LONGER A 0.7rem LABEL, AND THE TRACKING CAME DOWN WITH THE SIZE.
  *

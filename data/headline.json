@@ -91,7 +91,23 @@
       "ar": "مستثمرون، عملاء، رواد أعمال، شركات، شركاء استراتيجيون، مؤسسات",
       "nl": "Investeerders, klanten, ondernemers, bedrijven, strategische partners, instellingen"
     },
-    "tone": "formal-professional"
+    "tone": "formal-professional",
+    "primaryIdentityDetail": {
+      "en": "Entrepreneur and business development professional, and Consultant and Strategic Representative of the International Business Council (IBC). Alongside the consulting work, a partner in two established commercial ventures.",
+      "ar": "سيدة أعمال ومتخصصة في تطوير الأعمال، ومستشارة وممثلة استراتيجية لمجلس الأعمال الدولي (IBC). وإلى جانب نشاطها الاستشاري فهي شريكة في مشروعين تجاريين قائمين.",
+      "nl": "Onderneemster en professional in bedrijfsontwikkeling, en Consultant en Strategic Representative van de International Business Council (IBC). Naast het advieswerk partner in twee bestaande commerciële ondernemingen."
+    },
+    "secondaryIdentityDetail": {
+      "en": "Close to ten years of experience across business development, real estate and investment, with a professional practice that runs between Europe and the Gulf states.",
+      "ar": "ما يقارب عشر سنوات من الخبرة في تطوير الأعمال والقطاع العقاري والاستثمار، بنشاط مهني يمتد بين أوروبا ودول مجلس التعاون الخليجي.",
+      "nl": "Bijna tien jaar ervaring in bedrijfsontwikkeling, vastgoed en investeringen, met een professionele praktijk die loopt tussen Europa en de Golfstaten."
+    },
+    "audienceDetail": {
+      "en": "Relationships built over years with entrepreneurs, investors, companies and decision makers in Europe and the Middle East, and the connections between them.",
+      "ar": "علاقات مهنية بُنيت عبر سنوات مع رواد الأعمال والمستثمرين والشركات وأصحاب القرار في أوروبا والشرق الأوسط، والربط بينها.",
+      "nl": "Relaties die over jaren zijn opgebouwd met ondernemers, investeerders, bedrijven en besluitvormers in Europa en het Midden-Oosten, en de verbindingen daartussen."
+    }
   },
-  "_comment_kicker": "Two words, not a sentence. It read 'I am Sanae Rakik' and sat directly above an <h1> carrying the name, so the name was printed twice, a line apart, the second time at display size. The kicker now carries only the lead-in and the <h1> below it carries the name, which is the split the two elements were always meant to have."
+  "_comment_kicker": "Two words, not a sentence. It read 'I am Sanae Rakik' and sat directly above an <h1> carrying the name, so the name was printed twice, a line apart, the second time at display size. The kicker now carries only the lead-in and the <h1> below it carries the name, which is the split the two elements were always meant to have.",
+  "_comment_positioning_detail": "The second line inside each focus panel on /about. Sourced strictly from the supplied intake document (9 September 2026): the نبذة شخصية خام bullets in section 1, the four-part profile in data/biography.json, and section 2 الجمهور الأساسي. Nothing here characterises her beyond what that document states. Section 3 forbids أرقام ونِسب غير موثقة, so no figure appears that the document does not itself give; 10 عشر سنوات is the documents own wording."
 }

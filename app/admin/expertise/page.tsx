@@ -14,8 +14,17 @@ const SECTION = "expertise"
 /**
  * The areas of expertise.
  *
- * Short noun phrases only, per the intake form. The public grid in
- * components/expertise-grid.tsx renders these and nothing else.
+ * TWO FIELDS PER AREA. The title is a short noun phrase, per the intake form.
+ * The supporting line beneath it is one sentence saying what the area consists
+ * of, and it is OPTIONAL: an area with none renders as the phrase alone.
+ *
+ * Both are rendered by components/expertise-grid.tsx and nothing else.
+ *
+ * The supporting lines currently in data/expertise.json are transcribed from the
+ * supplied profile rather than written for the site, see that file's
+ * `_comment_detail`. Anything typed here is published as written, so a new line
+ * should come from something the client has confirmed in writing, and must not
+ * introduce a figure: intake section 3 forbids unverifiable numbers and ratios.
  */
 export default function ExpertiseAdminPage() {
   const { data, setData, error } = useSection<any>(SECTION)
@@ -45,11 +54,19 @@ export default function ExpertiseAdminPage() {
 
       <ContentSection
         title="Areas of expertise"
-        description="Five to eight short noun phrases. No sentences, the public grid is designed for phrases, not paragraphs."
+        description="Five to eight short noun phrases, each with an optional one-sentence supporting line. Keep the supporting line to a single sentence: the grid is four columns wide and the cells size themselves to the longest one."
       >
         {items.map((item: any, i: number) => (
           <div key={item.id} className="space-y-2 border-b border-[color:var(--border)] pb-5 last:border-0">
             <LocalizedFieldRow label={`Area ${i + 1}`} value={item.title} onChange={(v) => updateItem(i, { title: v })} />
+            {/* Optional. Clearing it renders the phrase alone, which is what the
+                grid did before this field existed, so there is no broken state to
+                fall into here. */}
+            <LocalizedFieldRow
+              label={`Area ${i + 1} — supporting line`}
+              value={item.detail}
+              onChange={(v) => updateItem(i, { detail: v })}
+            />
             <button
               type="button"
               onClick={() => setData({ ...data, items: items.filter((_: any, x: number) => x !== i) })}

@@ -65,10 +65,36 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   ].filter((f) => f.value)
 
   const positioning = headline.positioning ?? {}
+  /*
+   * EACH PANEL CARRIES TWO LINES, and the second one is why this reads as a
+   * statement rather than as three stranded labels.
+   *
+   * `primaryIdentity` and friends are the intake form's own answers and they are
+   * fragments by design, "سيدة أعمال ومستشارة" is three words in a panel sized
+   * for a paragraph. The `*Detail` fields beside them in data/headline.json carry
+   * a sentence of substantiation each, drawn from the supplied profile rather
+   * than written here; see that file's `_comment_positioning_detail`.
+   *
+   * `detail` IS OPTIONAL AND FALLS AWAY SILENTLY. A panel whose detail is empty
+   * renders exactly as it did before the field existed, so an editor clearing one
+   * at /admin/headline degrades the panel instead of breaking it.
+   */
   const focus = [
-    { label: t("pages.about.primaryIdentityLabel"), value: localize(positioning.primaryIdentity, locale) },
-    { label: t("pages.about.secondaryIdentityLabel"), value: localize(positioning.secondaryIdentity, locale) },
-    { label: t("pages.about.audienceLabel"), value: localize(positioning.audience, locale) },
+    {
+      label: t("pages.about.primaryIdentityLabel"),
+      value: localize(positioning.primaryIdentity, locale),
+      detail: localize(positioning.primaryIdentityDetail, locale),
+    },
+    {
+      label: t("pages.about.secondaryIdentityLabel"),
+      value: localize(positioning.secondaryIdentity, locale),
+      detail: localize(positioning.secondaryIdentityDetail, locale),
+    },
+    {
+      label: t("pages.about.audienceLabel"),
+      value: localize(positioning.audience, locale),
+      detail: localize(positioning.audienceDetail, locale),
+    },
   ].filter((f) => f.value)
 
   return (
@@ -123,14 +149,46 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         >
           <div className="container-page">
             <SectionHeader animate title={t("pages.about.focusHeading")} />
-            <dl className="depth-stage grid max-w-3xl gap-8 sm:grid-cols-3">
+            {/*
+              max-w-5xl, NOT max-w-3xl, AND THE CONTENT IS WHY IT MOVED.
+
+              3xl was the right measure when each panel held a four-word
+              fragment: three short cells in a narrow band, with the rest of the
+              row left as deliberate space. Now each panel carries a sentence
+              underneath, and at 3xl that sentence wraps to six or seven lines in
+              a column barely 15rem wide, three tall thin boxes stacked against
+              the leading edge of a wide viewport.
+
+              5xl gives each column roughly a 45-character measure, which is
+              inside the comfortable range for a short block of text, and the
+              panels read as a row rather than as a column of slivers.
+            */}
+            <dl className="depth-stage grid max-w-5xl gap-8 sm:grid-cols-3">
               {focus.map((f) => (
                 <div key={f.label} data-anime="panel" className="panel-wipe card-ruled panel-3d p-6">
                   {/* `.eyebrow` rather than a hand-rolled uppercase utility, so this
                       label matches every other piece of metadata on the site,
                       including the reduced tracking and the Turkish casing rule. */}
                   <dt className="eyebrow mb-2">{f.label}</dt>
-                  <dd className="text-sm leading-relaxed text-[color:var(--card-foreground)]">{f.value}</dd>
+                  {/*
+                    ONE <dd>, NOT TWO. The answer and its substantiation are a
+                    single description of one term, and a <dl> pairing a <dt>
+                    with two sibling <dd>s announces them as two alternative
+                    definitions, which they are not.
+
+                    The answer is lifted to --heading at base size so it still
+                    reads as the panel's subject, and the detail sits under it at
+                    the muted colour, the same two-tier relationship the market
+                    panels on /expertise use for label and value.
+                  */}
+                  <dd className="text-[color:var(--card-foreground)]">
+                    <span className="block text-base font-medium leading-snug text-[color:var(--heading)]">{f.value}</span>
+                    {f.detail && (
+                      <span className="mt-2 block text-sm leading-relaxed text-[color:var(--muted-foreground)]">
+                        {f.detail}
+                      </span>
+                    )}
+                  </dd>
                 </div>
               ))}
             </dl>
