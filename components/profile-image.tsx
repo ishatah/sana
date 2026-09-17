@@ -50,6 +50,35 @@ export function ProfileImage({
   const h = height ?? media.height
   const useFill = fill || !w || !h
 
+  /*
+   * DRAG IS DISABLED ON EVERY PHOTOGRAPH OF THE SUBJECT, ON HER INSTRUCTION.
+   *
+   * Two mechanisms, because neither is sufficient alone:
+   *
+   *   `draggable={false}` sets the HTML attribute, which is what Chrome and
+   *   Firefox honour. It stops the drag GESTURE, so the image cannot be dragged
+   *   to the desktop, into another tab, or into a message window.
+   *
+   *   `.no-drag` adds `-webkit-user-drag: none`, which is what Safari and other
+   *   WebKit browsers need: WebKit will still paint a drag ghost and start a drag
+   *   from an <img> that carries `draggable="false"`. The class also clears
+   *   `user-select`, because a drag begun just outside the image can otherwise
+   *   sweep it into a selection and drag it that way.
+   *
+   * WHAT THIS IS NOT. It is not image protection and must not be described as
+   * such to the client: right-click Save Image, devtools, the network tab and a
+   * screenshot all still work, and the file is served publicly by definition.
+   * This removes the ACCIDENTAL drag — the one that happens when someone means to
+   * scroll or select and instead peels the portrait off the page, which looks
+   * broken. Anyone determined to copy the file still can, and no amount of
+   * front-end code changes that.
+   *
+   * Applied here rather than at the call sites because this component is the only
+   * thing on the site that renders a photograph, so doing it once covers every
+   * present and future placement, and there is no call site that can forget.
+   */
+  const dragClass = `no-drag ${className}`.trim()
+
   const img = useFill ? (
     <Image
       src={media.src}
@@ -57,7 +86,8 @@ export function ProfileImage({
       fill
       sizes={sizes ?? "100vw"}
       priority={priority}
-      className={className}
+      draggable={false}
+      className={dragClass}
       style={style}
     />
   ) : (
@@ -68,7 +98,8 @@ export function ProfileImage({
       height={h}
       sizes={sizes}
       priority={priority}
-      className={className}
+      draggable={false}
+      className={dragClass}
       style={style}
     />
   )
@@ -113,7 +144,18 @@ export function BackgroundImage({
 
   return (
     <div aria-hidden className={`absolute inset-0 overflow-hidden ${className}`}>
-      <Image src={media.src} alt="" fill sizes="100vw" priority={priority} className="object-cover" />
+      {/* Not draggable, for the same reason as `ProfileImage` above: this slot is
+          fed a photograph of the subject, and a decorative presentation does not
+          make it a different file. */}
+      <Image
+        src={media.src}
+        alt=""
+        fill
+        sizes="100vw"
+        priority={priority}
+        draggable={false}
+        className="no-drag object-cover"
+      />
     </div>
   )
 }

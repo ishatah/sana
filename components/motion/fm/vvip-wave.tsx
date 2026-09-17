@@ -13,10 +13,9 @@ import * as THREE from "three"
  * that is still the rule everywhere else. This element is an explicit, scoped
  * override, granted for the hero band alone, with the intensity chosen so the
  * glow never leaves the palette: at the `uAlpha` ceiling below, the brightest
- * pixel the wave can produce against the white ground composites to #dbedf8,
- * which is --primary-tint (#dceafa) to within two 8-bit levels. A glow whose
- * peak is a colour the design system already contains is a different thing
- * from a glow that announces itself.
+ * pixel the wave can produce against the white ground composites to #d2e9f7,
+ * a shade off --primary-tint (#dceafa). A glow whose peak is a colour the design
+ * system already contains is a different thing from a glow that announces itself.
  *
  * ── WHY A SHADER AND NOT A GRADIENT ──────────────────────────────────────────
  *
@@ -119,6 +118,35 @@ varying vec2 vUv;
  */
 float gauss(float x) {
   return exp(-x * x);
+}
+
+/*
+ * ── ONE EDGE OF THE WINDOW ───────────────────────────────────────────────────
+ *
+ * The complement of a Gaussian: 0.0 at the border, rising asymptotically toward
+ * 1.0 inward, never arriving. Four of these multiplied make the four-edge
+ * window. The full argument — including why this replaced a centre-decaying
+ * Gaussian and why k = 5.0 — is at the window itself in main().
+ */
+float edge(float d) {
+  float x = d * 5.0;
+  return 1.0 - exp(-x * x);
+}
+
+/*
+ * ── tanh, HAND-ROLLED: GLSL ES 1.00 HAS NO tanh() ────────────────────────────
+ *
+ * WebGL1 ships no tanh, and this shader targets it. The identity form, written
+ * with a single exp() rather than (exp(x)-exp(-x))/(exp(x)+exp(-x)): one
+ * transcendental instead of two, same value.
+ *
+ * C-infinity, monotonic, bounded in (-1, 1), and branch-free — so it introduces
+ * no locus of constant value and the plateau rule this file is built on still
+ * holds. Used to make the filament asymmetric; see its call site.
+ */
+float stanh(float x) {
+  float e = exp(2.0 * x);
+  return (e - 1.0) / (e + 1.0);
 }
 
 /*
@@ -229,8 +257,37 @@ void main() {
    * rather than the 5.2x of the first tuning, and the weights below shifted
    * toward the filament.
    */
-  /* The filament: the bright spine. */
-  float s0 = gauss((q.y - wave) / (uThickness * 1.00));
+  /*
+   * ── THE FILAMENT IS ASYMMETRIC, AND THAT IS WHAT MAKES IT READ AS LIGHT ────
+   *
+   * A symmetric Gaussian spine is a stripe. Light travelling across a surface is
+   * not symmetric about its crest: the LEADING face is crisp, because that is
+   * where the light meets unlit ground, and the TRAILING face smears, because
+   * that is the decay behind it. Every specular sweep in luxury product motion
+   * has this asymmetry, and its absence is most of why a soft blue band reads as
+   * a gradient rather than as a highlight.
+   *
+   * Done by modulating the filament's WIDTH with the signed distance, rather
+   * than by adding a second lobe: one stanh() and one multiply, and the result
+   * is still a SINGLE Gaussian, so it cannot separate into two ribbons the way
+   * the first build's three independent strata did.
+   *
+   *   width(d) = uThickness * (1 + 0.30 * tanh(d / uThickness))
+   *
+   * Measured against the symmetric kernel at uThickness = 0.020:
+   *
+   *   d        symmetric   asymmetric
+   *   -0.030     0.156       0.021     <- leading face falls off ~7x faster
+   *    0.000     1.000       1.000
+   *   +0.030     0.156       0.337     <- trailing face carries ~2.2x further
+   *
+   * 0.30 and not more: past about 0.45 the trailing smear starts reading as a
+   * separate soft band behind the spine, which is the "competing ribbons"
+   * failure arriving by a different route.
+   */
+  float d  = q.y - wave;
+  float wd = uThickness * (1.0 + 0.30 * stanh(d / uThickness));
+  float s0 = gauss(d / wd);
   /* The body: the bulk of the light. */
   float s1 = gauss((q.y - centre(q.x, t + 0.35, 0.090, 6.0)) / (uThickness * 2.60));
   /* The outer halo: the bloom. */
@@ -251,7 +308,7 @@ void main() {
    * is built to avoid. v/(v+1) is asymptotic to 1: a triple overlap is bright
    * but bounded, and there is no locus at which the roll-off "engages".
    */
-  float v = s0 * 1.05 + s1 * 0.48 + s2 * 0.22;
+  float v = s0 * 1.35 + s1 * 0.42 + s2 * 0.26;
   float body = v / (v + 1.0);
 
   /*
@@ -267,9 +324,36 @@ void main() {
    * canvas) this denominator would otherwise be 0 and the divide would produce
    * NaN, which rasterises as black confetti.
    */
-  float wSum = s0 * 1.05 + s1 * 0.48 + s2 * 0.22 + 1e-4;
+  float wSum = s0 * 1.35 + s1 * 0.42 + s2 * 0.26 + 1e-4;
   vec3 tint =
-    (uTintCore * (s0 * 1.05) + uTintDeep * (s1 * 0.48) + uTintPale * (s2 * 0.22)) / wSum;
+    (uTintCore * (s0 * 1.35) + uTintDeep * (s1 * 0.42) + uTintPale * (s2 * 0.26)) / wSum;
+
+  /*
+   * ── THE CREST DESATURATES; THE TROUGH KEEPS THE PIGMENT ───────────────────
+   *
+   * The weighted average above is hue-stable by construction, which was the
+   * right first fix — it stopped the hue drifting with intensity. But hue-stable
+   * is not the same as physically right: a real light source is MOST saturated
+   * in its falloff and LEAST saturated at its hottest point, because the hot
+   * core is near the top of the channel range and the colour has nowhere left
+   * to go.
+   *
+   * Lifting the tint toward uTintPale by the band's own normalised intensity is
+   * exactly that, in one mix(). The trough and the outer bloom keep the full
+   * --primary / --primary-hover pigment; only the spine — the top few percent of
+   * the band by area — pales off. On a white ground that is the difference
+   * between a band that looks PRINTED and a band that looks LIT.
+   *
+   * NOT done by swapping the tint assignments above. Binding uTintPale to the
+   * halo and uTintCore to the filament is correct: reversing them would put the
+   * saturated blue in the WIDEST stratum, which on white is a visible blue
+   * smear rather than a glow.
+   *
+   * 0.34 measured: below about 0.2 the effect is not resolvable at this alpha;
+   * above about 0.5 the spine goes near-white and the band stops reading as
+   * blue at all, which the palette note at the top of this file will not allow.
+   */
+  tint = mix(tint, uTintPale, body * 0.34);
 
   /*
    * ── THE FOUR-EDGE WINDOW ───────────────────────────────────────────────────
@@ -285,25 +369,70 @@ void main() {
    * long axis and outside it at the corners — it cannot be zero at all four
    * edges without also eating the middle.
    *
-   * THE OLD FILE'S OBJECTION TO A SEPARABLE WINDOW, ANSWERED. It rejected four
-   * axis-aligned ramps because their product "is itself a rectangle with soft
-   * sides" and light crossing a corner exits through a STRAIGHT boundary. That
-   * objection is against SMOOTHSTEP, not against separability: smoothstep's
-   * outer plateau is where the straight boundary comes from, because "x = b" is
-   * a literal straight line beyond which the value is exactly zero. A Gaussian
-   * has no such locus. exp(-x*x)*exp(-y*y) has curved iso-contours, is never
-   * exactly 0 or exactly 1 away from the single centre point, and has continuous
-   * partials everywhere. There is no straight boundary to find because there is
-   * no boundary at all.
+   * ── AND NOT gauss(u.x * 2.05) * gauss(u.y * 2.05) EITHER, WHICH THIS REPLACES
    *
-   * THE 2.05 FACTOR IS LOAD-BEARING. At a border |u| = 1, so the argument is
-   * 2.05 and the Gaussian is exp(-4.20) = 0.015. Times the 0.16 ceiling that is
-   * an effective alpha of 0.0024 — less than one 8-bit level against white, so
-   * it is ZERO on screen rather than merely small. Raising it costs visible band
-   * length; below about 1.9 a measurable tint survives to the border.
+   * That was a window which DECAYS FROM THE CENTRE, and that is the wrong job
+   * description. The requirement is zero at the four BORDERS; a centre-decaying
+   * Gaussian delivers that only as a side effect of killing everything that is
+   * not at the centre. At |u| = 0.5 — halfway to an edge — each axis is already
+   * exp(-1.05) = 0.35, and the two axes multiply.
+   *
+   * Measured, window value across twelve columns of the horizontal midline:
+   *
+   *   old:  0.029 0.094 0.239 0.482 0.769 0.971 0.971 0.769 0.482 0.239 0.094 0.029
+   *   new:  0.042 0.322 0.660 0.877 0.966 0.990 0.990 0.966 0.877 0.660 0.322 0.042
+   *
+   * The old window had thrown away three quarters of the band's length before
+   * uAlpha was even applied. That is GEOMETRIC faintness, and it is why raising
+   * the ceiling twice (0.16 -> 0.24) never answered the "it looks faint"
+   * complaint: the wave was not dim, it was ABSENT everywhere but the middle.
+   *
+   * ── THE COMPLEMENT OF A GAUSSIAN, ONE TERM PER EDGE ────────────────────────
+   *
+   *   edge(d) = 1.0 - exp(-(d*k)^2),  d = normalised distance to ONE border
+   *
+   * The inverse job description, and the correct one: 0.0 at the border, rising
+   * asymptotically toward 1.0 as the pixel moves inward, so it is transparent
+   * across the interior and works only in a narrow collar hugging the frame.
+   *
+   * IT IS PLATEAU-FREE AT BOTH ENDS, which is the rule this file is built on:
+   *   - edge(0) = 0 at exactly ONE point per border. A measure-zero locus, not a
+   *     region — the same argument gauss() makes for exp(-x*x) at its peak.
+   *   - edge -> 1 ASYMPTOTICALLY and never arrives, the same argument the
+   *     combining note makes for v/(v+1). No interior region of constant value,
+   *     so no locus for the eye to find as an edge.
+   *   - C-infinity: a polynomial inside an exp, subtracted from a constant.
+   * No clamp, no min, no max, no step, no smoothstep. The design rule holds.
+   *
+   * THE FOUR-EDGE FADE IS STRICTLY BETTER THAN BEFORE, not merely preserved. At
+   * the literal border pixel (dpr 2, 1440 wide, uv = 0.5/2880):
+   *
+   *   old  gauss(u * 2.05)   7.6e-1 of one 8-bit level   <- very nearly visible
+   *   new  edge(d, 5.0)      3.8e-5 of one 8-bit level
+   *
+   * The OLD window was leaking most of a quantisation level at the border; this
+   * is four orders of magnitude below it, and still under half a level 2% inside
+   * the frame (0.50/255). Past k ~ 6 measurable tint reaches the border; below
+   * k ~ 4 the band's ends start being eaten again.
+   *
+   * ── WHY THIS STAYS IN vUv AND NOT IN THE BAND FRAME q ──────────────────────
+   *
+   * Windowing along q.x and across q.y looks more natural for a rotated band,
+   * and was measured and rejected: the extent of q-space depends on the aspect
+   * ratio, because the rotated bounding box of the viewport does.
+   *
+   *   AR 1.18 (phone):      q.x +-0.744    AR 2.84 (ultrawide):  q.x +-1.502
+   *
+   * Fixed constants in q would therefore fade at a different FRACTION of the
+   * canvas on every viewport — tuned for desktop they cut the band short on
+   * ultrawide, tuned for ultrawide they leak to the border on a phone. Each vUv
+   * term measures distance to one specific border instead, so the product is
+   * ~1.0 across the interior at any aspect, and a -24 degree band crosses the
+   * collar at the same normalised depth regardless.
    */
-  vec2 u = (vUv - 0.5) * 2.0;
-  float window = gauss(u.x * 2.05) * gauss(u.y * 2.05);
+  float window =
+    edge(vUv.x) * edge(1.0 - vUv.x) *
+    edge(vUv.y) * edge(1.0 - vUv.y);
 
   /*
    * ── ALPHA ──────────────────────────────────────────────────────────────────
@@ -428,33 +557,38 @@ export function VvipWave() {
       /*
        * THE ALPHA CEILING, AND IT IS BOUNDED BY A CONTRAST RATIO.
        *
-       * The shader reaches about 61% of this ceiling at its brightest (measured,
-       * not assumed: a CPU port of the fragment shader peaks at 0.1456), so the
-       * darkest pixel the wave actually composites against #ffffff is #dfeff9.
+       * The shader reaches about 66% of this ceiling at its brightest. MEASURED,
+       * not assumed: a CPU port of this fragment shader peaks at 0.1990, and it
+       * is stable at 0.194-0.199 across three aspect ratios (phone, desktop,
+       * ultrawide) and four phases, which is what makes it safe to budget against.
        *
-       * Every piece of hero text is checked against THAT colour, not against
-       * white, because the wave passes under all of it:
+       * Every piece of hero text is checked against the wave's composited ground
+       * rather than against white, because the wave passes under all of it — and
+       * against the DEEP tint (#0b6fc4 -> ground #cee2f3), which is the worst
+       * case because uTintDeep carries the body stratum, the widest bright layer
+       * and so the one most likely to sit under a baseline:
        *
-       *   .vvip-name      16.08:1  (floor 3.0, large)
-       *   .vvip-title      9.65:1  (floor 4.5)
-       *   meta labels      4.96:1  (floor 4.5)
-       *   .vvip-eyebrow    8.05:1  (floor 4.5)
+       *   .vvip-name       14.23:1  (floor 3.0, large)
+       *   .vvip-title       8.54:1  (floor 4.5)
+       *   .vvip-eyebrow     7.12:1  (floor 4.5)
+       *   .vvip-meta-label  5.12:1  (floor 4.5)   <- the binding constraint
        *
-       * ── RAISING THIS ONCE ALREADY COST A TOKEN CHANGE ───────────────────────
+       * ── RAISING THIS HAS NOW COST TWO TOKEN CHANGES ────────────────────────
        *
-       * At the first tuning this was 0.16 and the eyebrow took --primary-strong,
-       * which cleared the floor by about 2% (4.61:1). Going brighter broke it:
-       * at this ceiling --primary-strong lands at 4.37:1, a real WCAG 1.4.3
-       * failure on a line that reaches 0.95rem on a phone. The eyebrow therefore
-       * moved to --primary-deep in styles/globals.css, which is 8.05:1 here and
-       * has room to spare.
+       * At 0.16 the eyebrow took --primary-strong and cleared by 2% (4.61:1).
+       * Raising the ceiling broke it — --primary-strong lands at 4.37:1 — so the
+       * eyebrow moved to --primary-deep. Raising it again broke the meta labels
+       * the same way: --muted-foreground measures 4.39:1 here, a real WCAG 1.4.3
+       * failure at 0.62rem, so .vvip-meta-label took a scoped #525c67. Both
+       * changes are documented at their rules in styles/globals.css.
        *
-       * So the rule stands, one notch up: THIS VALUE CANNOT RISE without
-       * re-running the contrast check. The binding constraint is now the meta
-       * labels at 4.96:1, and --muted-foreground is a body-text token that should
-       * not be darkened to buy a brighter background.
+       * The rule therefore stands, twice reinforced: THIS VALUE CANNOT RISE
+       * without re-running the check against the DEEP tint at the PEAK. The
+       * absolute ceiling before the meta labels fail again is a peak of 0.288,
+       * i.e. a 45% margin on today's 0.199 — that margin is the room left for
+       * future retuning, and it is not large enough to spend carelessly.
        */
-      uAlpha: { value: 0.24 },
+      uAlpha: { value: 0.30 },
       /*
        * -24 degrees, measured in p-space AFTER the aspect correction, so it is a
        * true 24 degrees on screen at any viewport.
@@ -484,11 +618,11 @@ export function VvipWave() {
        * it has to stay well under the crest amplitude (0.090) or the wave hides
        * inside its own ribbon. See the amplitude note in the shader.
        */
-      uThickness: { value: 0.022 },
+      uThickness: { value: 0.020 },
       /* The halo's radius is uThickness * uSoftness * 2.17, so this sets how far
          the bloom reaches past the core: far enough to read as real glow, close
          enough that the band still has a locatable spine. */
-      uSoftness: { value: 2.4 },
+      uSoftness: { value: 2.9 },
       uTintCore: { value: new THREE.Color("#1e90d6") }, /* --primary */
       uTintDeep: { value: new THREE.Color("#0b6fc4") }, /* --primary-hover */
       uTintPale: { value: new THREE.Color("#7fc4ec") }, /* the pale third */

@@ -17,8 +17,7 @@
     "statPositions": "Positions held",
     "statExperience": "Years experience",
     "contactCta": "Get in touch",
-    "aboutCta": "About her work",
-    "affiliationLabel": "In affiliation with"
+    "aboutCta": "About her work"
   },
   "about": {
     "heading": "About",
@@ -32,20 +31,7 @@
   },
   "expertise": {
     "heading": "Areas of Expertise",
-    "subheading": "Where her work is focused",
-    "_comment_languages": "`levelInferred` exists BECAUSE the levels in data/expertise.json were inferred by the implementation rather than supplied by the subject. Deleting this key silently turns an inference into an assertion. Remove it only once those rows carry `status: \"confirmed\"`.",
-    "languagesHeading": "Languages",
-    "languagesLede": "Languages used in professional settings.",
-    "speakingLabel": "Speaking",
-    "writingLabel": "Writing",
-    "businessLabel": "Used in business",
-    "level": {
-      "native": "Native",
-      "fluent": "Fluent",
-      "professional": "Professional",
-      "basic": "Basic"
-    },
-    "levelInferred": "Level inferred, not confirmed by the subject"
+    "subheading": "Where her work is focused"
   },
   "positions": {
     "heading": "Positions",
@@ -103,8 +89,6 @@
       "lede": "Where her work is concentrated, and the markets it covers.",
       "areasHeading": "Core Areas",
       "marketsHeading": "Markets",
-      "_comment_languagesHeading": "The languages band lists each language with its speaking and writing level. THE LEVELS ARE INFERRED, NOT SUPPLIED AT INTAKE (see data/expertise.json _comment_levels and open question Q9), which is why `expertise.levelInferred` exists and renders beneath the table. This comment previously said the heading 'must never gain a level or fluency column label'; that was the correct reading of intake section 8 and was overridden at the client's explicit instruction. Do not remove the levelInferred caption while the rows are still status:'inferred'.",
-      "languagesHeading": "Languages",
       "sectorLabel": "Sector",
       "baseLabel": "Based in",
       "marketsLabel": "Markets covered"

@@ -78,19 +78,18 @@ export function VvipField() {
 
   return (
     <div aria-hidden className="vvip-field">
-      {/* The wave, FIRST so it paints UNDER the wash and the squares.
-          That order is the effect: a moving band beneath the static haze reads
-          as atmosphere the light is travelling through, which is what sells the
-          glow. The reverse — a sharp moving band on top of the haze — reads as
-          an overlay pasted onto the hero. It also keeps the wave off the
-          squares, so the IBC mark is never dimmed by decoration that is not the
-          mark. VvipWave owns its own reduced-motion and no-WebGL handling. */}
-      <VvipWave />
+      {/* The wash, FIRST. It is the GROUND the wave is lit against, not a haze
+          the wave shines through.
 
-      {/* The wash. Two large, very low-opacity blue radials that breathe against
-          each other. On a white ground this is what stops the page reading as a
-          blank sheet, and it is kept under 10% opacity so it never competes with
-          the type for attention. */}
+          This used to sit on top, on the theory that a moving band beneath a
+          static haze reads as atmosphere the light travels through. Good idea,
+          wrong numbers: the wash painted the same three blues as the wave at a
+          comparable alpha, and blue over blue gives the eye no hue difference to
+          resolve depth from. In practice it did not read as atmosphere at all,
+          it just raised the ground the wave had to contrast against and erased
+          the band. Its alphas are now roughly halved and one radial has moved to
+          the slate, so it still stops the page reading as a blank sheet while
+          leaving the wave something to be brighter than. */}
       <m.div
         className="vvip-field-wash"
         animate={
@@ -115,6 +114,17 @@ export function VvipField() {
         }
         transition={{ duration: 34, ease: "easeInOut", repeat: Infinity, repeatType: "loop" }}
       />
+
+      {/* The wave, SECOND: above the wash, below the dots.
+
+          Above the wash because it is the subject and the wash is its ground.
+          Below the dots because those are the IBC mark, and a mark dimmed by
+          decoration is a brand error — that reason was true when the wave was at
+          the bottom of the stack and is unchanged by moving it up. The wash has
+          no comparable claim; it is unbranded atmosphere.
+
+          VvipWave owns its own reduced-motion and no-WebGL handling. */}
+      <VvipWave />
 
       {/* The dots. Skipped entirely under reduced motion rather than frozen in
           place: six faint static circles are visual noise with no purpose, so the

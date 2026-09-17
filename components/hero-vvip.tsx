@@ -194,11 +194,18 @@ export async function HeroVvip({
           {/* The affiliation. Renders only when the logo slot is open, which is
               gated on a recorded permission in data/media.json. The legal name
               above stays as text either way; this accompanies it, it does not
-              replace it. */}
+              replace it.
+
+              THERE IS NO LONGER A LABEL ABOVE THE MARK. It read "In affiliation
+              with", and was removed on the site owner's instruction of
+              2026-09-18: the title line directly above already names the council
+              in full and names her role in it, so the label restated in six words
+              what the sentence above it had just said properly. The affiliation
+              is still carried in text by that title, not by the image, so
+              removing the label costs nothing with images off. */}
           {organisationLogo && (
             <VvipRise>
               <div className="vvip-affiliation">
-                <p className="vvip-affiliation-label">{t("affiliationLabel")}</p>
                 {/* decorative: the organisation is already named in full in the
                     title directly above, so real alt text here would make a screen
                     reader announce the same name twice in a row. */}

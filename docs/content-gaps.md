@@ -17,7 +17,7 @@ Baseline at time of writing: **0 banned-wording violations · 13 publication blo
 
 ---
 
-## The nine open questions
+## The eight open questions
 
 Source of truth: `data/deliverables.json` → `openQuestions`.
 
@@ -154,31 +154,6 @@ interpolates from that one field, plus the bio wording if the prose is the wrong
 
 ---
 
-### Q9, Proficiency level per language
-
-**Not from the intake form. Live on the page right now, and the only question here whose
-answer replaces something already published rather than filling a blank.**
-
-Intake section 8 is one of two MUST CONFIRM fields on the whole form: *"Never assume a
-language level from the material supplied"*. No level was ever supplied.
-
-Levels were nevertheless set in `data/expertise.json` by inference, at the client's
-explicit instruction after that conflict was put to them, and an **English row was added
-that is not on the form's language list**. What holds the line:
-
-- every inferred row carries `status: "inferred"`, a third value beside `confirmed` and
-  `to-confirm`, so the inference is visible in the data and not only in a commit message
-- each row records a `_basis` string, so the four inferences can be audited one at a time
-- the page renders `expertise.levelInferred` beside them, so a visitor is told the levels
-  are not her own answers
-- **no proficiency is emitted into the JSON-LD at all.** `knowsLanguage` states that she
-  knows each language, which intake does support, and nothing about how well
-
-**Needed:** her own speaking and writing level for Dutch, Arabic, English and French, and
-confirmation of whether English belongs on the list. Then set `status: "confirmed"` per
-row and the on-page caveat disappears by itself, no code change.
-
----
 
 ## Section 18, sign-off
 
@@ -254,18 +229,15 @@ Empty fields that look like gaps and are not:
   figure.
 - **`biography.achievements: []` and `press: []`.** Section 4 records achievements as
   none publishable, and media as *"غير مطلوب حاليًا"*, not requested at this stage.
-- **Languages now carry INFERRED proficiency levels, and that is a live exception to the
-  rule above.** This entry used to read "languages carry no proficiency levels", which was
-  the correct position: section 8 marks language level MUST CONFIRM, *"Never assume a
-  language level from the material supplied"*, and none was supplied. Levels were
-  nevertheless set in `data/expertise.json` by inference at the client's explicit
-  instruction after the conflict was put to them, and an English row was added that is not
-  on the form's language list either. Every such row carries `status: "inferred"` and the
-  page labels it with `expertise.levelInferred`, so the inference is disclosed to a reader
-  rather than passed off as her own answer, and no proficiency is emitted into the JSON-LD
-  at all. It is still an inference. **Q9 is the fix and it is a real blocker, not
-  housekeeping:** her own answers, then `status: "confirmed"`, and the caveat removes
-  itself.
+- **Languages are not published at all, and the omission is deliberate.** Intake section 8
+  marks language level MUST CONFIRM, *"Never assume a language level from the material
+  supplied"*, and no level was ever supplied. Levels were briefly set by inference and
+  displayed with an "inferred, not confirmed" caption; that section has since been removed
+  from the site at the client's request, along with the language names, the `knowsLanguage`
+  JSON-LD claim and the admin controls. Nothing on the site now states which languages she
+  speaks or how many. Do not reinstate any of it from the intake form alone: re-adding it
+  needs her own answers in writing, and the names and the levels are two separate
+  permissions.
 
 The empty sections on the live page, stats, press, achievements, are hidden by
 `getSectionAvailability()` in `lib/profile-content.ts` and reappear on their own once
@@ -284,10 +256,7 @@ Ordered by how much each unblocks:
 3. **Q1**, the two venture names. Two held rows and a blocked deliverable, one answer.
 4. **Q2**, the dates. Clears the pending-date lines from every roles surface.
 5. **Q8**, the years contradiction. One field, and it is visibly wrong today.
-6. **Q9**, the language levels. Ranked here, above the cosmetic items, because it is the
-   only open question where the site is currently showing an inference of ours rather
-   than a blank, and one reply retires it.
-7. **Q7** and **Q5**, the hero image and the social handles.
-8. **Q6**, the city. Smallest scope.
-9. **Section 18 sign-off**, last, once the above are settled and the titles have been
+6. **Q7** and **Q5**, the hero image and the social handles.
+7. **Q6**, the city. Smallest scope.
+8. **Section 18 sign-off**, last, once the above are settled and the titles have been
    confirmed in writing.

@@ -136,11 +136,40 @@ export async function getSectionAvailability(locale: string) {
   }
 }
 
+/**
+ * The subject's name in the script the locale reads in.
+ *
+ * Arabic gets `nameArabic`, every other locale gets the Latin form. Both
+ * spellings are the ones intake section 6 approved, 'سناء رقيق' / 'Sanae Rakik',
+ * so this SELECTS between two supplied strings and never transliterates: there is
+ * no code path here that can invent a spelling of a person's name.
+ *
+ * NOT `localize()`, on purpose. That helper falls back through English to
+ * whatever key is declared first, which is right for copy and wrong for a name,
+ * an empty `nameArabic` must fall back to the approved Latin spelling and
+ * nothing else. This returns the Latin form whenever the Arabic one is absent.
+ *
+ * The honorific is NOT prepended here or anywhere. Section 6 fixes the format as
+ * 'دون لقب', without a title, and data/exclusions.json records that as an
+ * exclusion no override unlocks.
+ */
+export function localizeName(identity: any, locale: string): string {
+  const latin = ((identity?.nameShort ?? identity?.nameLatin ?? "") as string).trim()
+  if (locale !== "ar") return latin
+
+  const arabic = ((identity?.nameArabic ?? "") as string).trim()
+  return arabic !== "" ? arabic : latin
+}
+
 /** Convenience for metadata and JSON-LD, which need plain strings. */
 export async function getProfileStrings(locale: string) {
   const [identity, headline, bio] = await Promise.all([getIdentity(), getHeadline(), getBiography()])
   return {
-    name: identity.namePrint as string,
+    // Localized so /ar titles and JSON-LD carry 'سناء رقيق' rather than the Latin
+    // spelling. `nameLatin` rides along as `alternateName` so the Latin form is
+    // still machine-readable on the Arabic locale; see lib/seo.ts.
+    name: localizeName({ ...identity, nameShort: identity.namePrint }, locale),
+    nameLatin: (identity.namePrint ?? identity.nameLatin ?? "") as string,
     title: localize(headline.primaryTitle, locale),
     shortTitle: localize(headline.shortTitle, locale),
     microBio: localize(bio.microBio, locale),

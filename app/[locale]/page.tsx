@@ -40,6 +40,7 @@ import {
   getAwards,
   getNavigation,
   getSectionAvailability,
+  localizeName,
 } from "@/lib/profile-content"
 import { getPublicContact, getSiteSettings, getDeliverables } from "@/lib/site-settings"
 import { getMedia } from "@/lib/media"
@@ -201,7 +202,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <>
       <SiteNav
         items={resolveNavItems(navigation.main ?? [], locale)}
-        name={identity.nameShort}
+        name={localizeName(identity, locale)}
         contactHref={`${prefix}/contact`}
       />
 
@@ -266,7 +267,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <HeroScope>
           <Hero
             kicker={headline.heroKicker}
-            name={identity.nameShort}
+            name={localizeName(identity, locale)}
             roles={headline.rotatingRoles?.[locale] ?? headline.rotatingRoles?.en ?? []}
             title={headline.primaryTitle}
             locations={headline.locations ?? []}

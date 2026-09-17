@@ -17,8 +17,7 @@
     "statPositions": "Functies bekleed",
     "statExperience": "Jaar ervaring",
     "contactCta": "Neem contact op",
-    "aboutCta": "Over haar werk",
-    "affiliationLabel": "In samenwerking met"
+    "aboutCta": "Over haar werk"
   },
   "about": {
     "heading": "Over",
@@ -32,20 +31,7 @@
   },
   "expertise": {
     "heading": "Expertisegebieden",
-    "subheading": "Waar haar werk zich op richt",
-    "_comment_languages": "De sleutel `levelInferred` bestaat OMDAT de niveaus in data/expertise.json zijn afgeleid en niet door betrokkene zijn opgegeven. Wie deze sleutel verwijdert, verandert een afleiding stilzwijgend in een bewering. Verwijder hem pas wanneer de rijen in data/expertise.json op `status: \"confirmed\"` staan.",
-    "languagesHeading": "Talen",
-    "languagesLede": "Talen die in een professionele omgeving worden gebruikt.",
-    "speakingLabel": "Spreken",
-    "writingLabel": "Schrijven",
-    "businessLabel": "Zakelijk gebruikt",
-    "level": {
-      "native": "Moedertaal",
-      "fluent": "Vloeiend",
-      "professional": "Professioneel",
-      "basic": "Basis"
-    },
-    "levelInferred": "Niveau afgeleid, niet door betrokkene bevestigd"
+    "subheading": "Waar haar werk zich op richt"
   },
   "positions": {
     "heading": "Functies",
@@ -103,8 +89,6 @@
       "lede": "Waar haar werk zich op concentreert, en de markten die het bestrijkt.",
       "areasHeading": "Kerngebieden",
       "marketsHeading": "Markten",
-      "_comment_languagesHeading": "De taalsectie toont per taal het niveau voor spreken en schrijven. DE NIVEAUS ZIJN AFGELEID EN NIET BIJ DE INTAKE OPGEGEVEN (zie _comment_levels in data/expertise.json en openstaande vraag Q9); daarom bestaat expertise.levelInferred en staat die tekst onder de tabel. Verwijder die tekst niet zolang de rijen status:'inferred' hebben.",
-      "languagesHeading": "Talen",
       "sectorLabel": "Sector",
       "baseLabel": "Gevestigd in",
       "marketsLabel": "Actieve markten"

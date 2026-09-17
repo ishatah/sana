@@ -2339,6 +2339,38 @@
   .section-pad {
     padding-block: clamp(3.5rem, 7vh, 6rem);
   }
+
+  /*
+   * ── NOT DRAGGABLE ───────────────────────────────────────────────────────────
+   *
+   * Applied by `ProfileImage` and `BackgroundImage` to every photograph of the
+   * subject, on her instruction. The components also set the `draggable={false}`
+   * attribute; this is the half of the job that attribute does not do.
+   *
+   * WHY BOTH. Chrome and Firefox honour `draggable="false"` on an <img>. WebKit
+   * (Safari, and every browser on iOS) does not reliably: it will still lift a
+   * translucent drag ghost off the image and start a drag. `-webkit-user-drag`
+   * is the non-standard property that actually stops it there, and it has no
+   * standard equivalent, which is why a vendor-prefixed declaration is correct
+   * here rather than legacy cruft to be cleaned up.
+   *
+   * `user-select: none` is the third case. Even with the image itself undraggable,
+   * a selection begun in the text beside it can sweep the <img> into its range,
+   * and dragging THAT selection carries the image along inside it. Excluding the
+   * image from selection closes that route. It costs nothing: there is no text
+   * inside an <img> for a reader to want to select.
+   *
+   * THIS IS NOT COPY PROTECTION AND MUST NOT BE SOLD AS IT. Save Image As,
+   * devtools, the network panel and screenshots are all untouched, and the file is
+   * served publicly to anyone who loads the page. What it removes is the
+   * ACCIDENTAL drag: the one where someone means to scroll or select, peels the
+   * portrait half off the page, and the site looks broken for a moment.
+   */
+  .no-drag {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
 }
 
 /*
@@ -5538,15 +5570,18 @@ body[data-nav-scrolled] .masthead-name {
     background-color: var(--primary-soft);
   }
 
-  /* ── 24. FOOTER SINK ──────────────────────────────────────────────────────
-   * --background down to #050506, so the page darkens as it ends. #050506 is
-   * below every ground in the ladder, which means every text token measures
-   * HIGHER on it than on --background, the footer's --muted-foreground rises
-   * from 5.83:1 to about 6.2:1. A darkening gradient can only improve contrast
-   * on a dark scheme, which is why this one needs no recomputation per token. */
-  .footer-sink {
-    background-image: linear-gradient(to bottom, var(--background) 0%, #050506 100%);
-  }
+  /* ── 24. FOOTER SINK ── REMOVED ───────────────────────────────────────────
+   * `.footer-sink` ramped --background down to #050506 so the page darkened into
+   * the footer. Removed on request; the footer now ends on --background.
+   *
+   * The number kept, and the rule not silently deleted, because the effects in
+   * this block are referenced by index from the component comments. 24 is now
+   * deliberately vacant rather than reassigned, so a later effect 24 cannot be
+   * mistaken for this one.
+   *
+   * If a bottom ramp is ever wanted again: DOWNWARD needed no contrast work,
+   * since darkening a dark ground raises every token's ratio. A ramp that
+   * LIGHTENS the footer would need every text token on it remeasured. */
 
   /* ── 25. NOISE OVERLAY ────────────────────────────────────────────────────
    * THIS ONE IS A FIX, NOT A FLOURISH, and it is the reason several of the
@@ -7385,11 +7420,57 @@ body[data-nav-scrolled] .masthead-name {
    * job by subtracting light instead of adding colour, which is the same move
    * `HeroBackdrop` now makes in components/motion/objects.tsx.
    */
+  /*
+   * ── THE RAMP IS NO LONGER BLACK, AND IT NO LONGER TOUCHES THE HERO ─────────
+   *
+   * It was `rgba(0,0,0,0.28) -> rgba(0,0,0,0.12) 38% -> transparent 72%`, which
+   * was correct for the NEAR-BLACK theme this layer was written for: there it
+   * subtracted light from a dark ground. The hero is now `--background: #ffffff`,
+   * and black over white is GREY.
+   *
+   * MEASURED in the browser at an 828px viewport, before this change: veil alpha
+   * 0.259 at y=41, 0.217 at y=124, 0.154 at y=248, 0.095 at y=373. The hero's
+   * white ground was composited down to #bd, #c8, #d8, #e7 — and .vvip-wave's
+   * brightest pixel landed on #a6b6c1, a muddy grey-blue, instead of the #deeff9
+   * azure it paints on clean white.
+   *
+   * That is why the wave read as "faint and not pro" at TWO different alpha
+   * ceilings (0.16 and 0.24): it was never dim, it was grey. Blue glow on a grey
+   * ground looks like a dirty screen, and no value of uAlpha fixes a hue problem.
+   *
+   * ── THE JOB IS REAL AND IS KEPT; IT JUST WAS NEVER THE HERO'S ──────────────
+   *
+   * Verified before touching this: NOTHING on the home page paints an opaque
+   * background of its own. The one band that did had it removed deliberately
+   * (see app/[locale]/page.tsx, the note about `bg-[color:var(--surface)]`),
+   * precisely so this field would show through. So below the fold this layer is
+   * the only thing keeping five stacked sections from reading as one flat white
+   * sheet, and deleting it outright would regress a problem already solved.
+   *
+   * The hero does not need it. The hero has .vvip-field — its own, richer ground
+   * of a wash, the IBC dots and the wave.
+   *
+   * 1. TRANSPARENT UNTIL 62%. The hero is `min-height: 100svh`, so at rest the
+   *    top of the viewport IS the hero. Holding the ramp at zero across that
+   *    span takes it off the hero entirely, and it engages only in the lower
+   *    third where the next band is already arriving. Once scrolled past, the
+   *    hero is gone and this behaves exactly as it always did.
+   *
+   * 2. THE TINT IS THE ACCENT, NOT BLACK. Grey is the one cast that makes a blue
+   *    glow look dirty. A trace of --primary tints the ground toward the same
+   *    light the hero is made of, so the bands still separate without the page
+   *    taking on the colour of newsprint.
+   *
+   * IF THE BANDS BELOW EVER READ AS TOO FLAT, raise the tail toward ~0.09 or use
+   * `.band-edge`, which exists for exactly this. Do NOT reinstate the black veil:
+   * the hero is protected by the 62% stop either way, so the two are not coupled.
+   */
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.28),
-    rgba(0, 0, 0, 0.12) 38%,
-    transparent 72%
+    transparent 0%,
+    transparent 62%,
+    rgba(30, 144, 214, 0.035) 84%,
+    rgba(30, 144, 214, 0.055) 100%
   );
 }
 
@@ -7653,10 +7734,35 @@ body[data-nav-scrolled] .masthead-name {
    * layout box at all.
    */
   inset: 0;
+  /*
+   * ── DIMMED, AND PULLED OFF THE WAVE'S HUE ──────────────────────────────────
+   *
+   * These were 0.10 / 0.08 / 0.09 of rgba(30,144,214), rgba(11,111,196) and
+   * rgba(127,196,236) — which is to say the wash painted THE SAME THREE BLUES
+   * the wave paints, overlapping to about 0.17 alpha, directly over it.
+   *
+   * Blue over blue is not atmosphere. With no hue difference there is nothing
+   * for the eye to resolve depth from, so the wash simply raised the ground the
+   * wave had to contrast against and erased its local contrast. That was the
+   * second reason the band read as faint at two different alpha ceilings.
+   *
+   * Two changes, and both matter:
+   *
+   * 1. ALPHA ROUGHLY HALVED. The wash now paints UNDER the wave (see the paint
+   *    order in components/motion/fm/vvip-field.tsx), so it is a ground rather
+   *    than a veil. A ground does not need to be strong to stop the page reading
+   *    as a blank sheet, it needs to be PRESENT — and it is still plainly
+   *    visible in the hero's outer margins, which is where its job actually is.
+   *
+   * 2. THE THIRD RADIAL TAKES --accent-cool. Two stay in the blue ramp so the
+   *    field still belongs to the palette; the third moves to the slate, which
+   *    gives the wash a hue axis of its own. The wave then reads AGAINST it
+   *    instead of merging into it.
+   */
   background:
-    radial-gradient(42% 46% at 22% 28%, rgba(30, 144, 214, 0.1) 0%, transparent 70%),
-    radial-gradient(38% 42% at 80% 68%, rgba(11, 111, 196, 0.08) 0%, transparent 72%),
-    radial-gradient(30% 34% at 62% 12%, rgba(127, 196, 236, 0.09) 0%, transparent 70%);
+    radial-gradient(42% 46% at 22% 28%, rgba(30, 144, 214, 0.055) 0%, transparent 70%),
+    radial-gradient(38% 42% at 80% 68%, rgba(11, 111, 196, 0.045) 0%, transparent 72%),
+    radial-gradient(30% 34% at 62% 12%, rgba(51, 80, 107, 0.05) 0%, transparent 70%);
   /* The resting oversize. The animation's keyframes all carry their own scale,
      but under reduced motion nothing animates, so without this the wash would sit
      at exactly viewport size and its radial gradients would show hard edges at
@@ -7693,8 +7799,8 @@ body[data-nav-scrolled] .masthead-name {
  * The register note at the top of this section says "nothing that glows". That
  * is still the rule for the rest of the site, and it is why there is exactly one
  * glowing element in the whole stylesheet. This one is a deliberate override for
- * the hero band alone, at an alpha ceiling (0.24, set in vvip-wave.tsx) whose
- * darkest composited pixel is #dfeff9 — a shade off --primary-tint (#dceafa),
+ * the hero band alone, at an alpha ceiling (0.30, set in vvip-wave.tsx) whose
+ * brightest composited pixel is #d2e9f7 - a shade off --primary-tint (#dceafa),
  * a colour this palette already contains. A glow that never leaves the palette
  * is a different thing from a glow that announces itself.
  *
@@ -8010,6 +8116,34 @@ body[data-nav-scrolled] .masthead-name {
   min-width: 8rem;
 }
 
+/*
+ * ── THIS LABEL TAKES A DARKER GREY THAN --muted-foreground, HERE ONLY ────────
+ *
+ * The same move .vvip-eyebrow already made when the wave's ceiling first rose,
+ * and for the same reason: the wave passes UNDER this row, so these labels are
+ * not on white — they are on the wave's composited ground.
+ *
+ * MEASURED against the band's peak (alpha 0.199, CPU port of the shader, stable
+ * across three aspect ratios and four phases) over the DEEP tint #0b6fc4, which
+ * is the worst case because uTintDeep carries the body stratum — the widest
+ * bright layer, and so the one most likely to sit under a baseline:
+ *
+ *   ground #cee2f3   --muted-foreground #5c6672   4.39:1   FAILS 1.4.3
+ *                    #525c67                      5.12:1   passes
+ *
+ * At 0.62rem this is unambiguously small text, so 4.5:1 is the floor and the
+ * large-text allowance does not apply.
+ *
+ * SCOPED RATHER THAN GLOBAL, deliberately. --muted-foreground carries dates,
+ * field labels and captions across the whole site, where it sits on #ffffff at
+ * 5.84:1 and is doing its job. Darkening the token would buy the hero 0.7 of a
+ * ratio point at the cost of flattening the text hierarchy on every other page —
+ * a site-wide change to solve a one-band problem. The override lives on the one
+ * selector that sits over the wave.
+ *
+ * #525c67 keeps the deliberate blue cast of the grey ramp; same hue family, one
+ * step down in lightness.
+ */
 .vvip-meta-label {
   display: block;
   font-family: var(--font-display);
@@ -8017,7 +8151,7 @@ body[data-nav-scrolled] .masthead-name {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--muted-foreground);
+  color: #525c67;
   margin-bottom: 0.3rem;
 }
 
@@ -8035,14 +8169,21 @@ body[data-nav-scrolled] .masthead-name {
 /*
  * THE HERO AFFILIATION BLOCK.
  *
- * A hairline, a small label, and the organisation's mark, sitting under the legal
- * title in the hero's text column.
+ * A hairline and the organisation's mark, sitting under the legal title in the
+ * hero's text column.
  *
  * IT IS A CREDENTIAL, NOT A BADGE, and the composition is what says so. A logo
  * dropped into a hero on its own reads as sponsorship or as decoration; a logo
- * under a labelled rule reads as an affiliation the subject holds, which is the
- * fact being communicated. The label carries that meaning in text, so it survives
- * with images off and is not left to the reader to infer from a picture.
+ * hung directly beneath the sentence that names the council and her role in it
+ * reads as the affiliation that sentence describes.
+ *
+ * THAT SENTENCE IS NOW THE ONLY THING CARRYING THE MEANING IN TEXT. There was a
+ * small "In affiliation with" label here until 2026-09-18, removed on the site
+ * owner's instruction because it restated the title line above it. Nothing is
+ * lost with images off: `.vvip-title` is still text and still names the council
+ * in full. What this DOES mean is that the tie between the two is now positional
+ * rather than stated, so the mark must stay adjacent to the title — if this block
+ * is ever moved away from it, the label has to come back with it.
  *
  * THE RULE IS ON THE BLOCK-START EDGE, matching `.vvip-meta-cell` and
  * `.about-ledger-row` directly below it. Hairlines on top edges are already this
@@ -8053,33 +8194,8 @@ body[data-nav-scrolled] .masthead-name {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 0.875rem;
   padding-block-start: 1.25rem;
   border-block-start: 1px solid var(--border);
-}
-
-/*
- * The label. Same treatment as `.vvip-meta-label` so the two read as siblings,
- * and in --muted-foreground (5.84:1 on white) rather than the accent: the accent
- * belongs to the mark below it, and a blue label above a blue logo would compete
- * with the thing it is introducing.
- */
-.vvip-affiliation-label {
-  font-family: var(--font-display);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted-foreground);
-}
-
-/*
- * Arabic has no small caps, and letterspacing an Arabic run breaks the joins
- * between its letters. The same correction every eyebrow on this site carries.
- */
-[dir="rtl"] .vvip-affiliation-label {
-  text-transform: none;
-  letter-spacing: 0;
 }
 
 /*

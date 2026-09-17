@@ -6,7 +6,7 @@ import { MotionScope } from "@/components/motion/motion-scope"
 import { SectionHeader } from "@/components/section-header"
 import { AboutSection } from "@/components/about-section"
 import { PendingNote } from "@/components/pending-note"
-import { getIdentity, getHeadline, getBiography, getSectionAvailability, getExpertise } from "@/lib/profile-content"
+import { getIdentity, getHeadline, getBiography, getSectionAvailability } from "@/lib/profile-content"
 import { getMedia } from "@/lib/media"
 import { localize } from "@/lib/localize"
 import { buildMetadata } from "@/lib/seo"
@@ -39,15 +39,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params
   setRequestLocale(locale)
 
-  // getExpertise() is fetched again, and for the languages row in the fact list
-  // below. It had been dropped when the languages table was removed from display.
-  const [identity, headline, bio, availability, portrait, expertise] = await Promise.all([
+  const [identity, headline, bio, availability, portrait] = await Promise.all([
     getIdentity(),
     getHeadline(),
     getBiography(),
     getSectionAvailability(locale),
     getMedia("portrait", locale),
-    getExpertise(),
   ])
 
   const t = await getTranslations()
@@ -65,30 +62,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     { label: t("about.baseLabel"), value: localize(identity.residence, locale) },
     { label: t("about.marketsLabel"), value: localize(identity.otherMarkets, locale) },
     { label: t("about.nationalityLabel"), value: localize(identity.nationality, locale) },
-    /*
-     * THE LANGUAGES ROW IS NAMES ONLY, AND THE OMISSION OF THE LEVELS IS THE POINT.
-     *
-     * The full table with speaking and writing levels renders on /expertise, where
-     * it sits under a caption stating that those levels are INFERRED rather than
-     * supplied by her (see components/languages-table.tsx and open question Q9).
-     *
-     * This ledger has nowhere to put that caveat. It is a two-column label/value
-     * list, and a value reading "Dutch native · Arabic fluent" with no qualifier
-     * beside it would assert four proficiency levels as her own answers, which is
-     * exactly what the `status: "inferred"` machinery exists to prevent. A bare list
-     * of names asserts only that she uses these languages, which intake section 1
-     * does support.
-     *
-     * So the split is deliberate: the claim that needs a caveat lives where the
-     * caveat fits, and this row carries the part that needs none.
-     */
-    {
-      label: t("expertise.languagesHeading"),
-      value: ((expertise.languages?.items ?? []) as { name?: any }[])
-        .map((l) => localize(l.name, locale))
-        .filter(Boolean)
-        .join(" · "),
-    },
   ].filter((f) => f.value)
 
   const positioning = headline.positioning ?? {}

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { getLocale, getTranslations } from "next-intl/server"
-import { getNavigation } from "@/lib/profile-content"
+import { getIdentity, getNavigation, localizeName } from "@/lib/profile-content"
 import { getSiteSettings } from "@/lib/site-settings"
 import { localize } from "@/lib/localize"
 import { routing } from "@/i18n/routing"
@@ -22,7 +22,7 @@ import { MotionScope } from "@/components/motion/motion-scope"
  * CONTENT inside it arrives.
  */
 export async function SiteFooter() {
-  const [settings, navigation] = await Promise.all([getSiteSettings(), getNavigation()])
+  const [settings, navigation, identity] = await Promise.all([getSiteSettings(), getNavigation(), getIdentity()])
   const locale = await getLocale()
   const t = await getTranslations("footer")
 
@@ -32,14 +32,16 @@ export async function SiteFooter() {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`
 
   /*
-      EFFECTS 24 AND 18, the page darkens and cools as it ends.
+      EFFECT 18, the page cools as it ends.
 
-      `footer-sink` ramps --background down to #050506. That direction is what
-      makes it free of contrast risk: #050506 is BELOW every ground in the
-      ladder, so every text token measures HIGHER on it than on --background,
-      the footer's --muted-foreground rises from 5.83:1 to about 6.2:1. A
-      darkening gradient on a dark scheme can only improve contrast, which is why
-      this one needed no per-token recomputation.
+      EFFECT 24, `footer-sink`, WAS REMOVED ON REQUEST. It ramped --background
+      down to #050506 so the page darkened into the footer. Nothing depended on
+      it: the gradient only ever DARKENED a dark ground, so every text token
+      measured higher on it than on --background, and removing it returns the
+      footer to --background, where the contrast ladder is already computed. The
+      footer's --muted-foreground goes from about 6.2:1 back to 5.83:1, still
+      clear of AA. Do not reintroduce it as a lighter ramp: upward is the
+      direction that WOULD need every token rechecked.
 
       `footer-bloom` is the cool counterweight to the hero's gold: the page opens
       warm and closes cool, which is the palette's own gold/cool split applied to
@@ -49,7 +51,7 @@ export async function SiteFooter() {
       would otherwise escape to the nearest positioned ancestor.
   */
   return (
-    <MotionScope as="footer" recipe="proseArrival" className="footer-sink relative border-t border-[color:var(--border)] py-10">
+    <MotionScope as="footer" recipe="proseArrival" className="relative border-t border-[color:var(--border)] py-10">
       {/*
         ── THE FOOTER IS NOT SCROLL-SCRUBBED, AND THAT IS A MEASURED DECISION ────
 
@@ -85,7 +87,14 @@ export async function SiteFooter() {
         className="container-page relative z-10 flex flex-col items-center justify-between gap-6 sm:flex-row"
       >
         <p className="text-xs text-[color:var(--muted-foreground)]">
-          {t("copyright", { year: new Date().getFullYear(), name: settings.siteName })}
+          {t("copyright", {
+            year: new Date().getFullYear(),
+            // The name in the reader's script, not `settings.siteName`, which is
+            // the Latin string the whole CMS is keyed on. A copyright line is the
+            // one place the name is set in running text on every page, so on /ar
+            // it read as the only Latin word in an Arabic footer.
+            name: localizeName(identity, locale),
+          })}
         </p>
 
         <nav aria-label="Legal" className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">

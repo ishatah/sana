@@ -6,7 +6,6 @@ import { MotionScope } from "@/components/motion/motion-scope"
 import { MassLag } from "@/components/motion/fm/mass-lag"
 import { SectionHeader } from "@/components/section-header"
 import { ExpertiseGrid } from "@/components/expertise-grid"
-import { LanguagesTable, type LanguageRow } from "@/components/languages-table"
 import { getIdentity, getHeadline, getExpertise } from "@/lib/profile-content"
 import { localize } from "@/lib/localize"
 import { buildMetadata } from "@/lib/seo"
@@ -23,20 +22,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
  * Two sections from two existing sources: the seven areas (`ExpertiseGrid`,
  * reused) and the markets she covers (`identity` + `headline.locations`,
  * assembled here).
- *
- * A third section lists the working languages. It had been removed from display and
- * is now restored: the three names were supplied at intake and were always present
- * in data/expertise.json, so the names reinstate a rendering rather than adding
- * content. The levels beside them, and a fourth row for English, are additions.
- *
- * ⚠️ THE LEVELS ARE INFERRED, NOT SUPPLIED, which is a deliberate exception to
- * intake section 8 made at the client's explicit instruction. Every inferred row is
- * labelled as such on the page and no proficiency is emitted into structured data.
- * See the derivation below and open question Q9, which is how this gets retired.
- *
- * ⚠️ FOR THE NEXT CLIENT REVIEW: two things to put to her, not one. The removal was
- * made at her request, so restoring the section reverses that decision; and the
- * levels now shown are ours rather than hers and need her answers (Q9).
  *
  * Nothing is described or characterised. The intake form asked for "short noun
  * phrases, no sentences" and that is what exists, so the grid carries phrases and
@@ -61,37 +46,6 @@ export default async function ExpertisePage({ params }: { params: Promise<{ loca
 
   const locations = (headline.locations ?? []) as { label: any; value: any }[]
 
-  /*
-   * ── THE WORKING LANGUAGES, NAMES PLUS INFERRED LEVELS ────────────────────────
-   *
-   * Restored to display. The rows were never removed from data/expertise.json, only
-   * their rendering, so the NAMES need no new content: intake section 1 supplied
-   * Dutch, Arabic and French and they are transcribed there verbatim. An English row
-   * and the four proficiency levels ARE new, and they are the part to read carefully.
-   *
-   * ⚠️ THE LEVELS ARE INFERRED, NOT SUPPLIED. This block previously rendered names
-   * only, and its note said the levels must never appear because intake section 8
-   * forbids inferring one, which was the correct reading of the form. The levels were
-   * subsequently set by inference at the client's explicit instruction, after that
-   * conflict was put to them in writing. Since the note and the data now disagree,
-   * the note is the thing that had to change: a comment claiming no level is asserted,
-   * sitting above a page asserting four, is worse than either position on its own.
-   *
-   * WHAT KEEPS THIS HONEST RATHER THAN A FABRICATION. Each inferred row carries
-   * `status: "inferred"`, a third value beside `confirmed` and `to-confirm`, and a
-   * `_basis` string recording what it was inferred from. `LanguagesTable` marks every
-   * such row and prints a caption stating the levels are not confirmed by her, so a
-   * visitor is told. No proficiency reaches the JSON-LD at all. The distinction the
-   * old note was protecting, do not pass our guess off as her answer, is intact; what
-   * changed is that the guess is now shown AND labelled rather than withheld.
-   *
-   * Open question Q9 is the exit: her own answers, then `status: "confirmed"`, and the
-   * marker and caption remove themselves with no code change.
-   *
-   * Rows are passed through whole rather than flattened to `{ code, name }` here,
-   * because the table needs `speaking`, `writing` and `status` to do the above.
-   */
-  const languages = (expertise.languages?.items ?? []) as LanguageRow[]
 
   return (
     <PageShell
@@ -249,62 +203,6 @@ export default async function ExpertisePage({ params }: { params: Promise<{ loca
         </MotionScope>
       )}
 
-      {/*
-        ── THE WORKING LANGUAGES, RESTORED ──────────────────────────────────────
-
-        This section was previously removed from display. It is back, carrying the
-        three language NAMES supplied at intake and no proficiency levels, because
-        no levels were ever supplied. See the derivation above for why the levels
-        and the `to-confirm` status are deliberately not surfaced.
-
-        It reuses the markets band's panel construction directly rather than
-        inventing a treatment: same `MotionScope` recipe, same `MassLag` wrapper,
-        same `fan-in` node, same `panel-wipe card-ruled panel-3d panel-edge-in`
-        panel. The ownership rule in components/motion/fm/variants.ts is why the
-        stack is one transform-writer per node, and copying the stack wholesale is
-        what keeps that rule satisfied here.
-
-        NO `linkedPair` interaction and no `data-pair`: that pairing exists to link
-        a market card to the location label beneath it, and there is nothing on
-        this band to pair with. A `tabIndex` is likewise omitted, since without the
-        pairing highlight there is no pointer-only affordance to make reachable,
-        and manufacturing a tab stop for a static list is the accessibility cost
-        components/motion/interactions.ts refuses elsewhere.
-      */}
-      {languages.length > 0 && (
-        <MotionScope
-          as="section"
-          id="expertise-languages"
-          recipe="panelGrid"
-          physics
-          className="section-skew snap-section page-section"
-        >
-          <div className="container-page">
-            <SectionHeader
-              animate
-              title={t("pages.expertise.languagesHeading")}
-              subtitle={t("expertise.languagesLede")}
-            />
-
-            {/*
-              THE PANEL GRID THAT STOOD HERE IS GONE, and the reason is the levels.
-
-              Names alone were one short phrase per row, which a three-across panel
-              grid suited. A row now carries a name AND two labelled levels, and three
-              of those side by side at `sm:grid-cols-3` is a wall of repeated
-              "Speaking Fluent · Writing Fluent" reading across rather than down, with
-              the footnote marker and its caption orphaned from each other.
-
-              `LanguagesTable` sets the same rows as a ruled ledger instead, which is
-              what the About fact list already uses for exactly this shape, a label and
-              a qualified value per row. It also owns the inferred-level marking, so
-              the disclosure travels with the data rather than being re-implemented at
-              each call site.
-            */}
-            <LanguagesTable items={languages} />
-          </div>
-        </MotionScope>
-      )}
     </PageShell>
   )
 }

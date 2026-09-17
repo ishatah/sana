@@ -2,7 +2,7 @@ import { getLocale } from "next-intl/server"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
 import { MotionAudit } from "@/components/motion/fm/audit"
-import { getIdentity, getNavigation } from "@/lib/profile-content"
+import { getIdentity, getNavigation, localizeName } from "@/lib/profile-content"
 import { resolveNavItems, localePrefix } from "@/lib/nav"
 
 /**
@@ -38,7 +38,7 @@ export async function PageShell({
     <>
       <SiteNav
         items={resolveNavItems(navigation.main ?? [], locale)}
-        name={identity.nameShort}
+        name={localizeName(identity, locale)}
         // `localePrefix` rather than a hand-built string, so the CTA follows the
         // same "the default locale is unprefixed" rule the nav links already use.
         contactHref={`${localePrefix(locale)}/contact`}

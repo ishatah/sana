@@ -64,6 +64,30 @@ export function LanguageToggle() {
     const target = next === routing.defaultLocale ? stripped : `/${next}${stripped === "/" ? "" : stripped}`
 
     /*
+     * WRITE THE COOKIE BEFORE NAVIGATING, OR ENGLISH IS UNREACHABLE FROM /ar.
+     *
+     * next-intl's middleware resolves the locale from the pathname FIRST and only
+     * falls back to the NEXT_LOCALE cookie when the path carries no locale prefix
+     * (resolveLocale in next-intl/middleware). English is `defaultLocale` under
+     * `localePrefix: "as-needed"`, so its URLs have no prefix — and that is exactly
+     * the case that falls through to the cookie.
+     *
+     * So from /ar, where a previous switch left NEXT_LOCALE=ar, clicking EN sent the
+     * browser to "/", the middleware saw no prefix, read the cookie, resolved `ar`
+     * and REDIRECTED STRAIGHT BACK to /ar. The switch looked like it did nothing.
+     * AR and NL were never affected: their prefixes override the cookie before it is
+     * ever consulted.
+     *
+     * Setting the cookie here makes the two inputs agree, so the fallback returns the
+     * locale that was actually asked for. The middleware still rewrites this same
+     * value on the response; this only ensures the REQUEST carries it.
+     *
+     * Attributes match next-intl's own defaults so it updates this cookie rather than
+     * writing a second one beside it. Max-Age is one year, as next-intl uses.
+     */
+    document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=31536000; samesite=lax`
+
+    /*
      * `assign`, not `replace`: the page they came from is a real step in their
      * history and Back should return to it in the language they were reading.
      * `replace` would swallow that entry and send Back to whatever preceded it,
