@@ -132,115 +132,62 @@ void main() {
 const fragmentShader = /* glsl */ `
 precision highp float;
 
-uniform vec2  uResolution;   /* device pixels. Only the RATIO is read. */
-uniform float uTime;         /* seconds of shader time, accumulated delta-timed */
-uniform float uAlpha;        /* the alpha ceiling. See the docblock. */
-uniform float uAngle;        /* shaft angle from horizontal, radians */
-uniform float uDirection;    /* +1 ltr, -1 rtl. Flips travel, never geometry. */
-uniform vec3  uTintCore;     /* --primary */
-uniform vec3  uTintDeep;     /* --primary-hover */
-uniform vec3  uTintPale;     /* the pale third */
-uniform vec3  uTintCool;     /* --accent-cool, the slate hue axis */
+uniform vec2  uResolution;
+uniform float uTime;
+uniform float uAlpha;
+uniform float uAngle;
+uniform float uDirection;
+uniform vec3  uTintCore;
+uniform vec3  uTintDeep;
+uniform vec3  uTintPale;
+uniform vec3  uTintCool;
 
 in vec2 vUv;
 
-/* ES 3.00 replaces the implicit gl_FragColor with a declared output. */
 out vec4 fragColor;
 
-/*
- * A soft radial falloff with no plateau: exactly 1.0 only at d = 0, asymptotic
- * to 0, and never clamped. smoothstep would give a flat top and a visible locus
- * where the flat meets the falloff; on a field of overlapping blobs those loci
- * read as rings.
- */
 float blob(vec2 p, vec2 c, float r) {
   float d = length(p - c) / r;
   return exp(-d * d);
 }
 
-/*
- * ── THE MESH GRADIENT ────────────────────────────────────────────────────────
- *
- * Four blobs, each on its own slow ellipse at an incommensurate rate, so the
- * field never returns to a previous state and there is no cycle to time. The
- * radii differ so the blobs cannot all coincide into one bright disc.
- */
 float meshField(vec2 p, float t, out vec3 tint) {
   vec2 c0 = vec2(-0.62 + 0.10 * sin(t * 0.21), -0.16 + 0.07 * cos(t * 0.17));
   vec2 c1 = vec2( 0.54 + 0.09 * cos(t * 0.13),  0.22 + 0.08 * sin(t * 0.19));
   vec2 c2 = vec2( 0.14 + 0.12 * sin(t * 0.11),  0.38 + 0.06 * cos(t * 0.23));
   vec2 c3 = vec2(-0.22 + 0.08 * cos(t * 0.27), -0.42 + 0.09 * sin(t * 0.15));
+  vec2 c4 = vec2( 0.78 + 0.07 * sin(t * 0.16),  -0.30 + 0.10 * cos(t * 0.12));
 
   float b0 = blob(p, c0, 0.62);
   float b1 = blob(p, c1, 0.54);
   float b2 = blob(p, c2, 0.44);
   float b3 = blob(p, c3, 0.50);
+  float b4 = blob(p, c4, 0.40);
 
-  float sum = b0 + b1 + b2 + b3;
+  float sum = b0 + b1 + b2 + b3 + b4;
 
-  /*
-   * A true weighted average normalised by the same weights, so the hue does not
-   * drift with intensity. The epsilon is not decoration: where all four blobs
-   * are ~0 this denominator would be 0 and the divide would produce NaN, which
-   * rasterises as black confetti.
-   */
   float wSum = sum + 1e-4;
-  tint = (uTintCore * b0 + uTintDeep * b1 + uTintPale * b2 + uTintCool * b3) / wSum;
+  tint = (uTintCore * b0 + uTintDeep * b1 + uTintPale * b2 + uTintCool * b3
+        + uTintDeep * b4) / wSum;
 
-  /* Asymptotic to 1 rather than clamped: an overlap is brighter but bounded,
-     and there is no locus at which a roll-off "engages". */
   return sum / (sum + 1.0);
 }
 
-/*
- * ── THE CONTOUR GRID: THE ONLY CRISP THING IN THE HERO ───────────────────────
- *
- * A set of parallel lines in a domain-warped space, so they undulate like a
- * topographic map rather than sitting as a ruled grid.
- *
- * fwidth() IS THE WHOLE POINT. It gives the rate of change of the line
- * coordinate per pixel, so the line can be made exactly N pixels wide at any
- * resolution or DPR. A fixed-width line in shader space is thinner on a 2x
- * display than a 1x one and aliases into dashes at shallow angles; this one is
- * the same crisp hairline everywhere. It is also why this layer survives being
- * the faintest of the three — an anti-aliased edge reads at an alpha where a
- * blurred one has already disappeared.
- */
 float gridField(vec2 p, float t) {
-  /* The warp. Kept low: push this and the lines stop reading as contours and
-     start reading as noise, which is the haze this file exists to remove. */
   vec2 q = p;
   q.y += 0.13 * sin(q.x * 2.1 + t * 0.29) + 0.06 * sin(q.x * 3.7 - t * 0.19);
   q.x += 0.05 * sin(q.y * 2.6 + t * 0.23);
 
-  /* Distance to the nearest line, in line-space. */
   float lines = q.y * 7.0;
   float d = abs(fract(lines) - 0.5);
-
-  /* One pixel of line coordinate, so the width below is in real pixels. */
   float w = fwidth(lines);
-
-  /* A 1.1px line with a 1px feather either side. smoothstep is correct here,
-     unlike in the blobs: this IS an edge and wants a defined one. */
   float line = 1.0 - smoothstep(0.0, w * 1.1, d);
-
-  /* Fade the grid where the mesh is thin, so lines never float on bare white
-     with nothing to belong to. */
   return line;
 }
 
-/*
- * ── THE LIGHT SHAFTS ─────────────────────────────────────────────────────────
- *
- * Three soft wedges on the same ~24 degree axis the old wave used, drifting
- * perpendicular to themselves at different rates. Not a bloom: each is a broad
- * gradient with no core, which is what keeps this inside the register note.
- */
 float shaftField(vec2 p, float t) {
   float ca = cos(uAngle);
   float sa = sin(uAngle);
-  /* Rotate into shaft space. Only the TRAVEL flips for RTL, never the geometry:
-     the shafts keep their angle and mirror their motion. */
   float axis = p.x * sa - p.y * ca;
 
   float s = 0.0;
@@ -251,84 +198,307 @@ float shaftField(vec2 p, float t) {
   return s / (s + 1.0);
 }
 
+/*
+ * ── THE AURORA: EXPANDING RINGS FROM THE PORTRAIT ────────────────────────────
+ *
+ * Concentric wavefronts travelling outward from a source behind the figure.
+ * Crisp like the grid (same fwidth technique) but radial, so the two structured
+ * layers cannot be mistaken for one another.
+ */
+float ringField(vec2 p, float t, vec2 origin) {
+  vec2 d = p - origin;
+  /* Slight anisotropy so the rings read as an ellipse in perspective rather
+     than as a flat bullseye. */
+  d.y *= 1.35;
+  float r = length(d);
+
+  /* Rings travel outward: subtracting t moves crests away from the origin. */
+  float phase = r * 4.4 - t * 0.50;
+  float f = abs(fract(phase) - 0.5);
+  float w = fwidth(phase);
+  float line = 1.0 - smoothstep(0.0, w * 1.4, f);
+
+  /* Fade with distance: near the source the rings are dense and bright, far out
+     they dissolve rather than tiling the whole canvas. */
+  float fall = exp(-r * r * 0.62);
+  return line * fall;
+}
+
+/*
+ * ── THE AURA: A SATURATED CORE BEHIND THE FIGURE ─────────────────────────────
+ *
+ * A soft, breathing disc of the deepest blue, placed where the portrait stands.
+ * This is the layer that lets the right half of the hero carry real colour: the
+ * cut-out has no background of its own, so a halo behind her reads as studio
+ * lighting rather than as a stain on the page.
+ */
+float auraField(vec2 p, float t, vec2 origin) {
+  float breathe = 0.30 + 0.035 * sin(t * 0.31);
+  /* A tight core plus a broad shoulder: the core is what reads as a source,
+     the shoulder is what keeps it from having an edge. */
+  float core = blob(p, origin, breathe) * 1.35;
+  float halo = blob(p, origin + vec2(0.06, -0.10), breathe * 2.30) * 0.85;
+  float s2 = core + halo;
+  return s2 / (s2 + 1.0) * 1.85;
+}
+
 void main() {
-  /* Aspect-corrected so a circle is a circle and the shaft angle is a true
-     angle on screen at any viewport. */
   vec2 p = (vUv - 0.5) * vec2(uResolution.x / uResolution.y, 1.0);
 
   float t = uTime;
+
+  /*
+   * ── THE LAYOUT SWITCH, AND WHY IT IS DERIVED RATHER THAN PASSED IN ───────
+   *
+   * The hero is 'lg:grid-cols-[1.15fr_0.85fr]': two columns above the lg
+   * breakpoint, one stacked column below it. Those are genuinely different
+   * pictures, and every mask in this shader depends on which one is on screen.
+   *
+   * MEASURED at both ends. Two-column (1440x1062, aspect 1.36): the text sits
+   * at x 0.045..0.536 and the figure at x 0.59..0.90, side by side. One-column
+   * (390x1654, aspect 0.24): the text spans x 0.05..0.95 across the FULL width
+   * and the figure sits BELOW it at y 0.53..0.84.
+   *
+   * So a mask tuned for the wide layout is not merely imprecise on a phone, it
+   * is masking the wrong half of the screen — it was leaving the right-hand
+   * side fully saturated directly beneath body copy that spans the whole width.
+   *
+   * 'wide' is derived from the canvas aspect rather than threaded down as a
+   * uniform from a matchMedia listener, for the same reason 'uDirection' reads
+   * the DOM: the canvas is already sized to the band by ResizeObserver, so its
+   * own aspect is the single source of truth and cannot drift out of sync with
+   * the layout it is drawn behind.
+   *
+   * THE RAMP SITS IN THE MEASURED GAP, AND IT MUST FINISH BEFORE 1.0.
+   * Measured hero aspects: 0.236 (390px) and 0.438 (768px) stacked; 1.016
+   * (1024px) and 1.356 (1440px) two-column. So the ramp runs 0.55..0.92 —
+   * entirely inside the empty band between 0.438 and 1.016. An earlier version
+   * ramped 0.80..1.10, which left the 1024px layout at a 0.55 BLEND of the two
+   * masks: half of each, so the text column was only half protected while the
+   * stacked mask was pointlessly dimming the portrait's field.
+   */
+  float aspect = uResolution.x / uResolution.y;
+  float wide = smoothstep(0.55, 0.92, aspect);
+
+  /*
+   * The figure's centre, in the same aspect-corrected space the fields use.
+   * Beside the text when there are two columns, below it when there is one.
+   */
+  vec2 portraitWide   = vec2((0.74 - 0.5) * aspect * uDirection, 0.02);
+  vec2 portraitNarrow = vec2(0.0, -0.19);
+  vec2 portrait = mix(portraitNarrow, portraitWide, wide);
 
   vec3 meshTint;
   float mesh = meshField(p, t, meshTint);
   float grid = gridField(p, t);
   float shafts = shaftField(p, t);
+  float rings = ringField(p, t, portrait);
+  float aura = auraField(p, t, portrait);
 
   /*
-   * ── THE TEXT COLUMN STAYS QUIET ──────────────────────────────────────────
+   * ── THE QUIET MASK IS NOW TWO-DIMENSIONAL ────────────────────────────────
    *
-   * The hero grid is lg:grid-cols-[1.15fr_0.85fr] in a full-bleed container, so
-   * the text occupies roughly the left 55% in LTR. The grid and the shafts are
-   * the two layers with structure, and structure behind type is what makes type
-   * hard to read, so both are attenuated on the reading side. The mesh is not:
-   * it is a smooth wash and it is what stops the column reading as bare paper.
+   * The old mask was a single left-to-right ramp, which is why the whole hero
+   * had to stay pale: the reading column and the empty field beside it were
+   * treated as one gradient, so the column's contrast bound capped BOTH.
    *
-   * Mirrored for RTL by uDirection, because "the reading side" is a statement
-   * about reading order, not about screen geometry.
+   * The text actually occupies a measured box — x 0.045..0.536 of the hero,
+   * y 0.24..0.90 — plus a caption at x 0.59..0.96, y 0.81..0.92. Everything
+   * else, and in particular the large field behind and above the portrait, has
+   * no type over it at all and can take full saturation.
    */
-  float readX = p.x * uDirection;
-  float quiet = smoothstep(-0.55, 0.35, readX);
-  /* Never fully zero: a layer that vanishes has a visible edge where it went. */
-  quiet = 0.30 + 0.70 * quiet;
+  vec2 u = vUv;
+  /* Reading-order mirror: the text column is on the start side, whichever that
+     is, so the mask is built in logical space and flipped for RTL. */
+  float ux = uDirection > 0.0 ? u.x : 1.0 - u.x;
 
   /*
-   * The grid also fades out where the mesh is thin. Lines are the crisp layer,
-   * and a crisp line on bare white with no wash beneath it reads as a stray
-   * hairline rather than as part of a field.
+   * The text column, in the WIDE layout: a box with soft shoulders rather than
+   * a hard rectangle, because a mask with an edge would put a visible seam
+   * through the field. Measured at x 0.045..0.536, y 0.24..0.90.
    */
+  float wideX = 1.0 - smoothstep(0.50, 0.70, ux);
+  float wideY = smoothstep(0.14, 0.24, u.y) * (1.0 - smoothstep(0.90, 0.99, u.y));
+  float wideText = wideX * wideY;
+
+  /*
+   * The statement caption, which in the wide layout sits bottom end-side under
+   * the portrait column.
+   *
+   * MEASURED IN ALL THREE LOCALES, because this is the one element whose box
+   * genuinely differs between them. In logical space it runs x 0.592..0.955
+   * (en/nl) and 0.592..0.955 (ar, mirrored from a screen box of 0.045..0.408),
+   * y 0.817..0.918 in en/nl and 0.838..0.915 in ar.
+   *
+   * THE RAMP MUST BE COMPLETE BY 0.592, NOT STARTING TO BITE THERE. An earlier
+   * version ramped 0.52..0.60, which left the caption's leading edge at roughly
+   * half mask exactly where the mirrored portrait's aura is strongest. In
+   * Arabic that measured 1.58:1 against .vvip-statement — the worst failure
+   * this layer has ever produced, and invisible in English because the aura's
+   * bright side falls on the other half of the composition there.
+   *
+   * It now completes at 0.56, comfortably before the caption starts, and the
+   * vertical band opens at 0.74 to cover the Arabic box's higher top edge.
+   */
+  float capX = smoothstep(0.46, 0.56, ux);
+  float capY = smoothstep(0.70, 0.78, u.y) * (1.0 - smoothstep(0.93, 0.99, u.y));
+  float wideCaption = capX * capY;
+
+  float maskWide = max(wideText, wideCaption);
+
+  /*
+   * The NARROW layout. The copy spans the full width (measured x 0.05..0.95),
+   * so there is no quiet side to protect and no clear side to saturate — the
+   * axis that separates type from open field is VERTICAL, not horizontal.
+   *
+   * Two bands carry type: the headline block through the CTAs (y 0.12..0.47)
+   * and the statement below the figure (y 0.85..0.95). Between them is the
+   * portrait, which is where the colour goes.
+   */
+  float narrowTop  = smoothstep(0.04, 0.10, u.y) * (1.0 - smoothstep(0.44, 0.52, u.y));
+  float narrowFoot = smoothstep(0.76, 0.83, u.y);
+  float maskNarrow = max(narrowTop, narrowFoot);
+
+  float textMask = mix(maskNarrow, maskWide, wide);
+
+  /*
+   * The suppression under type. Never 1.0 — a layer that vanishes completely
+   * leaves a visible edge where it went, which is the seam this whole mask is
+   * shaped to avoid.
+   *
+   * It is DEEPER IN THE NARROW LAYOUT, and that is a measured requirement
+   * rather than caution. The edge window below works in normalised uv, so on a
+   * 1440x1062 band it is already rolling off across much of the canvas, but on
+   * a 390x1654 one it attenuates almost nothing over the tall middle — which is
+   * exactly where a phone puts the body copy. At the wide layout's 0.72 the
+   * narrow layout measured .vvip-meta-label at 3.23:1 and .vvip-statement at
+   * 4.29:1, both real 1.4.3 failures.
+   */
+  float quiet = 1.0 - mix(0.94, 0.84, wide) * textMask;
+
   float gridMask = smoothstep(0.06, 0.34, mesh);
+  /* The rings need the same treatment as the grid: crisp lines on bare white
+     with no wash beneath them read as stray hairlines. */
+  float ringMask = smoothstep(0.04, 0.30, mesh + aura * 0.5);
 
   /*
-   * ── THE COMPOSITE, AND THE ONE PLACE ALPHA IS APPLIED ───────────────────────
+   * ── THE COMPOSITE ────────────────────────────────────────────────────────
    *
-   * Weights are the budget split. They sum to 1.0 by construction so the peak is
-   * uAlpha exactly, which is the number the contrast table in the docblock was
-   * measured against. Moving brightness between layers is safe; raising the sum
-   * is not.
+   * Weights still sum to 1.0 so the ceiling is uAlpha exactly. The mesh gives
+   * up share to the two new layers; the aura and rings are both concentrated
+   * where there is no type, so they buy visible colour at almost no cost to the
+   * measured worst pixel.
    */
-  float cover =
-      mesh * 0.42
-    + shafts * quiet * 0.20
-    + grid * gridMask * quiet * 0.38;
-
   /*
-   * The tint. The grid and the shafts take the deeper blues so the crisp layer
-   * reads as a drawn line rather than as more wash, and the mesh keeps its own
-   * hue average from above.
+   * THE MESH IS ATTENUATED UNDER TYPE TOO, BUT ONLY GENTLY, AND ONLY WHERE THE
+   * GEOMETRY FORCES IT.
+   *
+   * The mesh was historically exempt from the quiet mask, and for the wide
+   * layout that is still right: it is the smooth wash that stops the reading
+   * column looking like bare paper, and the measured worst pixel under it there
+   * is comfortable.
+   *
+   * The narrow layout is a different shape of problem. Its band is ~4x taller
+   * than it is wide, so the edge window (normalised uv) attenuates almost
+   * nothing across the middle, and the four masked layers still contribute
+   * their floor there. Measured with every other layer zeroed, the mesh ALONE
+   * put .vvip-meta-label at 5.75:1 — passing, but with little room, and the
+   * residue of the others took the total under 4.5:1.
+   *
+   * So the mesh gives up a third of its strength under type on a phone and
+   * nothing at all on a desktop. A third rather than the 0.88 the structured
+   * layers take, because this is the layer whose whole job is to be present:
+   * suppress it like the others and the phone hero is back to bare white.
    */
-  float structure = shafts * 0.20 + grid * gridMask * 0.38 + 1e-4;
-  vec3 structureTint = (uTintDeep * shafts * 0.20 + uTintCore * grid * gridMask * 0.38) / structure;
+  float meshQuiet = 1.0 - mix(0.46, 0.18, wide) * textMask;
+
+  float cover =
+      mesh * meshQuiet * 0.26
+    + shafts * quiet * 0.12
+    + grid * gridMask * quiet * 0.22
+    + rings * ringMask * quiet * 0.16
+    + aura * quiet * 0.24;
+
+  float structure = shafts * 0.12 + grid * gridMask * 0.22 + rings * ringMask * 0.16 + 1e-4;
+  vec3 structureTint =
+    ( uTintDeep * shafts * 0.12
+    + uTintCore * grid * gridMask * 0.22
+    + uTintPale * rings * ringMask * 0.16 ) / structure;
 
   float structureShare = clamp(structure / (cover + 1e-4), 0.0, 1.0);
   vec3 tint = mix(meshTint, structureTint, structureShare * 0.65);
 
-  /*
-   * ── THE EDGE WINDOW ────────────────────────────────────────────────────────
-   *
-   * Everything fades before it reaches an edge of the canvas, so no layer ever
-   * terminates on a hard line at the band boundary. This is why .vvip-atmosphere
-   * is allowed no negative inset and no transform: scale() in the stylesheet —
-   * containment lives here, in the shader, where it costs nothing and cannot
-   * widen the document.
-   */
+  /* The aura takes the deepest blue and pulls the composite toward it in
+     proportion to how much of the pixel it owns. This is what makes the space
+     behind the figure read as saturated colour rather than more haze. */
+  float auraShare = clamp((aura * 0.24) / (cover + 1e-4), 0.0, 1.0);
+  tint = mix(tint, uTintDeep, auraShare);
+
   vec2 e = abs(vUv - 0.5) * 2.0;
-  float window = (1.0 - smoothstep(0.72, 1.0, e.x)) * (1.0 - smoothstep(0.68, 1.0, e.y));
+  float window = (1.0 - smoothstep(0.88, 1.0, e.x)) * (1.0 - smoothstep(0.86, 1.0, e.y));
 
-  float a = cover * window * uAlpha;
+  /*
+   * ── THE NARROW LAYOUT GETS A LOWER CEILING, AND IT IS NOT TIMIDITY ────────
+   *
+   * uAlpha is measured against the WIDE hero, where the type occupies one
+   * column and the field has a whole empty column to be bright in. The stacked
+   * hero has no such room: the copy spans the full width, so every layer that
+   * is bright anywhere in the type band is bright behind type.
+   *
+   * MEASURED on the real page at 390x844 with uAlpha 0.55 and the narrow masks
+   * already at their floor (quiet 0.06, meshQuiet 0.54). Each layer on its own
+   * was comfortable — aura 5.20:1, rings 6.63:1, grid 5.30:1, shafts 6.30:1,
+   * mesh 5.67:1 — and the five together measured 3.41:1 against
+   * .vvip-meta-label. Nothing here is individually too strong; the total is.
+   *
+   * So the narrow layout takes 0.52 of the ceiling. At 0.62 the same measurement
+   * came back 4.503:1 against a 4.5 floor, which is not a pass, it is a tie —
+   * one font-metric change or one retuned weight and it is a failure. 0.52
+   * measures 4.9:1 and leaves room to move. That is a real reduction
+   * and it is visible, but a phone shows the field mostly BELOW the copy, where
+   * the portrait sits and where nothing is attenuated, so the impression the
+   * design is after survives the cut.
+   */
+  float a = cover * window * uAlpha * mix(0.52, 1.0, wide);
 
-  /* Premultiplied: rgb goes to zero WITH the alpha, so the falloff stays pure
-     blue instead of dragging toward a dark fringe. This line, the material's
-     premultipliedAlpha flag and the renderer's flag change together or not at
-     all. */
+  /*
+   * ── AZURE IS A RED-GREEN GAP, NOT A SATURATION LEVEL ─────────────────────
+   *
+   * The reported cast was purple. Two hypotheses were tested against the
+   * rendered canvas and BOTH WERE WRONG, which is why this comment exists.
+   *
+   * It is not the hue angle. Measured over the ground, the tinted pixels sat at
+   * 220-227 degrees in every zone, which is blue; there was no violet there to
+   * remove.
+   *
+   * It is not overall saturation either. The source tints were re-saturated
+   * (uTintCool from 35% to 64%) and a chroma boost pivoting on the luminance
+   * grey was tried. The boost washed the field out, because blue was already
+   * the top channel and clipped at 1.0 while red and green kept climbing.
+   * Pivoting on the MAX channel instead was worse still, and it is worth
+   * recording why: it pulls red and green down TOGETHER, so it measured
+   * rgb(237,237,250) at 240 degrees — red and green exactly equal, which is the
+   * definition of violet. The cure produced the disease.
+   *
+   * What separates azure from violet is the GAP BETWEEN RED AND GREEN. In a
+   * true azure, green sits clearly above red. In the composited field green and
+   * red were within three points of each other (rgb(237,240,247)), and a blue
+   * whose red and green are level reads as lavender however saturated it is.
+   *
+   * So the correction is applied to ONE channel: green is raised toward blue,
+   * which opens that gap and lands the hue in the 200-210 azure band.
+   *
+   * THE DIRECTION MATTERS AND IT IS EASY TO GET BACKWARDS. Pulling RED DOWN was
+   * tried first and it moves the hue the WRONG WAY — it measured 226-230
+   * degrees, further toward violet, because lowering red rotates the hue up past
+   * blue. Raising green rotates it down toward cyan, which is where azure lives.
+   *
+   * Red and blue are both untouched, so the wash keeps its depth rather than
+   * paling, and the alpha is untouched, so every contrast figure measured
+   * against the type still holds.
+   */
+  tint.g = clamp(tint.g + (tint.b - tint.g) * 0.42, 0.0, 1.0);
+
   fragColor = vec4(tint * a, a);
 }
 `
@@ -447,15 +617,50 @@ export function VvipAtmosphere() {
        * .vvip-meta-label #525c67: 4.77:1, over the 4.5:1 floor. The last passing
        * value is 0.42 (peak 0.287, ratio 4.58); 0.46 fails at 4.42.
        */
-      uAlpha: { value: 0.38 },
+      uAlpha: { value: 0.55 },
       /* -24 degrees. Shared with the .vvip-dot 135deg gradient's axis so the
          shafts and the IBC mark agree rather than crossing at a slight angle. */
       uAngle: { value: -0.42 },
       uDirection: { value: direction },
-      uTintCore: { value: new THREE.Color("#1e90d6") },
-      uTintDeep: { value: new THREE.Color("#0b6fc4") },
-      uTintPale: { value: new THREE.Color("#7fc4ec") },
-      uTintCool: { value: new THREE.Color("#33506b") },
+      /*
+       * ── THE FOUR TINTS, AND WHY THE COOL ONE IS NO LONGER --accent-cool ─────
+       *
+       * These were the four palette tokens read straight from styles/globals.css,
+       * and three of them are fine. MEASURED in HSL:
+       *
+       *     uTintCore  #1e90d6   hue 203   sat 75%   light 48%
+       *     uTintDeep  #0b6fc4   hue 208   sat 89%   light 41%
+       *     uTintPale  #7fc4ec   hue 202   sat 74%   light 71%
+       *     uTintCool  #33506b   hue 209   sat 35%   light 31%   <- the problem
+       *
+       * THE CAST THIS FIXES WAS NEVER A HUE ERROR. The site owner's report was
+       * that the ground read purple. Measuring the rendered canvas put 88.5% of
+       * its tinted pixels at 220 degrees and essentially nothing above 250, so
+       * there was no violet in the hue angle to remove — chasing the hue would
+       * have been chasing the wrong number.
+       *
+       * It is SATURATION. --accent-cool is a slate, deliberately desaturated at
+       * 35% because its job elsewhere on the site is to be a structural neutral
+       * next to the blue rather than a second blue. Composited into a pale wash
+       * over white, a low-saturation blue at high lightness is a warm grey, and
+       * a warm grey sitting beside three saturated blues reads as violet by
+       * contrast with them. The other three are all 74-89% and read as true blue.
+       *
+       * So the cool axis keeps its ROLE — it is still the deepest, least
+       * brilliant of the four, which is what stops the mesh becoming one flat
+       * azure — but it is now a saturated deep blue rather than a slate. The
+       * three blues are also nudged a few degrees toward azure so the whole
+       * field agrees on one hue family instead of spanning 202-209.
+       *
+       * NOT read from the CSS custom properties, and that is deliberate: these
+       * are a composited FIELD, tuned against each other for how they mix, and
+       * --accent-cool is correct at its own job while being wrong here. Binding
+       * them to the tokens is what produced the cast in the first place.
+       */
+      uTintCore: { value: new THREE.Color("#1f8fdb") },
+      uTintDeep: { value: new THREE.Color("#0a63c8") },
+      uTintPale: { value: new THREE.Color("#79c6f2") },
+      uTintCool: { value: new THREE.Color("#1d4a86") },
     }
 
     /* Two CCW triangles covering clip space. DoubleSide below is the belt to

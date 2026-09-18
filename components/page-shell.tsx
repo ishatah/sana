@@ -46,7 +46,28 @@ export async function PageShell({
 
       {/* `id="main"` is the skip-link target, components/skip-to-content.tsx
           points at it, so it has to be here and not on an inner wrapper. */}
-      <main id="main" className={hero ? undefined : "section-pad pt-32"}>
+      <main id="main" className={`main-field ${hero ? "" : "section-pad pt-32"}`}>
+        {/*
+          THE GROUND EVERY NON-HOME ROUTE WAS MISSING.
+
+          The home page paints `.hero-field` behind the whole of `<main>`; it is
+          mounted there rather than in a layout because it belongs to that page's
+          composition. Every route rendered through this shell therefore had no
+          ground layer at all and sat on flat white end to end.
+
+          `.page-field` is the same one-fixed-layer device tuned for a document
+          rather than a landing page (lighter, and it starts at the top because
+          there is no hero shader to keep it off). See its rule in
+          styles/globals.css for why it is one element carrying linear ramps and
+          not a stack of radials.
+
+          `main-field` comes with it and is not optional: it supplies the
+          `isolation: isolate` that keeps a z-index 0 fixed child behind the
+          content without letting it rise past the fixed header or the footer,
+          and the `overflow-x: clip` that stops a wide band scrolling the page
+          sideways in RTL. Both are argued at length on that rule.
+        */}
+        <div aria-hidden className="page-field" />
         {hero}
         {children}
       </main>

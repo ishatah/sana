@@ -53,12 +53,32 @@ export async function LegalPage({
           rather than to the article as one block, so the document resolves in
           reading order instead of arriving whole.
         */}
-        <article className="legal-prose mx-auto max-w-2xl space-y-6 text-sm leading-[1.9] text-[color:var(--foreground)]">
-          {children}
-          <p className="border-t border-[color:var(--border)] pt-6 text-xs text-[color:var(--muted-foreground)]">
-            {t("lastUpdated")}: {updated}
-          </p>
-        </article>
+        {/*
+          THE BLUE BAND ON A LEGAL PAGE IS THE DOCUMENT ITSELF, NOT A SECTION.
+
+          Every other route alternates white and blue by section. These three have
+          no sections to alternate: they are one heading over one prose column, so
+          the same rhythm applied here would be a single band with nothing to
+          alternate WITH, which is a rectangle rather than a rhythm.
+
+          So the band is scoped to the article instead. It sets the document off
+          from the white page around it and gives the legal routes the same blue
+          the rest of the site carries, while the reading column keeps its own
+          ground. `.band-blue` fades to white at both edges, so it reads as the
+          page lifting under the text rather than as a box drawn around it.
+
+          It also re-points --primary-strong and --input for its subtree (see the
+          rule), which matters here for the one bordered element in the column,
+          the "last updated" rule below.
+        */}
+        <div className="band-blue -mx-[var(--gutter)] mt-8 px-[var(--gutter)] py-12">
+          <article className="legal-prose mx-auto max-w-2xl space-y-6 text-sm leading-[1.9] text-[color:var(--foreground)]">
+            {children}
+            <p className="border-t border-[color:var(--border)] pt-6 text-xs text-[color:var(--muted-foreground)]">
+              {t("lastUpdated")}: {updated}
+            </p>
+          </article>
+        </div>
       </div>
     </PageShell>
   )

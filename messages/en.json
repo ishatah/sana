@@ -44,8 +44,7 @@
     "visitSite": "Organisation website",
     "sinceUnconfirmed": "Start year to be confirmed",
     "details": "Details",
-    "registerConfirmed": "Register entry confirmed",
-    "registerPending": "Register entry pending confirmation"
+    "registerConfirmed": "Register entry confirmed"
   },
   "contact": {
     "heading": "Contact",

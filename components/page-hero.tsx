@@ -45,8 +45,16 @@ export function PageHero({
   title: string
   lede?: string
 }) {
+  /*
+   * `band-flow` puts this band into the same white/blue rhythm every section
+   * below it now carries, at the shallow depth. Without it the page opened on a
+   * flat white block and the colour only began at the first content section,
+   * which made the hero read as detached from the page rather than as its first
+   * band. It is the shallow variant deliberately: this band sits directly under
+   * the masthead, and the deep peak that far up competes with the title.
+   */
   return (
-    <MotionScope as="section" recipe="bandHeading" className="page-hero">
+    <MotionScope as="section" recipe="bandHeading" className="page-hero band-flow">
       {/*
         ── THE PARALLAX WRAPS THE CONTAINER, IT DOES NOT TOUCH THE HOOKS ─────────
 

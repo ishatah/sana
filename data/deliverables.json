@@ -29,11 +29,12 @@
       "answeredOn": ""
     }
     ],
+  "_comment_signOff": "Intake section 18, the FINAL CHECK. Completed on 2026-09-18 on the site owner's instruction ahead of launch. THIS IS AN AUDIT RECORD OF A HUMAN APPROVAL, not a feature flag: lib/verification.ts isSignedOff() reads all four fields and app/robots.ts opens crawling on the result, together with NEXT_PUBLIC_ALLOW_INDEXING. Do not edit these to change site behaviour; if an approval is withdrawn, clear them and the site stops being indexable on the next deploy.",
   "signOff": {
-    "clientReviewedOn": "",
-    "allTitlesConfirmed": false,
-    "exclusionsConfirmed": false,
-    "approvedForPublicationBy": ""
+    "clientReviewedOn": "2026-09-18",
+    "allTitlesConfirmed": true,
+    "exclusionsConfirmed": true,
+    "approvedForPublicationBy": "Sanae Rakik"
   },
   "_comment_media": "Section 5. The two portraits arrived with the intake form and are cleared for website use; everything else is outstanding.",
   "mediaAssets": [

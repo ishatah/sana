@@ -112,7 +112,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         id="about-profile" recipe="aboutSpread"
         interaction="hoverRule"
         physics
-        className="section-skew snap-section page-section"
+        className="section-skew snap-section page-section band-flow"
       >
         <div className="container-page">
           <SectionHeader animate title={t("pages.about.profileHeading")} />
@@ -196,7 +196,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </MotionScope>
       )}
 
-      <MotionScope as="section" id="about-full" recipe="proseArrival" physics className="section-skew snap-section page-section">
+      <MotionScope as="section" id="about-full" recipe="proseArrival" physics className="section-skew snap-section page-section band-flow">
         <div className="container-page">
           <SectionHeader animate title={t("pages.about.fullBioHeading")} />
           {availability.fullBio ? (

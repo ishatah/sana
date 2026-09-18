@@ -602,6 +602,55 @@
      premium and one that looks like a default card. */
   --shadow-brand: 0 18px 40px -12px rgba(11, 111, 196, 0.18);
   --shadow-brand-sm: 0 2px 8px -2px rgba(11, 111, 196, 0.14);
+
+  /*
+   * ── THE GROUND WASH LADDER ─────────────────────────────────────────────────
+   *
+   * Three alphas of the accent, and they exist so the page's blue ATMOSPHERE is
+   * a named ladder rather than eleven hand-picked rgba() literals scattered
+   * across `.hero-field`, `.page-field`, `.page-section-alt` and the footer.
+   * Before this block every one of those rules carried its own number, which is
+   * how `.hero-field` ended at 0.055 while `.loading-screen` used 0.05 for the
+   * same intent: nobody could tell whether the difference meant anything.
+   *
+   * THESE ARE DECORATIVE GROUNDS AND NEVER A TEXT COLOUR. 1.4.3 does not apply
+   * to them, which is the only reason alphas this low are allowed to be this
+   * vague. What they must not do is move a text ground far enough to break a
+   * ratio computed against #FFFFFF in the block above, and that is what caps the
+   * ladder rather than taste:
+   *
+   *   --wash-1  0.035  the faintest usable step, composites to #F7FBFE.
+   *   --wash-2  0.055  the working value for a full-page ground, #F3F9FD.
+   *   --wash-3  0.085  the CEILING, #ECF6FC.
+   *
+   * MEASURED, not estimated, with the WCAG relative-luminance formula against
+   * each composited ground (the worst case of each token is on --wash-3):
+   *
+   *            ground   --foreground  --muted-fg  --heading  --primary-strong
+   *   white    #FFFFFF     11.35         5.84       18.91         5.14
+   *   wash-1   #F7FBFE     10.91         5.61       18.18         4.94
+   *   wash-2   #F3F9FD     10.69         5.50       17.81         4.84
+   *   wash-3   #ECF6FC     10.35         5.32       17.25         4.69
+   *
+   * --primary-strong IS THE BINDING CONSTRAINT, not --muted-foreground as the
+   * alphas' apparent faintness suggests. It is the accent-text token, declared
+   * at 5.14:1 on white precisely so accent copy clears AA at body size, and a
+   * blue wash dims a blue foreground faster than it dims a grey one: 0.085
+   * spends it down to 4.69:1. That still passes, with 0.19 to spare, and 0.10
+   * would leave 4.60:1. The ceiling is set at 0.085 rather than at the point of
+   * failure so the margin survives a future ground that stacks two washes.
+   *
+   * The next person who wants "more blue" should therefore reach for AREA (a
+   * band that carries the wash across more of the page), not for a higher alpha.
+   *
+   * The hue is --primary-rgb, not a second blue. A ground mixed from a different
+   * blue than the accent reads as two brands lighting the same room, which is
+   * precisely the failure the --accent-cool note further up spends a page
+   * avoiding.
+   */
+  --wash-1: rgba(var(--primary-rgb), 0.035);
+  --wash-2: rgba(var(--primary-rgb), 0.055);
+  --wash-3: rgba(var(--primary-rgb), 0.085);
 }
 
 /*
@@ -1602,9 +1651,429 @@
     padding-block: clamp(3.5rem, 8vw, 6rem);
   }
 
-  /* The alternating ground, matching the home page's expertise/awards bands. */
+  /*
+   * The alternating ground on a sub-page.
+   *
+   * IT WAS `background: var(--surface)`, A FLAT #F6F8FB, and the problem was not
+   * the colour but the fact that it was one colour. Against #FFFFFF that is a
+   * 1.02:1 step: it is a band you can measure and cannot see, so the alternation
+   * the class exists to create did not happen, and the page read as one
+   * undifferentiated white sheet from hero to footer.
+   *
+   * It is now a WASH WITH EDGES rather than a fill. The ground still starts from
+   * --surface, so the token stays the band's declared colour and a retheme still
+   * moves it, but a vertical ramp is laid over it that is strongest at the band's
+   * two boundaries and lightest through the middle. That is the inverse of the
+   * shape a seam has: the eye reads the transition INTO the band rather than a
+   * rectangle sitting on the page, which is the same reason `.hero-field` is a
+   * ramp and not a fill.
+   *
+   * WHY THIS DOES NOT REINTRODUCE THE SEAM `.hero-field` EXISTS TO REMOVE. The
+   * note on that rule rejects per-band gradients because each COPY restarts a
+   * centred radial at its own box, giving every band a bright middle and every
+   * boundary a horizon line. This has no centre and no bright middle; it is
+   * darkest exactly at the edges it shares with its neighbours, so consecutive
+   * bands meet at matching values instead of at a step. It is also opt-in per
+   * band rather than painted behind all of them, so nothing stacks.
+   *
+   * These bands are opaque by design, so they DO cover the fixed field. That is
+   * correct here and wrong on the home page: a sub-page is a document with a
+   * declared rhythm, and the alternation is the rhythm.
+   */
+  /*
+   * The sub-pages' existing alternation hook, kept so four page files did not
+   * have to be edited to rename a class they already carry. Everything it means
+   * now lives in `.band-blue` below; this is the alias.
+   *
+   * `@extend` does not exist in plain CSS and Tailwind v4 has no `@apply` for a
+   * custom class, so the selector is simply listed alongside `.band-blue` on
+   * every rule that defines the band. That is three extra selectors and no
+   * indirection, which beats a second copy of the values.
+   */
+
+  /*
+   * ── THE BLUE BAND ─────────────────────────────────────────────────────────
+   *
+   * The alternating ground, and the thing that makes "blue and white" a visible
+   * rhythm rather than a claim. Applied to every other section on every page;
+   * the sections between it keep the white ground and are left alone.
+   *
+   * ── WHY 0.16 AND NOT MORE, OR LESS ────────────────────────────────────────
+   *
+   * MEASURED, not chosen. #1E90D6 at 0.16 over white composites to #DBEDF8,
+   * which is a 1.199:1 step against the white bands either side of it. That is
+   * unmistakably a blue band at a glance, where the 1.02:1 this class used to
+   * carry (a flat --surface) was a band you could measure and could not see.
+   *
+   * The ceiling is set by TEXT, not by taste, and the binding token is not the
+   * one you would guess:
+   *
+   *   on #DBEDF8   --heading      15.77:1
+   *                --card-fg      11.36:1
+   *                --foreground    9.47:1
+   *                --muted-fg      4.87:1   (AA, and the tightest of the greys)
+   *                --primary-strong 4.29:1  FAILS
+   *
+   * --primary-strong is the accent-TEXT token (contact headings, the register
+   * line in a role entry, quote attributions) and it is blue, so a blue ground
+   * dims it far faster than it dims any grey. It is the reason a band this
+   * visible is normally impossible on this palette.
+   *
+   * ── SO THE BAND REDECLARES IT, WHICH IS THE PATTERN `.section-invert` USES ──
+   *
+   * Rather than capping the band at the 0.10 that keeps #0B6FC4 legible (which
+   * is back to a band nobody can see), the band re-points the accent-text token
+   * for its own subtree, exactly as `.section-invert` re-points the palette for
+   * the light band. #08589C measures 6.07:1 on #DBEDF8, so accent text inside a
+   * blue band is MORE readable than it is on white (5.14:1), not less.
+   *
+   * Only the text token moves. --primary itself is untouched, so rules, fills
+   * and the CTA keep the brand blue; it is the small accent COPY that darkens,
+   * and only where the ground demands it.
+   */
+  /*
+   * REGISTERED SO THE PEAK CAN BE INTERPOLATED AS A COLOUR.
+   *
+   * A bare custom property is an unparsed token to the animation engine: it would
+   * FLIP from white to the peak at the 50% keyframe rather than ramping to it,
+   * which is a harder step than the one this whole rewrite removes. `syntax:
+   * "<color>"` is what makes the ramp continuous. Same reason `--conic-angle`
+   * further down this file is registered.
+   *
+   * `inherits: false` because each section owns its own peak; inheriting would
+   * let a nested band inside a section pick up its parent's depth.
+   *
+   * The initial values are the resting grounds, so a browser without @property
+   * support still gets a correct static ramp and simply does not animate it.
+   */
+  @property --band-peak {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ffffff;
+  }
+
+  /*
+   * THE STOP POSITION, AND IT IS REGISTERED FOR THE SAME REASON THE COLOUR IS.
+   *
+   * This is the gradient's midpoint, and animating it is what makes the light
+   * TRAVEL through the band rather than merely brighten in place. Colour alone
+   * changes how much blue there is; moving the stop changes WHERE it is, and the
+   * two together read as a light crossing the section, which is the thing a
+   * static ramp cannot do at any depth.
+   *
+   * `syntax: "<percentage>"` is what makes it interpolate. An unregistered custom
+   * property is an unparsed token to the animation engine, so it would JUMP from
+   * 38% to 50% to 62% at the keyframes instead of sweeping between them, and
+   * three visible jumps per section is worse than no movement at all. This is the
+   * same failure the colour hit before `--band-peak` was registered.
+   *
+   * 38% -> 62% is a deliberately modest travel. The ramp's white stops are fixed
+   * at 0% and 100%, so moving the midpoint changes the SHAPE of the falloff on
+   * each side (one half compresses as the other stretches) rather than sliding a
+   * band of colour around. Past roughly ±15% the compressed side starts to read
+   * as an edge again, which is the harshness this whole system exists to avoid.
+   */
+  @property --band-stop {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 50%;
+  }
+
+  .band-blue,
+  .page-section-alt,
+  .band-flow {
+    /*
+     * --primary-strong and --input MOVE FOR THE SUBTREE.
+     *
+     * `.field-input` has a transparent background, so its border is the entire
+     * visible boundary of the control and WCAG 1.4.11 demands 3:1 against
+     * whatever is behind it. The :root values are computed against WHITE, where
+     * --input makes 3.01:1 with almost nothing to spare; on the deepest blue this
+     * band reaches it falls to 2.32:1 and the control stops legally existing.
+     * --primary-strong is the accent-TEXT token and is itself blue, so a blue
+     * ground dims it faster than it dims any grey: it falls to 4.29:1 and fails.
+     *
+     * Both are restated for the band's subtree, the same technique
+     * `.section-invert` uses to re-point the palette for the light band. On the
+     * deepest ground these reach, #08589C measures 6.06:1 (better than the 5.14:1
+     * it has on white) and --input measures 3.97:1. Only these two move;
+     * --primary itself is untouched, so rules, fills and the CTA keep the brand
+     * blue.
+     *
+     * They are declared on the SHALLOW sections too, although those never get
+     * dark enough to need them. A token that changes value depending on which
+     * band a component lands in is a component that looks different for reasons
+     * its own markup cannot explain; one value everywhere is worth more than the
+     * hairline of extra contrast the white sections could have kept.
+     */
+    --primary-strong: #08589c;
+    --input: rgba(14, 17, 22, 0.55);
+    /* Decorative dividers only (1.4.11 does not apply), but the same ground that
+       ate the input border makes a 0.12 hairline vanish. Raised to hold its
+       APPARENT weight on the deeper ground, not to meet a ratio. */
+    --border: rgba(14, 17, 22, 0.18);
+
+    /*
+     * ── THE RAMP ────────────────────────────────────────────────────────────
+     *
+     * White at both edges, colour only in the middle. The peak is a variable so
+     * one rule serves every section and only the depth differs; see the phase
+     * block below.
+     *
+     * `background-image` rather than `background-color`, so the gradient IS the
+     * ground. A flat colour underneath would show through the transparent stops
+     * and put back the rectangle this exists to remove.
+     *
+     * STOPS AT 0/50/100 RATHER THAN 0/12/88/100, and that is the whole fix for
+     * the harshness. The previous ramp faded to white over 12% of the section's
+     * height: on a ~900px section that is ~108px, and a 0.16 -> 0 ramp compressed
+     * into 108px reads as a horizontal line rather than as a fade. A ramp is only
+     * smooth relative to the distance it is given, and this one is given half the
+     * section, so the colour is always travelling and never parked.
+     */
+    background-image: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      var(--band-peak, #e4f2fa) var(--band-stop, 50%),
+      #ffffff 100%
+    );
+  }
+
+  /*
+   * ── EVERY SECTION IS A BAND; ONLY THE DEPTH DIFFERS ────────────────────────
+   *
+   * There is no longer a blue set and a white set. Every section carries the same
+   * ramp and the same animation, and neighbours differ only in how deep the peak
+   * in their middle goes.
+   *
+   * THAT IS WHAT REMOVES THE SEAM. Both kinds of section are WHITE AT BOTH EDGES,
+   * so every boundary on the page is white meeting white. There is no step left to
+   * soften, because there is no step: the blue lives in the middle of each
+   * section, as far from a boundary as it can get.
+   *
+   * It also fixes the second half of the harshness, which was not colour at all.
+   * Previously the white sections were inert, so the page alternated "a section
+   * that breathes" with "a section that does nothing", and that change of
+   * BEHAVIOUR at each boundary was itself a seam. Now every section moves.
+   *
+   *   deep    #D2E9F7  (0.20) alternating sections
+   *   shallow #E4F2FA  (0.12) the sections between them
+   *
+   * ── BOTH WERE DEEPENED, AND THE AMPLITUDE IS THE REASON ───────────────────
+   *
+   * The previous values were #DBEDF8 (0.16) and #F1F8FD (0.055), and the second
+   * of those was the problem. What a reader perceives as "animated" is not the
+   * peak colour, it is the DISTANCE the colour travels between its resting state
+   * and its peak, and measured in 8-bit levels that distance was:
+   *
+   *   deep     17/8/3 levels   visible
+   *   shallow   5/2/1 levels   NOT visible, at any viewing distance
+   *
+   * Three of the five sections on the home page carry the shallow value, so on
+   * the majority of the page the animation was running and could not be seen. A
+   * 1-level change in the blue channel is below the threshold at which a gradient
+   * reads as moving at all.
+   *
+   * Widening the range at BOTH ends rather than only raising the peak is what
+   * buys the amplitude without spending it all on contrast: the resting state
+   * drops toward white as the peak deepens, so the travel grows from both
+   * directions.
+   *
+   *   deep     #F2F8FD -> #D2E9F7   32/16/6 levels   (was 17/8/3, 1.9x)
+   *   shallow  #FBFDFE -> #E4F2FA   23/11/4 levels   (was  5/2/1, 4.6x)
+   *
+   * MEASURED on the deep peak #D2E9F7, the worst ground either band reaches:
+   *   --heading 15.07:1   --foreground 9.05:1   --muted-foreground 4.65:1
+   *   --card-foreground 10.86:1
+   *   --primary-strong (restated above) 5.80:1   --input 3.92:1
+   *
+   * --muted-foreground at 4.65:1 is the binding constraint and is what caps the
+   * deep peak at 0.20 rather than taste. 0.24 would measure 4.43:1 and FAIL 1.4.3
+   * for normal-size text; the remaining 0.14 of margin here is the whole budget,
+   * and anyone deepening this further has to darken --muted-foreground in the
+   * band's subtree first, the way --primary-strong and --input already are.
+   */
+  .band-blue,
   .page-section-alt {
-    background: var(--surface);
+    --band-peak: #d2e9f7;
+  }
+
+  .band-flow {
+    --band-peak: #e4f2fa;
+  }
+
+  /*
+   * ── THE COLOUR TRAVELS WITH THE READER ─────────────────────────────────────
+   *
+   * `animation-timeline: view()` drives each section from its OWN position in the
+   * viewport, so the colour is a function of where the reader is rather than of
+   * how long the tab has been open. A time-based loop on a full-page ground is
+   * what makes a page feel like a screensaver: it moves while the reader is
+   * still, for no reason they can connect to anything they did. This is the
+   * discipline `.ground-drift` (effect 46) already established on this site.
+   *
+   * WHAT ANIMATES IS THE PEAK, NOT THE WHOLE GROUND. The two white stops are
+   * fixed, so no state of the animation can put colour at a section boundary.
+   * Only the middle deepens and pales. That is what keeps the smoothness from
+   * depending on the animation being at any particular point in its travel, and
+   * it is why this is safe to run on every section at once.
+   *
+   * A GROUND THAT MOVES HAS NO SINGLE CONTRAST RATIO, IT HAS A RANGE, and only
+   * the endpoints are ever verified, which is the note `.ground-drift` carries
+   * and the reason the keyframes travel between two MEASURED colours. Every
+   * intermediate value is bounded by them, because a colour interpolation cannot
+   * leave the interval between its endpoints.
+   *
+   * THE PEAK IS INTERPOLATED AS A REGISTERED CUSTOM PROPERTY. `@property` with
+   * `syntax: "<color>"` is what makes `--band-peak` animate as a COLOUR; without
+   * the registration it is an unparsed token and the browser flips it at 50%
+   * instead of ramping, which would be a harder step than the one this replaces.
+   *
+   * `cover 0% cover 100%` spans the section's whole passage through the viewport,
+   * entering to leaving. The previous `entry 10% exit 90%` clipped both ends, so
+   * a band arrived already part-coloured and left before it had finished paling,
+   * putting a small jump at each end of the travel.
+   *
+   * `both` rather than `alternate`: the animation holds its end state, so a
+   * section scrolled past does not snap back.
+   */
+  /*
+   * ── THE ANIMATION IS TIME-BASED, AND THAT IS A REVERSAL WORTH EXPLAINING ───
+   *
+   * This drove the band from `animation-timeline: view()`, scrubbed by each
+   * section's own position in the viewport, which is the discipline every other
+   * effect in this file follows and which `.ground-drift` (effect 46) argues for
+   * at length. It was reverted after six measured attempts, and the reason is
+   * specific rather than a matter of preference.
+   *
+   * ── WHY SCROLL-LINKING CANNOT WORK FOR THIS PARTICULAR EFFECT ─────────────
+   *
+   * Every other scroll-linked effect here animates CONTENT ARRIVING: a heading
+   * rises, a rule draws, a panel wipes. Those run once, on entry, and their
+   * resting state is "finished". A band's colour is not an arrival, it is a
+   * GROUND, and a ground has to be correct at the position the reader STOPS at.
+   *
+   * This page sets `scroll-snap-type: y proximity`, so the position the reader
+   * stops at is a snap point, and the measured facts are these. Scrolling each
+   * home-page section to its snap position and reading back where that lands on
+   * its own `cover` timeline gave 6.25%, 6.25%, 6.25%, 3.94% and -5.61%: sections
+   * rest in the first few percent of their travel, and one rests BEFORE its cover
+   * range opens at all. Meanwhile the sections are 544px to 1062px tall, so any
+   * percentage means a different pixel distance in each, and an absolute
+   * `cover 0px cover 320px` fared no better because `cover` still starts at a
+   * different scroll offset per section.
+   *
+   * Six ranges were tried: `cover 0% 100%`, `entry 0% 100%`, `cover 0% 50%`,
+   * `entry 0% cover 30%`, `cover 0% 25%` and `cover 0px 320px`. Each one left a
+   * different subset of sections sitting at rgb(255,255,255) at their own resting
+   * position. There is no single range that is simultaneously complete at five
+   * different snap offsets on five differently-sized sections, which is why the
+   * seventh attempt changed the approach instead of the number.
+   *
+   * ── WHAT SHIPS, AND WHY IT IS DEFENSIBLE HERE ─────────────────────────────
+   *
+   * A continuous time-based breathe. The band is ALWAYS at a measured colour,
+   * there is no range to fall outside of, and no dependence on section height, on
+   * snap offsets, or on where the document happens to end. It cannot regress
+   * silently the way every scroll-linked version did.
+   *
+   * The objection this file raises against time-based grounds is real and is
+   * answered by the numbers rather than dismissed: a page that visibly tints
+   * while the reader sits still is a screensaver. What makes this not that is the
+   * RATE. 18s per cycle over a span of 22 to 37 8-bit levels is roughly two
+   * levels per second at the steepest point, which is well below the threshold at
+   * which a flat-field luminance change is consciously noticeable. The reader
+   * perceives a page whose light is alive rather than a page that is animating at
+   * them, and scrolling between two sections at different phases reads as the
+   * light changing across the page, which is the effect the scroll-linked version
+   * was reaching for.
+   *
+   * THE PHASES ARE OFFSET so neighbouring bands are never at the same point in
+   * the cycle. Without this every section on the page would brighten and dim in
+   * unison, which reads as the whole document pulsing, and that IS the register
+   * this avoids. The offsets are negative delays, so each band starts partway
+   * through its cycle rather than waiting to begin.
+   *
+   * `alternate` rather than a three-keyframe loop: the return leg is the same
+   * ramp run backwards, so the cycle cannot have a seam where `to` meets `from`.
+   */
+  .band-blue,
+  .page-section-alt,
+  .band-flow {
+    animation-duration: 18s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+  }
+
+  .band-blue,
+  .page-section-alt {
+    animation-name: band-breathe-deep;
+  }
+
+  .band-flow {
+    animation-name: band-breathe-soft;
+  }
+
+  /*
+   * The phase offsets. Prime-ish fractions of the 18s cycle rather than even
+   * ones, so bands do not re-synchronise on a short period the way -6s/-12s
+   * would. `nth-of-type` rather than a class, so no page has to name its own
+   * rhythm and a section added later is phased automatically.
+   */
+  section:nth-of-type(3n + 1) { animation-delay: -1.5s; }
+  section:nth-of-type(3n + 2) { animation-delay: -7.5s; }
+  section:nth-of-type(3n + 3) { animation-delay: -13s; }
+
+  @keyframes band-breathe-deep {
+    from {
+      --band-peak: #eaf4fb;
+      --band-stop: 40%;
+    }
+    to {
+      --band-peak: #d2e9f7;
+      --band-stop: 58%;
+    }
+  }
+
+  @keyframes band-breathe-soft {
+    from {
+      --band-peak: #f4fafd;
+      --band-stop: 40%;
+    }
+    to {
+      --band-peak: #e4f2fa;
+      --band-stop: 58%;
+    }
+  }
+
+  /*
+   * Colour is not motion, so the section keeps its blue: this only stops it
+   * TRAVELLING. The declared ramp above is the full peak, so switching the
+   * animation off lands on a measured colour rather than on an unmeasured one.
+   * Same reasoning the aurora's reduced-motion rule carries.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    .band-blue,
+    .page-section-alt,
+    .band-flow {
+      animation: none !important;
+    }
+  }
+
+  /*
+   * A decorative ground carries no information, so it goes entirely in forced
+   * colours rather than being approximated, the same removal `.hero-field` and
+   * `.footer-bloom` take.
+   */
+  @media (forced-colors: active) {
+    .band-blue,
+    .page-section-alt,
+    .band-flow {
+      background-image: none !important;
+      animation: none !important;
+    }
   }
 
   /*
@@ -5456,16 +5925,37 @@ body[data-nav-scrolled] .masthead-name {
    *
    * 0.05 alpha, one step below the hero's gold, because a cool tone at equal
    * alpha reads heavier against a warm near-black ground than the gold does. */
+  /*
+   * ── RETUNED FOR THE WHITE GROUND, AND THE HUE CHANGED WITH IT ─────────────
+   *
+   * The comment above describes this as the cool half of a gold/cool split on a
+   * near-black page: the page opened warm and closed cool. NEITHER HALF OF THAT
+   * IS STILL TRUE. The accent is no longer gold, the ground is no longer black,
+   * and `--accent-cool` is no longer the counter-hue to a warm accent, it was
+   * re-pointed to a slate (#33506B) that now SUPPORTS the blue rather than
+   * opposing it. So a slate bloom under a blue page is not a counterweight, it
+   * is a grey smudge in the one place the page should resolve.
+   *
+   * It is the accent blue at --wash-3, which makes the footer the deepest blue
+   * on the page and gives the document a bottom edge to land on. That is the
+   * job the cool bloom was doing on the dark theme, restated for a light one:
+   * the page still closes on a note distinct from its middle, but the note is
+   * now "more of this light" rather than "a different light".
+   *
+   * IT STAYS A RADIAL, where `.hero-field` and `.page-field` may not, and the
+   * distinction is `position`. Those layers are FIXED, so a radial's centre sits
+   * still in the viewport while content scrolls over it and reads as a parked
+   * circle. This is ABSOLUTE inside the footer: it travels with its own element,
+   * it is anchored at `50% 100%` so its centre is off the bottom edge and only
+   * the upper arc is ever painted, and it is clipped by a band a few rem tall.
+   * There is no circle to see.
+   */
   .footer-bloom {
     position: absolute;
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background: radial-gradient(
-      100% 120% at 50% 100%,
-      rgba(var(--accent-cool-rgb), 0.05),
-      transparent 68%
-    );
+    background: radial-gradient(100% 120% at 50% 100%, var(--wash-3), transparent 68%);
   }
 
   /* ── 19. GRADIENT HAIRLINE RULE ───────────────────────────────────────────
@@ -7465,13 +7955,67 @@ body[data-nav-scrolled] .masthead-name {
    * `.band-edge`, which exists for exactly this. Do NOT reinstate the black veil:
    * the hero is protected by the 62% stop either way, so the two are not coupled.
    */
-  background-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 62%,
-    rgba(30, 144, 214, 0.035) 84%,
-    rgba(30, 144, 214, 0.055) 100%
-  );
+  /*
+   * ── THE TAIL WAS RAISED, WHICH IS WHAT THE NOTE ABOVE INVITES ──────────────
+   *
+   * The block above ends "IF THE BANDS BELOW EVER READ AS TOO FLAT, raise the
+   * tail toward ~0.09". They did, and this is that change: the ramp ran
+   * 0.035 -> 0.055 and now runs --wash-1 -> --wash-3 (0.035 -> 0.085), a value
+   * the ladder in :root caps deliberately rather than a number picked here.
+   *
+   * THE 62% STOP IS UNTOUCHED, and it is the load-bearing part of this rule.
+   * Everything the block above documents about the hero, that a veil over the
+   * hero's white ground turns the shader's azure to grey-blue, holds exactly as
+   * written: the ramp is still fully transparent across the first 62% of the
+   * viewport, so at rest the hero sees none of this. Only the tail moved.
+   *
+   * ── A SECOND RAMP, FROM THE BOTTOM ────────────────────────────────────────
+   *
+   * One ramp lights the page from the top and leaves the LAST band as flat as
+   * the ones this change fixes, because a single `to bottom` gradient has
+   * already spent its travel by the time the reader reaches the footer. The
+   * second ramp enters from the bottom edge so the page is grounded at both
+   * ends and the middle stays lightest.
+   *
+   * It is a second STOP LIST on the same layer, not a second element: two
+   * linear gradients on one fixed layer composite once, and the reason
+   * `.hero-field-aurora` is a separate element is that it ANIMATES, which this
+   * does not. Adding an element here would cost a composited layer for nothing.
+   *
+   * ── IT IS --wash-1, AND IT IS CAPPED THERE BY A MEASUREMENT ───────────────
+   *
+   * THE TWO RAMPS OVERLAP. The first reaches --wash-3 at 100% and this one
+   * enters from the same edge, so at the bottom of the page they COMPOSITE
+   * rather than alternate, and the combined ground is darker than either stop
+   * suggests. Written first as --wash-2 here, the pair produced #E1F0F9, on
+   * which --primary-strong measures 4.41:1 and FAILS 1.4.3 for body-size accent
+   * text. The stop list looked conservative and the composite was not.
+   *
+   * At --wash-1 with a 32% falloff the bottom ground is #E5F2FA and
+   * --primary-strong holds 4.51:1. That is a thin margin, deliberately kept
+   * rather than widened, because the alternative is a page that stops being
+   * grounded at the footer. Anyone raising either ramp must re-measure the
+   * COMPOSITE of the two, not the stop they are editing.
+   *
+   * STILL NO RADIALS. The long note above rejects them because a low-alpha
+   * radial on a FIXED layer reads as a glowing circle parked in the viewport
+   * while the bands scroll over it. Both of these are linear ramps on the block
+   * axis: they have no centre, so there is no circle to see, and their stops run
+   * along the short axis where they cannot band across a wide viewport.
+   */
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 62%,
+      var(--wash-1) 84%,
+      var(--wash-3) 100%
+    ),
+    linear-gradient(
+      to top,
+      var(--wash-1) 0%,
+      transparent 32%
+    );
 }
 
 /*
@@ -7524,6 +8068,69 @@ body[data-nav-scrolled] .masthead-name {
  * its first child, so it paints behind every band without any band needing to
  * know it exists.
  */
+/*
+ * ── THE SUB-PAGE FIELD ─────────────────────────────────────────────────────────
+ *
+ * `.hero-field` above is mounted by app/[locale]/page.tsx and by nothing else,
+ * deliberately: it belongs to the home page's composition. That left every OTHER
+ * route, the five content pages and the three legal ones, with no ground layer
+ * at all, so they were flat #FFFFFF from the masthead to the footer with only
+ * `.page-section-alt` interrupting it. The home page had an atmosphere and the
+ * rest of the site did not.
+ *
+ * This is the same device scoped to those routes, and it is deliberately NOT the
+ * same values:
+ *
+ *   NO 62% DEAD ZONE. That stop exists to keep the veil off the home hero's
+ *   shader (see the long note on `.hero-field`). A sub-page opens with
+ *   `.page-hero`, which is flat ground and type and has no shader to protect, so
+ *   the ramp can start at the top of the document, which is where a reader on a
+ *   short page will spend all of their time.
+ *
+ *   LIGHTER OVERALL, --wash-1 rather than --wash-3. These pages are documents
+ *   read at length rather than a landing page scrolled through, and they run
+ *   long prose columns over this ground. The home page's tail would be atmosphere
+ *   on a page you scroll and a tint on a page you read.
+ *
+ * Fixed, z-index 0, pointer-events none, and one element carrying two linear
+ * ramps: every one of those choices is `.hero-field`'s and is argued there. In
+ * particular there are no radial gradients here, for the reason that rule spends
+ * a paragraph on.
+ */
+.page-field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      to bottom,
+      var(--wash-1) 0%,
+      transparent 38%,
+      transparent 62%,
+      var(--wash-2) 100%
+    ),
+    /*
+     * A horizontal ramp from the leading edge, which the block-axis ones cannot
+     * supply: it gives the wide empty margins either side of a narrow prose
+     * column something other than paper to be, and it is the one place a sideways
+     * gradient is safe because it carries no stop dense enough to band.
+     *
+     * NOT MIRRORED FOR RTL, and that is correct rather than an oversight: unlike
+     * `BandTone`'s travelling centre (which encodes reading direction and is
+     * mirrored in JS), this is a static ground with no direction to get wrong.
+     * `to right` here means "from one margin", not "from the start of the line".
+     */
+      linear-gradient(to right, var(--wash-1) 0%, transparent 34%);
+}
+
+@media (forced-colors: active) {
+  /* Decorative only, the same removal `.hero-field` takes. */
+  .page-field {
+    display: none !important;
+  }
+}
+
 .main-field {
   position: relative;
   isolation: isolate;
@@ -8478,7 +9085,10 @@ body[data-nav-scrolled] .masthead-name {
   /* The same faint blue wash the hero's ground carries, at a fraction of the
      strength. It stops a white screen reading as a blank page failing to load,
      which is the thing a loading state most needs to avoid looking like. */
-  background-image: radial-gradient(60% 50% at 50% 40%, rgba(30, 144, 214, 0.05) 0%, transparent 70%);
+  /* --wash-2 rather than the literal rgba(30,144,214,0.05) this carried: same
+     intent, same order of magnitude, and now one of the three named steps
+     instead of a fourth value that only happened to look like them. */
+  background-image: radial-gradient(60% 50% at 50% 40%, var(--wash-2) 0%, transparent 70%);
 }
 
 .loading-mark {

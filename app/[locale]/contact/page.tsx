@@ -87,7 +87,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         id="contact-details" recipe="proseArrival"
         interaction="copyEmail"
         physics
-        className="section-skew snap-section page-section"
+        className="section-skew snap-section page-section band-flow"
       >
         <div className="container-page">
           <SectionHeader animate title={t("pages.contact.detailsHeading")} subtitle={t("contact.subheading")} />
@@ -138,7 +138,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         </MotionScope>
       )}
 
-      <MotionScope as="section" id="contact-response" recipe="proseArrival" physics className="section-skew snap-section page-section">
+      <MotionScope as="section" id="contact-response" recipe="proseArrival" physics className="section-skew snap-section page-section band-flow">
         <div className="container-page">
           <SectionHeader animate title={t("pages.contact.responseHeading")} />
           <div data-anime="prose" className="page-prose">

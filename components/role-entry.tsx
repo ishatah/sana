@@ -231,11 +231,7 @@ export async function RoleEntryList({ roles }: { roles: ComposedRole[] }) {
               locales. The dimming is a nuance on top of the sentence, never a
               substitute for it.
             */}
-            <article
-              className={`panel-wipe panel-3d card-lift border-travel edge-warm p-6 sm:p-7 ${
-                r.registerConfirmed ? "" : "pending-hold"
-              }`}
-            >
+            <article className="panel-wipe panel-3d card-lift border-travel edge-warm p-6 sm:p-7">
                             <h3 className="mb-1.5 font-display text-lg font-bold leading-snug text-[color:var(--heading)]">
                 {localize(r.role, locale)}
               </h3>
@@ -255,26 +251,37 @@ export async function RoleEntryList({ roles }: { roles: ComposedRole[] }) {
 
               <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs text-[color:var(--muted-foreground)]">
                 {/*
-                  THE VERIFICATION STATE, STATED RATHER THAN IMPLIED.
+                  THE VERIFICATION MARK, AND IT IS CONFIRMED-ONLY.
+
+                  This used to render in BOTH states, printing "Register entry
+                  pending confirmation" on any row nobody had checked. That was the
+                  cautious reading and it was defensible, but it put a standing
+                  caveat on the one role this profile leads with, and the site owner
+                  removed it ahead of launch.
+
+                  WHAT IS NOT ALLOWED IS THE OTHER FIX. The mark still renders only
+                  when `registerConfirmed` is true, so an unchecked row shows NOTHING
+                  rather than a confirmation. Silence is not a claim; a tick on an
+                  unverified entry would be, and that is the fabrication
+                  lib/verification.ts exists to prevent. Do not make the mark
+                  unconditional, and do not set registerConfirmed:true in the data
+                  to "tidy up" a missing mark — that field means someone checked a
+                  public register, nothing else.
 
                   It sits FIRST in the meta row, before the city and the dates,
-                  because it qualifies everything after it: whether this entry has
-                  been checked against a public register is the frame the rest of
-                  the row is read in, not a footnote to it.
+                  because it qualifies everything after it.
 
-                  The label is full prose in both locales, the mark is the
-                  shorthand, the words are the claim. Nothing here is abbreviated
-                  into a symbol a reader has to decode.
+                  scripts/check-publish-gate.mjs still reports every publishable row
+                  without a confirmed register entry, so the outstanding work stays
+                  visible to whoever is producing the site even though the visitor
+                  no longer sees it.
                 */}
-                <span className="inline-flex items-center gap-2">
-                  <VerifyMark
-                    confirmed={r.registerConfirmed}
-                    label={r.registerConfirmed ? t("registerConfirmed") : t("registerPending")}
-                  />
-                  <span className={r.registerConfirmed ? "text-[color:var(--primary-strong)]" : undefined}>
-                    {r.registerConfirmed ? t("registerConfirmed") : t("registerPending")}
+                {r.registerConfirmed && (
+                  <span className="inline-flex items-center gap-2">
+                    <VerifyMark confirmed label={t("registerConfirmed")} />
+                    <span className="text-[color:var(--primary-strong)]">{t("registerConfirmed")}</span>
                   </span>
-                </span>
+                )}
 
                 {localize(r.city, locale) && <span>{localize(r.city, locale)}</span>}
 
@@ -292,9 +299,16 @@ export async function RoleEntryList({ roles }: { roles: ComposedRole[] }) {
                 {/* Effect 10: dates go cool. A date is a position marker, which
                     the --accent-cool split assigns to the structural half of the
                     palette rather than to gold. 6.02:1 on --card, AA at this
-                    size. The unconfirmed branch below keeps --warning, because
-                    that one is carrying STATE rather than position and must stay
-                    distinguishable from an ordinary date. */}
+                    size.
+
+                    A THIRD BRANCH USED TO PRINT "Start year to be confirmed" in
+                    --warning when neither a year nor a period existed. It was
+                    removed with the pending register mark above and for the same
+                    reason: the row now says nothing about a date it does not have,
+                    rather than advertising the gap. Intake section 4 still records
+                    the IBC start date as يُزوَّد لاحقًا, and
+                    scripts/check-publish-gate.mjs still reports it, so the missing
+                    answer stays visible to whoever is producing the site. */}
                 {r.startYear ? (
                   <span className="role-date-cool">
                     {t("since")} {r.startYear}
@@ -302,9 +316,7 @@ export async function RoleEntryList({ roles }: { roles: ComposedRole[] }) {
                   </span>
                 ) : r.period ? (
                   <span className="role-date-cool">{r.period}</span>
-                ) : (
-                  <span className="italic text-[color:var(--warning)]">{t("sinceUnconfirmed")}</span>
-                )}
+                ) : null}
 
                 {r.organisationUrl && (
                   <a

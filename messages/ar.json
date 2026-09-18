@@ -44,8 +44,7 @@
     "visitSite": "موقع الجهة",
     "sinceUnconfirmed": "سنة البدء بانتظار التأكيد",
     "details": "التفاصيل",
-    "registerConfirmed": "قيد السجل مؤكَّد",
-    "registerPending": "قيد السجل قيد التأكيد"
+    "registerConfirmed": "قيد السجل مؤكَّد"
   },
   "contact": {
     "heading": "اتصال",

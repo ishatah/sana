@@ -44,8 +44,7 @@
     "visitSite": "Website van de organisatie",
     "sinceUnconfirmed": "Beginjaar nog te bevestigen",
     "details": "Details",
-    "registerConfirmed": "Inschrijving in het register bevestigd",
-    "registerPending": "Inschrijving in het register nog te bevestigen"
+    "registerConfirmed": "Inschrijving in het register bevestigd"
   },
   "contact": {
     "heading": "Contact",

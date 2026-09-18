@@ -52,8 +52,19 @@ export default async function RolesPage({ params }: { params: Promise<{ locale: 
         />
       }
     >
+      {/*
+        THE ALTERNATION IS COMPUTED, NOT HARDCODED, BECAUSE BOTH SECTIONS ARE
+        CONDITIONAL. `previous` is empty for this subject, so the page renders one
+        section; marking that one white left the roles page as the only route with
+        no blue on it at all, and marking it blue unconditionally would put two
+        blue bands together the moment a previous role is added.
+
+        Keyed off whether the SECOND section will render: when it does, this one
+        stays white and that one takes the blue, and when it does not, this one
+        takes it. The page alternates correctly at either length.
+      */}
       {roles.length > 0 && (
-        <MotionScope as="section" id="roles-current" recipe="ledgerRows" interaction="hoverRule" physics className="section-skew snap-section page-section">
+        <MotionScope as="section" id="roles-current" recipe="ledgerRows" interaction="hoverRule" physics className={`section-skew snap-section page-section ${previous.length > 0 ? "band-flow" : "band-blue"}`}>
           <div className="container-page">
             <SectionHeader animate title={t("pages.roles.currentHeading")} />
             {/*

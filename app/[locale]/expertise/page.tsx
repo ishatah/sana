@@ -88,7 +88,7 @@ export default async function ExpertisePage({ params }: { params: Promise<{ loca
         id="expertise-areas"
         recipe="markWall"
         physics
-        className="section-skew snap-section page-section"
+        className="section-skew snap-section page-section band-flow"
       >
         <div className="container-page">
           <SectionHeader animate title={t("pages.expertise.areasHeading")} subtitle={t("expertise.subheading")} />

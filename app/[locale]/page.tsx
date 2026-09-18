@@ -306,7 +306,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           interaction="hoverRule"
           recipe="aboutSpread"
           physics
-          className="section-skew snap-section section-pad"
+          className="section-skew snap-section section-pad band-flow"
         >
           <div className="section-content container-page">
             <SectionHeader title={t("about.heading")} animate maskReveal />
@@ -336,15 +336,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           recipe="markWall"
           physics
           /*
-            NO `bg-[color:var(--surface)]` HERE ANY MORE. This was the one band
-            that painted an opaque ground a step lighter than the page, which is
-            the seam the continuous field exists to remove: an opaque fill covers
-            `.hero-field` outright, so the band would have stayed a visible box no
-            matter what was lit behind it. Its separation now comes from the
-            field's own falloff and from `.band-edge`, the same as every other
-            dark band on the page.
+            `band-blue` IS AN OPAQUE GROUND, AND THE NOTE THAT USED TO STAND HERE
+            SAID NOT TO PAINT ONE. That note is superseded rather than ignored,
+            and the distinction is worth stating because the old reasoning was
+            correct for what it was arguing against.
+
+            It objected to `bg-[color:var(--surface)]`: a SINGLE band painting a
+            flat fill one step off the page colour. That is the worst of both
+            options, it covers `.hero-field` so the band cannot be lit by the
+            continuous ground, and it is too faint to read as a deliberate band
+            either, so it looked like a seam rather than a choice.
+
+            The page now alternates white and blue by design, every other section,
+            so the ground IS the rhythm and covering the field here is the intent
+            rather than a side effect. `.band-blue` also fades to white at both
+            its edges, so it meets its neighbours at their own colour instead of
+            at a hard line, which is the specific failure the old note describes.
+            The white sections between these still show the field exactly as
+            before.
           */
-          className="section-skew snap-section section-pad"
+          className="section-skew snap-section section-pad band-blue"
         >
           <ExpertiseLattice />
           <div className="section-content container-page">
@@ -402,7 +413,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             id="section-roles"
             interaction={["ledgerMarks", "verifyMarks"]}
             recipe="ledgerRows"
-            className="snap-section section-pad"
+            className="snap-section section-pad band-flow"
           >
             <PositionsThread />
             <div className="section-content container-page grid items-start gap-y-8 lg:grid-cols-[minmax(0,16rem)_1fr] lg:gap-x-20">
@@ -455,7 +466,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           interaction="prefillEnquiry"
           recipe="aboutSpread"
           physics
-          className="section-skew snap-section section-pad"
+          className="section-skew snap-section section-pad band-blue"
         >
           <div className="section-content container-page">
             {/*
@@ -535,7 +546,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           interaction="copyEmail"
           recipe="proseArrival"
           physics
-          className="section-skew snap-section section-pad"
+          className="section-skew snap-section section-pad band-flow"
         >
           <ContactArcs />
           <div className="section-content container-page">
