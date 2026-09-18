@@ -321,12 +321,15 @@ export function SiteNav({
         </div>
 
         {/*
-          The wordmark. `.masthead-name` carries the size and tracking, both of
-          which change with the collapse; the colour and weight stay here.
+          The wordmark. `.masthead-name` now carries the size, the tracking, the
+          weight AND the case, because all four had to move together to bring it
+          into line with the site's other display type; see its note in
+          styles/globals.css. `font-bold uppercase` were removed from here rather
+          than left to fight the rule, which is why only the colour remains.
         */}
         <a
           href="#top"
-          className="masthead-name font-display font-bold uppercase text-[color:var(--heading)] transition-colors hover:text-[color:var(--primary-strong)]"
+          className="masthead-name font-display text-[color:var(--heading)] transition-colors hover:text-[color:var(--primary-strong)]"
         >
           {name}
         </a>
@@ -402,9 +405,22 @@ export function SiteNav({
         in force here.
       */}
       <div className="container-page flex h-full items-center justify-between gap-6 lg:hidden">
+        {/*
+          The phone wordmark. It carried its own `font-bold uppercase
+          tracking-[0.2em]` and so was a THIRD setting of this name, differing
+          from both the desktop mark and the hero. It now takes
+          `.masthead-name-compact`, which shares the case, weight and tracking of
+          the desktop mark and fixes its own size.
+
+          NOT `.masthead-name` PLUS A `text-lg` UTILITY. That was tried and the
+          utility lost: `.masthead-name` is declared inside `@layer components`
+          with a font-size of its own, and an unlayered Tailwind utility does not
+          beat it, so the name rendered at 24px in a bar sized for 18px and wrapped
+          onto two lines. Measured at 390px: 115x75px, three lines tall.
+        */}
         <a
           href="#top"
-          className="font-display text-lg font-bold uppercase tracking-[0.2em] text-[color:var(--heading)] transition-colors hover:text-[color:var(--primary-strong)]"
+          className="masthead-name-compact font-display text-[color:var(--heading)] transition-colors hover:text-[color:var(--primary-strong)]"
         >
           {name}
         </a>

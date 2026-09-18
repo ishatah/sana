@@ -152,9 +152,96 @@ export async function HeroVvip({
           whole hero behind aria-hidden. */}
       <VvipField />
 
-      <div className="container-page relative z-10 grid items-center gap-12 py-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20 lg:py-14">
+      {/*
+        ── THE AFFILIATION MARK IS THE MASTHEAD OF THE HERO ──────────────────
+
+        It used to sit partway down the left-hand text column, between the title
+        line and the meta row, left-aligned with everything else. Moved here on
+        the site owner's instruction of 2026-09-19: the council mark now opens
+        the page, centred, above the two-column grid rather than inside one of
+        its columns.
+
+        IT IS OUTSIDE THE GRID, NOT THE FIRST CELL OF IT. The grid is
+        `lg:grid-cols-[1.15fr_0.85fr]`, so anything placed inside it lands in the
+        text column and would be centred only within that column, which is
+        off-centre on the page. Lifting it out is what lets it centre against the
+        full content width, and it is what keeps the portrait beside the text
+        rather than pushed down a row.
+
+        THE TEXT BELOW IS NOT CENTRED WITH IT, and that is deliberate. Both were
+        centred together on 2026-09-19 and the layout change was reverted the
+        same day: the mark keeps its new position, the grid keeps its original
+        one. The mark therefore centres on the page while the name beneath it
+        stays flush to the leading edge, which is the arrangement that was asked
+        for rather than an oversight.
+
+        `container-page` repeats here because the grid below carries its own; the
+        two share the same gutter token, so the mark lands on the same optical
+        edges as everything beneath it.
+      */}
+      {organisationLogo && (
+        <div className="container-page relative z-10 w-full pt-10 lg:pt-12">
+          <VvipRise>
+            <div className="vvip-masthead-affiliation">
+              {/* decorative: the organisation is named in full in the title line
+                  inside the column below, so real alt text here would make a
+                  screen reader announce the same name twice. */}
+              <OrganisationLogo
+                media={organisationLogo}
+                decorative
+                sizes="(max-width: 1024px) 60vw, 16rem"
+                className="vvip-affiliation-mark"
+              />
+            </div>
+          </VvipRise>
+        </div>
+      )}
+
+      {/*
+        THE ORIGINAL TWO-COLUMN GRID, RESTORED. A single centred column was tried
+        on 2026-09-19 so the text could share a centre line with the mark above
+        it, and was reverted on the site owner's instruction: only the mark's new
+        position was wanted, not the layout change underneath it. Text left,
+        portrait right, exactly as before.
+      */}
+      {/*
+        ── THE GRID IS TOP-ALIGNED, NOT CENTRED, AND THAT IS WHAT CLOSES THE GAP ──
+
+        This carried `items-center`, and the band it sits in is `min-height:
+        100svh` (see `.vvip-hero` in styles/globals.css). So on any viewport
+        taller than the content, the grid centred itself in whatever space was
+        left AFTER the IBC masthead above it had taken its own height — which
+        pushed the name, role and title down away from the mark and opened a gap
+        between them.
+
+        MEASURED at 1440x900 before this change: the masthead sat at y 200-326
+        and the first line of the column (the eyebrow) at y 518. A 192px hole
+        below the mark, growing with viewport height — 267px at 1920x1080,
+        because a taller band leaves more space for `items-center` to distribute.
+
+        `items-start` makes the column begin directly under the mark, so the two
+        read as one block and the leftover height falls to the BOTTOM of the band
+        where it belongs. The masthead's own position is untouched: it is outside
+        this grid (see the note at its call site above), so moving the grid moves
+        everything except the mark, which is exactly the change that was asked
+        for.
+
+        THE PORTRAIT IS EXEMPTED BELOW. Top-aligning the grid would also top-align
+        the portrait column, and the figure is composed to sit lower than the
+        text; `self-center` on that cell keeps it where it was. See the note
+        there.
+      */}
+      <div className="container-page relative z-10 grid w-full items-start gap-12 pb-4 pt-0 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20 lg:pb-6 lg:pt-0">
         {/* The text column. */}
-        <VvipStagger className="flex flex-col gap-7">
+        {/*
+          `gap-5` rather than `gap-7`. Five gaps sit between this column's six
+          elements, so the 8px reduction lifts the CTA row by 40px and every line
+          between by a proportional share — the "move it further up" change,
+          applied to the column's own rhythm rather than to the space above it,
+          because the space above it is the IBC mark's position and that is
+          fixed.
+        */}
+        <VvipStagger className="flex flex-col gap-5">
           {kickerText && (
             <VvipRise>
               <p className="vvip-eyebrow">{kickerText}</p>
@@ -191,33 +278,12 @@ export async function HeroVvip({
             </VvipRise>
           )}
 
-          {/* The affiliation. Renders only when the logo slot is open, which is
-              gated on a recorded permission in data/media.json. The legal name
-              above stays as text either way; this accompanies it, it does not
-              replace it.
-
-              THERE IS NO LONGER A LABEL ABOVE THE MARK. It read "In affiliation
-              with", and was removed on the site owner's instruction of
-              2026-09-18: the title line directly above already names the council
-              in full and names her role in it, so the label restated in six words
-              what the sentence above it had just said properly. The affiliation
-              is still carried in text by that title, not by the image, so
-              removing the label costs nothing with images off. */}
-          {organisationLogo && (
-            <VvipRise>
-              <div className="vvip-affiliation">
-                {/* decorative: the organisation is already named in full in the
-                    title directly above, so real alt text here would make a screen
-                    reader announce the same name twice in a row. */}
-                <OrganisationLogo
-                  media={organisationLogo}
-                  decorative
-                  sizes="(max-width: 1024px) 60vw, 14rem"
-                  className="vvip-affiliation-mark"
-                />
-              </div>
-            </VvipRise>
-          )}
+          {/* THE AFFILIATION MARK USED TO SIT HERE, between the title and the
+              meta row. It is now the centred masthead above the grid; see the
+              note at the top of this section. The council is still named in FULL
+              AS TEXT by the title line directly above, so nothing is lost when
+              images are off, which was the same reason the "In affiliation with"
+              label above it could be dropped on 2026-09-18. */}
 
           {meta.length > 0 && (
             <VvipRise>
@@ -245,7 +311,19 @@ export async function HeroVvip({
         </VvipStagger>
 
         {/* The portrait column. */}
-        <VvipPortraitReveal className="relative mx-auto w-full max-w-md lg:max-w-none">
+        {/*
+          `self-center` because the GRID is now `items-start` (see the note on it
+          above). Top-aligning the grid is what pulls the text column up under the
+          IBC mark, but the portrait was never part of that problem: the figure is
+          composed to sit lower than the first line of type, and letting it start
+          at the grid's top edge would raise her by the same amount the text came
+          up and undo the crop this column was tuned for.
+
+          So the two cells align differently on purpose: the text starts at the
+          top of the grid, the portrait stays centred in it, and the change is
+          confined to the column that had the gap.
+        */}
+        <VvipPortraitReveal className="relative mx-auto w-full max-w-md self-center lg:max-w-none">
           {/*
             THE RATIO IS THE PHOTOGRAPH'S OWN, 1206x1748, NOT A CHOSEN 4/5.
 

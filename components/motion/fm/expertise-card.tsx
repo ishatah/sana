@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef, type ReactNode } from "react"
-import { m, useMotionValue, useSpring, useTransform, useReducedMotion, type MotionValue } from "motion/react"
+import { m, useMotionValue, useSpring, useTransform, useReducedMotion } from "motion/react"
 import { TRAVEL_SPRING } from "./tokens"
 import { useFinePointer } from "./use-media"
 
@@ -82,31 +82,23 @@ import { useFinePointer } from "./use-media"
  */
 const TILT = 6
 
+/*
+ * THE `shutterY` PROP IS GONE, AND SO IS THE EFFECT THAT FED IT.
+ *
+ * This card used to accept a rolling-shutter offset (#25) computed in
+ * ./mark-rail.tsx from a scroll-velocity spring, and compose it into the
+ * transform below. Both that effect and the wall's velocity shear were removed
+ * on 2026-09-19 because the band shook while scrolling; the reasoning is in the
+ * docblock of ./mark-rail.tsx.
+ *
+ * What remains on this element is the POINTER tilt, which is a different effect
+ * with a different input: it moves only when the reader is deliberately pointing
+ * at a card, never while they are reading. It is untouched.
+ */
 export function ExpertiseCard({
   children,
-  shutterY,
 }: {
   children: ReactNode
-  /**
-   * #25, the rolling-shutter offset for this row, in px, supplied by
-   * ./mark-rail.tsx.
-   *
-   * ── WHY IT ARRIVES HERE RATHER THAN BEING APPLIED WHERE IT IS COMPUTED ──────
-   *
-   * The <li> that owns the row carries `data-anime="panel"`, and the ownership
-   * rule in ./variants.ts is that no element carries both a vanilla and a Framer
-   * hook. That is not tidiness: `entrance()` in ../sections.ts tears down with
-   * `clearStyles`, which wipes an element's whole inline style surface, so a
-   * transform written there by this layer would be erased mid-flight.
-   *
-   * This card is already the row's Framer-owned element and is already writing a
-   * transform, so the shutter composes into that one rather than needing an
-   * element of its own.
-   *
-   * Optional, because the reduced-motion branch of ./mark-rail.tsx renders this
-   * card with no scroll machinery behind it at all.
-   */
-  shutterY?: MotionValue<number>
 }) {
   const reduced = useReducedMotion()
   const fine = useFinePointer()
@@ -279,12 +271,12 @@ export function ExpertiseCard({
         data-fm
         className="glass-card h-full"
         /*
-         * `y` is the rolling-shutter offset (#25) and is composed here rather
-         * than on the row, for the reason given in the prop docblock above.
-         * Framer writes all three into one transform, so there is still exactly
-         * one writer on this element.
+         * Two axes of pointer tilt, and nothing else. This carried a third
+         * value, `y`, the scroll-velocity rolling shutter; see the note above
+         * the prop list for why it is gone. Framer still writes these into one
+         * transform, so there is exactly one writer on this element.
          */
-        style={{ rotateX, rotateY, y: shutterY }}
+        style={{ rotateX, rotateY }}
         onPointerMove={onPointerMove}
         onPointerLeave={onPointerLeave}
         onPointerCancel={onPointerLeave}

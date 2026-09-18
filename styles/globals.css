@@ -3499,7 +3499,37 @@
    * The floors at `:root` mean this resolves to `skewY(0deg)` with no JavaScript,
    * which is identical to no transform, so the no-JS behaviour is unchanged.
    */
-  transform: skewY(calc(var(--scroll-speed, 0) * var(--scroll-dir, 0) * 2.4deg));
+  /*
+   * ── THE SKEW IS REMOVED. THE BANDS DO NOT LEAN ANY MORE ────────────────────
+   *
+   * This read `skewY(calc(var(--scroll-speed) * var(--scroll-dir) * 2.4deg))`,
+   * so every band on the site tilted by up to 2.4 degrees in the direction of
+   * travel while the page was scrolling and settled back to flat when it
+   * stopped. The history above explains how the angle came to be composed from
+   * the global scroll signal rather than from a per-band rAF hook, and all of
+   * that remains true; what changed is that the effect itself is not wanted.
+   *
+   * WHAT IT ACTUALLY LOOKED LIKE. `--scroll-speed` is resampled continuously
+   * while the wheel is moving, so the angle was never a single lean: it rose,
+   * fell and reversed with every change in scroll velocity, and because the
+   * whole band is one transformed layer, every straight edge inside it, the
+   * headings, the rules, the card borders and the type baselines, rotated with
+   * it. Small continuous rotation of straight edges is read as SHAKE rather than
+   * as give, which is exactly the report. It was worst on a trackpad, where
+   * velocity changes many times per gesture.
+   *
+   * IT IS `transform: none`, NOT A DELETED RULE. The class is still on ~14
+   * sections across six files and is still the hook `transform-origin` and the
+   * reduced-motion rule below hang off, so neutralising it here is one edit
+   * rather than fourteen, and restoring the lean later is one line rather than a
+   * hunt. Nothing else in this file depends on the bands being transformed.
+   *
+   * `none` rather than `skewY(0deg)` deliberately: a zero transform still makes
+   * the element a containing block for fixed descendants and still promotes it
+   * on some engines, so it is not free. `none` removes the layer entirely and is
+   * what makes the bands genuinely static.
+   */
+  transform: none;
   /*
    * `transform-origin` is centred on the INLINE axis and top on the block axis, so
    * a leaning band pivots about the edge the reader is approaching rather than
@@ -4049,15 +4079,79 @@ body[data-nav-scrolled] .masthead-rule {
  * `.eyebrow-lg`: letterspacing is optical rather than proportional, and 0.2em at
  * 24px is visibly looser than the same figure at 18px.
  */
+/*
+ * ── THE WORDMARK NOW MATCHES THE REST OF THE TYPE, AND IT DID NOT BEFORE ─────
+ *
+ * Changed on the site owner's report of 2026-09-19 that the name in the corner
+ * did not feel part of the same visual identity as the rest of the design. That
+ * was not a matter of taste; the wordmark was being set by the OPPOSITE rules to
+ * every other piece of display type on the site, and the numbers say so:
+ *
+ *              case        tracking     weight
+ *   .vvip-name        mixed      -0.03em      700
+ *   .page-hero-title  mixed      -0.025em     600
+ *   .section-heading  mixed      -0.02em      700
+ *   .masthead-name    UPPERCASE  +0.16em      700   <- the odd one out
+ *
+ * Every display element on this site is mixed-case and NEGATIVELY tracked, which
+ * is what large type needs: at display size the default sidebearings read as
+ * gaps, so the letters are pulled together. The wordmark was uppercase and
+ * tracked +0.16em, which is the treatment this stylesheet reserves for
+ * `.eyebrow`, the 11px small-caps labels. Applied at 24px it read as a different
+ * typographic voice, because it is one: small-caps-and-tracked is a LABEL
+ * gesture, and the site's headings are a DISPLAY gesture.
+ *
+ * It now takes the display treatment. The name is a proper noun set as a name,
+ * exactly as `.vvip-name` sets the same words in the hero, so the masthead and
+ * the hero finally agree about how this person's name looks.
+ *
+ * `text-transform: none` is declared here rather than removing `uppercase` from
+ * the call site because the same class is also reached by the mobile link, and
+ * one rule that owns the decision beats two call sites that have to remember it.
+ *
+ * THE SIZES ARE UNCHANGED, and the collapse still works exactly as the note
+ * above describes: 1.5rem at rest, 1.125rem scrolled. Only case, tracking and
+ * weight moved. Tracking still tightens as the size grows, which is the same
+ * optical rule the old values followed in the opposite direction.
+ */
 .masthead-name {
   font-size: 1.5rem;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: none;
   transition: font-size var(--dur-4) var(--ease-out), letter-spacing var(--dur-4) var(--ease-out);
 }
 
 body[data-nav-scrolled] .masthead-name {
   font-size: 1.125rem;
-  letter-spacing: 0.2em;
+  letter-spacing: -0.01em;
+}
+
+/*
+ * The phone bar's wordmark. Same voice as `.masthead-name` above, mixed case and
+ * negatively tracked, at the one fixed size that bar uses.
+ *
+ * A SEPARATE CLASS RATHER THAN `.masthead-name` PLUS A SIZE UTILITY. Both live
+ * in `@layer components`, and a layered rule beats an unlayered Tailwind utility
+ * regardless of specificity, so `text-lg` alongside `.masthead-name` was silently
+ * discarded and the name rendered at 1.5rem in a bar built for 1.125rem, wrapping
+ * onto two lines on a 390px screen. Declaring the size here puts it in the same
+ * layer, where it wins by being later.
+ *
+ * It does not transition: the phone bar is one fixed height and never collapses,
+ * so there is no second state for the size to travel to.
+ */
+.masthead-name-compact {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+/* Arabic takes zero rather than the Latin negative, for the cursive-join reason
+   recorded on the RTL rule below. */
+[dir="rtl"] .masthead-name-compact {
+  letter-spacing: 0;
 }
 
 /*
@@ -4068,7 +4162,24 @@ body[data-nav-scrolled] .masthead-name {
  */
 [dir="rtl"] .masthead-name,
 [dir="rtl"] .masthead-link {
-  letter-spacing: 0.04em;
+  /*
+   * ZERO, NOT 0.04em, AND NOT THE LATIN NEGATIVE EITHER.
+   *
+   * This read 0.04em, a small positive value left over from when the wordmark
+   * was uppercase and tracked +0.16em: the job then was to cut most of that back
+   * for Arabic without going to nothing. The Latin mark is now NEGATIVELY
+   * tracked, so a positive figure here is no longer a reduction of anything, it
+   * is a different direction.
+   *
+   * It goes to 0 rather than following the Latin to -0.02em because negative
+   * tracking is actively harmful in Arabic: the script is cursive and pulling
+   * letters together crushes the joins. This is the same correction
+   * `[dir="rtl"] .page-hero-title` makes, and for the same reason.
+   *
+   * `text-transform: none` is now redundant, `.masthead-name` sets it for every
+   * direction, and is kept only so `.masthead-link` beside it keeps the guard.
+   */
+  letter-spacing: 0;
   text-transform: none;
 }
 
@@ -8459,6 +8570,25 @@ body[data-nav-scrolled] .masthead-name {
 .vvip-hero {
   position: relative;
   display: flex;
+  /*
+   * ── COLUMN, NOT ROW ────────────────────────────────────────────────────────
+   *
+   * This was a row flex container with a single content child, so the direction
+   * never mattered and the default was fine. It matters now: the hero has TWO
+   * children, the centred council mark and the two-column grid beneath it, and
+   * as a row they were laid out SIDE BY SIDE. Measured before this change, the
+   * mark sat at y:872 and x:65 (bottom left, at full size because it had a whole
+   * flex column to itself) while the grid was pushed into the other half.
+   *
+   * `align-items: center` meant "centre on the cross axis", which for a row is
+   * VERTICAL centring; that is what it was doing for the old single child and is
+   * why nothing looked wrong before. In a column the cross axis is horizontal,
+   * so it now centres the mark, and `justify-content: center` takes over the
+   * vertical job it used to do. The grid below carries `w-full`, so centring
+   * does not shrink it and its own two columns are unaffected.
+   */
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   /* Belt and braces with `.vvip-field`'s own `overflow: hidden`: the wash paints
      at scale(1.25) and this band is the element whose width the document
@@ -8493,10 +8623,32 @@ body[data-nav-scrolled] .masthead-name {
    * it keeps the hero geometrically still for its whole time on screen.
    */
   padding-top: var(--masthead-tall);
-  /* The floor is the viewport LESS the header, since the header is now inside
-     this band's own box. min-height, not height: at Arabic and Dutch string
-     lengths the content runs taller and must grow rather than clip. */
-  min-height: 100svh;
+  /*
+   * ── THE FLOOR IS ONE SCREEN *INCLUDING* THE HEADER CLEARANCE ───────────────
+   *
+   * The comment here used to say "the viewport LESS the header" while the value
+   * said `100svh`, and the code was what ran. Because `padding-top` above is
+   * INSIDE this same box and `box-sizing` is `border-box` only for the padding
+   * that fits, a `min-height` of a full screen plus 152px of top padding makes
+   * the band at least a screen AND a masthead tall — it can never fit on one.
+   *
+   * MEASURED at 1440x900 before this line changed: the band was 1052px against a
+   * 900px screen, and 200px of that was empty grid stretched by this floor, with
+   * the content itself already fitting comfortably above it.
+   *
+   * Subtracting the clearance makes the floor mean what the old comment claimed:
+   * the band fills exactly one screen, header included, and stops.
+   *
+   * IT IS --masthead-tall, NOT --nav-height, for the reason the padding above
+   * gives at length: --nav-height collapses to --masthead-short the moment the
+   * page scrolls, so reading it here would shrink this floor by 76px on the
+   * first scroll and jump the whole band. --masthead-tall is the height the
+   * header actually has while the hero is on screen.
+   *
+   * STILL min-height, NOT height: at Arabic and Dutch string lengths the content
+   * runs taller and must grow rather than clip.
+   */
+  min-height: calc(100svh - var(--masthead-tall));
   background: var(--background);
   overflow: hidden;
 }
@@ -8730,6 +8882,55 @@ body[data-nav-scrolled] .masthead-name {
  * page's way of opening a new band of information, so this reads as one more
  * entry in that system rather than as a new device.
  */
+/*
+ * ── THE CENTRED AFFILIATION MASTHEAD ──────────────────────────────────────────
+ *
+ * The council mark opening the hero, centred on the page above the two-column
+ * grid. See the note at its call site in components/hero-vvip.tsx for why it is
+ * outside the grid rather than the first cell of it.
+ *
+ * NO TOP HAIRLINE. The rule the old in-column block carried
+ * (`border-block-start`) existed to separate the mark from the title line it sat
+ * under. Nothing sits above it now except the masthead, so a rule here would be
+ * drawing a line under the site header rather than grouping anything.
+ */
+.vvip-masthead-affiliation {
+  display: flex;
+  justify-content: center;
+  /*
+   * ── THE BAND'S HEIGHT IS PINNED TO THE MARK'S OLD RENDERED HEIGHT ──────────
+   *
+   * 7.875rem (126px) is exactly what the mark measured at its previous 14rem
+   * width, so this band occupies the same vertical space it did before the mark
+   * was enlarged and every element below it keeps its position to the pixel.
+   * That is the whole mechanism behind "bigger without affecting the
+   * surrounding".
+   *
+   * `align-items: center` makes the larger image overflow equally above and
+   * below the pinned box rather than hanging off one edge, which keeps the mark
+   * optically centred in the space it had.
+   *
+   * IT IS NOT `overflow: hidden`. Clipping is what a fixed-height box normally
+   * implies and it is exactly wrong here: it would crop the lockup's Arabic
+   * sub-line, which is the element the max-width note above exists to protect.
+   * The overflow is deliberate and lands on empty ground.
+   *
+   * THE PHONE RULE BELOW KEEPS ITS OWN HEIGHT for the same reason, since the
+   * mark is a different size there.
+   */
+  align-items: center;
+  height: 7.875rem;
+}
+
+@media (max-width: 640px) {
+  /* 11rem at the file's 1.78 aspect renders 99px tall; pinned for the same
+     reason as the desktop value above. */
+  .vvip-masthead-affiliation {
+    height: 6.1875rem;
+  }
+}
+
+/* Kept for any other consumer of the old block; the hero no longer renders it. */
 .vvip-affiliation {
   display: flex;
   flex-direction: column;
@@ -8755,7 +8956,31 @@ body[data-nav-scrolled] .masthead-name {
  * number that decides the rendered size, and the aspect ratio is the file's own.
  */
 .vvip-affiliation-mark {
-  max-width: 14rem;
+  /*
+   * ── RAISED 14rem -> 17rem, AND THE BLOCK HEIGHT IS PINNED SO NOTHING MOVES ──
+   *
+   * The mark reads about 21% larger. Requested on 2026-09-19 as "a bit bigger
+   * without affecting the surrounding", and the second half of that is the part
+   * that needed the work rather than the first.
+   *
+   * WHY SIZE ALONE WOULD HAVE MOVED THE PAGE. Measured before the change: the
+   * mark rendered 224x126 and the eyebrow beneath it began at exactly the mark's
+   * bottom edge, so the logo block's height WAS the offset of everything below
+   * it. The file is 1206x678, an aspect of about 1.78, so 14rem -> 17rem takes
+   * the rendered height 126px -> 153px and would have pushed the eyebrow, the
+   * name, the meta row and the portrait all 27px down the page.
+   *
+   * So the wrapper keeps the height it had (see `.vvip-masthead-affiliation`)
+   * and the image grows INSIDE it, overflowing its box symmetrically about the
+   * centre line. The mark is the only thing in that band and the band has clear
+   * space above and below it, so the overflow lands on empty ground rather than
+   * on any type.
+   *
+   * This is a max-width rather than a height for the reason recorded above: the
+   * Arabic sub-line is the smallest element in the lockup and its legibility is
+   * set by the mark's WIDTH, so width is the dimension worth stating.
+   */
+  max-width: 17rem;
 }
 
 /*
@@ -8765,8 +8990,12 @@ body[data-nav-scrolled] .masthead-name {
  * desktop and buys back some of the legibility the smaller box costs.
  */
 @media (max-width: 640px) {
+  /* Raised 11rem -> 13rem with the desktop value, keeping the same ratio between
+     the two so the mark grows by about the same proportion at every width. The
+     band height above stays pinned to the OLD 11rem render, so the phone layout
+     does not move either. */
   .vvip-affiliation-mark {
-    max-width: 11rem;
+    max-width: 13rem;
   }
 }
 
@@ -8912,7 +9141,63 @@ body[data-nav-scrolled] .masthead-name {
      * so the space the portrait may occupy does not actually change when the
      * header shrinks. Only the token did.
      */
-    max-height: calc(100svh - var(--masthead-short) - 12rem);
+    /*
+     * ── THE SUBTRAHEND NOW COUNTS THE IBC MASTHEAD, WHICH IS WHY IT GREW ──────
+     *
+     * This was `- 12rem` (192px) and the band still overflowed the viewport by
+     * about 140px at every desktop size. The reserve was written when the hero
+     * was masthead + grid; it does not account for the centred IBC lockup, which
+     * is a THIRD block above the grid and costs 174px of the band's height.
+     *
+     * MEASURED at 1440x900: hero padding-top 152 + IBC block 174 + grid padding
+     * 24/56 = 406px owed to things that are not the portrait, against a 900px
+     * screen. So the figure may be at most 494px, and the old cap allowed 632.
+     * The 138px difference was constant across 1366, 1440 and 1920, which is the
+     * signature of a fixed block being left out of a subtraction rather than a
+     * proportional error.
+     *
+     * 21rem (336px) is that reserve, minus the --masthead-short (76px) this
+     * expression already subtracts separately, plus the 166px the statement
+     * caption costs BELOW the figure inside the same grid cell — the cap limits
+     * the figure, but it is the CELL that sets the row height, and the caption
+     * is part of it.
+     *
+     * ── THE FIGURE IS DELIBERATELY PAST THE FREE POINT ──────────────────────
+     *
+     * The grid row is `max(text column, portrait cell)` and the text column is
+     * ~486px at every desktop width, so a portrait CELL under 486px costs the
+     * band nothing. The cell is the figure PLUS the statement caption beneath it
+     * (~166px), so "free" means a figure of about 320px.
+     *
+     * This value is well past that, and that is a decision rather than an
+     * oversight. Asked on 2026-09-19 to choose between the largest possible
+     * figure and a band that fits one screen, the site owner chose the figure.
+     * So every pixel the cell exceeds 486px is a pixel of band height, knowingly
+     * spent: at 1440x900 this puts the figure near 560px and the band near
+     * 1076px against a 900px viewport.
+     *
+     * DO NOT "FIX" THE RESULTING OVERFLOW BY SHRINKING THIS. It was measured,
+     * offered and declined. If the band must fit a screen again, the lever that
+     * costs nothing is moving the statement caption out of this cell and under
+     * the text column, which frees its ~166px and lets the figure stay large.
+     *
+     * ── THE BAND CANNOT FIT 900px, AND THIS IS NOT THE REASON ────────────────
+     *
+     * Worth recording so the next person does not tune this value hunting a fit
+     * that is not available here. The blocks that are NOT the portrait already
+     * cost 406px (masthead clearance 152 + IBC lockup 174 + grid padding), and
+     * the TEXT COLUMN beside the portrait is 526px at every desktop width. That
+     * is 932px of content before the figure is considered at all, so on a 900px
+     * screen the hero overflows by ~32px however small this cap is, and by 164px
+     * at 1366x768. Shrinking the figure past the text column's height buys
+     * nothing: the grid row is `max(text, portrait)`, so below 526px the text is
+     * the driver and this cap stops having any effect on the band.
+     *
+     * IT IS STILL A CAP, NOT A HEIGHT. On a tall viewport the portrait's own
+     * aspect ratio runs out before this does, so the figure is never stretched;
+     * this only stops it claiming more of the band than the band can spend.
+     */
+    max-height: calc(100svh - var(--masthead-short) - 16rem);
   }
   .vvip-portrait img {
     height: 100%;
